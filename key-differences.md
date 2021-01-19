@@ -61,7 +61,7 @@ O Cypress tira *snapshots* de sua aplicação e permite que você viaje no tempo
 
 Você pode usar o DevTools enquanto seus testes são executados, você pode ver todas as mensagens do console, e todas as solicitações de rede. Você pode inspecionar elementos, e você pode até mesmo usar instruções de depurador em seu código de teste ou no código de sua aplicação. Não há perda de fidelidade - você pode usar todas as ferramentas com as quais já está familiarizado. Isso permite que você teste e desenvolva, tudo ao mesmo tempo.
 
-# *Trade offs* (trocas)
+# *Trade offs*
 
 Embora o Cypress possua muitas novas e poderosas capacidades - também existem importantes *trade-offs* que fizemos para tornar isso possível.
 
