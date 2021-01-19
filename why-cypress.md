@@ -1,7 +1,3 @@
----
-title: Por que Cypress?
----
-
 # O que você vai aprender
 
 - O que é o Cypress e porque você deveria usá-lo

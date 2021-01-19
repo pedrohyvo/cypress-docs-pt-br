@@ -1,7 +1,3 @@
----
-title: Diferenças-chave
----
-
 # O que você vai aprender
 
 - O que torna o Cypress unico
