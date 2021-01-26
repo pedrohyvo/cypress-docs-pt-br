@@ -315,7 +315,7 @@ setx CYPRESS_CRASH_REPORTS 0
 Se você deseja instalar uma versão de pré-lançamento do Test Runner para testar a funcionalidade que ainda não foi lançada, veja como:
 
 1. Abra a lista de commits para desenvolver no repo Cypress: https://github.com/cypress-io/cypress/commits/develop 
-2. Encontre o commit do qual você gostaria de instalar a versão de pré-lançamento. Clique no ícone de comentário (destacado em vermelho abaixo):
+2. Encontre o commit o qual você gostaria de instalar a versão de pré-lançamento. Clique no ícone de comentário (destacado em vermelho abaixo):
 
 ![comment link](https://docs.cypress.io/img/guides/install/develop-commit-comment-link.656c55d7.png)
 
