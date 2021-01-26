@@ -82,6 +82,8 @@ Você pode descompactar manualmente e clicar duas vezes. Cypress irá ser execut
 
 ## Integração contínua
 
+[//]: <> (TODO - Adicionar link integração contínua)
+
 Por favor leia nossa documentação sobre [Integração Contínua](#) para ajudar na instação do Cypress na CI (Integração Contínua). Quando estiver rodando linux você precisa'ra instalar algumas dependências de sistema ou você pode usar a nossa imagem docker que possui tudo que você precisa.
 
 # Abrindo cypress
@@ -97,6 +99,7 @@ A forma longa com o caminho completo
 
 Ou com o atalho usando `npm bin`
 ```
+$(npm bin)/cypress open
 ```
 
 Ou usando o `npx`
@@ -110,11 +113,13 @@ Após um momento, o Cypress Test Runner será aberto.
 
 # Trocando navegadores
 
-O Cypress Test Runner tenta encontrar todos os browsers compatíveis na máquina do usuário. O drop down para selecionar um browser diferente está no topo lateral direito do Test Runner.
+O Cypress Test Runner tenta encontrar todos os browsers compatíveis na máquina do usuário. O drop down para selecionar um navegador diferente está no topo lateral direito do Test Runner.
 
 ![cypress test runner ui](https://docs.cypress.io/img/guides/browser-list-dropdown.80de3be3.png)
 
-Leia [Abrindo navegadores](#) para mais informações sobre como o Cypress controla um browser real durante os testes de ponta-a-ponta.
+[//]: <> (TODO - Adicionar link abrindo navegadores)
+
+Leia [Abrindo navegadores](#) para mais informações sobre como o Cypress controla um navegador real durante os testes de ponta-a-ponta.
 
 > Suporte entre navegadores
 
@@ -144,6 +149,8 @@ npm run cypress:open
 Instalando Cypress pela `npm` você também pode acessar vários comandos CLI.
 
 A partir da versão 0.20.0, o Cypress também é um `node_module` totalmente preparado que você pode exigir em seus scripts do Node. 
+
+[//]: <> (TODO - Adicionar link CLI)
 
 Você pode [ler mais sobre CLI aqui.](#)
 
