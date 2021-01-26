@@ -84,7 +84,7 @@ Você pode descompactar manualmente e clicar duas vezes. O Cypress será executa
 
 Por favor, leia nossa documentação sobre [Integração Contínua](#) para obter ajuda na instação do Cypress na CI (_Continuous Integration_). Quando estiver rodando linux você precisará instalar algumas dependências de sistema, ou você pode usar a nossa imagem docker que possui tudo que você precisa.
 
-# Abrindo cypress
+# Abrindo o Cypress
 
 Se você usou `npm` para instalação, Cypress foi instalado no diretório `./node_modules`, com seus binários executáveis accessíveis em `./node_modules/.bin`.
 
