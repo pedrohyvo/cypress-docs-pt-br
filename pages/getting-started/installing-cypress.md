@@ -122,7 +122,7 @@ Leia [Abrindo navegadores](#) para mais informações sobre como o Cypress contr
 
 # Adicionando scripts npm
 
-Embora não haja nada de errado em escrever o caminho completo para o executável Cypress a cada vez, é muito mais fácil e claro adicionar comandos Cypress ao campo de scripts em seu arquivo `package.json`.
+Embora não haja nada de errado em escrever o caminho completo para o executável do Cypress a cada momento, é muito mais fácil e claro adicionar os comandos do Cypress ao campo de scripts em seu arquivo `package.json`.
 
 ```json
 {
