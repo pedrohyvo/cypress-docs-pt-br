@@ -74,7 +74,7 @@ yarn add cypress --dev
 
 Se você não estiver utilizando Node ou npm no seu projeto, ou você quer tentar usar o Cypress rapidamente, você sempre poderá realizar o download do Cypress diretamente de nossa CDN. 
 
-> Gravando as execuções para o Dashboard não é possível pelo download direto. Este download tem como oferecer uma forma rápida de utilizar o Cypress. Para gravar os testes no Dashboard, você precisará instalar o Cypress como uma depedência npm.
+> A gravação de execuções para o Dashboard não é possível através do download direto. Este download tem somente a intenção de ser uma forma simples de experimentar com o Cypress. Para gravar os testes no Dashboard, você precisará instalar o Cypress como uma depedência npm.
 
 O download direto sempre trará a última versão disponível. Sua plataforma será identificada automaticamente.
 
