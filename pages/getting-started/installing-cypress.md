@@ -319,7 +319,7 @@ Se você deseja instalar uma versão de pré-lançamento do Test Runner para tes
 
 ![comment link](https://docs.cypress.io/img/guides/install/develop-commit-comment-link.656c55d7.png)
 
-3. Você deve ver vários comentários do usuário do cypress-bot com instruções para instalar os pré-lançamentos do Cypress. Escolha aquele que corresponde ao seu sistema operacional e arquitetura da CPU, e siga as instruções para instalar o pré-lançamento.
+3. Você deve ver vários comentários do usuário cypress-bot com instruções para instalar os pré-lançamentos do Cypress. Escolha aquele que corresponde ao seu sistema operacional e arquitetura de CPU, e siga as instruções para instalar o pré-lançamento.
 
 Notas sobre pré-lançamentos:
 
