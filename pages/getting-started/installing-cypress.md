@@ -3,7 +3,7 @@
 O que você vai aprender
 
 - Como instalar Cypress usando `npm`
-- Como instalar Cypress por download direto
+- Como instalar Cypress fazendo download a partir do repositório
 - Como versionar e rodar Cypress usando `package.json`
 ```
 
@@ -19,7 +19,7 @@ Cypress é uma aplicação desktop instalada no seu computador. A aplicação de
 
 ## Node.js
 
-Se você está utilizando `npm` para instalar o Cypress, nos suportamos:
+Se você está utilizando `npm` para instalar o Cypress, nós suportamos:
 
 - Node.js 10 ou 12 e superior
 
@@ -43,42 +43,42 @@ yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2
 
 ## `npm install`
 
-Instale Cypress usando `npm`:
+Instale o Cypress usando `npm`:
 ```
-cd /caminho/do/diretorio
+cd /caminho/do/projeto
 npm install cypress --save-dev
 ```
 
 Isto vai instalar o Cypress localmente como uma dependência de desenvolvimento em seu projeto.
 
-> Tenha certificado que você já tenha rodado `npm init` ou tenha o diretório `node_modules` ou o arquivo `package.json` no diretório raiz do seu projeto para garantir que o cypress foi instalado no diretório correto.
+> Certifique-se que você já rodou `npm init`, ou tenha o diretório `node_modules`, ou o arquivo `package.json` no diretório raiz do seu projeto para garantir que o cypress seja instalado no diretório correto.
 
-> Note que o pacote npm do cypress é um wrapper que envolve o binário do Cypress. A versão do pacote npm determina qual versão do binário baixado. Como a versão 3.0, o binário baixado como um diretório de cache global para ser utilizado entre os projetos.
+> Note que o pacote npm do cypress é um _wrapper_ que envolve o binário do Cypress. A versão do pacote npm determina qual versão do binário será baixado. A partir da versão 3.0, o binário é baixado como um diretório de cache global para ser utilizado entre os projetos.
 
 > Boa prática
 
-> A abordagem recomendada é de instalar o Cypress usando o `npm` porque: 
-    - Cypress é versionada como as outras dependências.
-    - É muito simples rodar o Cypress na Integração Contínua.
+> A abordagem recomendada é de instalar o Cypress usando o `npm`, pois: 
+    - O Cypress é versionado como qualquer outra dependência.
+    - Isto simplifica rodar o Cypress na Integração Contínua.
 
 ## `yarn add`
 
 Instalando o cypress usando o `yarn`:
 
 ```
-cd /your/project/path
+cd /caminho/do/projeto
 yarn add cypress --dev
 ```
 
-## download direto
+## Download direto do repositório
 
-Se você não estiver utilizando Node ou npm no seu projeto ou você quer tentar usar o Cypress rapidamente, você sempre poderá realizar o download do Cypress diretamente do nosso CDN. 
+Se você não estiver utilizando Node ou npm no seu projeto, ou você quer tentar usar o Cypress rapidamente, você sempre poderá realizar o download do Cypress diretamente de nossa CDN. 
 
-> Gravando as execuções para o Dashboard não é possível pelo download direto. Este download tem como oferecer uma forma rápida de utilizar o Cypress. Para gravar os testes no Dashboard, você precisará instalar o Cypress como uma depedência npm.
+> A gravação de execuções para o Dashboard não é possível através do download direto. Este download tem somente a intenção de ser uma forma simples de experimentar com o Cypress. Para gravar os testes no Dashboard, você precisará instalar o Cypress como uma depedência npm.
 
 O download direto sempre trará a última versão disponível. Sua plataforma será identificada automaticamente.
 
-Você pode descompactar manualmente e clicar duas vezes. Cypress irá ser executado sem precisar instalar nenhuma dependência.
+Você pode descompactar manualmente e clicar duas vezes. O Cypress será executado sem precisar instalar nenhuma dependência.
 
 ## Integração contínua
 
@@ -86,11 +86,11 @@ Você pode descompactar manualmente e clicar duas vezes. Cypress irá ser execut
 
 Por favor leia nossa documentação sobre [Integração Contínua](#) para ajudar na instação do Cypress na CI (Integração Contínua). Quando estiver rodando linux você precisa'ra instalar algumas dependências de sistema ou você pode usar a nossa imagem docker que possui tudo que você precisa.
 
-# Abrindo cypress
+# Abrindo o Cypress
 
-Se você usou `npm` para instalação, Cypress foi instalado no diretório `./node_modules`, com seus binários executáveis accessíveis em `./node_modules/.bin`.
+Se você usou `npm` para instalação, o Cypress foi instalado no diretório `./node_modules`, com seus binários executáveis accessíveis em `./node_modules/.bin`.
 
-Agora você pode abrir o Cypress do seu projeto principal com uma das seguintes formas:
+Agora você pode abrir o Cypress do seu projeto principal de uma das seguintes formas:
 
 A forma longa com o caminho completo
 ```
@@ -104,7 +104,7 @@ $(npm bin)/cypress open
 
 Ou usando o `npx`
 
-nota: npx está incluido no npm > v5.2 ou pode ser instalado separadamente.
+Obs.: o [npx](https://www.npmjs.com/package/npx) é incluido no npm > v5.2, ou pode ser instalado separadamente.
 ```
 npx cypress open
 ```
@@ -113,7 +113,7 @@ Após um momento, o Cypress Test Runner será aberto.
 
 # Trocando navegadores
 
-O Cypress Test Runner tenta encontrar todos os browsers compatíveis na máquina do usuário. O drop down para selecionar um navegador diferente está no topo lateral direito do Test Runner.
+O Cypress Test Runner tenta encontrar todos os navegadores compatíveis na máquina do usuário. O campo de seleção suspenso para selecionar um navegador diferente pode ser encontrado no topo lateral direito do Test Runner.
 
 ![cypress test runner ui](https://docs.cypress.io/img/guides/browser-list-dropdown.80de3be3.png)
 
@@ -123,11 +123,11 @@ Leia [Abrindo navegadores](#) para mais informações sobre como o Cypress contr
 
 > Suporte entre navegadores
 
-> Cypress atualmente suporta Firefox e família Chrome de browsers (incluindo Edge e Electron). Para executar testes de maneira otimizada nesses navegadores em CI (Integração Contínua), verifique as estratégias demonstradas no guia de teste entre navegadores.
+> O Cypress atualmente suporta o Firefox e navegadores da família Chrome (incluindo Edge e Electron). Para executar testes de maneira otimizada nesses navegadores na integração contínua, confira as estratégias demonstradas no [guia de teste entre navegadores](#).
 
 # Adicionando scripts npm
 
-Embora não haja nada de errado em escrever o caminho completo para o executável Cypress a cada vez, é muito mais fácil e claro adicionar comandos Cypress ao campo de scripts em seu arquivo `package.json`.
+Embora não haja nada de errado em escrever o caminho completo para o executável do Cypress a cada momento, é muito mais fácil e claro adicionar os comandos do Cypress ao campo de scripts em seu arquivo `package.json`.
 
 ```json
 {
@@ -137,7 +137,7 @@ Embora não haja nada de errado em escrever o caminho completo para o executáve
 }
 ```
 
-Agora você pode chamar o método do seu projeto principal dessa forma:
+Agora você pode chamar o comando a partir da raiz do projeto, dessa forma:
 ```
 npm run cypress:open
 ```
@@ -266,8 +266,8 @@ Veja https://download.cypress.io/desktop.json para todas plataformas disponívei
 | GET    |              /desktop               | Baixe o Cypress na versão mais recente (plataforma detectada automaticamente) |
 | GET    |            /desktop.json            |        Retorna JSON contendo os destinos CDN mais recentes disponíveis        |
 | GET    |     /desktop?platform=p&arch=a      |       Baixe o Cypress para uma plataforma e / ou arquitetura específica       |
-| GET    |          /desktop/:version          |                  Baixe o Cypress com uma versão especificada                  |
-| GET    | /desktop/:version?platform=p&arch=a | Baixe o Cypress com uma versão e plataforma e / ou arquitetura especificadas  |
+| GET    |          /desktop/:version          |                  Baixa o Cypress com uma versão especificada                  |
+| GET    | /desktop/:version?platform=p&arch=a | Baixa o Cypress com uma versão e plataforma e/ou arquitetura especificadas  |
 
 Exemplo de download do Cypress 3.0.0 para Windows de 64-bits:
 ```
@@ -276,7 +276,7 @@ https://download.cypress.io/desktop/3.0.0?platform=win32&arch=x64
 
 # Espelhamento
 
-Se você escolher espelhar todo o site de download do Cypress, pode especificar `CYPRESS_DOWNLOAD_MIRROR` para definir a URL do servidor de download de https://download.cypress.io para o seu próprio espelhamento.
+Se você escolher espelhar todo o site de download do Cypress, pode especificar `CYPRESS_DOWNLOAD_MIRROR` para definir a URL do servidor de download a partir de https://download.cypress.io para seu próprio espelhamento.
 
 Por exemplo:
 ```
@@ -322,20 +322,18 @@ setx CYPRESS_CRASH_REPORTS 0
 Se você deseja instalar uma versão de pré-lançamento do Test Runner para testar a funcionalidade que ainda não foi lançada, veja como:
 
 1. Abra a lista de commits para desenvolver no repo Cypress: https://github.com/cypress-io/cypress/commits/develop 
-2. Encontre o commit do qual você gostaria de instalar a versão de pré-lançamento. Clique no ícone de comentário (destacado em vermelho abaixo):
+2. Encontre o commit o qual você gostaria de instalar a versão de pré-lançamento. Clique no ícone de comentário (destacado em vermelho abaixo):
 
 ![comment link](https://docs.cypress.io/img/guides/install/develop-commit-comment-link.656c55d7.png)
 
-3. Você deve ver vários comentários do usuário do cypress-bot com instruções para instalar os pré-lançamentos do Cypress. Escolha aquele que corresponde ao seu sistema operacional e arquitetura da CPU, e siga as instruções para instalar o pré-lançamento.
+3. Você deve ver vários comentários do usuário cypress-bot com instruções para instalar os pré-lançamentos do Cypress. Escolha aquele que corresponde ao seu sistema operacional e arquitetura de CPU, e siga as instruções para instalar o pré-lançamento.
 
 Notas sobre pré-lançamentos:
 
 - Os pré-lançamentos do Cypress só estão disponíveis por cerca de um mês após serem construídos. Não confie que estes estejam disponíveis há mais de um mês.
 
-- Se você já tem um pré-lançamento ou lançamento oficial instalado para uma versão específica do Cypress, pode ser necessário `cypress cache clear` antes que o Cypress instale um pré-lançamento. Isso também se aplica à instalação de um lançamento oficial sobre um pré-lançamento - se você tiver um pré-lançamento do Cypress vX.Y.Z instalado, o lançamento oficial do Cypress vX.Y.Z não será instalado até você limpar o cache do cypress. 
+- Se você já tem um pré-lançamento ou lançamento oficial instalado para uma versão específica do Cypress, pode ser necessário rodar `cypress cache clear` antes que o Cypress instale um pré-lançamento. Isso também se aplica à instalação de um lançamento oficial sobre um pré-lançamento - se você tiver um pré-lançamento do Cypress vX.Y.Z instalado, o lançamento oficial do Cypress vX.Y.Z não será instalado até você limpar o cache do Cypress. 
 
-<br/>
 <div align="right">
     <b><a href="#">↥ Voltar para o topo</a></b>
 </div>
-<br/>
