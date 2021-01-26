@@ -78,7 +78,7 @@ Se você não estiver utilizando Node ou npm no seu projeto, ou você quer tenta
 
 O download direto sempre trará a última versão disponível. Sua plataforma será identificada automaticamente.
 
-Você pode descompactar manualmente e clicar duas vezes. Cypress irá ser executado sem precisar instalar nenhuma dependência.
+Você pode descompactar manualmente e clicar duas vezes. O Cypress será executado sem precisar instalar nenhuma dependência.
 
 ## Integração contínua
 
