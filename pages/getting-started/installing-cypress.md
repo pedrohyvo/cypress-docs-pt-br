@@ -70,7 +70,7 @@ cd /caminho/do/projeto
 yarn add cypress --dev
 ```
 
-## download direto
+## Download direto do repositório
 
 Se você não estiver utilizando Node ou npm no seu projeto ou você quer tentar usar o Cypress rapidamente, você sempre poderá realizar o download do Cypress diretamente do nosso CDN. 
 
