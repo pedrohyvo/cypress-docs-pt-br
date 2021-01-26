@@ -118,7 +118,7 @@ Leia [Abrindo navegadores](#) para mais informações sobre como o Cypress contr
 
 > Suporte entre navegadores
 
-> Cypress atualmente suporta Firefox e família Chrome de browsers (incluindo Edge e Electron). Para executar testes de maneira otimizada nesses navegadores em CI (Integração Contínua), verifique as estratégias demonstradas no guia de teste entre navegadores.
+> O Cypress atualmente suporta o Firefox e navegadores da família Chrome (incluindo Edge e Electron). Para executar testes de maneira otimizada nesses navegadores na integração contínua, confira as estratégias demonstradas no [guia de teste entre navegadores](#).
 
 # Adicionando scripts npm
 
