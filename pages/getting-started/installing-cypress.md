@@ -86,7 +86,7 @@ Por favor, leia nossa documentação sobre [Integração Contínua](#) para obte
 
 # Abrindo o Cypress
 
-Se você usou `npm` para instalação, Cypress foi instalado no diretório `./node_modules`, com seus binários executáveis accessíveis em `./node_modules/.bin`.
+Se você usou `npm` para instalação, o Cypress foi instalado no diretório `./node_modules`, com seus binários executáveis accessíveis em `./node_modules/.bin`.
 
 Agora você pode abrir o Cypress do seu projeto principal com uma das seguintes formas:
 
