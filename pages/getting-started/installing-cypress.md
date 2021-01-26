@@ -259,7 +259,7 @@ Veja https://download.cypress.io/desktop.json para todas plataformas disponívei
 | GET    |              /desktop               | Baixe o Cypress na versão mais recente (plataforma detectada automaticamente) |
 | GET    |            /desktop.json            |        Retorna JSON contendo os destinos CDN mais recentes disponíveis        |
 | GET    |     /desktop?platform=p&arch=a      |       Baixe o Cypress para uma plataforma e / ou arquitetura específica       |
-| GET    |          /desktop/:version          |                  Baixe o Cypress com uma versão especificada                  |
+| GET    |          /desktop/:version          |                  Baixa o Cypress com uma versão especificada                  |
 | GET    | /desktop/:version?platform=p&arch=a | Baixe o Cypress com uma versão e plataforma e / ou arquitetura especificadas  |
 
 Exemplo de download do Cypress 3.0.0 para Windows de 64-bits:
