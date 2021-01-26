@@ -101,7 +101,7 @@ Ou com o atalho usando `npm bin`
 
 Ou usando o `npx`
 
-nota: npx está incluido no npm > v5.2 ou pode ser instalado separadamente.
+Obs.: o [npx](https://www.npmjs.com/package/npx) é incluido no npm > v5.2, ou pode ser instalado separadamente.
 ```
 npx cypress open
 ```
