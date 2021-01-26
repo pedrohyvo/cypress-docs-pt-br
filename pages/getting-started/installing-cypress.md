@@ -3,7 +3,7 @@
 O que você vai aprender
 
 - Como instalar Cypress usando `npm`
-- Como instalar Cypress por download direto
+- Como instalar Cypress fazendo download a partir do repositório
 - Como versionar e rodar Cypress usando `package.json`
 ```
 
