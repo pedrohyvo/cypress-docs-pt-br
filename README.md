@@ -1,7 +1,6 @@
 # cypress-docs-pt-br
 
 ## Documentação oficial
-<br/>
 
 **Tabela de Conteúdo** ⚡
 
