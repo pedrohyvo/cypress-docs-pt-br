@@ -59,7 +59,7 @@ Isto vai instalar o Cypress localmente como uma dependência de desenvolvimento 
 
 > A abordagem recomendada é de instalar o Cypress usando o `npm`, pois: 
     - O Cypress é versionado como qualquer outra dependência.
-    - É muito simples rodar o Cypress na Integração Contínua.
+    - Isto simplifica rodar o Cypress na Integração Contínua.
 
 ## `yarn add`
 
