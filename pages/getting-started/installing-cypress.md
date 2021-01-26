@@ -269,7 +269,7 @@ https://download.cypress.io/desktop/3.0.0?platform=win32&arch=x64
 
 # Espelhamento
 
-Se você escolher espelhar todo o site de download do Cypress, pode especificar `CYPRESS_DOWNLOAD_MIRROR` para definir a URL do servidor de download de https://download.cypress.io para o seu próprio espelhamento.
+Se você escolher espelhar todo o site de download do Cypress, pode especificar `CYPRESS_DOWNLOAD_MIRROR` para definir a URL do servidor de download a partir de https://download.cypress.io para seu próprio espelhamento.
 
 Por exemplo:
 ```
