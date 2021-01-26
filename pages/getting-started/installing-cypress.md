@@ -132,7 +132,7 @@ Embora não haja nada de errado em escrever o caminho completo para o executáve
 }
 ```
 
-Agora você pode chamar o método do seu projeto principal dessa forma:
+Agora você pode chamar o comando a partir da raiz do projeto, dessa forma:
 ```
 npm run cypress:open
 ```
