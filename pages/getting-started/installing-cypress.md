@@ -51,7 +51,7 @@ npm install cypress --save-dev
 
 Isto vai instalar o Cypress localmente como uma dependência de desenvolvimento em seu projeto.
 
-> Tenha certificado que você já tenha rodado `npm init` ou tenha o diretório `node_modules` ou o arquivo `package.json` no diretório raiz do seu projeto para garantir que o cypress foi instalado no diretório correto.
+> Certifique-se que você já rodou `npm init`, ou tenha o diretório `node_modules`, ou o arquivo `package.json` no diretório raiz do seu projeto para garantir que o cypress seja instalado no diretório correto.
 
 > Note que o pacote npm do cypress é um wrapper que envolve o binário do Cypress. A versão do pacote npm determina qual versão do binário baixado. Como a versão 3.0, o binário baixado como um diretório de cache global para ser utilizado entre os projetos.
 
