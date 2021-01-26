@@ -325,7 +325,7 @@ Notas sobre pré-lançamentos:
 
 - Os pré-lançamentos do Cypress só estão disponíveis por cerca de um mês após serem construídos. Não confie que estes estejam disponíveis há mais de um mês.
 
-- Se você já tem um pré-lançamento ou lançamento oficial instalado para uma versão específica do Cypress, pode ser necessário `cypress cache clear` antes que o Cypress instale um pré-lançamento. Isso também se aplica à instalação de um lançamento oficial sobre um pré-lançamento - se você tiver um pré-lançamento do Cypress vX.Y.Z instalado, o lançamento oficial do Cypress vX.Y.Z não será instalado até você limpar o cache do cypress. 
+- Se você já tem um pré-lançamento ou lançamento oficial instalado para uma versão específica do Cypress, pode ser necessário rodar `cypress cache clear` antes que o Cypress instale um pré-lançamento. Isso também se aplica à instalação de um lançamento oficial sobre um pré-lançamento - se você tiver um pré-lançamento do Cypress vX.Y.Z instalado, o lançamento oficial do Cypress vX.Y.Z não será instalado até você limpar o cache do Cypress. 
 
 <br/>
 <div align="right">
