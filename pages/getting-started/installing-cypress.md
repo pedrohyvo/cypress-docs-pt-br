@@ -66,7 +66,7 @@ Isto vai instalar o Cypress localmente como uma dependência de desenvolvimento 
 Instalando o cypress usando o `yarn`:
 
 ```
-cd /your/project/path
+cd /caminho/do/projeto
 yarn add cypress --dev
 ```
 
