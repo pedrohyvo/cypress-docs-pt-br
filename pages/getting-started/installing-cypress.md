@@ -43,7 +43,7 @@ yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2
 
 ## `npm install`
 
-Instale Cypress usando `npm`:
+Instale o Cypress usando `npm`:
 ```
 cd /caminho/do/diretorio
 npm install cypress --save-dev
