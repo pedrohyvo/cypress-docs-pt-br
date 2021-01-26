@@ -110,7 +110,7 @@ Após um momento, o Cypress Test Runner será aberto.
 
 # Trocando navegadores
 
-O Cypress Test Runner tenta encontrar todos os browsers compatíveis na máquina do usuário. O drop down para selecionar um browser diferente está no topo lateral direito do Test Runner.
+O Cypress Test Runner tenta encontrar todos os navegadores compatíveis na máquina do usuário. O campo de seleção suspenso para selecionar um navegador diferente pode ser encontrado no topo lateral direito do Test Runner.
 
 ![cypress test runner ui](https://docs.cypress.io/img/guides/browser-list-dropdown.80de3be3.png)
 
