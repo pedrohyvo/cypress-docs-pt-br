@@ -191,7 +191,7 @@ Em todos os casos, o fato do binário ter sido instalado a partir de um local pe
 
 ## Pulando a instalação
 
-You can also force Cypress to skip the installation of the binary application by setting CYPRESS_INSTALL_BINARY=0. This could be useful if you want to prevent Cypress from downloading the Cypress binary at the time of npm install.
+Você também pode forçar o Cypress a pular a instalação da aplicação binária definindo `CYPRESS_INSTALL_BINARY = 0`. Isso pode ser útil se você quiser evitar que o Cypress baixe o binário do Cypress no momento da instalação do `npm install`.
 ```
 CYPRESS_INSTALL_BINARY=0 npm install
 ```
@@ -199,8 +199,8 @@ CYPRESS_INSTALL_BINARY=0 npm install
 Agora o Cypress irá pular as etapas de instalação já que o módulo `npm` está instalado.
 
 # Cache binário
-A partir da versão 3.0, 
-As of version 3.0, Cypress baixa o seu binário correspondente para o cache do sistema global, para que o binário possa ser compartilhado entre projetos. Por padrão, as pastas de cache globais são:
+
+A partir da versão 3.0, o Cypress baixa o seu binário correspondente para o cache do sistema global, para que o binário possa ser compartilhado entre projetos. Por padrão, as pastas de cache globais são:
 
   - MacOS: ~/Library/Caches/Cypress
   - Linux: ~/.cache/Cypress
@@ -319,7 +319,7 @@ setx CYPRESS_CRASH_REPORTS 0
 
 # Instalar versão pré-lançamento
 
-Se você deseja instalar uma versão de pré-lançamento do Test Runner para testar a funcionalidade que ainda não foi lançada, veja como:
+Se você deseja instalar uma versão de pré-lançamento do Test Runner para testar uma funcionalidade que ainda não foi lançada, veja como:
 
 1. Abra a lista de commits para desenvolver no repo Cypress: https://github.com/cypress-io/cypress/commits/develop 
 2. Encontre o commit o qual você gostaria de instalar a versão de pré-lançamento. Clique no ícone de comentário (destacado em vermelho abaixo):
