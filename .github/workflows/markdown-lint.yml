@@ -1,40 +1,20 @@
-# This is a basic workflow to help you get started with Actions
-
 name: markdown-lint
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   lint-changelog:
-    name: Lint changelog file
+    name: Lint docs
     runs-on: ubuntu-latest
     steps:
     - name: Check out code
       uses: actions/checkout@v2
-
-    - name: Lint changelog file
-      uses: docker://avtodev/markdown-lint:v1 # fastest way
-      with:
-        rules: '/lint/rules/changelog.js'
-        config: '/lint/config/changelog.yml'
-        args: './CHANGELOG.md'
-        ignore: './one_file.md ./another_file.md' # multiple files must be separated with single space
-
-    # Or using current repository as action:
-
-    - name: Lint changelog file
-      uses: avto-dev/markdown-lint@v1
-      with:
-        rules: '/lint/rules/changelog.js'
-        config: '/lint/config/changelog.yml'
-        args: './CHANGELOG.md'
+    - name: Installation of dependencies
+      run: npm install
+    - name: Lint all markdownfiles
+      run: node_modules/.bin/markdownlint ./ --ignore node_modules
