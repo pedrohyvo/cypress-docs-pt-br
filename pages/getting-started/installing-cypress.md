@@ -144,7 +144,7 @@ npm run cypress:open
 
 … e o Cypress irá abrir direto para você. 
 
-# Ferramentas CLI
+# Ferramentas CLI (_Command Line Interface_)
 
 Instalando Cypress pela `npm` você também pode acessar vários comandos CLI.
 
