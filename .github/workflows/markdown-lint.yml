@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v2
-    - name: Installation of dependencies
-      run: npm install
     - name: Lint all markdownfiles
-      run: node_modules/.bin/markdownlint ./ --ignore node_modules
+      run: |
+        npm install
+        node_modules/.bin/markdownlint ./ --ignore node_modules
