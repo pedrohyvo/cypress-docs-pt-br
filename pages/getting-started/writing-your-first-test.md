@@ -1,4 +1,4 @@
-# Escrevendo o primeiro teste
+# Escrevendo o Primeiro Teste
 ```
 O que você vai aprender
 
@@ -89,4 +89,3 @@ Todas essas funções vem das [Bundled Tools](https://docs.cypress.io/guides/ref
 > Cypress utiliza dessas ferramentas e frameworks populares, os quais é esperado que você já tenha alguma familiaridade e conhecimento prévio. Mas se não tiver, tudo bem.
 
 # Escreva um teste real
-
