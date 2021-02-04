@@ -1,4 +1,5 @@
 # Escrevendo o Primeiro Teste
+
 ```
 O que você vai aprender
 
@@ -9,7 +10,7 @@ O que você vai aprender
 
 [Vídeo de exemplo.](https://vimeo.com/237115455)
 
-# Adicione um arquivo de teste
+## Adicione um arquivo de teste
 
 Assumindo que você tenha [instalado](pages/getting-started/installing-cypress.md#instalando) e 
 [aberto](pages/getting-started/installing-cypress.md#abrindo-o-cypress) o Cypress Test Runner, 
@@ -44,7 +45,7 @@ Isso é normal - testes ainda não foram escritos! Você verá essa mensagem tam
  erro ao analisar os arquivos de teste. Você pode abrir o Dev Tools para inspecionar o console e 
  buscar por erros de sintaxe que impediu o Cypress de ler seus arquivos de testes.
 
-# Escreva seu primeiro teste
+## Escreva seu primeiro teste
 
 Chegou a hora de escrever o nosso primeiro teste. Vamos então:
 
@@ -123,4 +124,4 @@ Expect vem do [Chai](http://www.chaijs.com/).
 > Cypress utiliza dessas ferramentas e frameworks populares, os quais é esperado que você já tenha 
 alguma familiaridade e conhecimento prévio. Mas se não tiver, tudo bem.
 
-# Escreva um teste real
+## Escreva um teste real
