@@ -8,7 +8,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  lint-changelog:
+  lint-doc:
     name: Lint docs
     runs-on: ubuntu-latest
     steps:
@@ -18,3 +18,6 @@ jobs:
       run: |
         npm install
         node_modules/.bin/markdownlint ./ --ignore node_modules
+    - name: markdown-link-check
+      uses: gaurav-nelson/github-action-markdown-link-check@1.0.12
+
