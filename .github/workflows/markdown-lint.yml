@@ -8,7 +8,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  lint-doc:
+  lint-docs:
     name: Lint docs
     runs-on: ubuntu-latest
     steps:
