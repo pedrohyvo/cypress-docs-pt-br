@@ -1,6 +1,6 @@
 # Escrevendo o Primeiro Teste
 
-```
+```markdown
 O que você vai aprender
 
 - Como começar a testar um novo projeto com Cypress
@@ -58,7 +58,7 @@ real.
 
 Abra sua IDE favorita e adicione o código abaixo no arquivo de teste `sample_spec.js`.
 
-```
+```javascript
 describe('My First Test', () => {
   it('Does not do much!', () => {
     expect(true).to.equal(true)
@@ -85,7 +85,7 @@ página na internet - mas também pode funcionar bem sem isso.
 
 Agora vamos escrever nosso primeiro teste com falha.
 
-```
+```javascript
 describe('My First Test', () => {
   it('Does not do much!', () => {
     expect(true).to.equal(false)
