@@ -12,8 +12,8 @@ O que você vai aprender
 
 ## Adicione um arquivo de teste
 
-Assumindo que você tenha [instalado](pages/getting-started/installing-cypress.md#instalando) e 
-[aberto](pages/getting-started/installing-cypress.md#abrindo-o-cypress) o Cypress Test Runner, 
+Assumindo que você tenha [instalado](installing-cypress.md#instalando) e 
+[aberto](installing-cypress.md#abrindo-o-cypress) o Cypress Test Runner, 
 chegou a hora de escrever o primeiro teste. Vamos então:
 
 1. Criar um arquivo `sample_spec.js`.
@@ -79,7 +79,7 @@ em verde - sucesso).
 
 [//]: <> (TODO - Adicionar links Test Runner e Visit Command quando forem traduzidos)
 > Observe que o Cypress exibe uma mensagem sobre essa ser a página padrão 
-[ao lado direito](https://docs.cypress.io/guides/core-concepts/test-runner.html#Application-Under-Test). 
+[à direita](https://docs.cypress.io/guides/core-concepts/test-runner.html#Application-Under-Test).
 Cypress assume que você irá sair e [visitar](https://docs.cypress.io/api/commands/visit.html) outra 
 página na internet - mas também pode funcionar bem sem isso.
 
@@ -100,7 +100,7 @@ que `true` não é igual a `false`.
 Cypress também exibe o log do erro e o pedaço do código onde a asserção falhou 
 (quando disponível). Você pode clicar no link do arquivo em azul para abrir o arquivo em que o 
 erro ocorreu 
-[em sua IDE preferida](https://docs.cypress.io/guides/tooling/IDE-integration.html#File-Opener-Preference). 
+[em sua IDE](https://docs.cypress.io/guides/tooling/IDE-integration.html#File-Opener-Preference). 
 Para ler mais sobre exibição de erros, leia sobre 
 [Debugando Erros](https://docs.cypress.io/guides/guides/debugging.html#Errors).
 
