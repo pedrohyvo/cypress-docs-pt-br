@@ -1,1 +1,5 @@
-{}
+{
+  "dependencies": {
+    "markdownlint-cli": "^0.26.0"
+  }
+}
