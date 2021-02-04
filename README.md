@@ -21,3 +21,13 @@
     - [Diferenças-chave](pages/overview/key-differences.md)
 - Primeiros Passos
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
+
+----
+
+## Contributing
+
+If you are interested in translating `cypress.io docs` to `pt-BR`, check the opened issues
+and claim a section/page to translate. Also, when translating any content, make sure you 
+follow [markdown lint rules](https://github.com/DavidAnson/markdownlint).
+
+ps: for VSCode users, we have an [markdownlint extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
