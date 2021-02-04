@@ -1,0 +1,20 @@
+name: markdown-lint
+
+# Controls when the action will run. 
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  lint-changelog:
+    name: Lint docs
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Lint all markdownfiles
+      run: |
+        npm install
+        node_modules/.bin/markdownlint ./ --ignore node_modules
