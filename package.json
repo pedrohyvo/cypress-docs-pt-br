@@ -1,5 +1,7 @@
 {
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "markdown-link-check": "^3.8.6",
     "markdownlint-cli": "^0.26.0"
   }
 }
