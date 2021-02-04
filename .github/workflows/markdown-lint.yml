@@ -18,6 +18,3 @@ jobs:
       run: |
         npm install
         node_modules/.bin/markdownlint ./ --ignore node_modules
-    - name: markdown-link-check
-      uses: gaurav-nelson/github-action-markdown-link-check@1.0.12
-
