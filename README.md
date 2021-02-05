@@ -14,6 +14,8 @@
 </div>
 <br/>
 
+![markdown-lint](https://github.com/pedrohyvo/cypress-docs-pt-br/workflows/markdown-lint/badge.svg?branch=master)
+
 ## **Tabela de Conteúdo** ⚡
 
 - Visão Geral
@@ -21,6 +23,7 @@
     - [Diferenças-chave](pages/overview/key-differences.md)
 - Primeiros Passos
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
+    - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
 
 ----
 
