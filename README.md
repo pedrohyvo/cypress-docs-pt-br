@@ -14,7 +14,7 @@
 </div>
 <br/>
 
-![markdown-lint](https://github.com/pedrohyvo/cypress-docs-pt-br/workflows/markdown-lint/badge.svg?branch=master)
+![markdown-lint](https://github.com/pedrohyvo/cypress-docs-pt-br/workflows/markdown-lint/badge.svg)
 
 ## **Tabela de Conteúdo** ⚡
 
