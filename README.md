@@ -11,6 +11,7 @@
   <br/>
 	</a>
   <p>Documentação oficial do framework Cypress.io em Português-Brasil</p>
+  <p>Feita pela comunidade ❤️ </p>
 </div>
 <br/>
 
@@ -27,7 +28,14 @@
 
 ----
 
-## Contributing
+## Disclaimer (Aviso Legal) ⚠️
+
+**Por que a documentação não está sendo feita no repositório oficial?**
+
+> Existe uma [issue](https://github.com/cypress-io/cypress-documentation/issues/3084) no
+repositório da documentação do Cypress que comenta sobre o não suporte das outras traduções.
+
+## Contribuindo
 
 If you are interested in translating `cypress.io docs` to `pt-BR`, check the opened issues
 and claim a section/page to translate. Also, when translating any content, make sure you 
