@@ -17,6 +17,8 @@
 
 ![markdown-lint](https://github.com/pedrohyvo/cypress-docs-pt-br/workflows/markdown-lint/badge.svg?branch=master)
 
+----
+
 ## **Tabela de Conteúdo** ⚡
 
 - Visão Geral
@@ -28,6 +30,9 @@
 
 ----
 
+
+&nbsp;
+
 ## Disclaimer (Aviso Legal) ⚠️
 
 **Por que a documentação não está sendo feita no repositório oficial?**
@@ -35,10 +40,18 @@
 > Existe uma [issue](https://github.com/cypress-io/cypress-documentation/issues/3084) no
 repositório da documentação do Cypress que comenta sobre o não suporte das outras traduções.
 
-## Contribuindo
 
-If you are interested in translating `cypress.io docs` to `pt-BR`, check the opened issues
-and claim a section/page to translate. Also, when translating any content, make sure you 
-follow [markdown lint rules](https://github.com/DavidAnson/markdownlint).
+&nbsp;
 
-ps: for VSCode users, we have an [markdownlint extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
+## Como contribuir 🤝
+
+Se você está interessado em ajudar na tradução da documentação do `Cypress.io`
+para `Português-Brasil`, verifique as 
+[issues abertas](https://github.com/pedrohyvo/cypress-docs-pt-br/issues) e 
+solicite uma seção/página para traduzir.
+
+Você também pode enviar qualquer ideia/sugestão como issues no GitHub.
+
+Todas as contribuições são muito bem-vindas :D 
+
+Para maiores informações, recomendo a leitura do nosso [guia de como contribuir](CONTRIBUTING.md).
