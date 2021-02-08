@@ -9,7 +9,15 @@ nome da página ou seção que você está traduzindo).
 4. Salve as alterações e crie uma mensagem de commit contando o que você fez:
 `git commit -m "doc: Add Example page"`.
 5. Envie as suas alterações: `git push origin nome-pagina-nome-secao`.
-6. Verifique se a sua branch está atualizada com a branch `master` e submeta seu pull request!
+6. Verifique se a sua branch está atualizada com base no repositório `upstream` e submeta seu pull request!
+Ex:
+
+```bash
+git fetch upstream
+git checkout master
+git reset --hard upstream/master  
+git push origin master --force
+```
 
 > Quando estiver traduzindo qualquer conteúdo, tenha certeza que está seguindo as regras
 do `markdown lint rules`
@@ -28,4 +36,4 @@ npm install
 node_modules/.bin/markdownlint ./ --ignore node_modules
 ```
 
-obs: para os usuários do VSCode, existe uma extensão [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
+Obs: para os usuários do VSCode, existe uma extensão [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
