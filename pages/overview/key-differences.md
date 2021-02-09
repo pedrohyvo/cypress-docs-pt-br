@@ -32,10 +32,14 @@ o que o coloca na posição única de ser capaz de entender tudo o que acontece
 dentro e fora do navegador. Isso significa que o Cypress é capaz de fornecer 
 resultados mais consistentes do que qualquer outra ferramenta de teste.
 
-Visto que o Cypress é instalado localmente em sua máquina, ele também pode 
-acessar o sistema operacional para tarefas de automação. Isso torna possível
-a execução de tarefas como tirar screenshots, gravar vídeos, operações gerais
-do sistema de arquivos e perações de rede.
+[//]: <> (TODO - Adicionar links)
+
+Visto que o Cypress é [instalado localmente](../getting-started/installing-cypress.md)
+em sua máquina, ele também pode acessar o sistema operacional para tarefas de automação.
+Isso torna possível a execução de tarefas como 
+[tirar screenshots, gravar vídeos](https://docs.cypress.io/guides/guides/screenshots-and-videos.html), 
+[operações gerais do sistema de arquivos](https://docs.cypress.io/api/commands/exec.html) e 
+[operações de rede](https://docs.cypress.io/api/commands/request.html).
 
 ## Acesso nativo
 
@@ -58,29 +62,46 @@ necessitam a criação do estado necessário para uma determinada situação,
 você pode simplesmente criar esses estados artificialmente como faria em um 
 teste de unidade. Você pode, por exemplo:
 
-- Fazer um Stub do navegador ou das funções da sua aplicação e forçá-los a se 
-comportar conforme necessário no seu caso de teste.
+[//]: <> (TODO - Adicionar stub link)
+
+- Fazer um [Stub](https://docs.cypress.io/api/commands/stub.html) do navegador ou das funções
+da sua aplicação e forçá-los a se comportar conforme necessário no seu caso de teste.
+
 - Exponha *data stores*, ou armazenamentos de dados (como no Redux) para que 
 você possa alterar programaticamente o estado de sua aplicação diretamente de 
 seu código de teste.
+
 - Teste *edge cases* como 'páginas vazias', forçando seu servidor a 
 enviar respostas vazias.
-- Teste como sua aplicação responde a erros em seu servidor modificando os 
-códigos de status de resposta para 500.
+
+[//]: <> (TODO - Adicionar route link)
+
+- Teste como sua aplicação responde a erros em seu servidor 
+[modificando os códigos de status de resposta para 500](https://docs.cypress.io/api/commands/route.html).
+
 - Modifique elementos do DOM diretamente - como forçar a exibição de 
 elementos ocultos.
+
 - Use plugins de terceiros programaticamente. Em vez de se preocupar com widgets
 complexos da interface do usuário, como seleções múltiplas, 
 preenchimentos automáticos, menus suspensos, visualizações em árvore ou 
 calendários, basta chamar os métodos diretamente do seu código de teste 
 para controlá-los.
-- Impedir que o Google Analytics carregue *antes* que qualquer código 
-de sua aplicação execut durante o teste.
+
+[//]: <> (TODO - Adicionar block hosts link)
+
+- [Impedir que o Google Analytics carregue *antes* que qualquer código de sua aplicação execute](https://docs.cypress.io/guides/references/configuration.html#blockHosts)
+durante o teste.
+
 - Receber notificações síncronas sempre que sua aplicação fizer a transição 
 para uma nova página ou quando começar a descarregar.
-- Controle o tempo movendo-se para frente ou para trás para que os 
-temporizadores ou *polls* disparem automaticamente sem ter que esperar pelo 
+
+[//]: <> (TODO - Adicionar clock link)
+
+- [Controle o tempo movendo-se para frente ou para trás](https://docs.cypress.io/api/commands/clock.html)
+para que os temporizadores ou *polls* disparem automaticamente sem ter que esperar pelo 
 tempo necessário em seus testes.
+
 - Adicione seus próprios ouvintes de eventos (*event listeners*) para responder 
 à sua aplicação. Você pode atualizar o código da aplicação para se comportar de 
 maneira diferente quando estiver em testes no Cypress. Você pode controlar as 
@@ -108,18 +129,24 @@ Preocupado com o CORS? Não fique, isso é completamente ignorado.
 O poder de escolher quando testar como um usuário e quando pular partes lentas
 e repetitivas é seu.
 
-## *Flake resistant* (resistentes à "fraquesas")
+## *Flake resistant* (resistentes à "fraquezas")
+
+[//]: <> (TODO - Adicionar links)
 
 O Cypress conhece e compreende tudo o que acontece em sua aplicação de forma 
 síncrona. Ele é notificado no momento em que a página é carregada e no momento
 em que a página é descarregada. É impossível para o Cypress perder elementos
 quando ele aciona eventos. O Cypress sabe até mesmo o quão rápida a animação
-de um elemento leva e esperará que ele pare de animar. Além disso, ele espera
-automaticamente que os elementos se tornem visíveis, se tornem ativados e 
-deixem de ser cobertos. Quando as páginas começarem a transição, o Cypress 
-pausará a execução do comando até que a página seguinte seja totalmente 
-carregada. Você pode até mesmo dizer ao Cypress para esperar por solicitações
-de rede específicas até que sejam terminadas.
+de um elemento leva e esperará que ele 
+[pare a animação](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Animations).
+Além disso, ele 
+[espera automaticamente que os elementos se tornem visíveis](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Visibility),
+se [tornem ativados](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Disability) 
+e [deixem de ser cobertos](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Covering). 
+Quando as páginas começarem a transição, o Cypress pausará a execução do comando até que a página seguinte
+seja totalmente carregada. Você pode até mesmo dizer ao Cypress para 
+[esperar](https://docs.cypress.io/api/commands/wait.html)
+por solicitações de rede específicas até que sejam terminadas.
 
 O Cypress executa a grande maioria dos seus comandos dentro do navegador, 
 portanto, não há atrasos devido à rede. Comandos executam e conduzem sua 
@@ -159,7 +186,9 @@ tudo ao mesmo tempo.
 Embora o Cypress possua muitas novas e poderosas capacidades - 
 também existem importantes *trade-offs* que fizemos para tornar isso possível.
 
-Se você estiver interessado em entender mais, 
-escrevemos um guia completo sobre esse tópico.
+[//]: <> (TODO - Adicionar trade-offs link)
+
+Se você estiver interessado em entender mais, escrevemos 
+[um guia completo](https://docs.cypress.io/guides/references/trade-offs.html) sobre esse tópico.
 
 [Voltar para o topo](#diferenças-chave)
