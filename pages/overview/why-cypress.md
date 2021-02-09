@@ -163,21 +163,21 @@ que conhece e adora.
 
 [Vídeo de exemplo](https://docs.cypress.io/img/snippets/debugging.mp4)
 
-## Cypress no Mundo Real
+## Cypress Real World App
 
-![Cypress no Mundo Real](https://docs.cypress.io/img/guides/real-world-app.df1de4ad.png)
+![Cypress Real World App](https://docs.cypress.io/img/guides/real-world-app.df1de4ad.png)
 
 O Cypress torna rápido e fácil iniciar os testes e, quando você começa a testar seu aplicativo,
 **muitas vezes se pergunta se está usando as melhores práticas ou estratégias escaláveis.**
 
 Para guiar esse caminho, o time do Cypress criou a 
-[Aplicação Mundo Real (RWA)](https://github.com/cypress-io/cypress-realworld-app),
+[Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app),
 uma aplicação exemplo completa que demonstra testes com o **Cypress em cenários práticos e realistas.**
 
-O RWA alcança cobertura de código total com testes ponta a ponta em vários navegadores e
+A RWA alcança cobertura de código total com testes ponta a ponta em vários navegadores e
 tamanhos de dispositivo, mas também inclui testes de regressão visual, testes de API,
-testes de unidade e os executa em um pipeline de CI eficiente. Use o RWA para **aprender,**
-**experimentar, mexer e praticar** testes de aplicativos da web com o Cypress.
+testes de unidade e os executa em um pipeline de CI eficiente. Use a RWA para **aprender,**
+**experimentar, mexer e praticar** testes de aplicativos web com o Cypress.
 
 O aplicativo vem com tudo que você precisa, 
 [basta clonar o repositório](https://github.com/cypress-io/cypress-realworld-app)
