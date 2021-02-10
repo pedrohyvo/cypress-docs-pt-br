@@ -30,18 +30,12 @@
 
 ----
 
-
-&nbsp;
-
 ## Disclaimer (Aviso Legal) ⚠️
 
 **Por que a documentação não está sendo feita no repositório oficial?**
 
 > Existe uma [issue](https://github.com/cypress-io/cypress-documentation/issues/3084) no
 repositório da documentação do Cypress que comenta sobre o não suporte das outras traduções.
-
-
-&nbsp;
 
 ## Como contribuir 🤝
 
