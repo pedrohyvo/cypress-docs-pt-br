@@ -165,6 +165,7 @@ describe('My First Test', () => {
 Salve o arquivo e retorne ao Cypress Test Runner. Você vai perceber algumas coisas:
 
 [//]: <> (TODO - Adicionar link Command Log quando for traduzido)
+
 1. O [Log de Comandos](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log)
 agora exibe a nova ação `visit`.
 2. A aplicação Kitchen Sink foi carregada no painel de 
@@ -268,6 +269,7 @@ Agora podemos fazer uma asserção nessa nova página!
 [Vídeo de exemplo do teste acima](https://docs.cypress.io/img/snippets/first-test-click-30fps.mp4)
 
 [//]: <> (TODO - Adicionar link Triple Slash Directives quando for traduzido)
+
 ```markdown
 Você pode ver o IntelliSense em seus arquivos de teste ao adicionar uma única linha de comentário especial.
 Leia sobre isso [aqui](https://docs.cypress.io/guides/tooling/IDE-integration.html#Triple-slash-directives).
