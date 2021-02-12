@@ -229,15 +229,12 @@ eventualmente o elemento será encontrado no DOM. O teste não falha imediatamen
 
 ![Teste com falha](https://docs.cypress.io/img/guides/first-test-failing-contains.529e740a.png)
 
-```markdown
-Mensagens de Erro
-
 [//]: <> (TODO - Adicionar link Debugging quando for traduzido)
-Tomamos o cuidado de escrever centenas de mensagens de erro personalizadas que tentam explicar claramente
+
+> Tomamos o cuidado de escrever centenas de mensagens de erro personalizadas que tentam explicar claramente
 o que deu errado no Cypress. Nesse caso, o Cypress atingiu o tempo limite tentando encontrar o texto hype
 em toda a página. Para ler mais sobre a exibição do erro, leia sobre
 [Erros de depuração](https://docs.cypress.io/guides/guides/debugging.html#Errors).
-```
 
 Antes de adicionar outro comando - vamos consertar esse teste. Substitua `hype` por `type`.
 
@@ -270,11 +267,9 @@ Agora podemos fazer uma asserção nessa nova página!
 
 [//]: <> (TODO - Adicionar link Triple Slash Directives quando for traduzido)
 
-```markdown
-Você pode ver o IntelliSense em seus arquivos de teste ao adicionar uma única linha de comentário especial.
+> Você pode ver o IntelliSense em seus arquivos de teste ao adicionar uma única linha de comentário especial.
 Leia sobre isso [aqui](https://docs.cypress.io/guides/tooling/IDE-integration.html#Triple-slash-directives).
-```
 
 ### Passo 4: Fazer uma asserção
 
-[Voltar para o topo](#writing-your-first-test.md)
+[Voltar para o topo](#escrevendo-o-primeiro-teste)
