@@ -145,7 +145,8 @@ Hoje, vamos ver esses passos de perto e mapeá-los claramente em comandos do Cyp
 
 ### Passo 1: Visitar uma página web
 
-Primeiro, vamos visitar uma página web. Neste exemplo vamos visitar a aplicação 
+[//]: <> (TODO - Adicionar link Kitchen Sink quando for traduzido)
+Primeiro, vamos visitar uma página web. Neste exemplo vamos usar a aplicação 
 [Kitchen Sink](https://docs.cypress.io/examples/examples/applications.html#Kitchen-Sink)
 para que você possa experimentar o Cypress sem se preocupar em procurar uma página para 
 testar.
@@ -163,6 +164,7 @@ describe('My First Test', () => {
 
 Salve o arquivo e retorne ao Cypress Test Runner. Você vai perceber algumas coisas:
 
+[//]: <> (TODO - Adicionar link Command Log quando for traduzido)
 1. O [Log de Comandos](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log)
 agora exibe a nova ação `visit`.
 2. A aplicação Kitchen Sink foi carregada no painel de 
@@ -173,7 +175,7 @@ agora exibe a nova ação `visit`.
 Se essa solicitação tivesse retornado com um código de status diferente de 2xx, como 404 ou 500, 
 ou se houvesse um erro de JavaScript no código do aplicativo, o teste teria falhado.
 
-[Veja o exemplo acima neste vídeo](https://docs.cypress.io/img/snippets/first-test-visit-30fps.mp4).
+[Vídeo de exemplo](https://docs.cypress.io/img/snippets/first-test-visit-30fps.mp4).
 
 ```markdown
 Teste apenas aplicações que você controla
@@ -188,8 +190,8 @@ não controla. Por quê?
 
 O ponto do Cypress é ser uma ferramente de uso diário para construir e testar suas próprias aplicações.
 
-Cypress não é uma ferramenta de automação de propósito geral. É pouco adequado para scripts em sites que 
-estão produção, e não estão sob seu controle.
+O Cypress não é uma ferramenta de automação de propósito geral. É pouco adequado para scripts em sites que
+estão em produção, e não estão sob seu controle.
 ```
 
 ### Passo 2: Consultar um elemento
@@ -213,6 +215,7 @@ describe('My First Test', () => {
 
 Agora o teste deve exibir o comando `CONTAINS` e ainda estar verde.
 
+[//]: <> (TODO - Adicionar link Default Assertions quando for traduzido)
 Mesmo sem adicionar uma asserção, sabemos que está tudo certo! Isso acontece pois muitos dos comandos
 do Cypress são construídos para falhar caso não encontram o que é esperado. Isso é conhecido como uma
 [Asserção Padrão](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Default-Assertions).
@@ -228,6 +231,7 @@ eventualmente o elemento será encontrado no DOM. O teste não falha imediatamen
 ```markdown
 Mensagens de Erro
 
+[//]: <> (TODO - Adicionar link Debugging quando for traduzido)
 Tomamos o cuidado de escrever centenas de mensagens de erro personalizadas que tentam explicar claramente
 o que deu errado no Cypress. Nesse caso, o Cypress atingiu o tempo limite tentando encontrar o texto hype
 em toda a página. Para ler mais sobre a exibição do erro, leia sobre
@@ -253,7 +257,7 @@ describe('My First Test', () => {
 })
 ```
 
-É quase possível ler o teste como uma história! Cypress chama isso de encadeamento e comandos são
+É quase possível ler o teste como uma história! O Cypress chama isso de encadeamento e comandos são
 encadeados para contruir testes que realmente expressam o que a aplicação faz de forma declarativa.
 
 Note também que o painel da aplicação foi atualizado depois do clique, abrindo o link e mostrando a
@@ -263,6 +267,7 @@ Agora podemos fazer uma asserção nessa nova página!
 
 [Vídeo de exemplo do teste acima](https://docs.cypress.io/img/snippets/first-test-click-30fps.mp4)
 
+[//]: <> (TODO - Adicionar link Triple Slash Directives quando for traduzido)
 ```markdown
 Você pode ver o IntelliSense em seus arquivos de teste ao adicionar uma única linha de comentário especial.
 Leia sobre isso [aqui](https://docs.cypress.io/guides/tooling/IDE-integration.html#Triple-slash-directives).
@@ -270,4 +275,4 @@ Leia sobre isso [aqui](https://docs.cypress.io/guides/tooling/IDE-integration.ht
 
 ### Passo 4: Fazer uma asserção
 
-WIP
+[Voltar para o topo](#writing-your-first-test.md)
