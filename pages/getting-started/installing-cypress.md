@@ -30,7 +30,7 @@ Se você está utilizando `npm` para instalar o Cypress, nós suportamos:
 Se você estiver usando Linux, você precisará das dependências necessárias
 instaladas no seu sistema.
 
-Nós também temos uma versão oficial cypress/base em container docker com todas
+Nós também temos uma versão oficial [cypress/base](https://hub.docker.com/r/cypress/base/) em container docker com todas
 as dependências necessárias instaladas.
 
 #### Ubuntu/Debian
@@ -63,6 +63,8 @@ em seu projeto.
 `node_modules`, ou o arquivo `package.json` no diretório raiz do seu projeto
 para garantir que o cypress seja instalado no diretório correto.
 
+[Vídeo de exemplo.](https://docs.cypress.io/img/snippets/installing-cli.mp4)
+
 > Note que o pacote npm do cypress é um _wrapper_ que envolve o binário
 do Cypress. A versão do pacote npm determina qual versão do binário
 será baixado. A partir da versão 3.0, o binário é baixado como um diretório
@@ -70,9 +72,11 @@ de cache global para ser utilizado entre os projetos.
 
 > Boa prática
 
+[//]: <> (TODO - Adicionar link integração contínua)
+
 > A abordagem recomendada é de instalar o Cypress usando o `npm`, pois: 
     - O Cypress é versionado como qualquer outra dependência.
-    - Isto simplifica rodar o Cypress na Integração Contínua.
+    - Isto simplifica rodar o Cypress na [Integração Contínua](https://docs.cypress.io/guides/guides/continuous-integration.html).
 
 ### `yarn add`
 
@@ -86,8 +90,8 @@ yarn add cypress --dev
 ## Download direto do repositório
 
 Se você não estiver utilizando Node ou npm no seu projeto, ou você quer tentar
-usar o Cypress rapidamente, você sempre poderá realizar o download do Cypress
-diretamente de nossa CDN. 
+usar o Cypress rapidamente, você sempre poderá realizar o [download do Cypress
+diretamente de nossa CDN](https://download.cypress.io/desktop). 
 
 > A gravação de execuções para o Dashboard não é possível através do 
 download direto. Este download tem somente a intenção de ser uma forma simples
@@ -100,15 +104,18 @@ Sua plataforma será identificada automaticamente.
 Você pode descompactar manualmente e clicar duas vezes. O Cypress será 
 executado sem precisar instalar nenhuma dependência.
 
+[Vídeo de exemplo.](https://docs.cypress.io/img/snippets/installing-global.mp4)
+
 ## Integração contínua
 
-[//]: <> (TODO - Adicionar link integração contínua)
+[//]: <> (TODO - Adicionar link integração contínua e imagem docker)
 
 Por favor leia nossa documentação sobre 
-[Integração Contínua](#integracaocontinua) para ajudar na instalação do
-Cypress na CI (Integração Contínua). Quando estiver rodando linux você
-precisará instalar algumas dependências de sistema ou você pode usar a
-nossa imagem docker que possui tudo que você precisa.
+[Integração Contínua](https://docs.cypress.io/guides/guides/continuous-integration.html) para ajudar na instalação do
+Cypress na CI (Integração Contínua). Quando estiver rodando linux você precisará instalar algumas
+[dependências de sistema](https://docs.cypress.io/guides/guides/continuous-integration.html#Dependencies)
+ou você pode usar a nossa [imagem docker](https://docs.cypress.io/examples/examples/docker.html)
+que possui tudo que você precisa.
 
 ## Abrindo o Cypress
 
@@ -152,16 +159,18 @@ diferente pode ser encontrado no topo lateral direito do Test Runner.
 
 [//]: <> (TODO - Adicionar link abrindo navegadores)
 
-Leia [Abrindo navegadores](#abrindonavegadores) para mais informações
+Leia [Abrindo navegadores](https://docs.cypress.io/guides/guides/launching-browsers.html) para mais informações
 sobre como o Cypress controla um navegador real durante os testes
 de ponta-a-ponta.
 
 > Suporte entre navegadores
 
+[//]: <> (TODO - Adicionar link entre navegadores)
+
 > O Cypress atualmente suporta o Firefox e navegadores da família Chrome
 (incluindo Edge e Electron). Para executar testes de maneira otimizada
 nesses navegadores na integração contínua, confira as estratégias
-demonstradas no [guia de teste entre navegadores](#guiaentrenavegadores).
+demonstradas no [guia de teste entre navegadores](https://docs.cypress.io/guides/guides/cross-browser-testing.html).
 
 ## Adicionando scripts npm
 
@@ -194,7 +203,7 @@ preparado que você pode exigir em seus scripts do Node.
 
 [//]: <> (TODO - Adicionar link CLI)
 
-Você pode [ler mais sobre CLI aqui.](#maissobrecli)
+Você pode [ler mais sobre CLI aqui.](https://docs.cypress.io/guides/guides/command-line.html)
 
 ## Avançado
 
@@ -276,14 +285,17 @@ CYPRESS_CACHE_FOLDER=~/Desktop/cypress_cache npm run test
 
 Cypress substituirá automaticamente o `~` pelo diretório inicial do usuário.
 Portanto, você pode passar `CYPRESS_CACHE_FOLDER` como uma string de arquivos
-de configuração CI (Integração Contínua), por exemplo:
+de configuração CI, por exemplo:
 
 ```yml
 environment:
   CYPRESS_CACHE_FOLDER: '~/.cache/Cypress'
 ```
 
-Veja mais a seção [Integração Contínua - Caching] na documentação.
+[//]: <> (TODO - Adicionar links na integração contínua - caching)
+
+Veja mais a seção
+[Integração Contínua - Caching](https://docs.cypress.io/guides/guides/continuous-integration.html#Caching) na documentação.
 
 > `CYPRESS_CACHE_FOLDER` precisará existir toda vez que o Cypress for aberto.
 Para garantir isso, considere exportar essa variável de ambiente.
