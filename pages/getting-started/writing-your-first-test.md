@@ -238,7 +238,7 @@ em toda a página. Para ler mais sobre a exibição do erro, leia sobre
 
 Antes de adicionar outro comando - vamos consertar esse teste. Substitua `hype` por `type`.
 
-[Vídeo de exemplo do teste acima](https://docs.cypress.io/img/snippets/first-test-contains-30fps.mp4)
+[Vídeo de exemplo](https://docs.cypress.io/img/snippets/first-test-contains-30fps.mp4)
 
 ### Passo 3: Clicar em um elemento
 
