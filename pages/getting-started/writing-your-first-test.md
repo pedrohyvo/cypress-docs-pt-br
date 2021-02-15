@@ -263,7 +263,7 @@ página de destino.
 
 Agora podemos fazer uma asserção nessa nova página!
 
-[Vídeo de exemplo do teste acima](https://docs.cypress.io/img/snippets/first-test-click-30fps.mp4)
+[Vídeo de exemplo](https://docs.cypress.io/img/snippets/first-test-click-30fps.mp4)
 
 [//]: <> (TODO - Adicionar link Triple Slash Directives quando for traduzido)
 
