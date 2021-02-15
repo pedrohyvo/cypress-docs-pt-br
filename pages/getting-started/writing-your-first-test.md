@@ -164,7 +164,7 @@ describe('My First Test', () => {
 
 Salve o arquivo e retorne ao Cypress Test Runner. Você vai perceber algumas coisas:
 
-[//]: <> (TODO - Adicionar link Command Log quando for traduzido)
+[//]: <> (TODO - Adicionar Command Log e Pré visualização links)
 
 1. O [Log de Comandos](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log)
 agora exibe a nova ação `visit`.
