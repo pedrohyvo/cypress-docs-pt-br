@@ -49,3 +49,9 @@ Você também pode enviar qualquer ideia/sugestão como issues no GitHub.
 Todas as contribuições são muito bem-vindas :D 
 
 Para maiores informações, recomendo a leitura do nosso [guia de como contribuir](CONTRIBUTING.md).
+
+## Licença 📝
+
+Este projeto está sob a licença MIT.
+
+Feito com ❤️ por Pedro Hyvo 👋🏽 [Entre em contato!](https://www.linkedin.com/in/pedrohyvo/)
