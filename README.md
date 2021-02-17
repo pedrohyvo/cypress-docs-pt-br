@@ -52,6 +52,6 @@ Para maiores informações, recomendo a leitura do nosso [guia de como contribui
 
 ## Licença 📝
 
-Este projeto está sob a licença MIT.
+Este projeto está sob a [licença MIT](LICENSE).
 
 Feito com ❤️ por Pedro Hyvo 👋🏽 [Entre em contato!](https://www.linkedin.com/in/pedrohyvo/)
