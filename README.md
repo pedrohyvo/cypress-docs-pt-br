@@ -16,6 +16,7 @@
 <br/>
 
 ![markdown-lint](https://github.com/pedrohyvo/cypress-docs-pt-br/workflows/markdown-lint/badge.svg?branch=master)
+[![GitHub](https://img.shields.io/github/license/pedrohyvo/cypress-docs-pt-br)](https://github.com/pedrohyvo/cypress-docs-pt-br/edit/master/LICENSE)
 
 ----
 
