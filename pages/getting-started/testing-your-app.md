@@ -134,7 +134,7 @@ e [cy.request()](https://docs.cypress.io/api/commands/request.html) com esta bas
 encerrar todos os navegadores abertos. Isto é normal. Clique no arquivo de especificações novamente para 
 reiniciar o navegador.
 
-Nós agora podemos o caminha relativo e omitir o nome do host e a porta.
+Nós agora podemos visitar o caminho relativo, e omitir o nome do host e a porta.
 
 ```javascript
 describe('The Home Page', () => {
@@ -192,7 +192,8 @@ você precisa propagar o servidor para que esse estado possa ser testado.
 [pluginsFile](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
 - [cy.request()](https://docs.cypress.io/api/commands/request.html) - para fazer requisições HTTP
 
-If you’re running node.js on your server, you might add a `before` or `beforeEach` hook that executes an `npm` task.
+Se você estiver executando o `node.js` em seu servidor, pode adicionar uma função 
+`before` ou` beforeEach` que executa uma tarefa `npm`.
 
 ```javascript
 describe('The Home Page', () => {
