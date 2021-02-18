@@ -68,7 +68,7 @@ mas reservam um conjunto menor de **testes de fumaça** que são executados apen
 
 Assim que seu servidor estiver funcionando, é hora de acessá-lo.
 
-Vamos deletar o `sample_spec.js` arquivo criado no tutorial anterior que agora não é mais necessário. 
+Vamos deletar o arquivo `sample_spec.js` criado no tutorial anterior que agora não é mais necessário. 
 
 ```bash
 rm cypress/integration/sample_spec.js
@@ -128,7 +128,7 @@ Vamos adicionar a opção `baseUrl`.
 
 [//]: <> (TODO - Adicionar links dos comandos)
 Isso irá prefixar automaticamente os comandos [cy.visit()](https://docs.cypress.io/api/commands/visit.html) 
-e [cy.request()](https://docs.cypress.io/api/commands/request.html) com este baseUrl. 
+e [cy.request()](https://docs.cypress.io/api/commands/request.html) com esta baseUrl. 
 
 > Sempre que você modificar seu arquivo de configuração, o Cypress irá reiniciar-se automaticamente e 
 encerrar todos os navegadores abertos. Isto é normal. Clique no arquivo de especificações novamente para 
@@ -190,7 +190,7 @@ você precisa propagar o servidor para que esse estado possa ser testado.
 - [cy.exec()](https://docs.cypress.io/api/commands/exec.html) - para executar comandos do sistema
 - [cy.task()](https://docs.cypress.io/api/commands/task.html) - para executar o código no Node através do 
 [pluginsFile](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
-- [cy.request()](https://docs.cypress.io/api/commands/request.html) - fazer solicitações HTTP
+- [cy.request()](https://docs.cypress.io/api/commands/request.html) - para fazer requisições HTTP
 
 If you’re running node.js on your server, you might add a `before` or `beforeEach` hook that executes an `npm` task.
 
@@ -278,7 +278,7 @@ de contornar isso:
 Você pode fazer com que o servidor gere todos os fixture stubs para você com antecedência. 
 Isso significa que seus dados refletirão o que o servidor realmente enviará.
 
-### Escreva um único teste e2e sem stubs e, em seguida stub o restante
+### Escreva um único teste e2e sem stubs e, em seguida use stub para o restante
 
 Outra abordagem mais equilibrada é integrar as duas estratégias. Provavelmente, você deseja ter um 
 único teste que adote uma abordagem `e2e` verdadeira e não faça stubs. Ele usará o recurso para 
@@ -309,7 +309,7 @@ provavelmente requerem um usuário autenticado! Aqui estão algumas dicas.
 para todos os seus usuários e você nunca quer quebrar.
 
 O login é um dos recursos de missão crítica e provavelmente deve envolver o servidor. 
-Recomendamos que você teste a inscrição e o login usando sua interface do usuário(UI) como um usuário real faria:
+Recomendamos que você teste a inscrição e o login usando sua interface do usuário (UI) como um usuário real faria:
 
 Aqui está um exemplo ao lado da propagação de seu banco de dados:
 
@@ -442,7 +442,7 @@ describe('The Dashboard Page', () => {
 })
 ```
 
-Você vê a diferença? Conseguimos fazer o login sem realmente precisar usar nossa IO. Isso economiza 
+Você vê a diferença? Conseguimos fazer o login sem realmente precisar usar nossa UI. Isso economiza 
 muito tempo visitando a página de login, preenchendo o nome de usuário, senha e esperando que o servidor 
 nos redirecione antes de cada teste.
 
