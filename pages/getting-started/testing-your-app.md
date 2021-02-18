@@ -4,7 +4,7 @@
 O que você vai aprender
 
 - A relação entre Cypress e seu back-end
-- Como configurar Cypress para sua aplicação
+- Como configurar o Cypress para sua aplicação
 - Trabalhando com (ou sem) seu mecanismo de autenticação
 - Alavancando a eficácia dos dados de teste
 ```
@@ -41,7 +41,7 @@ até mesmo fazer **todo o seu desenvolvimento** nele.
 No final das contas, você não só poderá **testar e desenvolver** ao mesmo tempo, mas também será capaz de construir
 sua aplicação web **rápida** enquanto obtém testes “gratuitos”.
 
-Além do mais - como o Cypress permite que você faça coisas como **solicitações de rede stub**,
+Além do mais - como o Cypress permite que você faça coisas como **stub de solicitações de rede**,
 você pode construir sua aplicação web sem precisar de um servidor para fornecer respostas JSON válidas.
 
 Por último, mas não menos importante - tentar encaixar testes em uma aplicação já construída é muito mais difícil
@@ -54,7 +54,7 @@ Por fim, e provavelmente o mais importante motivo pelo qual você deseja testar 
 Quando está em desenvolvimento, você pode:
 
 - Pegar atalhos
-- Dados pré-populados rodando scripts executáveis
+- Pré-popular dados executando scripts
 - Expor rotas específicas do ambiente de teste
 - Desativar recursos de segurança que tornam a automação difícil
 - Redefinir estado no servidor / banco de dados 
@@ -80,7 +80,7 @@ Agora vamos criar nosso próprio arquivo de especificações chamado `home_page_
 touch cypress/integration/home_page_spec.js
 ```
 
-Assim que o arquivo for criado, você deve vê-lo na lista de arquivos de especificação.
+Assim que o arquivo for criado, você deve vê-lo na lista de arquivos de teste.
 
 ![home page spec](https://docs.cypress.io/img/guides/testing-your-app-home-page-spec.049e17f2.png)
 
@@ -177,7 +177,7 @@ geralmente em um banco de dados.
 Tradicionalmente, ao escrever testes `e2e` usando Selenium, antes de automatizar o navegador você faz algum 
 tipo de **configuração e destruição** no servidor.
 
-Talvez você precise gerar um usuário, e semeá-lo com associações e registros. 
+Talvez você precise gerar um usuário, e inseri-lo com associações e registros. 
 Você pode estar familiarizado com o uso de coisas como *fixtures* ou *factories*.
 
 Para testar vários estados de página - como uma visualização vazia ou uma visualização de paginação, 
