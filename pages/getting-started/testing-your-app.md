@@ -131,7 +131,7 @@ Isso irá prefixar automaticamente os comandos [cy.visit()](https://docs.cypress
 e [cy.request()](https://docs.cypress.io/api/commands/request.html) com esta baseUrl. 
 
 > Sempre que você modificar seu arquivo de configuração, o Cypress irá reiniciar-se automaticamente e 
-encerrar todos os navegadores abertos. Isto é normal. Clique no arquivo de especificações novamente para 
+encerrar todos os navegadores abertos. Isto é normal. Clique no arquivo de testes novamente para 
 reiniciar o navegador.
 
 Nós agora podemos visitar o caminho relativo, e omitir o nome do host e a porta.
