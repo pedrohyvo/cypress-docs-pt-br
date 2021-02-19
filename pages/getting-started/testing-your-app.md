@@ -164,7 +164,7 @@ então não temos muitos conselhos específicos para lhe dar.
 Dito isso, o teste da web moderna tem algumas dificuldades que toda equipe experimenta, então aqui estão 
 algumas dicas rápidas sobre situações comuns que você provavelmente encontrará.
 
-## Semeando dados
+## Inserindo dados
 
 Dependendo de como sua aplicação é construída - é provável que sua aplicação web seja afetada e controlada pelo servidor.
 
