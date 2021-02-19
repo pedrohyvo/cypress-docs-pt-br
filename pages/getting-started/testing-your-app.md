@@ -159,6 +159,7 @@ Você está prestes a embarcar na escrita de testes para sua aplicação e somen
 então não temos muitos conselhos específicos para lhe dar.
 
 **O que testar, onde estão os casos extremos e as integrações, quais regressões você provavelmente encontrará, etc.,** 
+
 **depende inteiramente de você, da sua aplicação e de sua equipe.**
 
 Dito isso, o teste da web moderna tem algumas dificuldades que toda equipe experimenta, então aqui estão 
