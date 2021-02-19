@@ -158,7 +158,8 @@ Verifique-os em [Configuração](https://docs.cypress.io/guides/references/confi
 Você está prestes a embarcar na escrita de testes para sua aplicação e somente você conhece sua aplicação, 
 então não temos muitos conselhos específicos para lhe dar.
 
-**O que testar, onde estão os casos extremos e as costuras, quais regressões você provavelmente encontrará, etc.,** 
+**O que testar, onde estão os casos extremos e as integrações, quais regressões você provavelmente encontrará, etc.,** 
+
 **depende inteiramente de você, da sua aplicação e de sua equipe.**
 
 Dito isso, o teste da web moderna tem algumas dificuldades que toda equipe experimenta, então aqui estão 
@@ -487,4 +488,4 @@ para a execução ideal de testes em CI nos navegadores da família Chrome e Fir
 - [Cypress Real World App(RWA)](https://github.com/cypress-io/cypress-realworld-app) 
 para demonstrações de práticas de teste no Cypress, configuração e estratégias em um projeto do mundo real.
 
-[Voltar para o topo](#testando-sua-aplicaçao)
+[Voltar para o topo](#testando-sua-aplicação)
