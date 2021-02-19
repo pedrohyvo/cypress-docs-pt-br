@@ -28,6 +28,7 @@
 - Primeiros Passos
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
+    - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
 
 ----
 
