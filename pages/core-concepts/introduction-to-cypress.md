@@ -156,7 +156,7 @@ Isso nos permite reutilizar nossas consultas ao DOM para tornar os testes mais r
 
 ### Os comandos são assíncronos
 
-É muito importante entender que os comandos do Cypress não fazem nada no momento em que são chamados, mas são enfileirados para serem executados mais tarde. Isso é o que queremos dizer quando dizemos que os comandos do Cypress são assíncronos.
+É muito importante entender que os comandos do Cypress não fazem nada no momento em que são chamados, mas são enfileirados para serem executados mais tarde. Isso é o que queremos dizer quando falamos que os comandos do Cypress são assíncronos.
 
 #### Veja este pequeno teste, por exemplo:
 
