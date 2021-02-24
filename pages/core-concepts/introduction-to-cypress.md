@@ -370,3 +370,44 @@ Estes comandos têm seus próprios valores de timeout específicos que estão do
 > Qualquer espera ou nova tentativa que seja necessária para garantir que uma etapa executada foi bem-sucedida deve terminar antes do início da etapa seguinte. Se ela não terminar com sucesso antes de o timeout ser atingido, o teste será reprovado.
 
 ### Os comandos são Promises
+
+Este é o grande segredo da Cypress: pegamos nosso padrão favorito de composição de código JavaScript, as Promises, e as incorporamos diretamente na essência do Cypress. Acima, quando dizemos que estamos enfileirando ações para serem tomadas mais tarde, poderíamos reformular isso como "adicionar Promises a uma cadeia de Promises".
+
+Vamos comparar o exemplo anterior com uma versão fictícia do mesmo como código bruto, mas em forma de Promises:
+
+#### Demonstração cheia de Promises. Não é um código válido.
+
+```JS
+it('muda a URL ao clicar em "awesome"', () => {
+  // ESTE CÓDIGO NÃO É VÁLIDO E
+  // SERVE APENAS PARA DEMONSTRAÇÃO
+  return cy.visit('/my/resource/path')
+  .then(() => {
+    return cy.get('.awesome-selector')
+  })
+  .then(($element) => {
+    // não análogo
+    return cy.click($element)
+  })
+  .then(() => {
+    return cy.url()
+  })
+  .then((url) => {
+    expect(url).to.eq('/my/resource/path#awesomeness')
+  })
+})
+```
+
+#### Como realmente fica no Cypress com as Promises encapsuladas e escondidas.
+
+```JS
+it('muda a URL ao clicar em "awesome"', () => {
+  cy.visit('/my/resource/path')
+
+  cy.get('.awesome-selector')
+    .click()
+
+  cy.url()
+    .should('include', '/my/resource/path#awesomeness')
+})
+```
