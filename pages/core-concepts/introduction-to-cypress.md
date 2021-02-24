@@ -24,7 +24,7 @@ Veja a seguir outros comandos de ação que o Cypress oferece para interagir com
 - [`.dblclick()`](https://docs.cypress.io/api/commands/dblclick.html) - Clica duas vezes em um elemento do DOM.
 - [`.rightclick()`](https://docs.cypress.io/api/commands/rightclick.html) - Clica com o botão direito do mouse em um elemento do DOM.
 
-Esses comandos oferecem `algumas garantias` em relação a qual deve ser o estado dos elementos antes de eles executarem suas ações.
+Esses comandos oferecem [algumas garantias](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html) em relação a qual deve ser o estado dos elementos antes de eles executarem suas ações.
 
 Por exemplo, quando você escreve um comando `.click()`, o Cypress garante que é possível interagir com o elemento (da mesma forma que um usuário real faria). Ele irá esperar automaticamente até que o elemento tenha um estado "acionável" confirmando que o elemento:
 
