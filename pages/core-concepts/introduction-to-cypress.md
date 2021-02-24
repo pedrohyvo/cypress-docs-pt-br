@@ -4,25 +4,25 @@
 
 ### Interagindo com Elementos
 
-Como vimos no exemplo inicial, o Cypress permite clicar e digitar em elementos da página usando os comandos `.click()` e `.type()` com um comando `cy.get()` ou `cy.contain()`. Este é um ótimo exemplo de encadeamento em ação. Vamos vê-lo novamente:
+Como vimos no exemplo inicial, o Cypress permite clicar e digitar em elementos da página usando os comandos [`.click()`](https://docs.cypress.io/api/commands/click.html) e [`.type()`](https://docs.cypress.io/api/commands/type.html) com um comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html). Este é um ótimo exemplo de encadeamento em ação. Vamos vê-lo novamente:
 
 ```JS
 cy.get("textarea.post-body")
   .type("Este é um ótimo artigo");
 ```
 
-Estamos encadeando `.type()` no comando `cy.get()`, solicitando que ele digite no sujeito gerado pelo comando `cy.get()`, que será um elemento DOM.
+Estamos encadeando [`.type()`](https://docs.cypress.io/api/commands/type.html) no comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html), solicitando que ele digite no sujeito gerado pelo comando `cy.get()`, que será um elemento DOM.
 
 Veja a seguir outros comandos de ação que o Cypress oferece para interagir com seu aplicativo:
 
-- `.blur()` - Tira o foco de um elemento do DOM focalizado.
-- `.focus()` - Focaliza um elemento do DOM.
-- `.clear()` - Limpa o valor de um input ou textarea.
-- `.check()` - Marca caixas de seleção ou botões de opção.
-- `.uncheck()` - Desmarcas caixas de seleção.
-- `.select()` - Seleciona um `<option>` dentro de um `<selection>`.
-- `.dblclick()` - Clica duas vezes em um elemento do DOM.
-- `.rightclick()` - Clica com o botão direito do mouse em um elemento do DOM.
+- [`.blur()`](https://docs.cypress.io/api/commands/blur.html) - Tira o foco de um elemento do DOM focalizado.
+- [`.focus()`](https://docs.cypress.io/api/commands/focus.html) - Focaliza um elemento do DOM.
+- [`.clear()`](https://docs.cypress.io/api/commands/clear.html) - Limpa o valor de um input ou textarea.
+- [`.check()`](https://docs.cypress.io/api/commands/check.html) - Marca caixas de seleção ou botões de opção.
+- [`.uncheck()`](https://docs.cypress.io/api/commands/uncheck.html) - Desmarcas caixas de seleção.
+- [`.select()`](https://docs.cypress.io/api/commands/select.html) - Seleciona um `<option>` dentro de um `<selection>`.
+- [`.dblclick()`](https://docs.cypress.io/api/commands/dblclick.html) - Clica duas vezes em um elemento do DOM.
+- [`.rightclick()`](https://docs.cypress.io/api/commands/rightclick.html) - Clica com o botão direito do mouse em um elemento do DOM.
 
 Esses comandos oferecem `algumas garantias` em relação a qual deve ser o estado dos elementos antes de eles executarem suas ações.
 
