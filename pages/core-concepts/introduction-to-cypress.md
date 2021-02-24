@@ -41,7 +41,7 @@ Isso também ajuda a evitar erros ao interagir com sua aplicação nos testes. N
 
 ### Asserções sobre elementos
 
-As asserções permitem fazer coisas como confirmar que um elemento está visível ou tem determinado atributo, classe CSS ou estado. As asserções são comandos que permitem descrever o estado _desejado_ da sua aplicação. O Cypress irá esperar automaticamente até que seus elementos tenham esse estado ou reprovará o teste se as asserções não forem atendidas. Veja a seguir uma breve demonstração das asserções em ação:
+As asserções permitem fazer coisas como confirmar que um elemento está visível ou tem determinado atributo, classe CSS ou estado. As asserções são comandos que permitem descrever o estado _desejado_ da sua aplicação. O Cypress irá esperar automaticamente até que seus elementos tenham esse estado ou reprovará o teste se as asserções não forem aprovadas. Veja a seguir uma breve demonstração das asserções em ação:
 
 ```JS
 cy.get(':checkbox').should('be.disabled')
@@ -51,7 +51,7 @@ cy.get('form').should('have.class', 'form-horizontal')
 cy.get('input').should('not.have.value', 'US')
 ```
 
-Em cada um dos exemplos, é importante observar que o Cypress _espera_ automaticamente até que essas asserções sejam atendidas. Isso evita a necessidade de saber ou definir o momento exato em que seus elementos terão esse estado.
+Em cada um dos exemplos, é importante observar que o Cypress _espera_ automaticamente até que essas asserções sejam aprovadas. Isso evita a necessidade de saber ou definir o momento exato em que seus elementos terão esse estado.
 
 Aprenderemos mais sobre as [asserções](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Assertions) posteriormente neste guia.
 
@@ -348,3 +348,33 @@ O teste acima causaria uma execução na seguinte ordem:
 Essas ações sempre acontecerão em série (uma após a outra), nunca em paralelo (ao mesmo tempo). Por quê?
 
 Para ilustrar isso, vamos revisitar essa lista de ações e expor alguns dos ✨ truques ✨ ocultos que o Cypress faz a cada passo:
+
+1. Visitar uma URL
+   ✨ e esperar que o evento `load` da página seja disparado depois que todos os recursos externos tiverem sido carregados✨
+2. Encontrar um elemento pelo seletor
+   ✨ e [tentar novamente](https://docs.cypress.io/guides/core-concepts/retry-ability.html) até que ele seja encontrado no DOM ✨
+3. Executar uma ação de clique nesse elemento
+   ✨ depois de esperar que o elemento tenha um [estado acionável](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html) ✨
+4. Pegar a URL e...
+5. Afirmar que a URL deve incluir uma _string_ específica
+   ✨ e [tentar novamente](https://docs.cypress.io/guides/core-concepts/retry-ability.html) até que a asserção seja aprovada ✨
+
+Como você pode ver, o Cypress trabalha muito para garantir que o estado da aplicação seja exatamente o estado que nossos comandos esperam. Cada comando pode ser resolvido rapidamente (tão rápido que você não irá vê-los em um estado pendente), mas outros podem levar segundos ou até mesmo dezenas de segundos para serem resolvidos.
+
+Embora a maioria dos comandos expire após alguns segundos, outros comandos especializados que esperam que determinados processos demorem muito mais tempo, como o [`cy.visit()`](https://docs.cypress.io/api/commands/visit.html), naturalmente aguardarão mais tempo antes de expirar.
+
+Estes comandos têm seus próprios valores de timeout específicos que estão documentados em nossa [configuração](https://docs.cypress.io/guides/references/configuration.html).
+
+> Conceito importante
+>
+> Qualquer espera ou nova tentativa que seja necessária para garantir que uma etapa executada foi bem-sucedida deve terminar antes do início da etapa seguinte. Se ela não terminar com sucesso antes de o tempo-limite ser atingido, o teste será reprovado.
+
+### Os comandos são Promises
+
+Este é o grande segredo da Cypress: pegamos nosso padrão favorito para compor o código JavaScript, Promessas, e os incorporamos diretamente no tecido da Cypress. Acima, quando dizemos que estamos questionando ações a serem tomadas mais tarde, poderíamos reafirmar isso como "adicionando Promessas a uma cadeia de Promessas".
+
+Vamos comparar o exemplo anterior com uma versão fictícia do mesmo como código bruto, baseado em Promessas:
+
+Demonstração de Promessas barulhentas. Código não válido.
+
+Traduzido com a versão gratuita do tradutor - www.DeepL.com/Translator
