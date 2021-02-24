@@ -343,7 +343,7 @@ O teste acima causaria uma execução na seguinte ordem:
 2. Encontrar um elemento pelo seletor.
 3. Executar uma ação de clique nesse elemento.
 4. Pegar a URL.
-5. Afirmar que a URL deve incluir uma string específica.
+5. Afirmar que a URL deve incluir uma _string_ específica.
 
 Essas ações sempre acontecerão em série (uma após a outra), nunca em paralelo (ao mesmo tempo). Por quê?
 
