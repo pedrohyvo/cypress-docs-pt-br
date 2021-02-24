@@ -2,7 +2,7 @@
 
 É muito importante entender o mecanismo que o Cypress usa para encadear comandos. Ele gerencia uma cadeia de Promises para você, e cada comando gera um "sujeito" para o próximo comando, até que a cadeia termine ou seja encontrado um erro. O desenvolvedor geralmente não precisa usar Promises diretamente, mas é útil entender como elas funcionam!
 
-### Interagindo com Elementos
+### Interagindo com elementos
 
 Como vimos no exemplo inicial, o Cypress permite clicar e digitar em elementos da página usando os comandos [`.click()`](https://docs.cypress.io/api/commands/click.html) e [`.type()`](https://docs.cypress.io/api/commands/type.html) com um comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html). Este é um ótimo exemplo de encadeamento em ação. Vamos vê-lo novamente:
 
