@@ -59,27 +59,27 @@ Aprenderemos mais sobre as [asserções](https://docs.cypress.io/guides/core-con
 
 Uma nova cadeia do Cypress sempre começa com `cy.[comando]`, e o resultado gerado pelo `comando` determina quais outros comandos podem ser chamados em seguida (encadeados).
 
-Alguns métodos geram `null` e, portanto, não podem ser encadeados, tais como `cy.clearCookies()`.
+Alguns métodos geram `null` e, portanto, não podem ser encadeados, tais como [`cy.clearCookies()](https://docs.cypress.io/api/commands/clearcookies.html).
 
-Alguns métodos, tais como `cy.get()` ou `cy.contain()`, geram um elemento do DOM, permitindo que outros comandos sejam encadeados neles (pressupondo que eles esperam um sujeito do DOM), tais como `.click()` ou até mesmo `cy.contain()` novamente.
+Alguns métodos, tais como [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html), geram um elemento do DOM, permitindo que outros comandos sejam encadeados neles (pressupondo que eles esperam um sujeito do DOM), tais como [`.click()`](https://docs.cypress.io/api/commands/click.html) ou até mesmo [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html) novamente.
 
 <!-- markdownlint-disable MD026 -->
 
 #### Alguns comandos podem ser encadeados...
 
-- apenas em `cy`, ou seja, eles não operam sobre um sujeito: `cy.clearCookies()`.
+- apenas em `cy`, ou seja, eles não operam sobre um sujeito: [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html).
 
-- em comandos que geram determinados tipos de sujeitos (como elementos do DOM): `.type()`.
+- em comandos que geram determinados tipos de sujeitos (como elementos do DOM): [`.type()`](https://docs.cypress.io/api/commands/type.html).
 
-- em `cy` _e também_ em um comando que gera um sujeito: `cy.contains()`.
+- em `cy` _e também_ em um comando que gera um sujeito: [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html).
 
 <!-- markdownlint-disable MD026 -->
 
 #### Alguns comandos geram...
 
-- `null`, ou seja, nenhum comando pode ser encadeado em seguida: `cy.clearCookie()`.
+- `null`, ou seja, nenhum comando pode ser encadeado em seguida: [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html).
 
-- o mesmo sujeito que foi gerado originalmente: `.click()`.
+- o mesmo sujeito que foi gerado originalmente: [`.click()`](https://docs.cypress.io/api/commands/click.html).
 
 - um novo sujeito, conforme apropriado para o comando .wait().
 
