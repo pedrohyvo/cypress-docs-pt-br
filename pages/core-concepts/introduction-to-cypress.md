@@ -37,7 +37,7 @@ Isso também ajuda a evitar erros ao interagir com sua aplicação nos testes. N
 
 > **Conceito importante**
 >
-> O Cypress oferece um algoritmo simples porém sofisticado para [interagir com elementos](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html).
+> O Cypress oferece um algoritmo simples mas poderoso para [interagir com elementos](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html).
 
 ### Asserções sobre elementos
 
