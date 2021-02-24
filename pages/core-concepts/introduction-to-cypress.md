@@ -152,7 +152,7 @@ cy
   .click()
 ```
 
-Isso nos permite reutilizar nossas consultas ao DOM para tornar os testes mais rápidos quando o elemento ainda está no DOM, processando automaticamente novas consultas ao DOM quando o elemento não é imediatamente encontrado no DOM. Isso é particularmente útil quando lidamos com frameworks de front-end que fazem muitas renderizações consecutivas!
+Isso nos permite reutilizar nossas consultas ao DOM para tornar os testes mais rápidos quando o elemento ainda está no DOM, processando automaticamente novas consultas ao DOM quando o elemento não é imediatamente encontrado no DOM. Isso é particularmente útil quando estamos trabalhando com frameworks de front-end que fazem muitas renderizações consecutivas!
 
 ### Os comandos são assíncronos
 
