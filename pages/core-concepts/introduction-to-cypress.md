@@ -51,7 +51,7 @@ cy.get('form').should('have.class', 'form-horizontal')
 cy.get('input').should('not.have.value', 'US')
 ```
 
-Em cada um dos exemplos, é importante observar que o Cypress espera automaticamente até que essas asserções sejam atendidas. Isso evita a necessidade de saber ou definir o momento exato em que seus elementos terão esse estado.
+Em cada um dos exemplos, é importante observar que o Cypress _espera_ automaticamente até que essas asserções sejam atendidas. Isso evita a necessidade de saber ou definir o momento exato em que seus elementos terão esse estado.
 
 Aprenderemos mais sobre as [asserções](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Assertions) posteriormente neste guia.
 
