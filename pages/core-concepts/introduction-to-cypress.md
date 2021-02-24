@@ -103,7 +103,7 @@ cy.get('.container-principal') // Gera um array de elementos do DOM corresponden
 
 > Para contornar a necessidade de referenciar elementos, o Cypress tem um recurso [conhecido como aliasing](https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html). O aliasing ajuda a armazenar e salvar referências de elementos para uso futuro.
 
-#### Usando .then() para manipular um sujeito
+#### Usando [`.then()`](https://docs.cypress.io/api/commands/then.html) para manipular um sujeito
 
 Quer assumir o controle do fluxo de comandos e manipular diretamente o sujeito? Sem problema, basta adicionar `.then()` à cadeia de comandos. Quando o comando anterior for resolvido, ele chamará sua função callback, em que o sujeito gerado será o primeiro argumento.
 
