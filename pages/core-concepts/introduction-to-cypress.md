@@ -367,6 +367,6 @@ Estes comandos têm seus próprios valores de timeout específicos que estão do
 
 > Conceito importante
 >
-> Qualquer espera ou nova tentativa que seja necessária para garantir que uma etapa executada foi bem-sucedida deve terminar antes do início da etapa seguinte. Se ela não terminar com sucesso antes de o tempo-limite ser atingido, o teste será reprovado.
+> Qualquer espera ou nova tentativa que seja necessária para garantir que uma etapa executada foi bem-sucedida deve terminar antes do início da etapa seguinte. Se ela não terminar com sucesso antes de o timeout ser atingido, o teste será reprovado.
 
 ### Os comandos são Promises
