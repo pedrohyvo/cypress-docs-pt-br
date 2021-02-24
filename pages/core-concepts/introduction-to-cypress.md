@@ -307,7 +307,7 @@ it('test', () => {
 
 > **Conceito importante**
 >
-> Cada comando (e cadeia de comandos) do do Cypress retorna imediatamente, e foi simplesmente adicionado a uma fila de comandos a serem executados posteriormente.
+> Cada comando (e cadeia de comandos) do Cypress retorna imediatamente, e foi simplesmente adicionado a uma fila de comandos a serem executados posteriormente.
 >
 > Não é possível fazer nada de útil diretamente com o valor de retorno de um comando. Os comandos são enfileirados e gerenciados totalmente por baixo dos panos.
 >
