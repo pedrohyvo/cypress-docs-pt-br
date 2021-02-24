@@ -323,7 +323,7 @@ it('test', () => {
 
 Depois que uma função de teste termina de ser executada, o Cypress executa os comandos que foram enfileirados usando as cadeias de comandos `cy.*`.
 
-#### Vamos analisar novamente um exemplo
+#### Vamos analisar outro exemplo
 
 ```JS
 it('altera a URL ao clicar em "awesome"', () => {
