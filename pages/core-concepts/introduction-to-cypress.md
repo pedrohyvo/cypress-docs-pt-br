@@ -180,7 +180,7 @@ O Cypress só faz a mágica da automação do navegador depois que a função de
 
 #### Misturando código assíncrono e síncrono
 
-É importante lembrar que os comandos do Cypress são executados de forma assíncrona se você for tentar mesclar os comandos do Cypress com o código síncrono. O código síncrono é executado imediatamente e não espera que os comandos do Cypress anteriores sejam executados.
+É importante lembrar que os comandos do Cypress são executados de forma assíncrona se você for tentar misturar os comandos do Cypress com o código síncrono. O código síncrono é executado imediatamente e não espera que os comandos do Cypress anteriores sejam executados.
 
 ⚠️ Uso incorreto
 
