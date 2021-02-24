@@ -370,11 +370,3 @@ Estes comandos têm seus próprios valores de timeout específicos que estão do
 > Qualquer espera ou nova tentativa que seja necessária para garantir que uma etapa executada foi bem-sucedida deve terminar antes do início da etapa seguinte. Se ela não terminar com sucesso antes de o tempo-limite ser atingido, o teste será reprovado.
 
 ### Os comandos são Promises
-
-Este é o grande segredo da Cypress: pegamos nosso padrão favorito para compor o código JavaScript, Promessas, e os incorporamos diretamente no tecido da Cypress. Acima, quando dizemos que estamos questionando ações a serem tomadas mais tarde, poderíamos reafirmar isso como "adicionando Promessas a uma cadeia de Promessas".
-
-Vamos comparar o exemplo anterior com uma versão fictícia do mesmo como código bruto, baseado em Promessas:
-
-Demonstração de Promessas barulhentas. Código não válido.
-
-Traduzido com a versão gratuita do tradutor - www.DeepL.com/Translator
