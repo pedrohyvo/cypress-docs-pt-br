@@ -4,7 +4,7 @@
 
 ### Interagindo com Elementos
 
-Como vimos no exemplo inicial, o Cypress permite clicar e digitar em elementos da página usando os comandos [`.click()`](https://docs.cypress.io/api/commands/click.html) e [`.type()`](https://docs.cypress.io/api/commands/type.html) com um comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html). Este é um ótimo exemplo de encadeamento em ação. Vamos vê-lo novamente:
+Como vimos no exemplo inicial, o Cypress permite clicar e digitar em elementos da página usando os comandos [`.click()`](https://docs.cypress.io/api/commands/click.html) e [`.type()`](https://docs.cypress.io/api/commands/type.html) com um comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html). Este é um ótimo exemplo de encadeamento em ação. Vamos vê-lo novamente:
 
 ```JS
 cy.get("textarea.post-body")
@@ -61,7 +61,7 @@ Uma nova cadeia do Cypress sempre começa com `cy.[comando]`, e o resultado gera
 
 Alguns métodos geram `null` e, portanto, não podem ser encadeados, tais como [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html).
 
-Alguns métodos, tais como [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html), geram um elemento do DOM, permitindo que outros comandos sejam encadeados neles (pressupondo que eles esperam um sujeito do DOM), tais como [`.click()`](https://docs.cypress.io/api/commands/click.html) ou até mesmo [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html) novamente.
+Alguns métodos, tais como [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html), geram um elemento do DOM, permitindo que outros comandos sejam encadeados neles (pressupondo que eles esperam um sujeito do DOM), tais como [`.click()`](https://docs.cypress.io/api/commands/click.html) ou até mesmo [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html) novamente.
 
 <!-- markdownlint-disable MD026 -->
 
