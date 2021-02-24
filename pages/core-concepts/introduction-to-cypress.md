@@ -93,7 +93,7 @@ Esse processo na verdade é muito mais intuitivo do que parece.
 cy.clearCookies() // Terminou: 'null' foi gerado, não há possibilidade de encadeamento
 
 cy.get('.container-principal') // Gera um array de elementos do DOM correspondentes
-  .contains('Títulos')         // Gera o primeiro elemento do DOM que inclui o conteúdo em questão
+  .contains('Headlines')         // Gera o primeiro elemento do DOM que inclui o conteúdo em questão
   .click()                     // Gera o mesmo elemento do DOM do comando anterior
 ```
 
