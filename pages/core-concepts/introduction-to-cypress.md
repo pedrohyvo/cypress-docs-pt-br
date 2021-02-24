@@ -33,7 +33,7 @@ Por exemplo, quando você escreve um comando [`.click()`](https://docs.cypress.i
 - Não está desativado
 - Não está sendo animado
 
-Isso também ajuda a evitar erros ao interagir com sua aplicação nos testes. Normalmente você pode alterar esse comportamento com a opção `force`.
+Isso também ajuda a evitar erros ao interagir com sua aplicação nos testes. Normalmente você pode substituir esse comportamento com a opção `force`.
 
 > **Conceito importante**
 >
