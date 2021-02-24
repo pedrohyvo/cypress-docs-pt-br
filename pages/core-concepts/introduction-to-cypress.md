@@ -105,7 +105,7 @@ cy.get('.container-principal') // Gera um array de elementos do DOM corresponden
 
 #### Usando [`.then()`](https://docs.cypress.io/api/commands/then.html) para manipular um sujeito
 
-Quer assumir o controle do fluxo de comandos e manipular diretamente o sujeito? Sem problema, basta adicionar `.then()` à cadeia de comandos. Quando o comando anterior for resolvido, ele chamará sua função callback, em que o sujeito gerado será o primeiro argumento.
+Quer assumir o controle do fluxo de comandos e manipular diretamente o sujeito? Sem problema, basta adicionar `.then()` à cadeia de comandos. Quando o comando anterior for resolvido, ele chamará sua função callback usando o sujeito gerado como o primeiro argumento.
 
 Se você quiser continuar encadeando comandos após seu `.then()`, precisará especificar o sujeito que deseja gerar para esses comandos, o que pode ser feito com um valor de retorno diferente de `null` ou `undefined`. O Cypress irá gerá-lo para o próximo comando para você.
 
