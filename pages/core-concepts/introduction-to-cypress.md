@@ -190,12 +190,12 @@ No exemplo abaixo, `el` é avaliado imediatamente, antes que `cy.visit()` tenha 
 it('não funciona como esperamos', () => {
   cy.visit('/my/resource/path') // Nada acontece ainda
 
-  cy.get('.awesome-selector') // Ainda nada acontece
-    .click()                  // Não, nada
+  cy.get('.awesome-selector')   // Nada acontecendo ainda
+    .click()                    // Não, nada
 
   // Cypress.$ é síncrono, portanto, é avaliado imediatamente
-  // ainda não há nenhum elemento a ser encontrado porque
-  // cy.visit() foi apenas enfileirado com visit
+  // Ainda não há nenhum elemento a ser encontrado porque
+  // cy.visit() foi apenas enfileirado para visit
   // e não visitou realmente a aplicação
   let el = Cypress.$('.new-el') // é avaliado imediatamente como []
 
