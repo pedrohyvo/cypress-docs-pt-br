@@ -99,7 +99,7 @@ cy.get('.container-principal') // Gera um array de elementos do DOM corresponden
 
 > **Conceito importante**
 >
-> Os comandos do Cypress não retornam sujeitos, apenas os geram. Lembre-se: os comandos do Cypress são assíncronos e são enfileirados para execução posterior. Durante a execução, os sujeitos são gerados de um comando para o seguinte, e muito código auxiliar do Cypress é executado entre cada comando para garantir que tudo funcione corretamente.
+> Os comandos do Cypress não retornam sujeitos, apenas os geram. Lembre-se: os comandos do Cypress são assíncronos e são enfileirados para execução posterior. Durante a execução, os sujeitos são gerados de um comando para o seguinte, e muito código útil do Cypress é executado entre cada comando para garantir que tudo funcione corretamente.
 
 > Para contornar a necessidade de referenciar elementos, o Cypress tem um recurso [conhecido como aliasing](https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html). O aliasing ajuda a armazenar e salvar referências de elementos para uso futuro.
 
