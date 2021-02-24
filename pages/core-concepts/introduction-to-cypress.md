@@ -107,7 +107,7 @@ cy.get('.container-principal') // Gera um array de elementos do DOM corresponden
 
 Quer assumir o controle do fluxo de comandos e manipular diretamente o sujeito? Sem problema, basta adicionar `.then()` à cadeia de comandos. Quando o comando anterior for resolvido, ele chamará sua função callback usando o sujeito gerado como o primeiro argumento.
 
-Se você quiser continuar encadeando comandos após seu `.then()`, precisará especificar o sujeito que deseja gerar para esses comandos, o que pode ser feito com um valor de retorno diferente de `null` ou `undefined`. O Cypress irá gerá-lo para o próximo comando para você.
+Se você quiser continuar encadeando comandos após seu [`.then()`](https://docs.cypress.io/api/commands/then.html), precisará especificar o sujeito que deseja gerar para esses comandos, o que pode ser feito com um valor de retorno diferente de `null` ou `undefined`. O Cypress irá gerá-lo para o próximo comando para você.
 
 #### Vejamos um exemplo:
 
@@ -137,7 +137,7 @@ cy
 
 #### Usando aliases para fazer referências a sujeitos anteriores
 
-O Cypress tem recursos adicionais para fazer referência a sujeitos anteriores chamados [aliases](https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html). É mais ou menos assim:
+O Cypress tem recursos adicionais para rapidamente fazer referência a sujeitos anteriores chamados [aliases](https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html). É mais ou menos assim:
 
 ```JS
 cy
@@ -152,7 +152,7 @@ cy
   .click()
 ```
 
-Isso nos permite reutilizar nossas consultas ao DOM para tornar os testes mais rápidos quando o elemento ainda está no DOM, processando automaticamente novas consultas quando o elemento não é imediatamente encontrado no DOM. Isso é particularmente útil quando lidamos com frameworks de front-end que fazem muitas renderizações consecutivas!
+Isso nos permite reutilizar nossas consultas ao DOM para tornar os testes mais rápidos quando o elemento ainda está no DOM, processando automaticamente novas consultas ao DOM quando o elemento não é imediatamente encontrado no DOM. Isso é particularmente útil quando lidamos com frameworks de front-end que fazem muitas renderizações consecutivas!
 
 ### Os comandos são assíncronos
 
