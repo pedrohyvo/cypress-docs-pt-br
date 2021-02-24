@@ -81,7 +81,7 @@ Alguns métodos, tais como [`cy.get()`](https://docs.cypress.io/api/commands/get
 
 - o mesmo sujeito que foi gerado originalmente: [`.click()`](https://docs.cypress.io/api/commands/click.html).
 
-- um novo sujeito, conforme apropriado para o comando .wait().
+- um novo sujeito, conforme apropriado para o comando [`.wait()`](https://docs.cypress.io/api/commands/wait.html).
 
 Esse processo na verdade é muito mais intuitivo do que parece.
 
