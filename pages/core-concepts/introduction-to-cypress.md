@@ -11,7 +11,7 @@ cy.get("textarea.post-body")
   .type("Este é um ótimo artigo");
 ```
 
-Estamos encadeando [`.type()`](https://docs.cypress.io/api/commands/type.html) no comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html), solicitando que ele digite no sujeito gerado pelo comando `cy.get()`, que será um elemento DOM.
+Estamos encadeando [`.type()`](https://docs.cypress.io/api/commands/type.html) no comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html), solicitando que ele digite no sujeito gerado pelo comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html), que será um elemento DOM.
 
 Veja a seguir outros comandos de ação que o Cypress oferece para interagir com seu aplicativo:
 
