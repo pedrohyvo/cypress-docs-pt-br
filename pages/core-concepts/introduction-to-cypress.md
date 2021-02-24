@@ -59,7 +59,7 @@ Aprenderemos mais sobre as [asserções](https://docs.cypress.io/guides/core-con
 
 Uma nova cadeia do Cypress sempre começa com `cy.[comando]`, e o resultado gerado pelo `comando` determina quais outros comandos podem ser chamados em seguida (encadeados).
 
-Alguns métodos geram `null` e, portanto, não podem ser encadeados, tais como [`cy.clearCookies()](https://docs.cypress.io/api/commands/clearcookies.html).
+Alguns métodos geram `null` e, portanto, não podem ser encadeados, tais como [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html).
 
 Alguns métodos, tais como [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html), geram um elemento do DOM, permitindo que outros comandos sejam encadeados neles (pressupondo que eles esperam um sujeito do DOM), tais como [`.click()`](https://docs.cypress.io/api/commands/click.html) ou até mesmo [`cy.contain()`](https://docs.cypress.io/api/commands/contains.html) novamente.
 
