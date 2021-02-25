@@ -5,7 +5,7 @@ testes gravados - normalmente ao executar os testes do Cypress de seu provedor d
 
 [![Visão Geral do Cypress Dashboard.](https://img.youtube.com/vi/ezp60FUnjGg/0.jpg)](https://youtu.be/ezp60FUnjGg)
 
->  Real World Example
+>  Exemplo do Real World App
 
 > O [Cypress Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app) potencializa o 
 [Cypress Dashboard na CI](https://dashboard.cypress.io/projects/7s5okt) para testar mais de 300 casos de teste
@@ -19,8 +19,8 @@ em paralelo em 25 máquinas, vários navegadores, vários tamanhos de dispositiv
 
 No dashboard você pode:
 
-- Configure um projeto para registrar no dashboard
-- Redefina ou adicione mais chaves de registro
+- Configurar um projeto para registrar no dashboard
+- Redefinir ou adicionar mais chaves de registro
 - Alterar quem pode acessar seu projeto Cypress
 - Transferir propriedade de projetos
 - Deletar projetos
@@ -29,13 +29,15 @@ No dashboard você pode:
 
 No dashboard você pode:
 
-- Veja o número de testes reprovados, aprovados, pendentes e ignorados.
-- Obtenha todo o rastreamento da pilha de testes com falha.
-- Visualize as capturas de tela feitas quando os testes falham ou 
+[//]: <> (TODO - Adicionar link cy.request)
+
+- Ver o número de testes reprovados, aprovados, pendentes e ignorados.
+- Obter todo o rastreamento da pilha de testes com falha.
+- Visualizar as capturas de tela feitas quando os testes falham ou 
 ao usar [cy.screenshot()](https://docs.cypress.io/api/commands/screenshot.html).
-- Assista a um vídeo de todo o teste executado ou a um videoclipe no ponto de falha do teste.
-- Veja a rapidez com que seus arquivos de especificação são executados no CI, incluindo se eles foram executados em paralelo.
-- Veja agrupamentos de testes relacionados. 
+- Assistir a um vídeo de todo teste executado ou um videoclipe no ponto de falha do teste.
+- Ver a rapidez com que seus arquivos de especificação são executados no CI, incluindo se eles foram executados em paralelo.
+- Ver agrupamentos de testes relacionados. 
 
 ![Latest runs](https://docs.cypress.io/img/dashboard/dashboard-runs-list.38bf0e41.png)
 
@@ -43,41 +45,41 @@ ao usar [cy.screenshot()](https://docs.cypress.io/api/commands/screenshot.html).
 
 No dashboard você pode:
 
-- Cancelar execuções em andamento
-- Arquive execuções em um estado cancelado ou com erro
+- Cancelar execuções em andamento.
+- Arquivar execuções canceladas ou com erro.
 
 ### Gerenciar organizações
 
 No dashboard você pode:
 
-- Criar, editar e deletar organizações
-- Veja os detalhes de uso de cada organização.
-- Pague o plano de pagamento selecionado.
+- Criar, editar e deletar organizações.
+- Ver os detalhes de uso de cada organização.
+- Pagar o plano de pagamento selecionado.
 
 ### Gerenciar usuários
 
 No dashboard você pode:
 
-- Convide e edite as funções do usuário para organizações
-- Aceite ou rejeite pedidos de adesão à sua organização. 
+- Convidar e editar as funções do usuário para organizações.
+- Aceitar ou rejeitar pedidos de adesão à sua organização. 
 
-### Integre com Github
+### Integrar com Github
 
 No dashboard você pode:
 
 [//]: <> (TODO - Adicionar links verificação de status e pull requests)
 
-- Integre seus testes Cypress com seu fluxo de trabalho GitHub por meio de 
+- Integrar seus testes Cypress com seu fluxo de trabalho GitHub por meio de 
 [verificação de status](https://docs.cypress.io/guides/dashboard/github-integration.html#Status-checks) 
 do commit.
-- Integre o Cypress no GitHub por meio de 
-[pull requests](https://docs.cypress.io/guides/dashboard/github-integration.html#Pull-request-comments) 
+- Integrar o Cypress no GitHub por meio de 
+[pull requests](https://docs.cypress.io/guides/dashboard/github-integration.html#Pull-request-comments).
 
-### Integre com Slack
+### Integrar com Slack
 
 No dashboard você pode:
 
-- Integre o Cypress no Slack em cada execução de teste salvo.
+- Integrar o Cypress no Slack em cada execução de teste salvo.
 
 ### **Veja os testes executados no Test Runner**
 
