@@ -5,7 +5,7 @@ testes gravados - normalmente ao executar os testes do Cypress de seu provedor d
 
 [![Visão Geral do Cypress Dashboard.](https://img.youtube.com/vi/ezp60FUnjGg/0.jpg)](https://youtu.be/ezp60FUnjGg)
 
->  Real World Example
+>  Exemplo do Real World App
 
 > O [Cypress Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app) potencializa o 
 [Cypress Dashboard na CI](https://dashboard.cypress.io/projects/7s5okt) para testar mais de 300 casos de teste
