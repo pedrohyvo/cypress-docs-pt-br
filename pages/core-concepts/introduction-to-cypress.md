@@ -411,3 +411,35 @@ it('muda a URL ao clicar em "awesome"', () => {
     .should('include', '/my/resource/path#awesomeness')
 })
 ```
+
+Uma grande diferença! Além de ser muito mais legível, o Cypress oferece outros benefícios, pois as Promises em si não têm o conceito de novas tentativas.
+
+Sem a possibilidade de fazer novas tentativas, as asserções falhariam aleatoriamente. Isso levaria a resultados inconsistentes e com falhas. É também por isso que não podemos usar novos recursos do JS como `async/await`.
+
+O Cypress não pode gerar valores primitivos isolados de outros comandos. Isso porque os comandos do Cypress agem internamente como um fluxo assíncrono de dados que só é resolvido depois de ser afetado e modificado por outros comandos. Isso significa que não podemos gerar valores parciais, porque temos que saber tudo que você espera antes de devolvermos um valor.
+
+Esses padrões de projeto garantem que possamos criar testes previsíveis, repetíveis e consistentes que não apresentem falhas.
+
+> O Cypress é construído com Promises que vêm do [Bluebird](http://bluebirdjs.com/). No entanto, os comandos do Cypress não retornam essas típicas instâncias de Promises. Em vez disso, retornamos algo chamado `Chainer`, que funciona como uma camada que fica por cima das instâncias das Promises internas.
+>
+> Por esse motivo, você nunca pode atribuir ou retornar algo útil dos comandos do Cypress.
+>
+> Se você deseja saber mais sobre como lidar com comandos assíncronos do Cypress, leia nosso [Guia de Conceitos Básicos](https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html).
+
+### Comandos não são Promises
+
+A API do Cypress não é uma implementação exata das Promises. Ela têm qualidades semelhantes a Promises, porém, há diferenças importantes das quais você deve estar ciente.
+
+1. Você não pode fazer uma "corrida" de comandos ou executar vários comandos ao mesmo tempo (em paralelo).
+
+2. Você não pode esquecer "acidentalmente" de retornar ou encadear um comando.
+
+3. Você não pode adicionar um manipulador de erro `.catch` a um comando com falha.
+
+Existem razões _muito_ específicas pelas quais essas limitações foram incorporadas na API do Cypress.
+
+Todo o propósito do Cypress (e o que o torna muito diferente de outras ferramentas de teste) é criar testes consistentes sem falhas, que são executados de forma idêntica de uma execução para a próxima. Tornar isso possível tem seu preço: há algumas restrições que à primeira vista podem parecer estranhas para desenvolvedores acostumados a trabalhar com Promises.
+
+Vejamos em detalhes cada um dessas restrições:
+
+#### Você não pode fazer uma "corrida" de comandos ou executar vários comandos ao mesmo tempo
