@@ -31,6 +31,7 @@
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
+    - [Projetos](pages/dashboard/projects.md)
 
 ----
 
