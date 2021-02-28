@@ -16,6 +16,7 @@
 <br/>
 
 ![markdown-lint](https://github.com/pedrohyvo/cypress-docs-pt-br/workflows/markdown-lint/badge.svg?branch=master)
+[![GitHub](https://img.shields.io/github/license/pedrohyvo/cypress-docs-pt-br)](https://github.com/pedrohyvo/cypress-docs-pt-br/edit/master/LICENSE)
 
 ----
 
@@ -27,6 +28,9 @@
 - Primeiros Passos
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
+    - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
+- Dashboard
+    - [Introdução](pages/dashboard/introduction.md)
 
 ----
 
@@ -49,3 +53,9 @@ Você também pode enviar qualquer ideia/sugestão como issues no GitHub.
 Todas as contribuições são muito bem-vindas :D 
 
 Para maiores informações, recomendo a leitura do nosso [guia de como contribuir](CONTRIBUTING.md).
+
+## Licença 📝
+
+Este projeto está sob a [licença MIT](LICENSE).
+
+Feito com ❤️ por Pedro Hyvo 👋🏽 [Entre em contato!](https://www.linkedin.com/in/pedrohyvo/)
