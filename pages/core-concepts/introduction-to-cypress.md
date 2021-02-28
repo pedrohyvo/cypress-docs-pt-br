@@ -311,7 +311,7 @@ it('test', () => {
 >
 > Não é possível fazer nada de útil diretamente com o valor de retorno de um comando. Os comandos são enfileirados e gerenciados totalmente por baixo dos panos.
 >
-> Projetamos nossa API assim porque o DOM é um objeto altamente mutável que fica desatualizado constantemente. Para que o Cypress evite falhas e saiba quando prosseguir, gerenciamos os comandos de uma forma altamente controlada e determinista.
+> Projetamos nossa API assim porque o DOM é um objeto altamente mutável que fica desatualizado constantemente. Para que o Cypress evite falhas e saiba quando prosseguir, gerenciamos os comandos de uma forma altamente controlada e determinística.
 
 > **Por que não posso usar async/await?**
 >
@@ -434,7 +434,7 @@ A API do Cypress não é uma implementação exata das Promises. Ela têm qualid
 
 2. Você não pode esquecer "acidentalmente" de retornar ou encadear um comando.
 
-3. Você não pode adicionar um manipulador de erro `.catch` a um comando com falha.
+3. Você não pode adicionar um manipulador de erro `.catch` a um comando que falhou.
 
 Existem razões _muito_ específicas pelas quais essas limitações foram incorporadas na API do Cypress.
 
@@ -443,3 +443,62 @@ Todo o propósito do Cypress (e o que o torna muito diferente de outras ferramen
 Vejamos em detalhes cada um dessas restrições:
 
 #### Você não pode fazer uma "corrida" de comandos ou executar vários comandos ao mesmo tempo
+
+O Cypress garante que executará todos os seus comandos de forma determinística e idêntica sempre que eles forem executados.
+
+Vários comandos do Cypress _modificam_ do estado do navegador de alguma forma.
+
+- [`cy.request()`](https://docs.cypress.io/api/commands/request.html) automaticamente obtém/define cookies no servidor remoto.
+
+- [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html) apaga todos os cookies do navegador.
+
+- [`.click()`](https://docs.cypress.io/api/commands/click.html) faz sua aplicação reagir a eventos de clique.
+
+Nenhum dos comandos acima é _idempotente_: todos eles causam efeitos colaterais. Uma corrida de comandos não é possível porque os comandos devem ser executados de forma controlada e em série a fim de garantir a consistência. Como os testes de integração e e2e geralmente imitam as ações de um usuário real, o Cypress baseia seu modelo de execução de comandos em um usuário real agindo passo a passo.
+
+#### Você não pode esquecer acidentalmente de retornar ou encadear um comando
+
+Em Promises reais, é muito fácil "perder" uma Promise aninhada se você não a retornar ou encadear corretamente.
+
+Vamos imaginar o seguinte código do Node:
+
+```JS
+// Supondo que estamos usando Promises com o módulo fs
+return fs.readFile('/foo.txt', 'utf8')
+.then((txt) => {
+  // Ops, esquecemos de encadear/retornar essa Promise,
+  // então ela é basicamente "perdida".
+  // Isso pode criar condições de corrida bizarras e
+  // bugs difíceis de rastrear.
+  fs.writeFile('/foo.txt', txt.replace('foo', 'bar'))
+
+  return fs.readFile('/bar.json')
+  .then((json) => {
+    // ...
+  })
+})
+```
+
+A razão pela qual isso é possível no mundo das Promises é o fato de você poder executar várias ações assíncronas em paralelo. Por baixo dos panos, cada "cadeia" de Promises retorna uma instância da Promise que rastreia a relação entre as instâncias pai e filho vinculadas.
+
+Como o Cypress garante que os comandos sejam executados _somente_ em série, você não precisa se preocupar com isso quando usa o Cypress. Enfileiramos todos os comandos em um singleton _global_. Como sempre há apenas uma única instância da fila de comandos, é impossível que os comandos sejam "_perdidos_".
+
+É como se o Cypress "enfileirasse" todos os comandos. Posteriormente, eles serão executados na ordem exata em que foram usados, 100% do tempo.
+
+Nunca há necessidade de `retornar` comandos do Cypress.
+
+#### Você não pode adicionar um manipulador de erro `.catch` a um comando que falhou
+
+No Cypress, não há recuperação de erro predefinida para comandos que falham. Um comando e todas as suas asserções _sempre_ serão aprovados ou, se um comando falhar, nenhum dos comandos restantes será executado e, portanto, o teste será reprovado.
+
+Você pode estar se perguntando:
+
+> Como crio um fluxo de controle condicional usando if/else, de forma que, se um elemento existir (ou não existir), eu possa escolher o que fazer?
+
+O problema com essa pergunta é que esse tipo de fluxo de controle condicional acaba sendo não determinístico. Isso significa que é impossível para um script (ou robô) segui-lo de forma 100% consistente.
+
+Geralmente, existe apenas um número limitado de situações muito específicas em que você _pode_ criar um fluxo de controle. Pedir uma recuperação de erros é basicamente o mesmo que pedir outro fluxo de controle `if/else`.
+
+Dito isso, desde que você esteja ciente das possíveis armadilhas relacionadas ao fluxo de controle, é possível fazer isso no Cypress!
+
+Leia tudo sobre como fazer [testes condicionais](https://docs.cypress.io/guides/core-concepts/conditional-testing.html) aqui.
