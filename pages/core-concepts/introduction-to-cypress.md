@@ -9,6 +9,8 @@ O desenvolvedor geralmente não precisa usar Promises diretamente, mas é útil 
 
 ### Interagindo com elementos
 
+[//]: <> (TODO - Adicionar links - integração github)
+
 Como vimos no exemplo inicial, o Cypress permite clicar e digitar em elementos da página usando os comandos
 [`.click()`](https://docs.cypress.io/api/commands/click.html) e
 [`.type()`](https://docs.cypress.io/api/commands/type.html) com um comando
@@ -21,12 +23,16 @@ cy.get("textarea.post-body")
   .type("Este é um ótimo artigo");
 ```
 
+[//]: <> (TODO - Adicionar links - integração github)
+
 Estamos encadeando [`.type()`](https://docs.cypress.io/api/commands/type.html) no comando
 [`cy.get()`](https://docs.cypress.io/api/commands/get.html),
 solicitando que ele digite no sujeito gerado pelo comando
 [`cy.get()`](https://docs.cypress.io/api/commands/get.html), que será um elemento do DOM.
 
 Veja a seguir outros comandos de ação que o Cypress oferece para interagir com seu aplicativo:
+
+[//]: <> (TODO - Adicionar links - integração github)
 
 - [`.blur()`](https://docs.cypress.io/api/commands/blur.html) - Tira o foco de um elemento do DOM focalizado.
 - [`.focus()`](https://docs.cypress.io/api/commands/focus.html) - Focaliza um elemento do DOM.
@@ -38,8 +44,12 @@ Veja a seguir outros comandos de ação que o Cypress oferece para interagir com
 - [`.rightclick()`](https://docs.cypress.io/api/commands/rightclick.html) - Clica com o botão direito do mouse
   em um elemento do DOM.
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 Esses comandos oferecem [algumas garantias](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html)
 em relação a qual deve ser o estado dos elementos antes de eles executarem suas ações.
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 Por exemplo, quando você escreve um comando [`.click()`](https://docs.cypress.io/api/commands/click.html),
 o Cypress garante que é possível interagir com o elemento (da mesma forma que um usuário real faria).
@@ -52,6 +62,8 @@ Ele irá esperar automaticamente até que o elemento tenha um estado "acionável
 
 Isso também ajuda a evitar erros ao interagir com sua aplicação nos testes.
 Normalmente você pode substituir esse comportamento com a opção `force`.
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 > **Conceito importante**
 >
@@ -78,6 +90,8 @@ Em cada um dos exemplos, é importante observar que o Cypress _espera_ automatic
 até que essas asserções sejam aprovadas.
 Isso evita a necessidade de saber ou definir o momento exato em que seus elementos terão esse estado.
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 Aprenderemos mais sobre as
 [asserções](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Assertions) posteriormente neste guia.
 
@@ -86,36 +100,46 @@ Aprenderemos mais sobre as
 Uma nova cadeia do Cypress sempre começa com `cy.[comando]`, e o resultado gerado pelo `comando`
 determina quais outros comandos podem ser chamados em seguida (encadeados).
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 Alguns métodos geram `null` e, portanto, não podem ser encadeados, tais como [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html).
+
+[//]: <> (TODO - Adicionar links - integração github)
 
 Alguns métodos, tais como [`cy.get()`](https://docs.cypress.io/api/commands/get.html) ou
 [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html), geram um elemento do DOM, permitindo que outros
 comandos sejam encadeados neles (pressupondo que eles esperam um sujeito do DOM), tais como [`.click()`](https://docs.cypress.io/api/commands/click.html)
 ou até mesmo [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html) novamente.
 
-<!-- markdownlint-disable MD026 -->
-
 #### Alguns comandos podem ser encadeados...
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 - apenas em `cy`, ou seja, eles não operam sobre um sujeito: [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html).
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 - em comandos que geram determinados tipos de sujeitos (como elementos do DOM): [`.type()`](https://docs.cypress.io/api/commands/type.html).
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 - em `cy` _e também_ em um comando que gera um sujeito: [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html).
 
-<!-- markdownlint-disable MD026 -->
-
 #### Alguns comandos geram...
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 - `null`, ou seja, nenhum comando pode ser encadeado em seguida: [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html).
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 - o mesmo sujeito que foi gerado originalmente: [`.click()`](https://docs.cypress.io/api/commands/click.html).
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 - um novo sujeito, conforme apropriado para o comando [`.wait()`](https://docs.cypress.io/api/commands/wait.html).
 
 Esse processo na verdade é muito mais intuitivo do que parece.
-
-<!-- markdownlint-disable MD026 -->
 
 #### Exemplos:
 
@@ -133,15 +157,21 @@ cy.get('.container-principal') // Gera um array de elementos do DOM corresponden
 > enfileirados para execução posterior. Durante a execução, os sujeitos são gerados de um comando para o seguinte, e muito
 > código útil do Cypress é executado entre cada comando para garantir que tudo funcione corretamente.
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 > Para contornar a necessidade de referenciar elementos, o Cypress tem um recurso
 > [conhecido como aliasing](https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html). O aliasing ajuda
 > a armazenar e salvar referências de elementos para uso futuro.
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 #### Usando [`.then()`](https://docs.cypress.io/api/commands/then.html) para manipular um sujeito
 
 Quer assumir o controle do fluxo de comandos e manipular diretamente o sujeito?
 Sem problema, basta adicionar `.then()` à cadeia de comandos.
 Quando o comando anterior for resolvido, ele chamará sua função callback usando o sujeito gerado como o primeiro argumento.
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 Se você quiser continuar encadeando comandos após seu [`.then()`](https://docs.cypress.io/api/commands/then.html),
 precisará especificar o sujeito que deseja gerar para esses comandos,
@@ -170,6 +200,8 @@ cy
   })
 ```
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 > **Conceito importante**
 >
 > Temos muito mais exemplos e casos de uso de `cy.then()` em nosso
@@ -177,6 +209,8 @@ cy
 > que ensina como lidar corretamente com código assíncrono, quando usar variáveis e o que é aliasing.
 
 #### Usando aliases para fazer referências a sujeitos anteriores
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 O Cypress tem recursos adicionais para rapidamente fazer referência a sujeitos anteriores chamados
 [aliases](https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html). É mais ou menos assim:
@@ -408,13 +442,22 @@ Para ilustrar isso, vamos revisitar essa lista de ações e expor alguns dos ✨
 
 1. Visitar uma URL
    ✨ e esperar que o evento `load` da página seja disparado depois que todos os recursos externos tiverem sido carregados✨
+
+   [//]: <> (TODO - Adicionar link - integração github)
+
 2. Encontrar um elemento pelo seletor
    ✨ e [tentar novamente](https://docs.cypress.io/guides/core-concepts/retry-ability.html)
    até que ele seja encontrado no DOM ✨
+
+   [//]: <> (TODO - Adicionar link - integração github)
+
 3. Executar uma ação de clique nesse elemento
    ✨ depois de esperar que o elemento tenha um
    [estado acionável](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html) ✨
 4. Pegar a URL e...
+
+   [//]: <> (TODO - Adicionar link - integração github)
+
 5. Afirmar que a URL deve incluir uma _string_ específica
    ✨ e [tentar novamente](https://docs.cypress.io/guides/core-concepts/retry-ability.html)
    até que a asserção seja aprovada ✨
@@ -424,9 +467,13 @@ exatamente o estado que nossos comandos esperam.
 Cada comando pode ser resolvido rapidamente (tão rápido que você não irá vê-los em um estado pendente),
 mas outros podem levar segundos ou até mesmo dezenas de segundos para serem resolvidos.
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 Embora a maioria dos comandos expire após alguns segundos, outros comandos especializados que
 esperam que determinados processos demorem muito mais tempo, como o
 [`cy.visit()`](https://docs.cypress.io/api/commands/visit.html), naturalmente aguardarão mais tempo antes de expirar.
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 Estes comandos têm seus próprios valores de timeout específicos que estão documentados em nossa [configuração](https://docs.cypress.io/guides/references/configuration.html).
 
@@ -495,6 +542,8 @@ antes de devolvermos um valor.
 
 Esses padrões de projeto garantem que possamos criar testes previsíveis, repetíveis e consistentes que não apresentem falhas.
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 > O Cypress é construído com Promises que vêm do [Bluebird](http://bluebirdjs.com/).
 > No entanto, os comandos do Cypress não retornam essas típicas instâncias de Promises.
 > Em vez disso, retornamos algo chamado `Chainer`, que funciona como uma camada
@@ -530,9 +579,15 @@ O Cypress garante que executará todos os seus comandos de forma determinística
 
 Vários comandos do Cypress _modificam_ do estado do navegador de alguma forma.
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 - [`cy.request()`](https://docs.cypress.io/api/commands/request.html) automaticamente obtém/define cookies no servidor remoto.
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 - [`cy.clearCookies()`](https://docs.cypress.io/api/commands/clearcookies.html) apaga todos os cookies do navegador.
+
+[//]: <> (TODO - Adicionar link - integração github)
 
 - [`.click()`](https://docs.cypress.io/api/commands/click.html) faz sua aplicação reagir a eventos de clique.
 
@@ -600,4 +655,8 @@ Pedir uma recuperação de erros é basicamente o mesmo que pedir outro fluxo de
 Dito isso, desde que você esteja ciente das possíveis armadilhas relacionadas ao fluxo de controle,
 é possível fazer isso no Cypress!
 
+[//]: <> (TODO - Adicionar link - integração github)
+
 Leia tudo sobre como fazer [testes condicionais](https://docs.cypress.io/guides/core-concepts/conditional-testing.html) aqui.
+
+[Voltar para o topo](#introdução-ao-cypress)
