@@ -111,7 +111,7 @@ Alguns métodos, tais como [`cy.get()`](https://docs.cypress.io/api/commands/get
 comandos sejam encadeados neles (pressupondo que eles esperam um sujeito do DOM), tais como [`.click()`](https://docs.cypress.io/api/commands/click.html)
 ou até mesmo [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html) novamente.
 
-#### Alguns comandos podem ser encadeados...
+#### Alguns comandos podem ser encadeados
 
 [//]: <> (TODO - Adicionar link - integração github)
 
@@ -125,7 +125,7 @@ ou até mesmo [`cy.contains()`](https://docs.cypress.io/api/commands/contains.ht
 
 - em `cy` _e também_ em um comando que gera um sujeito: [`cy.contains()`](https://docs.cypress.io/api/commands/contains.html).
 
-#### Alguns comandos geram...
+#### Alguns comandos geram
 
 [//]: <> (TODO - Adicionar link - integração github)
 
@@ -141,7 +141,7 @@ ou até mesmo [`cy.contains()`](https://docs.cypress.io/api/commands/contains.ht
 
 Esse processo na verdade é muito mais intuitivo do que parece.
 
-#### Exemplos:
+#### Exemplos
 
 ```JS
 cy.clearCookies() // Terminou: 'null' foi gerado, não há possibilidade de encadeamento
@@ -178,7 +178,7 @@ precisará especificar o sujeito que deseja gerar para esses comandos,
 o que pode ser feito com um valor de retorno diferente de `null` ou `undefined`.
 O Cypress irá gerá-lo para o próximo comando para você.
 
-#### Vejamos um exemplo:
+#### Vejamos um exemplo
 
 ```JS
 cy
@@ -238,7 +238,7 @@ Isso é particularmente útil quando estamos trabalhando com frameworks de front
 mas são enfileirados para serem executados mais tarde.
 Isso é o que queremos dizer quando falamos que os comandos do Cypress são assíncronos.
 
-#### Veja este pequeno teste, por exemplo:
+#### Veja este pequeno teste, por exemplo
 
 ```JS
 it('muda a URL ao clicar em "awesome"', () => {
@@ -491,7 +491,7 @@ para serem tomadas mais tarde, poderíamos reformular isso como "adicionar Promi
 
 Vamos comparar o exemplo anterior com uma versão fictícia do mesmo como código bruto, mas em forma de Promises:
 
-#### Demonstração cheia de Promises. Não é um código válido.
+#### Demonstração cheia de Promises (não é um código válido)
 
 ```JS
 it('muda a URL ao clicar em "awesome"', () => {
@@ -514,7 +514,7 @@ it('muda a URL ao clicar em "awesome"', () => {
 })
 ```
 
-#### Como realmente fica no Cypress com as Promises encapsuladas e escondidas.
+#### Como realmente fica no Cypress com as Promises encapsuladas e escondidas
 
 ```JS
 it('muda a URL ao clicar em "awesome"', () => {
