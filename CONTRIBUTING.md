@@ -43,9 +43,12 @@ Esta seção descreve as regras que devem ser aplicadas para todas as páginas. 
 
 ### Texto em Blocos de Código
 
-Mantenha o texto em blocos de código sem tradução, exceto para os comentários. Você pode optar por traduzir o texto em strings, mas tenha cuidado para não traduzir strings que se refiram ao código!
+Mantenha o texto em blocos de código sem tradução, exceto para os comentários. 
+Você pode optar por traduzir o texto em strings, mas tenha cuidado para não traduzir 
+strings que se refiram ao código!
 
 Exemplo:
+
 ```js
 //Example
 cy
@@ -53,7 +56,9 @@ cy
   .should('be.visible')
 // Checking if login field is visible
 ```
+
 ✅ FAÇA:
+
 ```js
 //Exemplo
 cy
@@ -61,7 +66,9 @@ cy
   .should('be.visible')
 // Checking if login field is visible
 ```
+
 ✅ PERMITIDO:
+
 ```js
 //Exemplo
 cy
@@ -69,7 +76,9 @@ cy
   .should('be.visible')
 // Checando se o campo de login é visível
 ```
+
 ❌ NÃO FAÇA:
+
 ```js
 //Exemplo
 cy
@@ -79,7 +88,9 @@ cy
   .should('be.visible')
 // Checando se o campo de login é visível
 ```
+
 ❌ DEFINITIVAMENTE NÃO FAÇA:
+
 ```js
 //Exemplo
 cy
