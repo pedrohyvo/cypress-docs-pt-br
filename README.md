@@ -10,7 +10,7 @@
   <br/>
   <br/>
 	</a>
-  <p>Documentação oficial do framework Cypress.io em Português-Brasil</p>
+  <p>Tradução da documentação oficial do framework Cypress.io em Português-Brasil</p>
   <p>Feita pela comunidade ❤️ </p>
 </div>
 <br/>
