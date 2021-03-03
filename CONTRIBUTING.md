@@ -39,7 +39,9 @@ node_modules/.bin/markdownlint ./ --ignore node_modules
 Obs: para os usuários do VSCode, existe uma extensão [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
 
 ## Guia de Estilos Universal
-Esta seção descreve as regras que devem ser aplicadas para todas as páginas. Quando estiver se referindo ao próprio `Cypress`, use `o Cypress`.
+
+Esta seção descreve as regras que devem ser aplicadas para todas as páginas. 
+Quando estiver se referindo ao próprio `Cypress`, use `o Cypress`.
 
 ### Texto em Blocos de Código
 
