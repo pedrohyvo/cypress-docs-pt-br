@@ -1,11 +1,12 @@
 # TypeScript
 
 O Cypress já vem com [declarações oficiais de tipo](https://github.com/cypress-io/cypress/tree/develop/cli/types) 
-para [TypeScript](https://www.typescriptlang.org/). Isso te permite escrever seus testes em TypeScript.
+para [TypeScript](https://www.typescriptlang.org/). Isso permite que você escreva seus testes em TypeScript.
 
 ## Instalar TypeScript
 
-Você precisará ter instalado no mínimo a versão 3.4 do TypeScript no seu projeto para ter suporte TypeScript dentro do Cypress.
+Você precisará ter instalado no mínimo a versão 3.4 do TypeScript no seu projeto para ter suporte ao TypeScript dentro 
+do Cypress.
 
 ### Com npm
 
@@ -26,7 +27,7 @@ Encontre o seu editor de código no
 e siga as instruções para o seu IDE ter o suporte e o 
 [preenchimento inteligente de código](https://docs.cypress.io/guides/tooling/IDE-integration.html#Writing-Tests) 
 do TypeScript configurados no seu ambiente de desenvolvimento antes de continuar. 
-O suporte ao TypeScript já vem embutido no [Visual Studio Code](https://code.visualstudio.com/), 
+O suporte ao TypeScript já vem configurado no [Visual Studio Code](https://code.visualstudio.com/), 
 [Visual Studio](https://visualstudio.microsoft.com/pt-br/) e [WebStorm](https://www.jetbrains.com/webstorm/) - os demais
 editores requerem configuração extra.
 
@@ -51,15 +52,15 @@ dentro da sua pasta do [`Cypress`](https://docs.cypress.io/guides/core-concepts/
 
 O `"types"` irá dizer para o compilador TypeScript incluir somente definições de tipo do Cypress. Isso irá endereçar
 instâncias onde o projeto também usa @types/chai ou @types/jquery. Já que o Chai e jQuery são namespaces (globais), 
-versões incompatíveis farão com que o gerenciador de pacotes (yarn ou npm) aninhe e inclua múltiplas definições e cause confiltos.
+versões incompatíveis farão o gerenciador de pacotes (yarn ou npm) juntar e incluir múltiplas definições, causando confiltos.
 
-> Você pode encontrar um exemplo de Jest e Cypress instalado no mesmo projeto usando um arquivo tsconfig.json separado 
-no repositório cyperss-io/cypress-and-jest-typescript-example.
+> Você pode encontrar um exemplo de Jest e Cypress instalado no mesmo projeto usando um arquivo `tsconfig.json` 
+separado no repositório [cyperss-io/cypress-and-jest-typescript-example](https://github.com/cypress-io/cypress-and-jest-typescript-example).
 
-> Talvez você tenha que reiniciar o servidor TypeScript do seu IDE se a configuração acima não funcionar. Por exemplo:
+> Talvez seja necessário reiniciar o servidor TypeScript do seu IDE se a configuração acima não funcionar. Por exemplo:
 
 > VS Code (dentro de um arquivo .ts ou .js):
-    - Abra a paleta de comandos (Mac: cmd+shift+p, Windows: ctrl+shift+p)
+    - Abra a paleta de comandos (Mac: cmd+shift+p, Windows: ctrl+shift+p)   
     - Digite "restart ts" e selecione a opção "TypeScript: Restart TS server."
 
 > Se não funcionar, tente reiniciar o IDE.
@@ -79,7 +80,7 @@ Cypress.Commands.add('dataCy', (value) => {
 ```
 
 Então você pode adicionar o comando `dataCy` na interface global Chainable do Cypress (chamada assim pois os comandos 
-são encadeados juntos) ao criar um novo arquivo de definições TypeScript ao lado do seu 
+são encadeados) ao criar um novo arquivo de definições TypeScript ao lado do seu 
 [`supportFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files), 
 nesse caso em `cypress/support/index.d.ts`.
 
