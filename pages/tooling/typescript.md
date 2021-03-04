@@ -153,7 +153,12 @@ module.exports = (on, config) => {
 
 ## Histórico
 
-| Versão | Mudanças                                                                                                   |   |   |   |
-|--------|------------------------------------------------------------------------------------------------------------|---|---|---|
-| 5.0.0  | Atualização da versão mínima do TypeScript de 2.9+ para 3.4+                                               |   |   |   |
-| 4.4.0  | Adicionado suporte para o TypeScript sem precisar de sua própria transpilação através de pré-processadores |   |   |   |
+| Versão | Mudanças                                                                                                   |
+|--------|------------------------------------------------------------------------------------------------------------|
+| [5.0.0](https://docs.cypress.io/guides/references/changelog.html#5-0-0)  | Atualização da versão mínima do TypeScript de 2.9+ para 3.4+                                               |
+| [4.4.0](https://docs.cypress.io/guides/references/changelog.html#4-4-0)  | Adicionado suporte para o TypeScript sem precisar de sua própria transpilação através de pré-processadores |
+
+## Veja também
+
+- [Integração do IDE](https://docs.cypress.io/guides/tooling/IDE-integration.html)
+
