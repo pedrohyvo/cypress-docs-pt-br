@@ -272,4 +272,108 @@ Leia sobre isso [aqui](https://docs.cypress.io/guides/tooling/IDE-integration.ht
 
 ### Passo 4: Fazer uma asserção
 
+Vamos fazer uma asserção sobre algo na nova página em que clicamos. Gostaríamos de ter certeza de que o novo
+URL é o URL esperado. Podemos fazer isso procurando a URL e encadeando uma asserção a ela com `.should()`.
+
+Aqui está, algo parecido:
+
+```javascript
+describe('My First Test', () => {
+  it('clicking "type" navigates to a new url', () => {
+    cy.visit('https://example.cypress.io')
+
+    cy.contains('type').click()
+
+    // Should be on a new URL which includes '/commands/actions'
+    cy.url().should('include', '/commands/actions')
+  })
+})
+```
+
+#### Adicionando mais comandos e asserções
+
+Não estamos limitados a uma única interação e asserção em um determinado teste. Na verdade, muitas
+interações em um aplicativo podem exigir várias etapas e provavelmente alterarão o estado do aplicativo
+em mais de uma maneira.
+
+Podemos continuar as interações e asserções neste teste, adicionando outro encadeamento para interagir
+e verificar o comportamento dos elementos nesta nova página.
+
+Podemos usar `cy.get()` para selecionar um elemento baseado em uma classe CSS. Então, podemos usar o comando
+`.type()` para inserir texto no campo de entrada de texto selecionado. Por fim, podemos verificar que o valor
+do campo de entrada de texto reflete o texto que foi digitado com outro `.should()`.
+
+```javascript
+describe('My First Test', () => {
+  it('Gets, types and asserts', () => {
+    cy.visit('https://example.cypress.io')
+
+    cy.contains('type').click()
+
+    // Should be on a new URL which includes '/commands/actions'
+    cy.url().should('include', '/commands/actions')
+
+    // Get an input, type into it and verify that the value has been updated
+    cy.get('.action-email')
+      .type('fake@email.com')
+      .should('have.value', 'fake@email.com')
+  })
+})
+```
+
+E aí está: um breve teste no Cypress que visita uma página, encontra e clica em um link, verifica a URL e,
+em seguida, verifica o comportamento de um elemento na nova página. Se lermos em voz alta, pode soar como:
+
+1. Visitar: https://example.cypress.io
+2. Encontrar o elemento que contém `type`
+3. Clicar no elemento
+4. Pegar a URL
+5. Verificar que ela inclui `/commands/actions`
+6. Pegar o campo de entrada de texto com a classe `.action-email`
+7. Digitar `fake@email.com` no campo de entrada de texto
+8. Verificar que o campo de entrada de texto é preenchido com o novo valor
+
+Ou na sintaxe Dado que, Quando, Então:
+
+1. Dado que um usuário visita https://example.cypress.io
+2. Quando ele clica no link com label `type`
+3. E ele digita `fake@email.com` no campo de entrada de texto com a classe `.action-email`
+4. Então o URL deve incluir `/comandos/ações`
+5. E o campo de entrada de texto com a classe `.action-email` tem `fake@email.com` como valor
+
+E ei, este é um teste muito limpo! Não precisamos dizer nada sobre como as coisas funcionam,
+apenas que gostaríamos de verificar uma série particular de eventos e resultados.
+
+[Vídeo de exemplo](https://docs.cypress.io/img/snippets/first-test-assertions-30fps.mp4)
+
+```markdown
+Transições de página
+
+É importante notar que este teste fez a transição em duas páginas diferentes.
+
+1. O primeiro `cy.visit()`
+2. O `.click()` para uma nova página
+
+O Cypress detecta automaticamente coisas como um evento de transição de página e interromperá automaticamente
+os comandos em execução até que a próxima página termine de carregar.
+
+Se a próxima página não tivesse terminado sua fase de carregamento, Cypress teria encerrado o teste
+e apresentado um erro.
+
+Feito automaticamente - isso significa que você não precisa se preocupar com comandos executados
+acidentalmente em uma página desatualizada, nem precisa se preocupar com a execução de comandos em
+uma página parcialmente carregada.
+
+Mencionamos anteriormente que o Cypress esperou 4 segundos antes de atingir o tempo limite para encontrar
+um elemento DOM - mas, neste caso, quando o Cypress detecta um evento de transição de página, ele aumenta
+automaticamente o tempo limite para 60 segundos para o único evento CARREGAR PÁGINA.
+
+Em outras palavras, com base nos comandos e nos eventos que acontecem, o Cypress altera automaticamente seus
+tempos limite esperados para corresponder ao comportamento do aplicativo da web.
+
+Esses vários tempos limite são definidos no arquivo de configuração.
+```
+
+## Debugando
+
 [Voltar para o topo](#escrevendo-o-primeiro-teste)
