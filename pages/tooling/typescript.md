@@ -58,11 +58,12 @@ versões incompatíveis farão o gerenciador de pacotes (yarn ou npm) juntar e i
 separado no repositório [cyperss-io/cypress-and-jest-typescript-example](https://github.com/cypress-io/cypress-and-jest-typescript-example).
 
 > Talvez seja necessário reiniciar o servidor TypeScript do seu IDE se a configuração acima não funcionar. Por exemplo:
-
+>
 > VS Code (dentro de um arquivo .ts ou .js):
-    - Abra a paleta de comandos (Mac: cmd+shift+p, Windows: ctrl+shift+p)   
-    - Digite "restart ts" e selecione a opção "TypeScript: Restart TS server."
-
+>
+>- Abra a paleta de comandos (Mac: cmd+shift+p, Windows: ctrl+shift+p)   
+>- Digite "restart ts" e selecione a opção "TypeScript: Restart TS server."
+>
 > Se não funcionar, tente reiniciar o IDE.
 
 ## Tipos de comandos personalizados
