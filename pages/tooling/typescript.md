@@ -5,8 +5,7 @@ para [TypeScript](https://www.typescriptlang.org/). Isso permite que você escre
 
 ## Instalar TypeScript
 
-Você precisará ter instalado no mínimo a versão 3.4 do TypeScript no seu projeto para ter suporte ao TypeScript dentro 
-do Cypress.
+Você precisará ter, no mínimo, a versão 3.4 do TypeScript instalada no seu projeto para ter suporte ao TypeScript no Cypress.
 
 ### Com npm
 
