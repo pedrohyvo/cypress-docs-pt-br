@@ -80,7 +80,7 @@ em verde - sucesso).
 [//]: <> (TODO - Adicionar links Test Runner e Visit Command quando forem traduzidos)
 > Observe que o Cypress exibe uma mensagem sobre essa ser a página padrão 
 [à direita](https://docs.cypress.io/guides/core-concepts/test-runner.html#Application-Under-Test).
-Cypress assume que você irá sair e [visitar](https://docs.cypress.io/api/commands/visit.html) outra 
+Cypress assume que você irá sair e [visitar](https://docs.cypress.io/api/commands/visit.html) outra
 página na internet - mas também pode funcionar bem sem isso.
 
 Agora vamos escrever nosso primeiro teste com falha.
@@ -324,7 +324,7 @@ describe('My First Test', () => {
 E aí está: um breve teste no Cypress que visita uma página, encontra e clica em um link, verifica a URL e,
 em seguida, verifica o comportamento de um elemento na nova página. Se lermos em voz alta, pode soar como:
 
-1. Visitar: https://example.cypress.io
+1. Visitar: `https://example.cypress.io`
 2. Encontrar o elemento que contém `type`
 3. Clicar no elemento
 4. Pegar a URL
@@ -335,7 +335,7 @@ em seguida, verifica o comportamento de um elemento na nova página. Se lermos e
 
 Ou na sintaxe Dado que, Quando, Então:
 
-1. Dado que um usuário visita https://example.cypress.io
+1. Dado que um usuário visita `https://example.cypress.io`
 2. Quando ele clica no link com label `type`
 3. E ele digita `fake@email.com` no campo de entrada de texto com a classe `.action-email`
 4. Então o URL deve incluir `/comandos/ações`
