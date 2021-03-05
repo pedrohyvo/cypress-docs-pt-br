@@ -49,8 +49,8 @@ dentro da sua pasta do [`Cypress`](https://docs.cypress.io/guides/core-concepts/
 }
 ```
 
-O `"types"` irá dizer para o compilador TypeScript incluir somente definições de tipo do Cypress. Isso irá endereçar
-instâncias onde o projeto também usa @types/chai ou @types/jquery. Já que o Chai e jQuery são namespaces (globais), 
+O `"types"` informa para o compilador TypeScript incluir apenas definições de tipo do Cypress. Ao fazer isso, instâncias vão ser endereçadas 
+onde o projeto utilizar @types/chai ou @types/jquery. Já que o Chai e jQuery são namespaces (globais), 
 versões incompatíveis farão o gerenciador de pacotes (yarn ou npm) juntar e incluir múltiplas definições, causando confiltos.
 
 > Você pode encontrar um exemplo de Jest e Cypress instalado no mesmo projeto usando um arquivo `tsconfig.json` 
