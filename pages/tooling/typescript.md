@@ -122,10 +122,13 @@ it('works', () => {
 ```
 
 Exemplos:
-    - Veja a receita de exemplo em [Adicionando Comandos Personalizados](https://github.com/cypress-io/cypress-example-recipes#fundamentals).
-    - Você pode encontrar um exemplo de comando personalizado escrito em TypeScript no repositório 
+
+- Veja a receita de exemplo em [Adicionando Comandos Personalizados](https://github.com/cypress-io/cypress-example-recipes#fundamentals).
+
+- Você pode encontrar um exemplo de comando personalizado escrito em TypeScript no repositório 
     [omerose/cypress-support](https://github.com/omerose/cypress-support).
-    - O projeto de exemplo [cypress-example-todomvc](https://github.com/cypress-io/cypress-example-todomvc#custom-commands)
+
+- O projeto de exemplo [cypress-example-todomvc](https://github.com/cypress-io/cypress-example-todomvc#custom-commands)
     utiliza comandos personalizados para evitar código boilerplate.
 
 ## Tipos de asserções personalizadas
