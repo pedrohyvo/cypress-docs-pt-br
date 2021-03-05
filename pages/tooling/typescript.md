@@ -121,7 +121,7 @@ it('works', () => {
 })
 ```
 
-Exemplos:
+**Exemplos:**
 
 - Veja a receita de exemplo em [Adicionando Comandos Personalizados](https://github.com/cypress-io/cypress-example-recipes#fundamentals).
 
