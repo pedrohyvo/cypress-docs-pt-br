@@ -74,6 +74,7 @@ __* Esconde transbordamento__  significa que ele tem `overflow: hidden`, `overfl
 `overflow: scroll`, or `overflow: auto`
 
 > **Opacidade**
+>
 > Os elementos onde a propriedade CSS (ou ancestrais) tem `opacity: 0` são considerados ocultos ao declarar a visibilidade
 > do elemento diretamente.
 > No entanto, os elementos onde a propriedade CSS (ou ancestrais) tem `opacity: 0` são considerados acionáveis ​​e quaisquer
