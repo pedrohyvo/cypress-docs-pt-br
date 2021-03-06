@@ -1,5 +1,282 @@
 # Introdução ao Cypress
 
+> ## 🎓 O que você aprenderá
+>
+> - Como o Cypress faz consultas ao DOM
+> - Como o Cypress gerencia sujeitos e cadeias de comandos
+> - O que são e como funcionam as asserções
+> - Como timeouts são aplicados aos comandos
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+> **Importante**
+>
+> Este é o guia mais importante para entender como testar com o Cypress.
+> É importante que você leia e entenda este guia. Faça perguntas sobre
+> ele para que possamos melhorá-lo.
+>
+> Quando você terminar, recomendamos assistir aos
+> [Tutoriais em Vídeo](https://docs.cypress.io/examples/examples/tutorials.html).
+
+## O Cypress pode ser simples (às vezes)
+
+Simplicidade tem a ver com fazer mais digitando menos. Vejamos um exemplo:
+
+```JS
+describe('Recurso do Artigo', () => {
+  it('Criar um novo artigo', () => {
+    cy.visit('/posts/new')           // 1.
+
+    cy.get('input.post-title')       // 2.
+      .type('Meu Primeiro Artigo')   // 3.
+
+    cy.get('input.post-body')        // 4.
+      .type('Olá, mundo!')           // 5.
+
+    cy.contains('Enviar')            // 6.
+      .click()                       // 7.
+
+    cy.url()                         // 8.
+      .should('include', '/posts/my-first-post')
+
+    cy.get('h1')                     // 9.
+      .should('contain', 'Meu Primeiro Artigo')
+  })
+})
+```
+
+Você consegue ler isso? Se conseguiu, é mais ou menos assim:
+
+1. Visite a página em `/posts/new`.
+2. Encontre o `<input>` com a classe `post-title`.
+3. Digite "Meu Primeiro Artigo" nele.
+4. Encontre o `<input>` com a classe `post-body`.
+5. Digite "Olá, mundo!" nele.
+6. Encontre o elemento que contém o texto "Enviar".
+7. Clique nele.
+8. Pegue a URL do navegador e verifique se ela inclui `/posts/my-first-post`.
+9. Encontre a tag `h1` e verifique se ela contém o texto "Meu Primeiro Artigo".
+
+Esse é um teste relativamente simples, mas observe quanto
+código ele abrange, tanto no cliente quanto no servidor!
+
+No restante deste guia, vamos explorar os conceitos básicos do Cypress
+que fazem este exemplo funcionar. Vamos desmistificar as regras que o
+Cypress segue para que você possa testar sua aplicação com eficiência,
+de forma que ela reflita ao máximo as ações do usuário. Além disso,
+explicaremos como usar alguns atalhos, quando apropriado.
+
+## Consultando elementos
+
+### O Cypress é como o jQuery
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+Se você já usou o [jQuery](https://jquery.com/), provavelmente está acostumado a consultar elementos assim:
+
+```JS
+$('.my-selector')
+```
+
+Na Cypress, consultamos elementos da mesma forma:
+
+```JS
+cy.get('.my-selector')
+```
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+Na verdade, o Cypress [incorpora o jQuery](https://docs.cypress.io/guides/references/bundled-tools.html#Other-Library-Utilities)
+e expõe muitos de seus métodos de travessia do DOM para que você possa trabalhar com estruturas HTML complexas
+mais facilmente usando APIs que já conhece.
+
+```JS
+// Cada método tem seu equivalente no jQuery. Reaproveite o que você já sabe!
+cy.get('#main-content')
+  .find('.article')
+  .children('img[src^="/static"]')
+  .first()
+```
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+> **Conceito importante**
+>
+> O Cypress aproveita o sofisticado mecanismo de seletores do jQuery para tornar
+> os testes mais simples e legíveis para desenvolvedores Web modernos.
+>
+> Gostaria de conhecer melhores práticas sobre como selecionar elementos?
+> [Leia esta página](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements).
+
+No entanto, há uma diferença na forma de acessar os elementos do DOM retornados pela consulta:
+
+```JS
+// O código a seguir funciona, pois o jQuery retorna o elemento de forma síncrona.
+const $jqElement = $('.element')
+
+// O código a seguir não vai funcionar! O Cypress não retorna o elemento de forma síncrona.
+const $cyElement = cy.get('.element')
+```
+
+Vamos entender por quê...
+
+### O Cypress _não_ é como o jQuery
+
+Pergunta: O que acontece quando o jQuery não consegue encontrar
+nenhum elemento do DOM correspondente ao seletor?
+
+Resposta: _Ops!_ Ele retorna uma coleção do jQuery vazia. Há um objeto real
+com o qual podemos trabalhar, porém ele não contém o elemento que queríamos.
+Por isso, começamos a adicionar verificações condicionais e a repetir nossas
+consultas manualmente.
+
+```JS
+// $() retorna imediatamente com uma coleção vazia.
+const $myElement = $('.element').first()
+
+// Isso gera verificações condicionais deselegantes
+// e, ainda pior: testes cheios de falhas!
+if ($myElement.length) {
+  doSomething($myElement)
+}
+```
+
+Pergunta: O que acontece quando o Cypress não consegue encontrar nenhum elemento do
+DOM correspondente ao seletor?
+
+Resposta: _Não tem problema!_ O Cypress repete automaticamente a consulta até que:
+
+#### 1. O elemento seja encontrado
+
+```JS
+cy
+  // cy.get() procura '#element', repetindo a consulta até...
+  .get('#element')
+
+  // ...encontrar o elemento!
+  // Agora é possível trabalhar com ele usando .then
+  .then(($myElement) => {
+    doSomething($myElement)
+  })
+```
+
+#### 2. Um timeout definido seja atingido
+
+```JS
+cy
+// cy.get() procura '#element-does-not-exist', repetindo a consulta até...
+// ...o timeout ser atingido sem o elemento ter sido encontrado.
+// O Cypress para e o teste falha.
+.get('#element-does-not-exist')
+
+// ...O código abaixo nunca será executado...
+.then(($myElement) => {
+    doSomething($myElement)
+})
+```
+
+Isso torna o Cypress robusto e imune a dezenas de problemas
+comuns que ocorrem em outras ferramentas de teste. Considere
+todas as situações que poderiam fazer uma consulta do DOM falhar:
+
+- O DOM ainda não foi carregado.
+- O framework que você está usando não terminou de ser inicializado.
+- Uma requisição XHR não recebeu a resposta.
+- Uma animação ainda não terminou.
+- E por aí vai...
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+Antes, você seria obrigado a escrever código personalizado para lidar com cada um desses problemas:
+uma combinação desastrosa de esperas aleatórias, retentativas condicionais e verificações de nulo
+que sobrecarregam seus testes. Mas não no Cypress! Com retentativas automáticas e
+[timeouts personalizáveis](https://docs.cypress.io/guides/references/configuration.html#Timeouts),
+o Cypress acaba com todos esses problemas.
+
+> **Conceito importante**
+>
+> O Cypress encapsula todas as consultas ao DOM com uma lógica robusta de "retentativa e timeout" que reflete melhor
+> o funcionamento de aplicações Web reais. Com essa pequena adaptação na forma como localizamos elementos do DOM,
+> temos uma grande melhoria na estabilidade de todos os nossos testes. Os testes com falhas estão com os dias contados!
+
+[//]: <> (TODO - Adicionar links - integração github)
+
+> No Cypress, quando você quiser interagir com um elemento do DOM diretamente, chame
+> [`.then()`](https://docs.cypress.io/api/commands/then.html) com uma função
+> callback que recebe o elemento como primeiro argumento. Quando quiser pular
+> completamente a funcionalidade de retentativa e timeout e trabalhar de forma
+> síncrona tradicional, use [`Cypress.$`](https://docs.cypress.io/api/utilities/$.html).
+
+### Consultando pelo conteúdo do texto
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+Outra maneira de encontrar algo (uma maneira mais humana) é procurar pelo conteúdo,
+ou seja, pelo que o usuário vê na página. Para isso, existe o prático comando
+[`cy.contains()`](https://docs.cypress.io/api/commands/contains.html). Por exemplo:
+
+```JS
+// Encontrar um elemento no documento que contém o texto "Novo Artigo".
+cy.contains('Novo Artigo')
+
+// Encontrar um elemento dentro de '.main' que contêm o texto "Novo Artigo".
+cy.get('.main').contains('Novo Artigo')
+```
+
+Isso é útil ao escrever testes do ponto de vista do usuário que está interagindo com sua
+aplicação. Ele só sabe que quer clicar no botão "Enviar" e não faz ideia de que esse
+botão tem um atributo `type` igual a `submit` ou a classe CSS `my-submit-button`.
+
+> **Internacionalização**
+>
+> Se a sua aplicação for traduzido para vários idiomas para i18n, considere as
+> implicações de encontrar elementos do DOM usando o texto que o usuário vê!
+
+### Quando elementos estão faltando
+
+Como mostramos acima, o Cypress leva em consideração a natureza assíncrona das aplicações Web e não
+emite uma falha imediatamente logo na primeira vez que um elemento não é encontrado. Em vez disso, o Cypress
+espera um tempo para que a sua aplicação possa terminar seja lá o que ela esteja fazendo!
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+Isso é conhecido como um `timeout`, e é possível personalizar a maioria dos comandos com tempos de timeout
+específicos ([o timeout padrão é de 4 segundos](https://docs.cypress.io/guides/references/configuration.html#Timeouts)).
+Esses comandos indicam a opção `timeout` em sua documentação da API, detalhando como definir o número de milissegundos
+durante os quais você deseja continuar tentando encontrar o elemento.
+
+```JS
+// Espere 10 segundos até este elemento aparecer
+cy.get('.my-slow-selector', { timeout: 10000 })
+```
+
+[//]: <> (TODO - Adicionar link - integração github)
+
+Você também pode definir o timeout globalmente através da
+[configuração: `defaultCommandTimeout`](https://docs.cypress.io/guides/references/configuration.html#Timeouts).
+
+> **Conceito importante**
+>
+> Para refletir o comportamento das aplicações Web, o Cypress é assíncrono e usa timeouts
+> para saber quando deve parar de esperar que uma aplicação entre no estado esperado.
+> Os timeouts podem ser configurados globalmente ou por comando.
+
+> **Timeouts e desempenho**
+>
+> Neste caso, há uma consideração de desempenho importante: testes com tempos de timeout mais longos levam mais tempo
+> para falhar. Os comandos sempre continuam assim que as condições esperadas são atendidas, portanto, os testes funcionais
+> serão executados tão rápido quanto sua aplicação permitir. Por padrão, um teste que falha devido a um timeout
+> consumirá todo o tempo de timeout. Isso significa que, embora você _possa_ aumentar o tempo de timeout para
+> partes específicas da sua aplicação, _não deve_ usar um timeout extra longo "apenas por precaução".
+
+[//]: <> (TODO - Adicionar links - integração github)
+
+Mais adiante neste guia entraremos em muito mais detalhes sobre
+[Asserções Padrão](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Default-Assertions) e
+[Timeouts](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Timeouts).
+
+[Voltar para o topo](#introdução-ao-cypress)
+
 ## Cadeias de Comandos
 
 É muito importante entender o mecanismo que o Cypress usa para encadear comandos.
@@ -39,7 +316,8 @@ Veja a seguir outros comandos de ação que o Cypress oferece para interagir com
 - [`.clear()`](https://docs.cypress.io/api/commands/clear.html) - Limpa o valor de um input ou textarea.
 - [`.check()`](https://docs.cypress.io/api/commands/check.html) - Marca caixas de seleção ou botões de opção.
 - [`.uncheck()`](https://docs.cypress.io/api/commands/uncheck.html) - Desmarcas caixas de seleção.
-- [`.select()`](https://docs.cypress.io/api/commands/select.html) - Seleciona um `<option>` dentro de um `<selection>`.
+- [`.select()`](https://docs.cypress.io/api/commands/select.html) - Seleciona um `<option>`
+  dentro de um `<selection>`.
 - [`.dblclick()`](https://docs.cypress.io/api/commands/dblclick.html) - Clica duas vezes em um elemento do DOM.
 - [`.rightclick()`](https://docs.cypress.io/api/commands/rightclick.html) - Clica com o botão direito do mouse
   em um elemento do DOM.
