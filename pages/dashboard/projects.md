@@ -17,27 +17,25 @@ também pode gravar seus testes ao executar localmente.
 
 ## Configure um projeto para gravar
 
-![Setup to record](https://docs.cypress.io/img/dashboard/setup-to-record.81b3d46f.gif)
-
 [//]: <> (TODO - Adicionar links - verificar todos os items da lista)
 
-1. Clique na guia **Execuções** de seu projeto no 
+1. Clique na guia **Runs** de seu projeto no 
 [Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html).
-2. Clique em **Conectar ao Dashboard**.
+2. Clique em **Connect to Dashboard**.
 3. Você precisará fazer login para gravar seus testes, portanto, será solicitado que você faça login 
 no Cypress Dashboard aqui, caso ainda não tenha feito isso.
 
     ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-1.2e5fcf2c.png)
  
 4. Escolha quem é o dono do projeto. Você pode ser o dono ou selecionar uma organização que criou. 
-Se você não tiver nenhuma organização, clique em **Criar Organização**. As organizações funcionam 
+Se você não tiver nenhuma organização, clique em **Create organization**. As organizações funcionam 
 exatamente como no GitHub. Eles permitem que você separe seus projetos pessoais e de trabalho. 
 [Leia mais sobre organizações](https://docs.cypress.io/guides/dashboard/organizations.html).
 
     ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-2.36fe8b32.png)
 
 5. Se você não tiver nenhum projeto existente, terá a oportunidade de criar um novo aqui. 
-Se você tem projetos existentes e deseja criar um novo, pode clicar em **Criar Novo Projeto** para fazer um novo.
+Se você tem projetos existentes e deseja criar um novo, pode clicar em **Create new project** para fazer um novo.
 
     - Preencha o nome do seu projeto (isso é apenas para fins de exibição e pode ser alterado posteriormente).
     - Escolha se este projeto é Público ou Privado.
@@ -54,8 +52,8 @@ vinculado anteriormente a um projeto existente.
 
     ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-4.66a081bd.png)
 
-7. Clique em **Configuração de Projeto**.
-8. Agora você deve ver uma visão explicando como registrar sua primeira execução com sua chave de registro. 
+7. Clique em **Setup Project**.
+8. Agora você deve ver uma tela explicando como registrar sua primeira execução com sua chave de registro. 
 
     ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-5.15b5679e.png)
 
@@ -83,7 +81,7 @@ enquanto executa o comando [cypress run](https://docs.cypress.io/guides/guides/c
 
 [//]: <> (TODO - Adicionar link - Test Runner)
 🎉 Seus testes agora estão sendo gravados! Assim que a execução dos testes terminar, você os verá no 
-[Dashboard](https://on.cypress.io/dashboard) e na guia `Execuções` do 
+[Dashboard](https://on.cypress.io/dashboard) e na guia `Runs` do 
 [Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html).
 
 ![Dashboard runs list](https://docs.cypress.io/img/dashboard/dashboard-runs-list.38bf0e41.png)
@@ -165,7 +163,7 @@ Você pode criar várias chaves de registro para um projeto ou excluir as existe
 
 ![Record keys in project settings dashboard](https://docs.cypress.io/img/dashboard/record-keys-in-project-settings-dashboard.fcaeea13.png)
 
-Você também pode encontrar sua chave de registro dentro da guia Configurações no Test Runner.
+Você também pode encontrar sua chave de registro dentro da guia **Settings** no Test Runner.
 
 ![Record key shown in desktop gui](https://docs.cypress.io/img/dashboard/record-key-shown-in-desktop-gui-configuration.15896828.jpg)
 
@@ -184,11 +182,11 @@ Veja [Chave de registro](###chave-de-registro) para uma descrição completa de 
 
     ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
 
-4. Aqui você verá uma seção **Chaves de Registro**.
+4. Aqui você verá uma seção **Record Keys**.
 
     ![Record keys in project settings dashboard](https://docs.cypress.io/img/dashboard/record-keys-in-project-settings-dashboard.fcaeea13.png)
 
-5. Clique em **criar nova chave**. Uma nova chave será gerada automaticamente para seu projeto.
+5. Clique em **Create new key**. Uma nova chave será gerada automaticamente para seu projeto.
 
 ### Deletar chave de registro
 
@@ -201,11 +199,11 @@ Veja [Chave de registro](###chave-de-registro) para uma descrição completa de 
 
     ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
 
-4. Aqui você verá uma seção **Chaves de Registro**.
+4. Aqui você verá uma seção **Record Keys**.
 
     ![Record keys in project settings dashboard](https://docs.cypress.io/img/dashboard/record-keys-in-project-settings-dashboard.fcaeea13.png)
 
-5. Clique em deletar ao lado da chave de registro que deseja excluir.
+5. Clique em **Delete** ao lado da chave de registro que deseja excluir.
 
 ## Configurações de paralelização
 
@@ -362,10 +360,10 @@ A exclusão de projetos só pode ser feita a partir do [serviço Dashboard](http
 
     ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
 
-4. Na parte inferior da página Configurações, clique no botão **Remover Projeto**.
+4. Na parte inferior da página Configurações, clique no botão **Yes, remove project**.
 
     ![Remove project dialog](https://docs.cypress.io/img/dashboard/remove-project-dialog.a84d3195.png)
 
-5. Confirme que deseja excluir o projeto clicando em **Sim, Remover Projeto**.
+5. Confirme que deseja excluir o projeto clicando em **Yes, remove project**.
 
 [Voltar para o topo](#projetos)
