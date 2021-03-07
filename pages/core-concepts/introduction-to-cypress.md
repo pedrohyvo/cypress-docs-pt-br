@@ -229,7 +229,7 @@ botão tem um atributo `type` igual a `submit` ou a classe CSS `my-submit-button
 
 > **Internacionalização**
 >
-> Se a sua aplicação for traduzido para vários idiomas para i18n, considere as
+> Se a sua aplicação for traduzida para vários idiomas para i18n, considere as
 > implicações de encontrar elementos do DOM usando o texto que o usuário vê!
 
 ### Quando elementos estão faltando
