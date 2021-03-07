@@ -1,19 +1,19 @@
 # Escrevendo e Organizando Testes
 
->O que você aprenderá
+> ## __O que você aprenderá__
 >
->-Como organizar seus arquivos de teste e suporte.
+>- Como organizar seus arquivos de teste e suporte.
 >
->-Quais idiomas são suportados em seus arquivos de teste.
+>- Quais idiomas são suportados em seus arquivos de teste.
 >
->-Como o Cypress lida com testes de unidade versus testes de integração.
+>- Como o Cypress lida com testes de unidade versus testes de integração.
 >
->-Como agrupar seus testes.
+>- Como agrupar seus testes.
 
->Melhores Práticas
+> __Melhores Práticas__
 >
->Recentemente, demos uma palestra na conferência “Melhores práticas” na AssertJS
->(fevereiro de 2018). Este vídeo demonstra
+>Recentemente demos uma palestra de “Melhores práticas” na conferência AssertJS
+>(Fevereiro de 2018). Este vídeo demonstra
 >como dividir seu aplicativo e organizar seus testes.
 >
 ><https://www.youtube.com/watch?v=5XQOK0v_YRE>
@@ -57,7 +57,7 @@ Depois de adicionar um novo projeto, o Cypress criará automaticamente uma estru
     - index.js
   ```
 
-## Configurando a Estrutura da Pasta
+### Configurando a Estrutura da Pasta
 
 Enquanto o Cypress permite que você configure onde seus testes, fixtures
 e arquivos de suporte estão localizados, se você estiver iniciando
@@ -66,19 +66,19 @@ seu primeiro projeto, recomendamos que você use a estrutura acima.
 Você pode modificar a configuração da pasta em seu arquivo de configuração.
 Veja a [configuração](https://docs.cypress.io/guides/references/configuration.html#Folders-Files) para mais detalhes.
 
->__Quais arquivos devo adicionar ao meu 'arquivo .gitignore'?__
+>__Quais arquivos devo adicionar ao meu arquivo '.gitignore'?__
 >
 >O Cypress criará um [`screenshotsFolder`](https://docs.cypress.io/guides/references/configuration.html#Screenshots) e um
 >[`videosFolder`](https://docs.cypress.io/guides/references/configuration.html#Videos) para armazenar as capturas de tela
->e vídeos feitos durante o teste de seu aplicativo. Muitos usuários optarão por adicionar essas pastas a seus `.gitignore`
->arquivos. Além disso, se você estiver armazenando variáveis ​​de ambiente confidenciais em seu arquivo de configuração
+>e vídeos feitos durante o teste de seu aplicativo. Muitos usuários optarão por adicionar essas pastas a seus arquivos `.gitignore`.
+>Além disso, se você estiver armazenando variáveis ​​de ambiente confidenciais em seu arquivo de configuração
 >(`cypress.json` por padrão) ou [`cypress.env.json`](https://docs.cypress.io/guides/guides/environment-variables.html#Option-2-cypress-env-json),
 >elas também devem ser ignoradas ao fazer check-in no controle de origem.
 
 
-## Arquivos de teste
+### Arquivos de teste
 
-Os arquivos de teste estão localizados `cypress/integration` por padrão, mas podem ser [configurados](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
+Os arquivos de teste estão localizados em `cypress/integration` por padrão, mas podem ser [configurados](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
 em outro diretório. Os arquivos de teste podem ser escritos como:
 
 - `.js`
@@ -86,40 +86,40 @@ em outro diretório. Os arquivos de teste podem ser escritos como:
 - `.coffee`
 - `.cjsx`
 
-Cypress também oferece suporte pronto `ES2015` para uso. Você pode usar `ES2015 modules` ou `CommonJS modules`. Isto significa
- que pode `import` ou `require` ambos NPM pacotes e módulos relativos locais .
+Cypress também oferece suporte `ES2015` pronto para uso. Você pode usar `ES2015 modules` ou `CommonJS modules`. Isto significa
+que pode utilizar `import` ou `require`, ambos pacotes NPM e módulos relativos locais.
 
 >__Receita de exemplo__
 >
 >Confira nossa receita usando os [módulos ES2015 e CommonJS](https://docs.cypress.io/examples/examples/recipes.html#Fundamentals).
 
-Para ver um exemplo de cada comando usado no Cypress, abra a `example` [pasta](https://github.com/cypress-io/cypress-example-kitchensink/tree/master/cypress/integration/examples)
-dentro da sua `cypress/integration` pasta.
+Para ver um exemplo de cada comando usado no Cypress, abra a [pasta](https://github.com/cypress-io/cypress-example-kitchensink/tree/master/cypress/integration/examples)
+`example` dentro da sua pasta `cypress/integration`.
 
-Para começar a escrever testes para seu aplicativo, crie um novo arquivo como `app_spec.js` em sua `cypress/integration`
-pasta. Atualize sua lista de testes no Cypress Test Runner e seu novo arquivo deve ter aparecido na lista.
+Para começar a escrever testes para seu aplicativo, crie um novo arquivo como `app_spec.js` em sua pasta `cypress/integration`.
+Atualize sua lista de testes no Cypress Test Runner e seu novo arquivo deve ter aparecido na lista.
 
-## Arquivos de fixação
+### Arquivos de fixação
 
-As luminárias são usadas como partes externas de dados estáticos que podem ser usadas por seus testes. Os arquivos de
-luminárias estão localizados `cypress/fixtures` por padrão, mas podem ser [configurados](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
+Fixtures são usadas como partes externas de dados estáticos que podem ser usadas por seus testes. Os arquivos de fixtures
+estão localizados em `cypress/fixtures` por padrão, mas podem ser [configurados](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
 em outro diretório.
 
-Você normalmente os usaria com o [`cy.fixture()`](https://docs.cypress.io/api/commands/fixture.html) comando e com mais
-frequência quando estiver fazendo o stub de [Solicitações de Rede](https://docs.cypress.io/guides/guides/network-requests.html).
+Você normalmente os usaria com o comando [`cy.fixture()`](https://docs.cypress.io/api/commands/fixture.html) e com mais frequência
+ quando estiver fazendo o stub de [Solicitações de Rede](https://docs.cypress.io/guides/guides/network-requests.html).
 
-## Arquivos de ativos
+### Arquivos de ativos
 
 Existem algumas pastas que podem ser geradas após a execução de um teste, contendo ativos que foram gerados durante a execução
 do teste.
 
-Você pode considerar adicionar essas pastas ao seu `.gitignore` arquivo para ignorar a verificação desses arquivos no controle
+Você pode considerar adicionar essas pastas ao seu arquivo `.gitignore` para ignorar a verificação desses arquivos no controle
 de origem.
 
-## Download de arquivos
+#### Download de arquivos
 
-Todos os arquivos baixados durante o teste do recurso de download de arquivo de um aplicativo serão armazenados no, [`downloadsFolder`](https://docs.cypress.io/guides/references/configuration.html#Downloads)
-que é definido como `cypress/downloads` padrão.
+Todos os arquivos baixados durante o teste do recurso de download de arquivo de um aplicativo serão armazenados em [`downloadsFolder`](https://docs.cypress.io/guides/references/configuration.html#Downloads)
+que é definido como padrão `cypress/downloads`.
 
 ```markdown
 /cypress
@@ -127,11 +127,11 @@ que é definido como `cypress/downloads` padrão.
     - records.csv
 ```
 
-## Arquivos de captura de tela
+#### Arquivos de captura de tela
 
-Se as capturas de tela foram tiradas por meio do [`cy.screenshot()`](https://docs.cypress.io/api/commands/screenshot.html)
-comando ou automaticamente quando um teste falha, as capturas de tela são armazenadas no [`screenshotsFolder`](https://docs.cypress.io/guides/references/configuration.html#Screenshots)
-qual é definido como cypress/screenshotspor padrão.
+Se as capturas de tela foram tiradas por meio do comando [`cy.screenshot()`](https://docs.cypress.io/api/commands/screenshot.html)
+ou automaticamente quando um teste falha, as capturas de tela são armazenadas em [`screenshotsFolder`](https://docs.cypress.io/guides/references/configuration.html#Screenshots)
+qual é definido como `cypress/screenshots` por padrão.
 
 ```markdown
 /cypress
@@ -142,10 +142,10 @@ qual é definido como cypress/screenshotspor padrão.
 
 Para saber mais sobre as capturas de tela e as configurações disponíveis, consulte [Capturas de tela e vídeos](https://docs.cypress.io/guides/guides/screenshots-and-videos.html#Screenshots)
 
-## Arquivos de vídeo
+#### Arquivos de vídeo
 
-Todos os vídeos gravados da corrida são armazenados no, [`videosFolder`](https://docs.cypress.io/guides/references/configuration.html#Videos)
-que é definido como `cypress/videos` padrão.
+Todos os vídeos gravados da execução são armazenados em [`videosFolder`](https://docs.cypress.io/guides/references/configuration.html#Videos),
+que é definido como `cypress/videos` por padrão.
 
 ```markdown
 /cypress
@@ -155,7 +155,7 @@ que é definido como `cypress/videos` padrão.
 
 Para saber mais sobre os vídeos e as configurações disponíveis, consulte [Capturas de tela e vídeos](https://docs.cypress.io/guides/guides/screenshots-and-videos.html#Screenshots)
 
-## Arquivos de plug-in
+### Arquivos de plug-in
 
 Por padrão, o Cypress incluirá automaticamente o arquivo de plug-ins `cypress/plugins/index.js` antes de cada arquivo de
 especificação executado. Fazemos isso puramente como um mecanismo de conveniência para que você não precise importar esse
@@ -165,28 +165,29 @@ O arquivo de plug-ins importado inicial pode ser [configurado para outro arquivo
 
 [Leia mais sobre como usar plug-ins para estender o comportamento do Cypress](https://docs.cypress.io/guides/tooling/plugins-guide.html).
 
-## Arquivo de suporte
+### Arquivo de suporte
 
 Por padrão, o Cypress incluirá automaticamente o arquivo de suporte `cypress/support/index.js`. Este arquivo é executado
 antes de cada arquivo de especificação. Fazemos isso puramente como um mecanismo de conveniência para que você não precise
 importar esse arquivo em cada um dos seus arquivos de especificação.
 
->Lembre-se de que, ao clicar em “Executar todas as especificações” depois [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
+>Lembre-se de que, ao clicar em “Run all specs” após o comando [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
 >o código no arquivo de suporte é executado uma vez antes de todos os arquivos de especificação, em vez de uma vez antes
 >de cada arquivo de especificação. Consulte [Execução](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Support-file)
 >para obter mais detalhes.
 
-O arquivo de suporte importado inicial pode ser configurado para outro arquivo ou desligado completamente usando a [`supportFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files)
-configuração.
+O arquivo de suporte importado inicial pode ser configurado para outro arquivo ou desligado completamente usando a configuração
+de [`supportFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files).
 
 O arquivo de suporte é um ótimo lugar para colocar comportamento reutilizável, como [comandos personalizados](https://docs.cypress.io/api/cypress-api/custom-commands.html#Syntax)
 ou substituições globais que você deseja aplicar e disponibilizar para todos os seus arquivos de especificação.
 
-Do seu arquivo de suporte, você pode `import` ou `require` outros arquivos para manter as coisas organizadas.
+A partir do seu arquivo de suporte você pode executar os comandos `import` ou `require` de outros arquivos para manter as
+coisas organizadas.
 
-Nós semeamos automaticamente um arquivo de suporte de exemplo, que tem vários exemplos comentados.
+Nós preenchemos automaticamente um arquivo de suporte de exemplo, que tem vários exemplos comentados.
 
-Você pode definir comportamentos em um `before` ou `beforeEach` em qualquer um dos `cypress/support` arquivos:
+Você pode definir comportamentos em um `before` ou `beforeEach` em qualquer um dos arquivos `cypress/support`:
 
 ```js
 beforeEach(() => {
@@ -199,7 +200,7 @@ beforeEach(() => {
 >Nota: Este exemplo pressupõe que você já esteja familiarizado com os [ganchos](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Hooks)
 >Mocha.
 
-## Execução
+#### Execução
 
 Cypress executa o arquivo de suporte antes do arquivo de especificação. Por exemplo, quando você clica em um arquivo de
 teste denominado `spec-a.js` via [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
@@ -212,10 +213,10 @@ o Test Runner executa os arquivos na seguinte ordem:
 <script src="integration/spec-a.js"></script>
 ```
 
-O mesmo acontece ao usar o [`cypress run`](https://docs.cypress.io/guides/guides/command-line.html#cypress-run) comando:
+O mesmo acontece ao usar o comando [`cypress run`](https://docs.cypress.io/guides/guides/command-line.html#cypress-run):
 uma nova janela do navegador é aberta para cada par de arquivos de suporte e especificações.
 
-Mas quando você clica no botão “Executar todas as especificações” depois [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
+Mas quando você clica no botão “Run all specs” depois do comando [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
 o Test Runner empacota e concatena todas as especificações juntas, basicamente executando scripts como mostrado abaixo.
 Isso significa que o código no arquivo de suporte é executado uma vez antes de todos os arquivos de especificação, em vez
 de uma vez antes de cada arquivo de especificação.
@@ -230,14 +231,14 @@ de uma vez antes de cada arquivo de especificação.
 <script src="integration/spec-n.js"></script>
 ```
 
->Ter um único arquivo de suporte ao executar todas as especificações juntas pode executar `before` e `beforeEach` travar
+>Ter um único arquivo de suporte ao executar todas as especificações juntas pode executar os ganchos `before` e `beforeEach`
 >de maneiras que você pode não antecipar. Leia '[Cuidado ao executar todas as especificações juntas](https://glebbahmutov.com/blog/run-all-specs/)'
 para exemplos.
 
-## Solução de problemas
+### Solução de problemas
 
 Se o Cypress não encontrar os arquivos de especificação por algum motivo, você pode solucionar o problema de sua lógica abrindo
- ou executando o Cypress com os [logs de depuração](https://docs.cypress.io/guides/references/troubleshooting.html#Print-DEBUG-logs)
+ou executando o Cypress com os [logs de depuração](https://docs.cypress.io/guides/references/troubleshooting.html#Print-DEBUG-logs)
 habilitados:
 
 ```js
@@ -249,17 +250,17 @@ DEBUG=cypress:server:specs npx cypress run
 ## Escrevendo testes
 
 Cypress é construído em cima de [Mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha) e [Chai](https://docs.cypress.io/guides/references/bundled-tools.html#Chai).
-Apoiamos os estilos de Chai `BDD` e de `TDD` asserção. Os testes que você escreve no Cypress irão, em sua maioria, seguir
+Apoiamos os estilos de asserção de Chai `BDD` e de `TDD`. Os testes que você escreve no Cypress irão, em sua maioria, seguir
 esse estilo.
 
 Se você está familiarizado com a escrita de testes em JavaScript, escrever testes em Cypress será muito fácil.
 
-## Estrutura de Teste
+### Estrutura de Teste
 
-A interface de teste, emprestado do [mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha), fornece
+A interface de teste, emprestado do [mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha) fornece comandos
 `describe()`, `context()`, `it()` e `specify()`.
 
-`context()` é idêntico `describe()` e `specify()` é idêntico a `it()`, portanto, escolha a terminologia que funciona
+`context()` é idêntico a `describe()` e `specify()` é idêntico a `it()`, portanto, escolha a terminologia que funciona
 melhor para você.
 
 ```js
@@ -304,7 +305,7 @@ describe('Unit test our math functions', () => {
 // -- End: Our Cypress Tests --
 ```
 
-## Ganchos
+### Ganchos
 
 Cypress também fornece ganchos (emprestados do [Mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha)).
 
@@ -338,24 +339,24 @@ describe('Hooks', () => {
 
 __A ordem de execução do gancho e do teste é a seguinte:__
 
-- Todos os `before()` ganchos funcionam (uma vez)
+- Todos os ganchos `before()` funcionam (uma vez)
 
-- Qualquer `beforeEach()` gancho corre
+- Qualquer gancho `beforeEach()` é executado
 
 - Testes executados
 
-- Qualquer `afterEach()` gancho corre
+- Qualquer gancho `afterEach()` é executado
 
-- Todos os `after()` ganchos funcionam (uma vez)
+- Todos os ganchos `after()` funcionam (uma vez)
 
->Antes de escrever `after()` ou fazer `afterEach()` ganchos, consulte nossos [pensamentos sobre o anti-padrão de limpeza
+>Antes de escrever `after()` ou chamar ganchos `afterEach()`, consulte nossos [pensamentos sobre o anti-padrão de limpeza
 >do estado com `after()` ou `afterEach()`](https://docs.cypress.io/guides/references/best-practices.html#Using-after-or-afterEach-hooks).
 
->Desconfie de ganchos no nível de raiz, pois eles podem ser executados em uma ordem surpreendente ao clicar no botão “Executar
->todas as especificações”. Em vez disso, coloque-os dentro `describe` ou em `context` suítes para isolamento. Leia ['Tenha
->cuidado ao executar todas as especificações juntas'](https://glebbahmutov.com/blog/run-all-specs/) .
+>Desconfie de ganchos no nível de raiz, pois eles podem ser executados em uma ordem surpreendente ao clicar no botão “Run
+>all specs”. Em vez disso, coloque-os dentro de suítes `describe` ou `context` para isolamento.
+>Leia ['Tenha cuidado ao executar todas as especificações juntas'](https://glebbahmutov.com/blog/run-all-specs/).
 
-## Excluindo e Incluindo Testes
+### Excluindo e Incluindo Testes
 
 Para executar um conjunto ou teste especificado, anexe `.only` à função. Todas as suítes aninhadas também serão executadas.
 Isso nos dá a capacidade de executar um teste por vez e é a maneira recomendada de escrever um conjunto de testes.
@@ -409,15 +410,15 @@ it.skip('returns "fizz" when number is multiple of 3', () => {
 })
 ```
 
-## Configuração de Teste
+### Configuração de Teste
 
-Para aplicar um valor de [configuração](https://docs.cypress.io/guides/references/configuration.html) Cypress específico
+Para aplicar um valor específico de [configuração](https://docs.cypress.io/guides/references/configuration.html) Cypress
 a um conjunto ou teste, passe um objeto de configuração para a função de teste ou suíte como o segundo argumento.
 
 Essa configuração entrará em vigor durante o conjunto ou testes em que foram definidos e, em seguida, retornará aos valores
 padrão anteriores depois que o conjunto ou os testes forem concluídos.
 
-### Sintaxe
+#### Sintaxe
 
 ```js
 describe(name, config, fn)
@@ -426,7 +427,7 @@ it(name, config, fn)
 specify(name, config, fn)
 ```
 
-### Valores de configuração permitidos
+#### Valores de configuração permitidos
 
 Observação: alguns valores de configuração são somente leitura e não podem ser alterados por meio da configuração de teste.
 Os seguintes valores de configuração podem ser alterados por meio de configuração de teste:
@@ -446,10 +447,11 @@ Os seguintes valores de configuração podem ser alterados por meio de configura
 - `viewportWidth`
 - `waitForAnimations`
 
-### Configuração de suíte
+#### Configuração de suíte
 
-Se você deseja `browser` definir como destino um conjunto de testes a ser executado ou ser excluído ao ser executado em um
-navegador específico, pode substituir a configuração dentro da configuração do conjunto. A `browser` opção aceita os mesmos
+Se você deseja definior um conjunto de testes a ser executado ou excluído, passando um
+navegador específico, você pode sobrescrever as configurações do `browser` dentro das configurações do conjunto de testes.
+A opção `browser` aceita os mesmos
 argumentos de [`Cypress.isBrowser()`](https://docs.cypress.io/api/cypress-api/isbrowser.html).
 
 O seguinte conjunto de testes será ignorado se os testes forem executados em navegadores Chrome.
@@ -500,10 +502,10 @@ describe('When in Firefox', {
 })
 ```
 
-### Configuração de teste único
+#### Configuração de teste único
 
-Você pode configurar o número de tentativas de repetição durante `cypress run` ou `cypress open`. Consulte [Testar](https://docs.cypress.io/guides/guides/test-retries.html)
-novas [tentativas](https://docs.cypress.io/guides/guides/test-retries.html) para obter mais informações.
+Você pode configurar o número de tentativas de repetição durante `cypress run` ou `cypress open`.
+Consulte [Testar novas tentativas](https://docs.cypress.io/guides/guides/test-retries.html) para obter mais informações.
 
 ```js
 it('should redirect unauthenticated user to sign-in page', {
@@ -518,7 +520,7 @@ it('should redirect unauthenticated user to sign-in page', {
 })
 ```
 
-## Gerar testes dinamicamente
+### Gerar testes dinamicamente
 
 Você pode gerar testes dinamicamente usando JavaScript.
 
@@ -546,9 +548,9 @@ O código acima produzirá um pacote com 4 testes:
   > triggers event: 'mouseleave'
   ```
 
-## Estilos de Asserção
+### Estilos de Asserção
 
-Cypress suporta asserções simples de estilo BDD (`expect`/ `should`) e TDD (`assert`). [Leia mais sobre afirmações simples](https://docs.cypress.io/guides/references/assertions.html).
+Cypress suporta asserções simples de estilo BDD (`expect`/ `should`) e TDD (`assert`). [Leia mais sobre asserções simples](https://docs.cypress.io/guides/references/assertions.html).
 
 ```js
 it('can add numbers', () => {
@@ -560,9 +562,9 @@ it('can subtract numbers', () => {
 })
 ```
 
-O [`.should()`](https://docs.cypress.io/api/commands/should.html) comando e seu alias
-[`.and()`](https://docs.cypress.io/api/commands/and.html) também podem ser usados ​​para encadear mais facilmente as afirmações
-dos comandos do Cypress. [Leia mais sobre afirmações](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Assertions).
+O comando [`.should()`](https://docs.cypress.io/api/commands/should.html) e seu alias
+[`.and()`](https://docs.cypress.io/api/commands/and.html) também podem ser usados ​​para encadear mais facilmente as asserções
+dos comandos do Cypress. [Leia mais sobre asserções](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Assertions).
 
 ```js
 cy.wrap(add(1, 2)).should('equal', 3)
@@ -578,22 +580,22 @@ vários arquivos de teste, mas abaixo executamos um único arquivo de teste “n
 
 ![Executando uma única especificação](https://docs.cypress.io/img/guides/core-concepts/run-single-spec.175d5077.gif)
 
-## Execute todas as especificações
+### Execute todas as especificações
 
-Você pode executar todos os arquivos de especificações juntos clicando no botão “Executar todas as especificações”. Este
+Você pode executar todos os arquivos de especificações juntos clicando no botão “Run all specs”. Este
 modo é equivalente a concatenar todos os arquivos de especificações juntos em uma única parte do código de teste.
 
 ![Executando todas as especificações](https://docs.cypress.io/img/guides/core-concepts/run-all-specs.f59fcccb.gif)
 
->Desconfie de ganchos no nível de raiz, pois eles podem ser executados em uma ordem surpreendente ao clicar no botão
->“Executar todas as especificações”. Em vez disso, coloque-os dentro `describe` ou em `context` suítes para isolamento.
->Leia ['Tenha cuidado ao executar todas as especificações juntas'](https://glebbahmutov.com/blog/run-all-specs/) .
+>Desconfie de ganchos no nível de raiz, pois eles podem ser executados em uma ordem surpreendente ao clicar no botão “Run
+>all specs”. Em vez disso, coloque-os dentro de suítes `describe` ou `context` para isolamento.
+>Leia ['Tenha cuidado ao executar todas as especificações juntas'](https://glebbahmutov.com/blog/run-all-specs/).
 
-## Executar especificações filtradas
+### Executar especificações filtradas
 
 Você também pode executar um subconjunto de todas as especificações inserindo um filtro de pesquisa de texto. Apenas as
 especificações com caminhos de arquivo relativos contendo o filtro de pesquisa permanecerão e serão executadas como se
-estivessem concatenando todos os arquivos de especificações ao clicar no botão “Executar N especificações”.
+estivessem concatenando todos os arquivos de especificações ao clicar no botão “Run N specs”.
 
 - O filtro de pesquisa não diferencia maiúsculas de minúsculas; o filtro “ui” corresponderá aos arquivos “UI-spec.js” e “admin-ui-spec.js”.
 
@@ -605,9 +607,9 @@ pasta para limitar as especificações; o filtro “ui” irá corresponder aos 
 
 ## Assistindo testes
 
-Ao executar em using [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open), Cypress observa
-o sistema de arquivos para mudanças em seus arquivos de especificação. Logo após adicionar ou atualizar um teste, o Cypress
-o recarregará e executará todos os testes naquele arquivo de especificação.
+Ao executar testes por meio do comando [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
+Cypress observa o sistema de arquivos para mudanças em seus arquivos de especificação. Logo após adicionar ou atualizar um
+teste, o Cypress o recarregará e executará todos os testes naquele arquivo de especificação.
 
 Isso torna a experiência de desenvolvimento produtiva porque você pode adicionar e editar testes enquanto implementa um
 recurso e a interface de usuário do Cypress sempre refletirá os resultados de suas edições mais recentes.
@@ -617,14 +619,14 @@ recurso e a interface de usuário do Cypress sempre refletirá os resultados de 
 >de especificação que está constantemente editando; considere também dividir seus testes em arquivos menores, cada um lidando
 >com comportamento logicamente relacionado.
 
-## O que é assistido?
+### O que é monitorado?
 
-### arquivos
+#### arquivos
 
 - [Arquivo de configuração (`cypress.json`) por padrão](https://docs.cypress.io/guides/references/configuration.html#Options)
 - [`cypress.env.json`](https://docs.cypress.io/guides/guides/environment-variables.html)
 
-## Pastas
+#### Pastas
 
 - Diretório de integração (`cypress/integration/` por padrão)
 - Diretório de suporte (`cypress/support/` por padrão)
@@ -636,7 +638,7 @@ A pasta, os arquivos dentro da pasta e todas as pastas filhas e seus arquivos (r
 >Se você configurou o Cypress para usar caminhos de pasta diferentes, então as pastas específicas para sua configuração
 >serão monitoradas.
 
-## O que não é assistido?
+### O que não é monitorado?
 
 Todo o resto; isso inclui, mas não se limita a:
 
@@ -644,18 +646,18 @@ Todo o resto; isso inclui, mas não se limita a:
 - `node_modules`
 - `cypress/fixtures/`
 
-Se você está desenvolvendo usando uma pilha de aplicativos da web moderna baseada em JS, então provavelmente você tem suporte
+Se você está desenvolvendo usando uma stack de aplicativos da web moderna baseada em JS, então provavelmente você tem suporte
 para alguma forma de substituição de módulo quente que é responsável por observar o código do seu aplicativo - HTML, CSS,
 JS, etc. - e recarregar de forma transparente o seu aplicação em resposta às mudanças.
 
-## Configuração
+### Configuração
 
-Defina a [`watchForFileChanges`](https://docs.cypress.io/guides/references/configuration.html#Global) propriedade de configuração
-`false` para desativar a observação de arquivos.
+Defina a propriedade de configuração [`watchForFileChanges`](https://docs.cypress.io/guides/references/configuration.html#Global)
+para `false` com o objetivo de desativar a observação de arquivos.
 
 >Nada é observado durante [`cypress run`](https://docs.cypress.io/guides/guides/command-line.html#cypress-run).
 >
->A `watchForFileChanges` propriedade só tem efeito ao executar o Cypress usando [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open).
+>A propriedade `watchForFileChanges` só tem efeito ao executar o Cypress usando [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open).
 
 O componente responsável pelo comportamento de observação de arquivos no Cypress é o [`webpack-preprocessor`](https://github.com/cypress-io/cypress/tree/master/npm/webpack-preprocessor).
 Este é o observador de arquivos padrão fornecido com o Cypress.
