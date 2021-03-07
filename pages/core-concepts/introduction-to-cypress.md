@@ -1,13 +1,15 @@
 # Introdução ao Cypress
 
-> ## 🎓 O que você aprenderá
->
-> - Como o Cypress faz consultas ao DOM
-> - Como o Cypress gerencia sujeitos e cadeias de comandos
-> - O que são e como funcionam as asserções
-> - Como timeouts são aplicados aos comandos
+```markdown
+O que você vai aprender
 
-[//]: <> (TODO - Adicionar link - integração github)
+- Como o Cypress faz consultas ao DOM
+- Como o Cypress gerencia sujeitos e cadeias de comandos
+- O que são e como funcionam as asserções
+- Como timeouts são aplicados aos comandos
+```
+
+[//]: <> (TODO - Adicionar link - tutoriais em vídeo)
 
 > **Importante**
 >
@@ -70,8 +72,6 @@ explicaremos como usar alguns atalhos, quando apropriado.
 
 ### O Cypress é como o jQuery
 
-[//]: <> (TODO - Adicionar link - integração github)
-
 Se você já usou o [jQuery](https://jquery.com/), provavelmente está acostumado a consultar elementos assim:
 
 ```JS
@@ -84,7 +84,7 @@ Na Cypress, consultamos elementos da mesma forma:
 cy.get('.my-selector')
 ```
 
-[//]: <> (TODO - Adicionar link - integração github)
+[//]: <> (TODO - Adicionar link - incorpora o jQuery)
 
 Na verdade, o Cypress [incorpora o jQuery](https://docs.cypress.io/guides/references/bundled-tools.html#Other-Library-Utilities)
 e expõe muitos de seus métodos de travessia do DOM para que você possa trabalhar com estruturas HTML complexas
@@ -274,8 +274,6 @@ Você também pode definir o timeout globalmente através da
 Mais adiante neste guia entraremos em muito mais detalhes sobre
 [Asserções Padrão](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Default-Assertions) e
 [Timeouts](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Timeouts).
-
-[Voltar para o topo](#introdução-ao-cypress)
 
 ## Cadeias de Comandos
 
