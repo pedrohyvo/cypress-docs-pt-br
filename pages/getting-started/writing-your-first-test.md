@@ -293,7 +293,7 @@ describe('My First Test', () => {
 })
 ```
 
-*Adicionando mais comandos e asserções*
+#### Adicionando mais comandos e asserções
 
 Não estamos limitados a uma única interação e asserção em um determinado teste. Na verdade, muitas
 interações em um aplicativo podem exigir várias etapas e provavelmente alterarão o estado do aplicativo
