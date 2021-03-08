@@ -272,8 +272,11 @@ Leia sobre isso [aqui](https://docs.cypress.io/guides/tooling/IDE-integration.ht
 
 ### Passo 4: Fazer uma asserção
 
+[//]: <> (TODO - Adicionar link .should quando traduzido)
+
 Vamos fazer uma asserção sobre algo na nova página em que clicamos. Gostaríamos de ter certeza de que o novo
-URL é o URL esperado. Podemos fazer isso procurando a URL e encadeando uma asserção a ela com `.should()`.
+URL é o URL esperado. Podemos fazer isso procurando a URL e encadeando uma asserção a ela com
+[`.should()`](https://docs.cypress.io/api/commands/should.html).
 
 Aqui está, algo parecido:
 
@@ -290,7 +293,7 @@ describe('My First Test', () => {
 })
 ```
 
-#### Adicionando mais comandos e asserções
+*Adicionando mais comandos e asserções*
 
 Não estamos limitados a uma única interação e asserção em um determinado teste. Na verdade, muitas
 interações em um aplicativo podem exigir várias etapas e provavelmente alterarão o estado do aplicativo
@@ -299,9 +302,14 @@ em mais de uma maneira.
 Podemos continuar as interações e asserções neste teste, adicionando outro encadeamento para interagir
 e verificar o comportamento dos elementos nesta nova página.
 
-Podemos usar `cy.get()` para selecionar um elemento baseado em uma classe CSS. Então, podemos usar o comando
-`.type()` para inserir texto no campo de entrada de texto selecionado. Por fim, podemos verificar que o valor
-do campo de entrada de texto reflete o texto que foi digitado com outro `.should()`.
+[//]: <> (TODO - Adicionar link cy.get, .type e .should quando traduzidos)
+
+Podemos usar [`cy.get()`](https://docs.cypress.io/api/commands/get.html)
+para selecionar um elemento baseado em uma classe CSS.Então, podemos usar o comando
+[`.type()`](https://docs.cypress.io/api/commands/type.html)
+para inserir texto no campo de entrada de texto selecionado. Por fim, podemos verificar que o valor
+do campo de entrada de texto reflete o texto que foi digitado com outro
+[`.should()`](https://docs.cypress.io/api/commands/should.html).
 
 ```javascript
 describe('My First Test', () => {
@@ -371,7 +379,10 @@ automaticamente o tempo limite para 60 segundos para o único evento CARREGAR P�
 Em outras palavras, com base nos comandos e nos eventos que acontecem, o Cypress altera automaticamente seus
 tempos limite esperados para corresponder ao comportamento do aplicativo da web.
 
-Esses vários tempos limite são definidos no arquivo de configuração.
+[//]: <> (TODO - Adicionar link Configuração quando traduzido)
+
+Esses vários tempos limite são definidos no arquivo de
+[configuração](https://docs.cypress.io/guides/references/configuration.html#Timeouts).
 ```
 
 ## Debugando
