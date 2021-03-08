@@ -359,8 +359,10 @@ Transições de página
 
 É importante notar que este teste fez a transição em duas páginas diferentes.
 
-1. O primeiro `cy.visit()`
-2. O `.click()` para uma nova página
+[//]: <> (TODO - Adicionar links cy.visit e .click() quando traduzidos)
+
+1. O [`cy.visit()`](https://docs.cypress.io/api/commands/visit.html)
+2. O [`.click()`](https://docs.cypress.io/api/commands/click.html) para nova página
 
 O Cypress detecta automaticamente coisas como um evento de transição de página e interromperá automaticamente
 os comandos em execução até que a próxima página termine de carregar.
