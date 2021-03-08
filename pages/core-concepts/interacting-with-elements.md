@@ -36,15 +36,15 @@ O Cypress esperará que o elemento passe em todas essas verificações durante o
 
 ## Verificações e Ações Realizadas
 
-- [`Rolar elemento para exibição.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Scrolling)
-- [`Garantir que o elemento não esteja oculto.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Visibility)
-- [`Garantir que o elemento não esteja desabilitado.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Disability)
-- [`Garantir que o elemento não esteja desconectado.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Detached)
-- [`Garantir que o elemento não seja somente leitura.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Readonly)
-- [`Garantir que o elemento não esteja animando.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Animations)
-- [`Garantir que o elemento não está coberto.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Covering)
-- [`Rolar a página se ainda estiver coberto por um elemento com posição fixa.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Scrolling)
-- [`Disparar o evento nas coordenadas desejadas.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Coordinates)
+- [`Rolar elemento para exibição.`](##rolagem)
+- [`Garantir que o elemento não esteja oculto.`](##visibilidade)
+- [`Garantir que o elemento não esteja desabilitado.`](##inabilidade)
+- [`Garantir que o elemento não esteja desconectado.`](##desconectado)
+- [`Garantir que o elemento não seja somente leitura.`](##somente-leitura)
+- [`Garantir que o elemento não esteja animando.`](##animações)
+- [`Garantir que o elemento não está coberto.`](##cobertura)
+- [`Rolar a página se ainda estiver coberto por um elemento com posição fixa.`](##rolagem)
+- [`Disparar o evento nas coordenadas desejadas.`](##coordenadas)
 
 Sempre que o Cypress não pode interagir com um elemento, ele pode falhar em qualquer uma das etapas acima. 
 Normalmente, você receberá um erro explicando por que o elemento não foi considerado acionável.
@@ -84,12 +84,12 @@ __* Esconde transbordamento__  significa que ele tem `overflow: hidden`, `overfl
 
 O Cypress verifica se a propriedade `disabled` de um elemento é `true`.
 
-## Desvinculado
+## Desconectado
 
 Quando muitos aplicativos renderizam o DOM, na verdade eles removem o elemento DOM e inserem um novo elemento
 DOM em seu lugar com os atributos recém-alterados.
 
-O Cypress verifica se um elemento que você está fazendo afirasserções está separado do DOM. Isso verifica se o elemento ainda
+O Cypress verifica se um elemento que você está fazendo asserções está separado do DOM. Isso verifica se o elemento ainda
 está dentro `document` da aplicação em teste.
 
 ## Somente Leitura
@@ -188,13 +188,12 @@ Além disso, exibiremos um “hitbox” vermelho - que é um ponto que indica as
 
 ## Depurando
 
-[//]: <> (TODO - Adicionar links - Log de comandos)
-
 Pode ser difícil depurar problemas quando os elementos não são considerados acionáveis ​​pelo Cypress.
 
 Embora você *deva* ver uma bela mensagem de erro, nada se compara a inspecionar visualmente e cutucar o DOM você mesmo 
 para entender o motivo.
 
+[//]: <> (TODO - Adicionar links - Log de comandos)
 Ao usar o [`Log de comandos`](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log) para passar o 
 mouse sobre um comando, você notará que sempre rolaremos o elemento ao qual o comando foi aplicado para exibição. 
 Observe que isso *NÃO* está usando os mesmos algoritmos que descrevemos acima.
@@ -202,12 +201,12 @@ Observe que isso *NÃO* está usando os mesmos algoritmos que descrevemos acima.
 Na verdade, só rolamos elementos para exibição quando comandos acionáveis ​​estão sendo executados usando os algoritmos
 acima. Nós *não* rolamos elementos com os comandos DOM regulares como `cy.get()` ou `.find()`.
 
-O motivo pelo qual rolamos um elemento para exibição ao passar o mouse sobre um instantâneo é para ajudá-lo a ver quais
+O motivo pelo qual rolamos um elemento para exibição ao passar o mouse sobre um comando executado é para ajudá-lo a ver quais
 elementos foram encontrados por aquele comando correspondente. É um recurso puramente visual e não reflete
 necessariamente a aparência de sua página quando o comando foi executado.
 
 Em outras palavras, você não pode obter uma representação visual correta do que Cypress “viu” ao olhar para um
-instantâneo anterior.
+estado anterior.
 
 A única maneira de você “ver” e depurar porque Cypress pensou que um elemento não estava visível é usar uma instrução `debugger`.
 
