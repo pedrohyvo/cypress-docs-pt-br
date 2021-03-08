@@ -1,6 +1,6 @@
 # cypress-docs-pt-br
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -74,6 +74,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/pedrohyvo/"><img src="https://avatars.githubusercontent.com/u/15241188?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pedro Hyvo</b></sub></a><br /><a href="#infra-pedrohyvo" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=pedrohyvo" title="Code">💻</a></td>
     <td align="center"><a href="https://walmyr.dev"><img src="https://avatars.githubusercontent.com/u/2768415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Walmyr</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wlsf82" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/lucastfa-toptal"><img src="https://avatars.githubusercontent.com/u/69941309?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Avila</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=lucastfa-toptal" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/edmundobiglia"><img src="https://avatars.githubusercontent.com/u/53831919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edmundo Biglia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=edmundobiglia" title="Code">💻</a></td>
   </tr>
 </table>
 
