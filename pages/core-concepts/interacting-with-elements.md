@@ -5,7 +5,7 @@ O que você vai aprender
 
 - Como o Cypress calcula visibilidade
 - Como o Cypress garante que os elementos sejam acionáveis
-- Como Cypress lida com elementos de animação
+- Como o Cypress lida com elementos de animação
 - Como você pode ignorar essas verificações e forçar eventos
 ```
 
@@ -13,7 +13,7 @@ O que você vai aprender
 
 Alguns comandos no Cypress são para interagir com o DOM, como:
 
-[//]: <> (TODO - Adicionar links - integração github)
+[//]: <> (TODO - Adicionar links - comandos cypress)
 
 - [`.click()`](https://docs.cypress.io/api/commands/click.html) 
 - [`.dblclick()`](https://docs.cypress.io/api/commands/dblclick.html)
@@ -46,7 +46,7 @@ O Cypress esperará que o elemento passe em todas essas verificações durante o
 - [`Rolar a página se ainda estiver coberto por um elemento com posição fixa.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Scrolling)
 - [`Disparar o evento nas coordenadas desejadas.`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Coordinates)
 
-Sempre que Cypress não pode interagir com um elemento, ele pode falhar em qualquer uma das etapas acima. 
+Sempre que o Cypress não pode interagir com um elemento, ele pode falhar em qualquer uma das etapas acima. 
 Normalmente, você receberá um erro explicando por que o elemento não foi considerado acionável.
 
 ## Visibilidade
@@ -80,7 +80,7 @@ __* Esconde transbordamento__  significa que ele tem `overflow: hidden`, `overfl
 > No entanto, os elementos onde a propriedade CSS (ou ancestrais) tem `opacity: 0` são considerados acionáveis ​​e quaisquer
 > comandos usados ​​para interagir com o elemento oculto realizarão a ação.
 
-## Desabilidade
+## Inabilidade
 
 O Cypress verifica se a propriedade `disabled` de um elemento é `true`.
 
@@ -94,6 +94,8 @@ está dentro `document` da aplicação em teste.
 
 ## Somente Leitura
 
+[//]: <> (TODO - Adicionar link do comando .type)
+
 O Cypress verifica se a propriedade `readonly` de um elemento é definida durante [`.type()`](https://docs.cypress.io/api/commands/type.html).
 
 ## Animações
@@ -103,6 +105,7 @@ O Cypress irá automaticamente determinar se um elemento está sendo animado e e
 Para calcular se um elemento está animado, pegamos uma amostra das últimas posições em que ele estava e calculamos a 
 inclinação do elemento. Você deve se lembrar disso da álgebra da 8ª série. 😉
 
+[//]: <> (TODO - Adicionar link - configuração de acionabilidade)
 Para calcular se um elemento está animado, verificamos as posições atual e anterior do próprio elemento. Se a distância
 exceder o [`animationDistanceThreshold`](https://docs.cypress.io/guides/references/configuration.html#Actionability), então
 consideramos o elemento como uma animação.
@@ -133,6 +136,7 @@ Imagine que você tem um botão:
 </button>
 ```
 
+[//]: <> (TODO - Adicionar links - Log de comandos)
 Muitas vezes, o elemento `<i>` ou `<span>` está cobrindo a coordenada exata com a qual estamos tentando interagir. 
 Nesses casos, o evento dispara no elemento filho. Nós até anotamos isso para você no [`Log de Comandos`](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log).
 
@@ -142,8 +146,10 @@ Antes de interagir com um elemento, *sempre* o rolaremos para a visualização (
 pais). Mesmo se o elemento estivesse visível sem rolagem, executamos o algoritmo de rolagem para reproduzir o mesmo 
 comportamento toda vez que o comando for executado.
 
-> Essa lógica de rolagem se aplica apenas aos comandos acionáveis ​​acima . **Não rolamos os elementos** para a 
-> visualização ao usar comandos DOM, como `cy.get()` ou `.find()`.
+[//]: <> (TODO - Adicionar links dos comandos de Acionabilidade, cy.get e .find)
+> Essa lógica de rolagem se aplica apenas aos [`comandos acionáveis ​​acima`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Actionability).
+> **Não rolamos os elementos** para a visualização ao usar comandos DOM, como [`cy.get()`](https://docs.cypress.io/api/commands/get.html)
+ou [`.find()`](https://docs.cypress.io/api/commands/find.html).
 
 Por padrão, o algoritmo de rolagem funciona rolando o ponto superior mais à esquerda do elemento no qual emitimos o 
 comando para o ponto de rolagem superior e mais à esquerda de seu contêiner rolável.
@@ -154,6 +160,7 @@ página até que ela se torne visível. Isso acontece frequentemente quando voc�
 
 Nosso algoritmo *deve* sempre ser capaz de rolar até que o elemento não seja coberto.
 
+[//]: <> (TODO - Adicionar links - configuração de acionabilidade)
 Para alterar a posição na janela de visualização para onde rolamos um elemento, você pode usar a opção de 
 configuração [`scrollBehavior`](https://docs.cypress.io/guides/references/configuration.html#Actionability). Isso pode 
 ser útil se o elemento for coberto quando alinhado ao topo da janela de visualização ou se você apenas preferir que o 
@@ -170,6 +177,7 @@ comandos permite que você altere a posição para a qual são disparadas.
 cy.get('button').click({ position: 'topLeft' })
 ```
 
+[//]: <> (TODO - Adicionar links - Log de comandos)
 As coordenadas nas quais disparamos o evento geralmente estarão disponíveis ao clicar no comando no [`Log de Comandos`](https://docs.cypress.io/guides/core-concepts/test-runner.html#Command-Log).
 
 ![coords](https://docs.cypress.io/img/guides/coords.713642d1.png)
@@ -179,6 +187,8 @@ Além disso, exibiremos um “hitbox” vermelho - que é um ponto que indica as
 ![cypress hitbox](https://docs.cypress.io/img/guides/hitbox.fb2d0b28.png)
 
 ## Depurando
+
+[//]: <> (TODO - Adicionar links - Log de comandos)
 
 Pode ser difícil depurar problemas quando os elementos não são considerados acionáveis ​​pelo Cypress.
 
@@ -201,12 +211,14 @@ instantâneo anterior.
 
 A única maneira de você “ver” e depurar porque Cypress pensou que um elemento não estava visível é usar uma instrução `debugger`.
 
+[//]: <> (TODO - Adicionar link - debug)
 Recomendamos colocar `debugger` ou usar o comando [`.debug()`](https://docs.cypress.io/api/commands/debug.html) 
 diretamente ANTES da ação.
 
 Garantir de que suas Ferramentas de Desenvolvedor estejam abertas e você possa chegar bem perto de “ver” os cálculos
 que o Cypress está realizando.
 
+[//]: <> (TODO - Adicionar links - catálogo de eventos)
 Você também pode [`vincular a eventos`](https://docs.cypress.io/api/events/catalog-of-events.html) que o Cypress dispara
 enquanto trabalha com seu elemento. Usar um depurador com esses eventos lhe dará uma visão baixo nível de
 como o Cypress funciona.
@@ -259,9 +271,10 @@ cy.get('button').click({ force: true })
 
 Em resumo, `{ force: true }` pula as verificações e sempre dispara o evento no elemento desejado.
 
+[//]: <> (TODO - Adicionar links - comando select e issues)
 > *forçar `.select()` opções desabilitadas*
-> Passar `{ force: true }` para `.select()` não substituirá as verificações de ação para selecionar uma `<option>` 
-> desabilitada ou uma opção dentro de um `<optgroup>` desabilitado. Veja [`este problema`](https://github.com/cypress-io/cypress/issues/107)
-> para mais detalhes.
+> Passar `{ force: true }` para [`.select()`](https://docs.cypress.io/api/commands/select.html) não substituirá as 
+> verificações de ação para selecionar uma `<option>` desabilitada ou uma opção dentro de um `<optgroup>` desabilitado.
+> Veja [`este problema`](https://github.com/cypress-io/cypress/issues/107) para mais detalhes.
 
 [Voltar para o topo](#interagindo-com-elementos)
