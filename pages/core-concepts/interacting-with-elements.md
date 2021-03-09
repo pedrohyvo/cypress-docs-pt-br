@@ -31,6 +31,7 @@ dispara os eventos que um navegador dispararia, fazendo com que as associações
 Antes de emitir qualquer um dos comandos, verificamos o estado atual do DOM e executamos algumas ações para garantir que
 o elemento DOM esteja “pronto” para receber a ação.
 
+[//]: <> (TODO - Adicionar links - configuração de timeouts e o link de asserções padrão)
 O Cypress esperará que o elemento passe em todas essas verificações durante o [`defaultCommandTimeout`](https://docs.cypress.io/guides/references/configuration.html#Timeouts)
 (descrito em detalhes no guia de conceito principal [`Default Assertions`](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Default-Assertions)).
 
@@ -110,9 +111,11 @@ Para calcular se um elemento está animado, verificamos as posições atual e an
 exceder o [`animationDistanceThreshold`](https://docs.cypress.io/guides/references/configuration.html#Actionability), então
 consideramos o elemento como uma animação.
 
+[//]: <> (TODO - Adicionar link - configuração de acionabilidade)
 Ao chegar a esse valor, fizemos alguns experimentos para encontrar uma velocidade que “parece” muito rápida para um usuário
 interagir. Você sempre pode [`aumentar ou diminuir esse limite`](https://docs.cypress.io/guides/references/configuration.html#Actionability).
 
+[//]: <> (TODO - Adicionar link - configuração de acionabilidade)
 Você também pode desligar nossas verificações de animações com a opção de configuração [`waitForAnimations`](https://docs.cypress.io/guides/references/configuration.html#Actionability).
 
 ## Cobertura
@@ -198,8 +201,10 @@ Ao usar o [`Log de comandos`](https://docs.cypress.io/guides/core-concepts/test-
 mouse sobre um comando, você notará que sempre rolaremos o elemento ao qual o comando foi aplicado para exibição. 
 Observe que isso *NÃO* está usando os mesmos algoritmos que descrevemos acima.
 
+[//]: <> (TODO - Adicionar links dos comandos de Acionabilidade, cy.get e .find)
 Na verdade, só rolamos elementos para exibição quando comandos acionáveis ​​estão sendo executados usando os algoritmos
-acima. Nós *não* rolamos elementos com os comandos DOM regulares como `cy.get()` ou `.find()`.
+acima. Nós *não* rolamos elementos com os comandos DOM regulares como [`cy.get()`](https://docs.cypress.io/api/commands/get.html)
+ou [`.find()`](https://docs.cypress.io/api/commands/find.html).
 
 O motivo pelo qual rolamos um elemento para exibição ao passar o mouse sobre um comando executado é para ajudá-lo a ver quais
 elementos foram encontrados por aquele comando correspondente. É um recurso puramente visual e não reflete
