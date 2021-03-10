@@ -1,4 +1,7 @@
 # cypress-docs-pt-br
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
   <div>
@@ -10,7 +13,7 @@
   <br/>
   <br/>
 	</a>
-  <p>Documentação oficial do framework Cypress.io em Português-Brasil</p>
+  <p>Tradução da documentação oficial do framework Cypress.io em Português-Brasil</p>
   <p>Feita pela comunidade ❤️ </p>
 </div>
 <br/>
@@ -59,3 +62,29 @@ Para maiores informações, recomendo a leitura do nosso [guia de como contribui
 Este projeto está sob a [licença MIT](LICENSE).
 
 Feito com ❤️ por Pedro Hyvo 👋🏽 [Entre em contato!](https://www.linkedin.com/in/pedrohyvo/)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/pedrohyvo/"><img src="https://avatars.githubusercontent.com/u/15241188?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pedro Hyvo</b></sub></a><br /><a href="#infra-pedrohyvo" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=pedrohyvo" title="Code">💻</a></td>
+    <td align="center"><a href="https://walmyr.dev"><img src="https://avatars.githubusercontent.com/u/2768415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Walmyr</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wlsf82" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/lucastfa-toptal"><img src="https://avatars.githubusercontent.com/u/69941309?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Avila</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=lucastfa-toptal" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/edmundobiglia"><img src="https://avatars.githubusercontent.com/u/53831919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edmundo Biglia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=edmundobiglia" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- markdownlint-disable -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+<!-- markdownlint-restore -->
