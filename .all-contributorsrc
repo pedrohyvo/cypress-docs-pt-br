@@ -1,0 +1,52 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "pedrohyvo",
+      "name": "Pedro Hyvo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15241188?v=4",
+      "profile": "https://www.linkedin.com/in/pedrohyvo/",
+      "contributions": [
+        "infra",
+        "code"
+      ]
+    },
+    {
+      "login": "wlsf82",
+      "name": "Walmyr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2768415?v=4",
+      "profile": "https://walmyr.dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "lucastfa-toptal",
+      "name": "Lucas Avila",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69941309?v=4",
+      "profile": "https://github.com/lucastfa-toptal",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "edmundobiglia",
+      "name": "Edmundo Biglia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53831919?v=4",
+      "profile": "https://github.com/edmundobiglia",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "cypress-docs-pt-br",
+  "projectOwner": "pedrohyvo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
