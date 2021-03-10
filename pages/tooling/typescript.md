@@ -49,9 +49,12 @@ dentro da sua pasta do [`Cypress`](https://docs.cypress.io/guides/core-concepts/
 }
 ```
 
-O `"types"` informa para o compilador TypeScript incluir apenas definições de tipo do Cypress. Ao fazer isso, instâncias vão ser endereçadas 
-onde o projeto utilizar `@types/chai` ou `@types/jquery`. Já que o [Chai](https://docs.cypress.io/guides/references/bundled-tools.html#Chai) e [jQuery](https://docs.cypress.io/guides/references/bundled-tools.html#Other-Library-Utilities) são namespaces (globais), 
-versões incompatíveis farão o gerenciador de pacotes (yarn ou npm) juntar e incluir múltiplas definições, causando confiltos.
+O `"types"` informa para o compilador TypeScript incluir apenas definições de tipo do Cypress. Ao fazer isso, 
+instâncias serão endereçadas onde o projeto usar `@types/chai` ou `@types/jquery`. 
+Já que o [Chai](https://docs.cypress.io/guides/references/bundled-tools.html#Chai) e 
+[jQuery](https://docs.cypress.io/guides/references/bundled-tools.html#Other-Library-Utilities) 
+são namespaces (globais), versões incompatíveis farão o gerenciador de pacotes (yarn ou npm) juntar e incluir 
+múltiplas definições, causando confiltos.
 
 > Você pode encontrar um exemplo de Jest e Cypress instalado no mesmo projeto usando um arquivo `tsconfig.json` 
 separado no repositório [cyperss-io/cypress-and-jest-typescript-example](https://github.com/cypress-io/cypress-and-jest-typescript-example).
@@ -67,7 +70,7 @@ separado no repositório [cyperss-io/cypress-and-jest-typescript-example](https:
 
 ## Tipos de comandos personalizados
 
-Ao adicionar comandos personalizados no objeto `cy`, você pode adicionar manualmente seus tipos para evitar erros TypeScript.
+Ao adicionar comandos personalizados no objeto `cy`, você pode adicionar seus tipos manualmente para evitar erros TypeScript.
 
 Por exemplo, se você adicionar o comando `cy.dataCy` dentro do seu 
 [`supportFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files) assim:
