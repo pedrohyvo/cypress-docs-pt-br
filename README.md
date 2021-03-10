@@ -32,7 +32,7 @@
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
-- Conceitos Bpasicos
+- Conceitos Básicos
     - [Escrevendo e Organizando Testes](pages/core-concepts/writing-and-organizing-tests.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
