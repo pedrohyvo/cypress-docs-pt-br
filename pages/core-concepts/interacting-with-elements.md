@@ -37,15 +37,15 @@ O Cypress esperará que o elemento passe em todas essas verificações durante o
 
 ## Verificações e Ações Realizadas
 
-- [`Rolar elemento para exibição.`](##rolagem)
-- [`Garantir que o elemento não esteja oculto.`](##visibilidade)
-- [`Garantir que o elemento não esteja desabilitado.`](##inabilidade)
-- [`Garantir que o elemento não esteja desconectado.`](##desconectado)
-- [`Garantir que o elemento não seja somente leitura.`](##somente-leitura)
-- [`Garantir que o elemento não esteja animando.`](##animações)
-- [`Garantir que o elemento não está coberto.`](##cobertura)
-- [`Rolar a página se ainda estiver coberto por um elemento com posição fixa.`](##rolagem)
-- [`Disparar o evento nas coordenadas desejadas.`](##coordenadas)
+- [`Rolar elemento para exibição.`](#rolagem)
+- [`Garantir que o elemento não esteja oculto.`](#visibilidade)
+- [`Garantir que o elemento não esteja desabilitado.`](#inabilidade)
+- [`Garantir que o elemento não esteja desconectado.`](#desconectado)
+- [`Garantir que o elemento não seja somente leitura.`](#somente-leitura)
+- [`Garantir que o elemento não esteja animando.`](#animações)
+- [`Garantir que o elemento não está coberto.`](#cobertura)
+- [`Rolar a página se ainda estiver coberto por um elemento com posição fixa.`](#rolagem)
+- [`Disparar o evento nas coordenadas desejadas.`](#coordenadas)
 
 Sempre que o Cypress não pode interagir com um elemento, ele pode falhar em qualquer uma das etapas acima. 
 Normalmente, você receberá um erro explicando por que o elemento não foi considerado acionável.
