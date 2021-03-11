@@ -33,7 +33,6 @@
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
 - Conceitos Básicos
-    - [Introdução ao Cypress](pages/core-concepts/introduction-to-cypress.md)
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
