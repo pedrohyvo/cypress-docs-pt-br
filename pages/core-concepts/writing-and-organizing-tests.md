@@ -1,14 +1,13 @@
 # Escrevendo e Organizando Testes
 
-> ## __O que você aprenderá__
->
->- Como organizar seus arquivos de teste e suporte.
->
->- Quais idiomas são suportados em seus arquivos de teste.
->
->- Como o Cypress lida com testes de unidade versus testes de integração.
->
->- Como agrupar seus testes.
+```markdown
+O que você vai aprender
+
+- Como organizar seus arquivos de teste e suporte.
+- Quais idiomas são suportados em seus arquivos de teste.
+- Como o Cypress lida com testes de unidade versus testes de integração.
+- Como agrupar seus testes.
+```
 
 > **Melhores Práticas**
 >
@@ -16,7 +15,7 @@
 >(Fevereiro de 2018). Este vídeo demonstra
 >como dividir seu aplicativo e organizar seus testes.
 >
-><https://www.youtube.com/watch?v=5XQOK0v_YRE>
+>[Vídeo do Brian Mann na AssertJS(2018)](https://www.youtube.com/watch?v=5XQOK0v_YRE)
 
 ## Estrutura da Pasta
 
@@ -92,7 +91,7 @@ em outro diretório. Os arquivos de teste podem ser escritos como:
 - `.coffee`
 - `.cjsx`
 
-Cypress também oferece suporte `ES2015` pronto para uso. Você pode usar `ES2015 modules` ou `CommonJS modules`. Isto significa
+O Cypress também oferece suporte `ES2015` pronto para uso. Você pode usar `ES2015 modules` ou `CommonJS modules`. Isto significa
 que pode utilizar `import` ou `require`, ambos pacotes NPM e módulos relativos locais.
 
 [//]: <> (TODO - Adicionar link fundamentos)
@@ -233,7 +232,7 @@ beforeEach(() => {
 
 [//]: <> (TODO - Adicionar link guias)
 
-Cypress executa o arquivo de suporte antes do arquivo de especificação. Por exemplo, quando você clica em um arquivo de
+O Cypress executa o arquivo de suporte antes do arquivo de especificação. Por exemplo, quando você clica em um arquivo de
 teste denominado `spec-a.js` via [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
 o Test Runner executa os arquivos na seguinte ordem:
 
@@ -288,7 +287,7 @@ DEBUG=cypress:server:specs npx cypress run
 
 [//]: <> (TODO - Adicionar link referências)
 
-Cypress é construído em cima de [Mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha) e [Chai](https://docs.cypress.io/guides/references/bundled-tools.html#Chai).
+O Cypress é construído em cima de [Mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha) e [Chai](https://docs.cypress.io/guides/references/bundled-tools.html#Chai).
 Apoiamos os estilos de asserção de Chai `BDD` e de `TDD`. Os testes que você escreve no Cypress irão, em sua maioria, seguir
 esse estilo.
 
@@ -350,7 +349,7 @@ describe('Unit test our math functions', () => {
 
 [//]: <> (TODO - Adicionar link referências)
 
-Cypress também fornece ganchos (emprestados do [Mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha)).
+O Cypress também fornece ganchos (emprestados do [Mocha](https://docs.cypress.io/guides/references/bundled-tools.html#Mocha)).
 
 Eles são úteis para definir as condições que você deseja executar antes de um conjunto de testes ou antes de cada teste.
 Eles também são úteis para limpar as condições após um conjunto de testes ou após cada teste.
@@ -603,7 +602,7 @@ O código acima produzirá um pacote com 4 testes:
 
 [//]: <> (TODO - Adicionar link referências)
 
-Cypress suporta asserções simples de estilo BDD (`expect`/ `should`) e TDD (`assert`). [Leia mais sobre asserções simples](https://docs.cypress.io/guides/references/assertions.html).
+O Cypress suporta asserções simples de estilo BDD (`expect`/ `should`) e TDD (`assert`). [Leia mais sobre asserções simples](https://docs.cypress.io/guides/references/assertions.html).
 
 ```js
 it('can add numbers', () => {
@@ -630,7 +629,7 @@ cy.wrap(add(1, 2)).should('equal', 3)
 ### Execute um único arquivo de especificação
 
 Sugerimos executar arquivos de teste individualmente clicando no nome do arquivo de especificação para garantir o melhor
-desempenho. Por exemplo, o [aplicativo Cypress RealWorld](https://github.com/cypress-io/cypress-example-conduit-app) tem
+desempenho. Por exemplo, o [aplicação Cypress RealWorld](https://github.com/cypress-io/cypress-example-conduit-app) tem
 vários arquivos de teste, mas abaixo executamos um único arquivo de teste “new-transaction.spec.ts”.
 
 ![Executando uma única especificação](https://docs.cypress.io/img/guides/core-concepts/run-single-spec.175d5077.gif)
@@ -665,8 +664,8 @@ pasta para limitar as especificações; o filtro “ui” irá corresponder aos 
 [//]: <> (TODO - Adicionar link guias)
 
 Ao executar testes por meio do comando [`cypress open`](https://docs.cypress.io/guides/guides/command-line.html#cypress-open),
-Cypress observa o sistema de arquivos para mudanças em seus arquivos de especificação. Logo após adicionar ou atualizar um
-teste, o Cypress o recarregará e executará todos os testes naquele arquivo de especificação.
+O Cypress observa o sistema de arquivos para mudanças em seus arquivos de especificação. Logo após adicionar ou atualizar
+um teste, o Cypress o recarregará e executará todos os testes naquele arquivo de especificação.
 
 Isso torna a experiência de desenvolvimento produtiva porque você pode adicionar e editar testes enquanto implementa um
 recurso e a interface de usuário do Cypress sempre refletirá os resultados de suas edições mais recentes.
