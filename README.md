@@ -37,7 +37,9 @@
     - [Escrevendo e Organizando Testes](pages/core-concepts/writing-and-organizing-tests.md)
 =======
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
+
 >>>>>>> 61bffe15a62290802f39493ce67f38808971919b
+
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
 
