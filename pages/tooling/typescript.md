@@ -21,6 +21,8 @@ yarn add --dev typescript
 
 ## Configurar seu ambiente de desenvolvimento
 
+[//]: <> (TODO - Adicionar link preenchimento inteligente de código)
+
 Encontre o seu editor de código no 
 [documento de Suporte do Editor ao TypeScript](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support) 
 e siga as instruções para o seu IDE ter o suporte e o 
@@ -31,6 +33,8 @@ O suporte ao TypeScript já vem configurado no [Visual Studio Code](https://code
 editores requerem configuração extra.
 
 ## Configurar tsconfig.json
+
+[//]: <> (TODO - Adicionar link guides/core-concepts/writing-and-organizing-tests.html#Folder-Structure)
 
 Recomendamos a seguinte configuração em um arquivo 
 [`tsconfig.json`](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html) 
@@ -49,6 +53,8 @@ dentro da sua pasta do [`Cypress`](https://docs.cypress.io/guides/core-concepts/
 }
 ```
 
+[//]: <> (TODO - Adicionar link Chai e jQuery)
+
 O `"types"` informa para o compilador TypeScript incluir apenas definições de tipo do Cypress. Ao fazer isso, 
 instâncias serão endereçadas onde o projeto usar `@types/chai` ou `@types/jquery`. 
 Já que o [Chai](https://docs.cypress.io/guides/references/bundled-tools.html#Chai) e 
@@ -57,7 +63,7 @@ são namespaces (globais), versões incompatíveis farão o gerenciador de pacot
 múltiplas definições, causando confiltos.
 
 > Você pode encontrar um exemplo de Jest e Cypress instalado no mesmo projeto usando um arquivo `tsconfig.json` 
-separado no repositório [cyperss-io/cypress-and-jest-typescript-example](https://github.com/cypress-io/cypress-and-jest-typescript-example).
+separado no repositório [cypress-io/cypress-and-jest-typescript-example](https://github.com/cypress-io/cypress-and-jest-typescript-example).
 
 > Talvez seja necessário reiniciar o servidor TypeScript do seu IDE se a configuração acima não funcionar. Por exemplo:
 >
@@ -72,6 +78,8 @@ separado no repositório [cyperss-io/cypress-and-jest-typescript-example](https:
 
 Ao adicionar comandos personalizados no objeto `cy`, você pode adicionar seus tipos manualmente para evitar erros TypeScript.
 
+[//]: <> (TODO - Adicionar link guides/references/configuration.html#Folders-Files)
+
 Por exemplo, se você adicionar o comando `cy.dataCy` dentro do seu 
 [`supportFile`](https://docs.cypress.io/guides/references/configuration.html#Folders-Files) assim:
 
@@ -81,6 +89,8 @@ Cypress.Commands.add('dataCy', (value) => {
   return cy.get(`[data-cy=${value}]`)
 })
 ```
+
+[//]: <> (TODO - Adicionar link guides/references/configuration.html#Folders-Files)
 
 Então você pode adicionar o comando `dataCy` na interface global Chainable do Cypress (chamada assim pois os comandos 
 são encadeados) ao criar um novo arquivo de definições TypeScript ao lado do seu 
@@ -125,6 +135,8 @@ it('works', () => {
 
 **Exemplos:**
 
+[//]: <> (TODO - Adicionar link dos exemplos)
+
 - Veja a receita de exemplo em [Adicionando Comandos Personalizados](https://github.com/cypress-io/cypress-example-recipes#fundamentals).
 
 - Você pode encontrar um exemplo de comando personalizado escrito em TypeScript no repositório 
@@ -135,12 +147,16 @@ it('works', () => {
 
 ## Tipos de asserções personalizadas
 
+[//]: <> (TODO - Adicionar link examples/examples/recipes.html#Fundamentals)
+
 Se você estender asserções Cypress, você pode estender os tipos de asserções para o compilador TypeScript entender 
 os novos métodos. Veja a 
 [Receita: Adicionando Asserções Chai](https://docs.cypress.io/examples/examples/recipes.html#Fundamentals)
 para instruções.
 
 ## Tipos de plugins
+
+[//]: <> (TODO - Adicionar link guides/tooling/plugins-guide.html#Use-Cases)
 
 Você pode utilizar as declarações de tipo do Cypress no seu 
 [arquivo de plugins](https://docs.cypress.io/guides/tooling/plugins-guide.html#Use-Cases) anotando da seguinte forma:
@@ -160,12 +176,16 @@ module.exports = (on, config) => {
 
 ## Histórico
 
+[//]: <> (TODO - Adicionar link das versões 4.4.0 e 5.0.0)
+
 | Versão | Mudanças                                                                                                   |
 |--------|------------------------------------------------------------------------------------------------------------|
 | [5.0.0](https://docs.cypress.io/guides/references/changelog.html#5-0-0)  | Atualização da versão mínima do TypeScript de 2.9+ para 3.4+                                               |
 | [4.4.0](https://docs.cypress.io/guides/references/changelog.html#4-4-0)  | Adicionado suporte para o TypeScript sem precisar de sua própria transpilação através de pré-processadores |
 
 ## Veja também
+
+[//]: <> (TODO - Adicionar link Integração do IDE)
 
 - [Integração do IDE](https://docs.cypress.io/guides/tooling/IDE-integration.html)
 
