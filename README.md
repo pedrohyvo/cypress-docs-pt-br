@@ -34,6 +34,7 @@
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
 - Conceitos Básicos
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
+    - [Variáveis e Apelidos](pages/core-concepts/variables-and-aliases.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
 
