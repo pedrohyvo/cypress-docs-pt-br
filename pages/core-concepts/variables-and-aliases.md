@@ -204,9 +204,9 @@ describe('a suite', () => {
 
 Felizmente, você não precisa fazer seu código dar backflips. Com o Cypress, podemos lidar melhor com essas situações.
 
-> **Apresentando Aliases**
+> **Apresentando Apelidos**
 >
-> Aliases são uma construção poderosa no Cypress que tem muitos usos. Exploraremos cada um de seus recursos a seguir.
+> Os Apelidos são uma construção poderosa no Cypress que tem muitos usos. Exploraremos cada um de seus recursos a seguir.
 >
 > A princípio, vamos usá-los para compartilhar objetos entre seus ganchos e seus testes.
 
@@ -327,8 +327,8 @@ cy.fixture('users.json').then((users) => {
 > Acessar apelidos como propriedades com `this.*` não irá funcionar se você usar [`arrow functions`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/>Reference/Functions/Arrow_functions)
 > para seus testes ou ganchos.
 >
-> É por isso que todos os nossos exemplos usam a sintaxe de regular `function () {}` ao invés da sintaxe de “seta gorda”
-> lambda `() => {}`.
+> É por isso que todos os nossos exemplos usam a sintaxe de regular `function () {}` ao invés da sintaxe de
+> “seta gorda” lambda `() => {}`.
 
 Em vez de usar a sintaxe `this.*`, Há outra maneira de acessar apelidos.
 
