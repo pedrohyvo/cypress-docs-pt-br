@@ -14,6 +14,7 @@ O que você vai aprender
 Novos usuários do Cypress podem inicialmente achar desafiador trabalhar com a natureza assíncrona de nossas APIs.
 
 > **Não se preocupe!**
+>
 > Existem muitas maneiras de referenciar, comparar e utilizar os objetos que os comandos do Cypress fornecem para você.
 >
 > Depois de pegar o jeito do código assíncrono, você perceberá que pode fazer tudo o que pode fazer de forma síncrona,
@@ -171,11 +172,12 @@ it('does not have access to text', () => {
 })
 ```
 
-Como teremos acesso ao texto?
+Como teremos acesso ao `text`?
 
 Poderíamos fazer nosso código fazer alguns backflips feios usando let para obter acesso a ele.
 
 > **Não faça isso**
+>
 > Este código abaixo é apenas para demonstração.
 
 ```JS
@@ -202,6 +204,7 @@ describe('a suite', () => {
 Felizmente, você não precisa fazer seu código dar backflips. Com o Cypress, podemos lidar melhor com essas situações.
 
 > **Apresentando Aliases**
+>
 > Aliases são uma construção poderosa no Cypress que tem muitos usos. Exploraremos cada um de seus recursos a seguir.
 >
 > A princípio, vamos usá-los para compartilhar objetos entre seus ganchos e seus testes.
@@ -281,7 +284,7 @@ it('utilize users in some way', function () {
 })
 ```
 
-> **Cuidado com os comandos** 
+> **Cuidado com os comandos assíncronos** 
 >
 > Não se esqueça de que os comandos do Cypress são assíncronos!
 >
@@ -326,7 +329,7 @@ cy.fixture('users.json').then((users) => {
 > É por isso que todos os nossos exemplos usam a sintaxe de regular `function () {}` ao invés da sintaxe de “seta gorda”
 > lambda `() => {}`.
 
-Em vez de usar a sintaxe this. *, Há outra maneira de acessar apelidos.
+Em vez de usar a sintaxe `this.*`, Há outra maneira de acessar apelidos.
 
 [//]: <> (TODO - Adicionar links - comando cy.get)
 O comando [`cy.get()`](https://docs.cypress.io/api/commands/get.html) é capaz de acessar apelidos com uma sintaxe 
@@ -390,8 +393,9 @@ Como usamos o caractere `@` em [`cy.get()`](https://docs.cypress.io/api/commands
 busca de elementos, [`cy.get()`](https://docs.cypress.io/api/commands/get.html) procura por um apelido existente chamado
 de `rows` e retorna a referência (se encontrar).
 
-[//]: <> (TODO - Adicionar links - comando cy.get)
 **Elementos obsoletos:**
+
+[//]: <> (TODO - Adicionar links - comando cy.get)
 Em muitos aplicativos single-page JavaScript, o DOM re-renderiza partes do aplicativo constantemente. Se você criar
 um apelido para os elementos DOM que foram removidos do DOM no momento em que você chamar [`cy.get()`](https://docs.cypress.io/api/commands/get.html)
 com o apelido, o Cypress consultará automaticamente o DOM para encontrar esses elementos novamente.
@@ -439,7 +443,8 @@ encontrado.
 
 ## Rotas
 
-Apelidos também podem ser usados com rotas. Apelidar suas rotas permite que você:
+[//]: <> (TODO - Adicionar links - rotas)
+Apelidos também podem ser usados com [rotas](https://docs.cypress.io/api/commands/route.html). Apelidar suas rotas permite que você:
 
 - garanta que seu aplicativo faça as solicitações pretendidas
 - espere que o seu servidor envie a resposta
@@ -447,7 +452,7 @@ Apelidos também podem ser usados com rotas. Apelidar suas rotas permite que voc
 
 ![aliasing-routes](https://docs.cypress.io/img/guides/aliasing-routes.b16f3c04.jpg)
 
-Aqui está um exemplo de como apelidar uma rota e aguar sua conclusão.
+Aqui está um exemplo de como apelidar uma rota e aguardar sua conclusão.
 
 ```JS
 cy.intercept('POST', '/users', { id: 123 }).as('postUser')
@@ -462,6 +467,7 @@ cy.contains('Successfully created user: Brian')
 ```
 
 > Novo no Cypress?
+>
 > [Temos um guia muito mais detalhado e abrangente sobre o roteamento de requisições de rede.](https://docs.cypress.io/guides/guides/network-requests.html)
 
 ## Requisições
@@ -485,4 +491,4 @@ cy.get('@comments').should((response) => {
 })
 ```
 
-[Voltar para o topo](#variaveis-e-apelidos)
+[Voltar para o topo](#variáveis-e-apelidos)
