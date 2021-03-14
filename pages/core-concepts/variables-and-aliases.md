@@ -445,7 +445,8 @@ encontrado.
 ## Rotas
 
 [//]: <> (TODO - Adicionar links - rotas)
-Apelidos também podem ser usados com [rotas](https://docs.cypress.io/api/commands/route.html). Apelidar suas rotas permite que você:
+Apelidos também podem ser usados com [rotas](https://docs.cypress.io/api/commands/route.html). Apelidar suas rotas 
+permite que você:
 
 - garanta que seu aplicativo faça as solicitações pretendidas
 - espere que o seu servidor envie a resposta
