@@ -31,6 +31,7 @@ Os padrões que exploraremos abaixo são úteis dentro e fora do Cypress.
 O primeiro e mais importante conceito que você deve reconhecer é...
 
 > **Valores Retornados**
+>
 > Você não pode atribuir ou trabalhar com os valores de retorno de qualquer comando Cypress. Os comandos são 
 > enfileirados e executados de forma assíncrona.
 
