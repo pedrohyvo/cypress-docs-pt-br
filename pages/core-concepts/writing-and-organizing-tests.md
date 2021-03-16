@@ -15,7 +15,7 @@ O que você vai aprender
 >(Fevereiro de 2018). Este vídeo demonstra
 >como dividir seu aplicativo e organizar seus testes.
 >
->[Vídeo do Brian Mann na AssertJS(2018)](https://www.youtube.com/watch?v=5XQOK0v_YRE)
+>[![Vídeo do Brian Mann na AssertJS(2018)](https://img.youtube.com/vi/5XQOK0v_YRE/0.jpg)](https://www.youtube.com/watch?v=5XQOK0v_YRE)
 
 ## Estrutura da Pasta
 
