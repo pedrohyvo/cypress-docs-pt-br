@@ -33,6 +33,7 @@
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
 - Conceitos Básicos
+    - [Escrevendo e Organizando Testes](pages/core-concepts/writing-and-organizing-tests.md)
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
