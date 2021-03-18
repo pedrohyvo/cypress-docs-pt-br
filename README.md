@@ -1,6 +1,6 @@
 # cypress-docs-pt-br
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -32,6 +32,9 @@
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
+- Conceitos Básicos
+    - [Escrevendo e Organizando Testes](pages/core-concepts/writing-and-organizing-tests.md)
+    - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
 
@@ -76,6 +79,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://walmyr.dev"><img src="https://avatars.githubusercontent.com/u/2768415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Walmyr</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wlsf82" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/lucastfa-toptal"><img src="https://avatars.githubusercontent.com/u/69941309?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Avila</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=lucastfa-toptal" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/edmundobiglia"><img src="https://avatars.githubusercontent.com/u/53831919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edmundo Biglia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=edmundobiglia" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/murillowelsi/"><img src="https://avatars.githubusercontent.com/u/25549745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Murillo Welsi de Souza Pereira</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=murillowelsi" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/rafaabc"><img src="https://avatars.githubusercontent.com/u/42503318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rafaabc</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=rafaabc" title="Code">💻</a></td>
   </tr>
 </table>
 
