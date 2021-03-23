@@ -37,6 +37,8 @@
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
+- Tooling
+    - [TypeScript](pages/tooling/typescript.md)
 
 ----
 
