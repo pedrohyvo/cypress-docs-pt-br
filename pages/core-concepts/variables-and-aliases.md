@@ -5,7 +5,7 @@ O que você vai aprender
 
 - Como lidar com comandos assíncronos
 - O que são apelidos e como eles simplificam seu código
-- Por que você raramente precisa usar variáveis com Cypress
+- Por que você raramente precisa usar variáveis com o Cypress
 - Como usar apelidos para objetos, elementos e rotas
 ```
 
@@ -468,12 +468,14 @@ cy.wait('@postUser').then(({ request }) => {
 cy.contains('Successfully created user: Brian')
 ```
 
+[//]: <> (TODO - Adicionar links - requisições de rede)
 > Novo no Cypress?
 >
 > [Temos um guia muito mais detalhado e abrangente sobre o roteamento de requisições de rede.](https://docs.cypress.io/guides/guides/network-requests.html)
 
 ## Requisições
 
+[//]: <> (TODO - Adicionar links - requisições)
 Apelidos também podem ser usados com [requisições](https://docs.cypress.io/api/commands/request.html).
 
 Aqui está um exemplo de como apelidar uma requisição e acessar suas propriedades posteriormente.
