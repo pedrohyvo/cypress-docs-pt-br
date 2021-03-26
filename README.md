@@ -35,6 +35,7 @@
 - Conceitos Básicos
     - [Escrevendo e Organizando Testes](pages/core-concepts/writing-and-organizing-tests.md)
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
+    - [Variáveis e Apelidos](pages/core-concepts/variables-and-aliases.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
 - Tooling
