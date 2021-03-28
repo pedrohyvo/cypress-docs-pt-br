@@ -3,7 +3,6 @@
 Com o Cypress, você pode gravar os testes do seu projeto.
 
 [//]: <> (TODO - Adicionar link integração contínua)
-
 Normalmente, você deseja gravar ao executar testes em 
 [integração contínua](https://docs.cypress.io/guides/continuous-integration/introduction.html), mas 
 também pode gravar seus testes ao executar localmente.
@@ -25,14 +24,14 @@ também pode gravar seus testes ao executar localmente.
 3. Você precisará fazer login para gravar seus testes, portanto, será solicitado que você faça login 
 no Cypress Dashboard aqui, caso ainda não tenha feito isso.
 
-    ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-1.2e5fcf2c.png)
+    ![Setup a project](https://docs.cypress.io/_nuxt/img/setup-a-project-1.a3fa41e.png)
  
 4. Escolha quem é o dono do projeto. Você pode ser o dono ou selecionar uma organização que criou. 
 Se você não tiver nenhuma organização, clique em **Create organization**. As organizações funcionam 
 exatamente como no GitHub. Eles permitem que você separe seus projetos pessoais e de trabalho. 
 [Leia mais sobre organizações](https://docs.cypress.io/guides/dashboard/organizations.html).
 
-    ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-2.36fe8b32.png)
+    ![Setup a project](https://docs.cypress.io/_nuxt/img/setup-a-project-2.464f34a.png)
 
 5. Se você não tiver nenhum projeto existente, terá a oportunidade de criar um novo aqui. 
 Se você tem projetos existentes e deseja criar um novo, pode clicar em **Create new project** para fazer um novo.
@@ -44,36 +43,36 @@ Normalmente, esses são projetos de código aberto.
       - **Um projeto privado** restringe seu acesso 
 [apenas aos usuários que você convida](https://docs.cypress.io/guides/dashboard/users.html). 
 
-    ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-3.1e1b3934.png)
+    ![Setup a project](https://docs.cypress.io/_nuxt/img/setup-a-project-3.78ce355.png)
 
 6. Como alternativa, se você já criou um projeto no Dashboard, você pode linkar seu projeto 
 selecionando no menu *dropdown*. Certifique-se de selecionar um projeto limpo que não tenha sido 
 vinculado anteriormente a um projeto existente.
 
-    ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-4.66a081bd.png)
+    ![Setup a project](https://docs.cypress.io/_nuxt/img/setup-a-project-4.618c40e.png)
 
 7. Clique em **Setup Project**.
 8. Agora você deve ver uma tela explicando como registrar sua primeira execução com sua chave de registro. 
 
-    ![Setup a project](https://docs.cypress.io/img/dashboard/projects/setup-a-project-5.15b5679e.png)
+    ![Setup a project](https://docs.cypress.io/_nuxt/img/setup-a-project-5.e3456c8.png)
 
 9. Depois de configurar seu projeto, o Cypress insere um 
 [projectId](###id-do-projeto) exclusivo em seu arquivo de configuração, 
-`cypress.json` por padrão. Se você estiver usando o controle de origem, recomendamos que você 
-verifique seu arquivo de configuração, incluindo o `projectId`, no controle de origem.
+`cypress.json` por padrão. Se você estiver usando o controle de versão, recomendamos que você 
+verifique seu arquivo de configuração, incluindo o `projectId`, no controle de versão.
 
 10. Dentro da [integração contínua](https://docs.cypress.io/guides/continuous-integration/introduction.html), 
 ou a partir do terminal do seu computador local, passe a [Chave de Registro](###chave-de-registro) exibida 
 enquanto executa o comando [cypress run](https://docs.cypress.io/guides/guides/command-line.html#cypress-run).
 
-    - Fornecer a chave de registro diretamente:
-
+      - Fornecer a chave de registro diretamente:
+    
         ```bash
         cypress run --record --key <record key>
         ```        
-
-    - Ou setar a chave de registro como variável de ambiente
-
+    
+      - Ou setar a chave de registro como variável de ambiente
+    
         ```bash
         export CYPRESS_RECORD_KEY=<record key>
         cypress run --record
@@ -84,9 +83,9 @@ enquanto executa o comando [cypress run](https://docs.cypress.io/guides/guides/c
 [Dashboard](https://on.cypress.io/dashboard) e na guia `Runs` do 
 [Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner.html).
 
-![Dashboard runs list](https://docs.cypress.io/img/dashboard/dashboard-runs-list.38bf0e41.png)
+![Dashboard runs list](https://docs.cypress.io/_nuxt/img/dashboard-runs-list.39125d1.png)
 
-![runs list in desktop gui](https://docs.cypress.io/img/dashboard/runs-list-in-desktop-gui.c0a8a677.png)
+![runs list in desktop gui](https://docs.cypress.io/_nuxt/img/runs-list-in-desktop-gui.4eab7f3.png)
 
 ## Identificação
 
@@ -108,8 +107,8 @@ O `projectId` **é uma string de 6 caracteres no seu** `cypress.json`
 Isso nos ajuda a identificar o seu projeto de maneira única. Se você alterar isso manualmente, **o Cypress** 
 **não será mais capaz de identificar seu projeto ou encontrar as *builds* registradas para ele.**
 
-Se você estiver usando o controle de origem, recomendamos que você verifique seu `cypress.json`, 
-incluindo o `projectId`, no controle de origem. Se você não quiser que seu `projectId` fique visível 
+Se você estiver usando o controle de versão, recomendamos que você verifique seu `cypress.json`, 
+incluindo o `projectId`, no controle de versão. Se você não quiser que seu `projectId` fique visível 
 em seu código-fonte, você pode defini-lo como uma variável de ambiente usando o nome `CYPRESS_PROJECT_ID`. 
 O mecanismo exato para fazer isso depende do seu sistema, mas pode ser algo como:
 
@@ -161,11 +160,11 @@ f4466038-70c2-4688-9ed9-106bf013cd73
 Você pode criar várias chaves de registro para um projeto ou excluir as existentes do nosso 
 [Dashboard](https://on.cypress.io/dashboard).
 
-![Record keys in project settings dashboard](https://docs.cypress.io/img/dashboard/record-keys-in-project-settings-dashboard.fcaeea13.png)
+![Record keys in project settings dashboard](https://docs.cypress.io/_nuxt/img/record-keys-in-project-settings-dashboard.3517d8a.png)
 
 Você também pode encontrar sua chave de registro dentro da guia **Settings** no Test Runner.
 
-![Record key shown in desktop gui](https://docs.cypress.io/img/dashboard/record-key-shown-in-desktop-gui-configuration.15896828.jpg)
+![Record key shown in desktop gui](https://docs.cypress.io/_nuxt/img/record-key-shown-in-desktop-gui-configuration.818405f.jpg)
 
 ## Chaves de Registro
 
@@ -176,15 +175,15 @@ Veja [Chave de registro](###chave-de-registro) para uma descrição completa de 
 1. Acesse a página de projetos da sua organização.
 2. Selecione o projeto para o qual deseja alterar o acesso.
     
-    ![Select cypress project](https://docs.cypress.io/img/dashboard/select-cypress-project.c8d65a99.png)
+    ![Select cypress project](https://docs.cypress.io/_nuxt/img/select-cypress-project.fe3b44b.png)
 
 3. Acesse a página de **configuração** do projeto.
 
-    ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+    ![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 4. Aqui você verá uma seção **Record Keys**.
 
-    ![Record keys in project settings dashboard](https://docs.cypress.io/img/dashboard/record-keys-in-project-settings-dashboard.fcaeea13.png)
+    ![Record keys in project settings dashboard](https://docs.cypress.io/_nuxt/img/record-keys-in-project-settings-dashboard.3517d8a.png)
 
 5. Clique em **Create new key**. Uma nova chave será gerada automaticamente para seu projeto.
 
@@ -193,15 +192,15 @@ Veja [Chave de registro](###chave-de-registro) para uma descrição completa de 
 1. Acesse a página de projetos da sua organização.
 2. Selecione o projeto para o qual deseja alterar o acesso.
 
-    ![Select cypress project](https://docs.cypress.io/img/dashboard/select-cypress-project.c8d65a99.png) 
+    ![Select cypress project](https://docs.cypress.io/_nuxt/img/select-cypress-project.fe3b44b.png) 
 
 3. Acesse a página de **configuração** do projeto.
 
-    ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+    ![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 4. Aqui você verá uma seção **Record Keys**.
 
-    ![Record keys in project settings dashboard](https://docs.cypress.io/img/dashboard/record-keys-in-project-settings-dashboard.fcaeea13.png)
+    ![Record keys in project settings dashboard](https://docs.cypress.io/_nuxt/img/record-keys-in-project-settings-dashboard.3517d8a.png)
 
 5. Clique em **Delete** ao lado da chave de registro que deseja excluir.
 
@@ -214,13 +213,13 @@ Você pode editar o número de segundos que uma execução aguardará para que n
 fazer a transição para "concluída". Veja nosso 
 [guia de paralelização](https://docs.cypress.io/guides/guides/parallelization.html#Run-completion-delay) para saber mais.
 
-![Run completion delay](https://docs.cypress.io/img/dashboard/run-completion-delay.dc152f75.jpg)
+![Run completion delay](https://docs.cypress.io/_nuxt/img/run-completion-delay.3338118.jpg)
 
 ## Integração Github
 
 Você pode integrar seu projeto ao GitHub e editar suas configurações na página de configurações do projeto.
 
-![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 [//]: <> (TODO - Adicionar link - integração github)
 Veja nosso guia de [Integração Github](https://docs.cypress.io/guides/dashboard/github-integration.html) para saber mais.
@@ -229,7 +228,7 @@ Veja nosso guia de [Integração Github](https://docs.cypress.io/guides/dashboar
 
 Você pode integrar seu projeto ao Slack e editar suas configurações na página de configurações do projeto.
 
-![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 [//]: <> (TODO - Adicionar link - integração slack)
 Veja nosso guia de [Integração Slack](https://docs.cypress.io/guides/dashboard/slack-integration.html) para saber mais.
@@ -244,7 +243,7 @@ contagem de testes para outros desenvolvedores visualizarem o arquivo README do 
 1. Em sua conta do Cypress Dashboard, selecione o projeto para o qual você gostaria de criar um selo no README.
 2. Na página de configurações do projeto, role para baixo até a seção "README Badges" e clique em “Configure Badge”.
 
-    ![Dashboard badge configure button](https://docs.cypress.io/img/dashboard/badges/dashboard-badge-configure-button.eb79365a.png)
+    ![Dashboard badge configure button](https://docs.cypress.io/_nuxt/img/dashboard-badge-configure-button.b3e6ed2.png)
 
     Observação: Selos do README atualmente estão disponíveis apenas para projetos públicos.
 
@@ -271,7 +270,7 @@ Veja também
 
 Visite as configurações do seu projeto para ver quem tem acesso às execuções do seu projeto.
 
-![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 ### Público x Privado
 
@@ -292,16 +291,16 @@ execuções registradas. Mesmo que alguém conheça seu `projectId`, essa pessoa
 1. Acesse a página de projetos da sua organização.
 2. Selecione o projeto para o qual deseja alterar o acesso.
 
-    ![Select cypress project](https://docs.cypress.io/img/dashboard/select-cypress-project.c8d65a99.png)
+    ![Select cypress project](https://docs.cypress.io/_nuxt/img/select-cypress-project.fe3b44b.png)
 
 3. Acesse a página de **configuração** do projeto.
 
-    ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+    ![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 4. Aqui você verá uma seção exibindo o acesso às execuções. Escolha o acesso apropriado que você 
 gostaria de atribuir ao projeto aqui.
 
-![Access to runs](https://docs.cypress.io/img/dashboard/access-to-runs.b5ca0210.png)
+![Access to runs](https://docs.cypress.io/_nuxt/img/access-to-runs.e75c555.png)
 
 ## Transferir propriedade
 
@@ -315,26 +314,26 @@ para outro usuário na sua organização. Os projetos só podem ser transferidos
 1. Selecione sua organização no *switcher* de organização.
 2. Selecione o projeto que deseja transferir.
 
-    ![Select cypress project](https://docs.cypress.io/img/dashboard/select-cypress-project.c8d65a99.png)
+    ![Select cypress project](https://docs.cypress.io/_nuxt/img/select-cypress-project.fe3b44b.png)
 
 3. Acesse a página de **configuração** do projeto.
 
-    ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+    ![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 4. Role para baixo até a seção **Transferir Propriedade** e clique em **Transferir Propriedade**.
 
-    ![Transfer ownership button](https://docs.cypress.io/img/dashboard/transfer-ownership-button.22d66cf1.png)
+    ![Transfer ownership button](https://docs.cypress.io/_nuxt/img/transfer-ownership-button.8bb249d.png)
 
 5. Selecione o usuário ou organização e clique em **Transferir**.
 
-    ![Transfer Ownership of project](https://docs.cypress.io/img/dashboard/transfer-ownership-of-project-dialog.eceefeaa.png)
+    ![Transfer Ownership of project](https://docs.cypress.io/_nuxt/img/transfer-ownership-of-project-dialog.3822fb9.png)
 
 ### Cancelar transferência de projeto
 
 Após a transferência, você pode cancelar a transferência a qualquer momento visitando os projetos da organização 
 e clicando em **Cancelar transferência**.
 
-![Cancel transfer of project](https://docs.cypress.io/img/dashboard/cancel-transfer-of-project.751b3383.png)
+![Cancel transfer of project](https://docs.cypress.io/_nuxt/img/cancel-transfer-of-project.5a878c9.png)
 
 ### Aceitar ou rejeitar projeto transferido
 
@@ -342,9 +341,9 @@ Quando um projeto é transferido para você, você receberá um e-mail com uma n
 Você poderá aceitar ou rejeitar o projeto transferido clicando na notificação na barra lateral e 
 clicando em ‘Aceitar’ ou ‘Rejeitar’.
 
-![See pending transfer](https://docs.cypress.io/img/dashboard/see-pending-transfer.dba986c1.png)
+![See pending transfer](https://docs.cypress.io/_nuxt/img/see-pending-transfer.e20c41c.png)
 
-![Accept or reject transfer project](https://docs.cypress.io/img/dashboard/accept-or-reject-transfer-of-project.ae0ae78c.png)
+![Accept or reject transfer project](https://docs.cypress.io/_nuxt/img/accept-or-reject-transfer-of-project.a9ea3cd.png)
 
 ## Deletar projeto
 
@@ -354,15 +353,15 @@ A exclusão de projetos só pode ser feita a partir do [serviço Dashboard](http
 1. Selecione sua organização no *switcher* de organização.
 2. Selecione o projeto que deseja remover.
 
-    ![Select cypress project](https://docs.cypress.io/img/dashboard/select-cypress-project.c8d65a99.png)
+    ![Select cypress project](https://docs.cypress.io/_nuxt/img/select-cypress-project.fe3b44b.png)
 
 3. Acesse a página de **configuração** do projeto.
 
-    ![Visit project settings](https://docs.cypress.io/img/dashboard/visit-project-settings.f345bc8b.png)
+    ![Visit project settings](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
 
 4. Na parte inferior da página Configurações, clique no botão **Yes, remove project**.
 
-    ![Remove project dialog](https://docs.cypress.io/img/dashboard/remove-project-dialog.a84d3195.png)
+    ![Remove project dialog](https://docs.cypress.io/_nuxt/img/remove-project-dialog.bd56b1f.png)
 
 5. Confirme que deseja excluir o projeto clicando em **Yes, remove project**.
 
