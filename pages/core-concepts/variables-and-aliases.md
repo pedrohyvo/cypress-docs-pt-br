@@ -452,7 +452,7 @@ permite que você:
 - espere que o seu servidor envie a resposta
 - acesse o objeto de solicitação real para asserções
 
-![aliasing-routes](https://docs.cypress.io/img/guides/aliasing-routes.b16f3c04.jpg)
+![aliasing-routes](https://docs.cypress.io/_nuxt/img/aliasing-routes.af26c33.jpg)
 
 Aqui está um exemplo de como apelidar uma rota e aguardar sua conclusão.
 
