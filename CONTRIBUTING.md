@@ -37,3 +37,66 @@ node_modules/.bin/markdownlint ./ --ignore node_modules
 ```
 
 Obs: para os usuários do VSCode, existe uma extensão [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint).
+
+## Guia de Estilos Universal
+
+Esta seção descreve as regras que devem ser aplicadas para todas as páginas. 
+Quando estiver se referindo ao próprio `Cypress`, use `o Cypress`.
+
+### Texto em Blocos de Código
+
+Mantenha o texto em blocos de código sem tradução, exceto para os comentários. 
+Você pode optar por traduzir o texto em strings, mas tenha cuidado para não traduzir 
+strings que se refiram ao código!
+
+Exemplo:
+
+```js
+//Example
+cy
+  .get('#login-field')
+  .should('be.visible')
+// Checking if login field is visible
+```
+
+✅ FAÇA:
+
+```js
+//Exemplo
+cy
+  .get('#login-field')
+  .should('be.visible')
+// Checking if login field is visible
+```
+
+✅ PERMITIDO:
+
+```js
+//Exemplo
+cy
+  .get('#login-field')
+  .should('be.visible')
+// Checando se o campo de login é visível
+```
+
+❌ NÃO FAÇA:
+
+```js
+//Exemplo
+cy
+  .get('#login-campo')
+// "login-field" se refere a um ID de um elemento.
+// NÃO TRADUZA  
+  .should('be.visible')
+// Checando se o campo de login é visível
+```
+
+❌ DEFINITIVAMENTE NÃO FAÇA:
+
+```js
+//Exemplo
+cy
+  .get('#login-campo')
+  .should('seja.visivel')
+// Checando se o campo de login é visível
+```
