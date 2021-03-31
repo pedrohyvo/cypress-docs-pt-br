@@ -38,6 +38,7 @@
     - [Variáveis e Apelidos](pages/core-concepts/variables-and-aliases.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
+    - [Projetos](pages/dashboard/projects.md)
 - Tooling
     - [TypeScript](pages/tooling/typescript.md)
 
