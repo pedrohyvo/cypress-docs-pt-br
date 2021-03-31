@@ -2,13 +2,13 @@
 
 [//]: <> (TODO - Adicionar links traduzidos Dashboard, status de commit, comentários de merge request e config para gravação)
 
-O [Dashboard do Cypress](https://on.cypress.io/dashboard) consegue integrar seus testes Cypress com o seu fluxo do 
-GitLab através do [status de commit](https://docs.cypress.io/guides/dashboard/gitlab-integration#Commit-statuses)
+O [Dashboard do Cypress](https://on.cypress.io/dashboard) consegue integrar seus testes Cypress com o seu fluxo 
+de trabalho do GitLab através do [status de commit](https://docs.cypress.io/guides/dashboard/gitlab-integration#Commit-statuses)
 e de [comentários de merge request](https://docs.cypress.io/guides/dashboard/gitlab-integration#Merge-Request-comments)
 Primeiramente o projeto precisa estar [configurado para gravação](https://docs.cypress.io/guides/dashboard/projects) 
 para o Dashboard do Cypress utilizar a integração GitLab.
 
-> A Integração GitLab é dependente do seu ambiente de integração contínua, confiavelmente fornecendo dados do SHA do 
+> A Integração GitLab é dependente do seu ambiente de integração contínua, confiavelmente fornecendo dados SHA do 
 commit (tipicamente via variável de ambiente). Isso não é um problema para a maioria dos usuários, mas se você estiver 
 com problemas de integração GitLab na sua configuração de integração contínua, certifique-se de que a 
 informação git está sendo enviada corretamente ao seguir 
@@ -19,7 +19,7 @@ Se após isso você ainda estiver com problemas, por favor, entre em [contato co
 
 > Aplicações OAuth2 do GitLab permitirão que o Dashboard do Cypress autentique-se como o usuário que registrou a 
 aplicação. Isso significa que o Cypress terá a visibilidade de cada repositório GitLab que você pode acessar.
-Se você quiser um controle mais rígido nos repositórios que o Cypress vai enxergar, considere criar uma conta 
+Se você quiser um controle mais rígido nos repositórios que o Cypress vai visualizar, considere criar uma conta 
 de serviço com mais acessos limitados no GitLab.
 
 1. Visite **Integrations -> GitLab** no Dashboard do Cypress.
