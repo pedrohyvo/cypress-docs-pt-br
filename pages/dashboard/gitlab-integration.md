@@ -2,11 +2,11 @@
 
 [//]: <> (TODO - Adicionar links traduzidos Dashboard, status de commit, comentários de merge request e config para gravação)
 
-O [Dashboard do Cypress](https://on.cypress.io/dashboard) consegue integrar seus testes Cypress com o seu fluxo 
+O [Cypress Dashboard](https://on.cypress.io/dashboard) consegue integrar seus testes Cypress com o seu fluxo 
 de trabalho do GitLab através do [status de commit](https://docs.cypress.io/guides/dashboard/gitlab-integration#Commit-statuses)
 e de [comentários de merge request](https://docs.cypress.io/guides/dashboard/gitlab-integration#Merge-Request-comments)
 Primeiramente o projeto precisa estar [configurado para gravação](https://docs.cypress.io/guides/dashboard/projects) 
-para o Dashboard do Cypress utilizar a integração GitLab.
+para o Cypress Dashboard utilizar a integração GitLab.
 
 > A Integração GitLab depende que o seu ambiente de Integração Contínua forneça dados SHA de 
 commit de forma confiável (tipicamente via variável de ambiente). Isso não é um problema para a maioria dos usuários, 
@@ -17,16 +17,16 @@ Se após isso você ainda estiver com problemas, por favor, entre em [contato co
 
 ## Instalando a integração com o GitLab
 
-> Aplicações OAuth2 do GitLab permitirão que o Dashboard do Cypress autentique-se como o usuário que registrou a 
+> Aplicações OAuth2 do GitLab permitirão que o Cypress Dashboard autentique-se como o usuário que registrou a 
 aplicação. Isso significa que o Cypress vai enxergar cada repositório GitLab que você puder acessar.
 Se você quiser um controle mais rígido nos repositórios que o Cypress vai visualizar, considere criar uma conta 
 de serviço com acessos mais limitados no GitLab.
 
-1. Visite **Integrations -> GitLab** no Dashboard do Cypress.
+1. Visite **Integrations -> GitLab** no Cypress Dashboard.
 2. Siga as instruções para criar uma nova aplicação OAuth2 no GitLab. Acesse o 
 [docs GitLab](https://docs.gitlab.com/ee/integration/oauth_provider.html#adding-an-application-through-the-profile) 
 para mais detalhes.
-3. Copie o Application ID e Secret de volta no Dashboard do Cypress.
+3. Copie o Application ID e Secret de volta no Cypress Dashboard.
 4. Conecte seus projetos em um repositório GitLab.
 5. (Opicional) Configure o comportamento para cada projeto.
 
