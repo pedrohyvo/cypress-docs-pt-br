@@ -8,10 +8,10 @@ e de [comentários de merge request](https://docs.cypress.io/guides/dashboard/gi
 Primeiramente o projeto precisa estar [configurado para gravação](https://docs.cypress.io/guides/dashboard/projects) 
 para o Dashboard do Cypress utilizar a integração GitLab.
 
-> A Integração GitLab é dependente do seu ambiente de integração contínua, confiavelmente fornecendo dados SHA do 
-commit (tipicamente via variável de ambiente). Isso não é um problema para a maioria dos usuários, mas se você estiver 
-com problemas de integração GitLab na sua configuração de integração contínua, certifique-se de que a 
-informação git está sendo enviada corretamente ao seguir 
+> A Integração GitLab depende que o seu ambiente de Integração Contínua forneça dados SHA de 
+commit de forma confiável (tipicamente via variável de ambiente). Isso não é um problema para a maioria dos usuários, 
+mas se você estiver com problemas de integração GitLab na sua configuração de integração contínua, certifique-se de que
+a informação git está sendo enviada corretamente ao seguir 
 [essas diretrizes](https://docs.cypress.io/guides/continuous-integration/introduction#Git-information).
 Se após isso você ainda estiver com problemas, por favor, entre em [contato conosco](mailto:hello@cypress.io).
 
