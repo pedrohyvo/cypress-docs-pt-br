@@ -26,7 +26,7 @@ de serviço com acessos mais limitados no GitLab.
 2. Siga as instruções para criar uma nova aplicação OAuth2 no GitLab. Acesse o 
 [docs GitLab](https://docs.gitlab.com/ee/integration/oauth_provider.html#adding-an-application-through-the-profile) 
 para mais detalhes.
-3. Copie o Application ID e Secret de volta no Cypress Dashboard.
+3. Copie o Application ID e Secret e cole no Cypress Dashboard.
 4. Conecte seus projetos em um repositório GitLab.
 5. (Opicional) Configure o comportamento para cada projeto.
 
