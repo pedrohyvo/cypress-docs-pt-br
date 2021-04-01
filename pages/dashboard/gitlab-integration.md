@@ -6,7 +6,7 @@ O [Cypress Dashboard](https://on.cypress.io/dashboard) consegue integrar seus te
 de trabalho do GitLab através do [status de commit](https://docs.cypress.io/guides/dashboard/gitlab-integration#Commit-statuses)
 e de [comentários de merge request](https://docs.cypress.io/guides/dashboard/gitlab-integration#Merge-Request-comments)
 Primeiramente o projeto precisa estar [configurado para gravação](https://docs.cypress.io/guides/dashboard/projects) 
-para o Cypress Dashboard utilizar a integração GitLab.
+para que o Cypress Dashboard utilize a integração GitLab.
 
 > A Integração GitLab depende que o seu ambiente de Integração Contínua forneça dados SHA de 
 commit de forma confiável (tipicamente via variável de ambiente). Isso não é um problema para a maioria dos usuários, 
