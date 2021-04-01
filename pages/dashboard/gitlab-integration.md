@@ -17,8 +17,8 @@ Se após isso você ainda estiver com problemas, por favor, entre em [contato co
 
 ## Instalando a integração com o GitLab
 
-> Aplicações OAuth2 do GitLab permitirão que o Cypress Dashboard autentique-se como o usuário que registrou a 
-aplicação. Isso significa que o Cypress vai enxergar cada repositório GitLab que você puder acessar.
+> Aplicações OAuth2 do GitLab permitem que o Cypress Dashboard autentique-se como o usuário que registrou a 
+aplicação. Isso significa que o Cypress vai conseguir enxergar cada repositório GitLab que você puder acessar.
 Se você quiser um controle mais rígido nos repositórios que o Cypress vai visualizar, considere criar uma conta 
 de serviço com acessos mais limitados no GitLab.
 
