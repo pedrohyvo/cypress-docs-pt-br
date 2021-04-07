@@ -37,8 +37,8 @@ para mais detalhes.
 Por padrão, o Cypress postará um status de commit **cypress/run** contendo os resultados da execução do Cypress. 
 Isso serve para evitar que seu time faça merge de um merge request com testes do Cypress que estão falhando.
 
-Adicionalmente, o Cypress pode postar um status de commit **cypress/flake** que informa se a execução do Cypress possui algum 
-teste inconsistente. Isso serve para evitar que seu time faça merge de qualquer merge request com testes inconsistentes.
+Adicionalmente, o Cypress pode postar um status de commit **cypress/flake** que informa se a execução do Cypress possui 
+algum teste inconsistente. Isso serve para evitar que seu time faça merge de qualquer merge request com testes inconsistentes.
 
 Você pode gerenciar esse comportamento na página **Project Settings** do seu projeto.
 
