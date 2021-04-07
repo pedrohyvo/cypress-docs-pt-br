@@ -40,14 +40,14 @@ Isso serve para evitar que seu time faça merge de um merge request com testes d
 Adicionalmente, o Cypress pode postar um status de commit **cypress/flake** que informa se a execução do Cypress possui algum 
 teste inconsistente. Isso serve para evitar que seu time faça merge de qualquer merge request com testes inconsistentes.
 
-Você pode gerenciar esse comportamento na página **Configurações de Projeto** do seu projeto.
+Você pode gerenciar esse comportamento na página **Project Settings** do seu projeto.
 
 ## Comentários de Merge Request
 
 Por padrão, o Cypress irá postar um comentário de Merge Request resumindo a execução quando ela terminar. Isso
 inclui contagem de testes, informações da execução e um resumo de testes que falharam ou foram inconsistentes.
 
-Você pode gerenciar esse comportamento na página **Configurações de Projeto** do seu projeto.
+Você pode gerenciar esse comportamento na página **Project Settings** do seu projeto.
 
 ## Desinstalando a integração com o Gitlab
 
