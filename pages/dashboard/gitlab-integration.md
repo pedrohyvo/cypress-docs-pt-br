@@ -52,7 +52,7 @@ Você pode gerenciar esse comportamento na página **Configurações de Projeto*
 ## Desinstalando a integração com o Gitlab
 
 Você pode remover essa integração visitando a página **Integrations -> GitLab** da sua organização. Isso irá interromper
-todos os checks de commit e comentário de Merge Request do Cypress.
+todos os checks de commit e comentários de Merge Request do Cypress.
 
 ## Feedback
 
