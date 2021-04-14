@@ -57,3 +57,5 @@ todos os checks de commit e comentários de Merge Request do Cypress.
 ## Feedback
 
 Tem ideias sobre como podemos melhorar nossa Integração com o GitLab? [Conte-nos!](https://portal.productboard.com/cypress-io/1-cypress-dashboard/c/48-gitlab-integration?utm_medium=social&utm_source=portal_share)
+
+[Voltar para o topo](#ntegração-com-o-gitlab)
