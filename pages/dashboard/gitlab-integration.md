@@ -28,7 +28,7 @@ de serviço com acessos mais limitados no GitLab.
 para mais detalhes.
 3. Copie o Application ID e Secret e cole no Cypress Dashboard.
 4. Conecte seus projetos em um repositório GitLab.
-5. (Opicional) Configure o comportamento para cada projeto.
+5. (Opcional) Configure o comportamento para cada projeto.
 
 ## Configurando a integração com o GitLab
 
