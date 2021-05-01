@@ -78,7 +78,7 @@ Se você já usou o [jQuery](https://jquery.com/), provavelmente está acostumad
 $('.my-selector')
 ```
 
-Na Cypress, consultamos elementos da mesma forma:
+No Cypress, consultamos elementos da mesma forma:
 
 ```JS
 cy.get('.my-selector')
@@ -761,7 +761,7 @@ Estes comandos têm seus próprios valores de timeout específicos que estão do
 
 ### Os comandos são Promises
 
-Este é o grande segredo da Cypress: pegamos nosso padrão favorito de composição de código JavaScript, as Promises,
+Este é o grande segredo do Cypress: pegamos nosso padrão favorito de composição de código JavaScript, as Promises,
 e as incorporamos diretamente na essência do Cypress. Acima, quando dizemos que estamos enfileirando ações
 para serem tomadas mais tarde, poderíamos reformular isso como "adicionar Promises a uma cadeia de Promises".
 
@@ -936,3 +936,393 @@ Dito isso, desde que você esteja ciente das possíveis armadilhas relacionadas 
 Leia tudo sobre como fazer [testes condicionais](https://docs.cypress.io/guides/core-concepts/conditional-testing.html) aqui.
 
 [Voltar para o topo](#introdução-ao-cypress)
+
+## Asserções
+
+Como mencionamos anteriormente neste guia:
+
+> As asserções descrevem o estado **desejado** de **elementos**,
+> **objetos** e da sua **aplicação**.
+
+O que torna o Cypress diferente das outras ferramentas de teste
+é que os comandos **retentam automaticamente** as asserções.
+Na verdade, eles analisam o contexto geral do que você tentando
+expressar e modifica seu comportamento para que as asserções passem.
+
+Pense nas asserções como **garantias**.
+
+Use essas **garantias** para descrever como sua aplicação deve ser,
+e o Cypress **bloqueará, aguardará e retentará** automaticamente
+até que esse estado seja atingido.
+
+> **Conceito importante**
+>
+> Cada comando da API documenta seu comportamento com asserções: por exemplo,
+> a forma como ele retenta ou espera que as asserções passem.
+
+### Asserções em linguagem humana
+
+Vejamos como descrever uma asserção em linguagem humana:
+
+> Depois de clicar em `<button>`, espero que ele receba a classe `active`.
+
+Para expressar isso no Cypress, você escreveria:
+
+```JS
+cy.get('button').click().should('have.class', 'active')
+```
+
+O teste acima passará mesmo se a classe `.active` for aplicada ao botão
+de forma assíncrona, ou seja, após um período de tempo indeterminado.
+
+```JS
+// mesmo se a classe for adicionada
+// depois de dois segundos...
+// este teste ainda vai passar!
+$('button').on('click', (e) => {
+  setTimeout(() => {
+    $(e.target).addClass('active')
+  }, 2000)
+})
+```
+
+Veja a seguir outro exemplo.
+
+> Após fazer uma requisição HTTP ao meu servidor, espero
+> que o corpo da resposta seja igual a `{name: 'Jane'}`.
+
+Para expressar isso com uma asserção, você escreveria:
+
+```JS
+cy.request('/users/1').its('body').should('deep.eq', { name: 'Jane' })
+```
+
+### Quando fazer asserções?
+
+Apesar das dezenas de asserções que o Cypress coloca à sua disposição,
+às vezes o melhor teste não precisa de asserções. Como assim?
+As asserções não são uma parte essencial dos testes?
+
+#### Considere o exemplo a seguir
+
+```JS
+cy.visit('/home')
+
+cy.get('.main-menu').contains('Novo Projeto').click()
+
+cy.get('.title').type('Meu Projeto Legal')
+
+cy.get('form').submit()
+```
+
+Sem uma asserção explícita, este teste poderia falhar de diversas maneiras!
+Estas estão algumas delas:
+
+[//]: <> (TODO - Adicionar links - visit, get, click, type)
+
+- O [`cy.visit()`](https://docs.cypress.io/api/commands/visit)
+  inicial pode enviar uma resposta de não sucesso.
+
+- Qualquer um dos comandos [`cy.get()`](https://docs.cypress.io/api/commands/get)
+  pode não conseguir encontrar os elementos do DOM.
+
+- O elemento no qual queremos executar [`.click()`](https://docs.cypress.io/api/commands/click)
+  pode estar encoberto por outro elemento.
+
+- O input no qual queremos digitar com [`.type()`](https://docs.cypress.io/api/commands/type)
+  pode estar desabilitado.
+
+- O envio do formulário pode resultar em um código de status de não sucesso.
+
+- O JS na página (o aplicativo em teste) pode lançar um erro.
+
+Consegue pensar em outros exemplos?
+
+[//]: <> (TODO - Adicionar link - asserção padrão)
+
+> **Conceito importante**
+>
+> Com o Cypress, não é obrigatório fazer uma asserção para que um teste seja útil.
+> Mesmo sem asserções, algumas linhas do Cypress podem garantir que milhares de
+> linhas de código funcionem corretamente tanto no cliente como no servidor!
+>
+> Isso porque muitos comandos têm uma [asserção padrão](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress#Default-Assertions)
+> integrada que oferece um alto nível de garantia.
+
+### Asserções padrão
+
+Vários comandos têm uma asserção padrão integrada ou têm exigências que podem fazer
+com que ela falhe sem a necessidade de uma asserção explícita adicionada por você.
+
+#### Por exemplo
+
+[//]: <> (TODO - Adicionar link - visit, request, contains, get, find, type, click, its)
+
+- [`cy.visit()`](https://docs.cypress.io/api/commands/visit) espera que
+  a página envie conteúdo `text/html` com um código de status `200`.
+
+- [`cy.request()`](https://docs.cypress.io/api/commands/request) espera
+  que o servidor remoto exista e envie uma resposta.
+
+- [`cy.contains()`](https://docs.cypress.io/api/commands/contains)
+  espera que o elemento com o conteúdo exista no DOM.
+
+- [`cy.get()`](https://docs.cypress.io/api/commands/get)
+  espera que o elemento exista no DOM.
+
+- [`.find()`](https://docs.cypress.io/api/commands/find)
+  também espera que o elemento exista no DOM.
+
+- [`.type()`](https://docs.cypress.io/api/commands/type) espera que
+  o elemento esteja em um estado _digitável_.
+
+- [`.click()`](https://docs.cypress.io/api/commands/click) espera
+  que o elemento esteja em um estado _acionável_.
+
+- [`.its()`](https://docs.cypress.io/api/commands/its) espera
+  encontrar uma propriedade no sujeito atual.
+
+Alguns comandos podem ter uma exigência específica que faz com que eles falhem imediatamente
+sem retentativas, como por exemplo [cy.request()](https://docs.cypress.io/api/commands/request).
+
+[//]: <> (TODO - Adicionar link - retentativa)
+
+Outros, como comandos que dependem do DOM, [retentam](https://docs.cypress.io/guides/core-concepts/retry-ability)
+automaticamente e esperam até que os elementos necessários existam antes de falharem.
+
+[//]: <> (TODO - Adicionar link - interagir com elementos)
+
+Além disso, comandos de ação esperam automaticamente que o elemento tenha um
+[estado acionável](https://docs.cypress.io/guides/core-concepts/interacting-with-elements) antes de falharem.
+
+[//]: <> (TODO - Adicionar link - should)
+
+> **Conceito importante**
+>
+> Todos os comandos que depedem do DOM esperam
+> automaticamente até que seus elementos existam no DOM.
+>
+> Você nunca precisa escrever [`.should('exist')`](https://docs.cypress.io/api/commands/should)
+> para um comando que depende do DOM.
+
+A maioria dos comandos permite substituir ou ignorar seus mecanismos
+de falha padrão, normalmente passando uma opção `{force: true}`.
+
+#### Exemplo 1: Existência e acionabilidade
+
+```JS
+cy
+// há uma asserção padrão de que este
+// botão deve existir no DOM antes de prosseguir
+.get('button')
+
+// antes de emitir o clique, o botão deve ser "acionável":
+// não pode estar desativado, coberto ou oculto.
+.click()
+```
+
+O Cypress _espera_ automaticamente até que os elementos passem nas asserções padrão.
+Assim como as asserções explícitas que você adicionou, todas essas asserções
+compartilham _os mesmos_ valores de timeout.
+
+#### Exemplo 2: Revertendo a asserção padrão
+
+Em geral, ao consultar elementos, você espera que eles existam.
+Porém, às vezes, você quer esperar até que eles _deixem de existir_.
+
+Para isso, basta adicionar essa asserção, e o Cypress **reverterá**
+as regras que esperam até que os elementos existam.
+
+```JS
+// agora o Cypress vai esperar até que este
+// <button> não esteja mais no DOM após o clique
+cy.get('button.close').click().should('not.exist')
+
+// e agora garante que este #modal não existe no DOM
+// e espera automaticamente até que ele desapareça!
+cy.get('#modal').deveria('not.exist')
+```
+
+[//]: <> (TODO - Adicionar link - should)
+
+> **Conceito importante**
+>
+> Quando adicionamos [`.should('not.exist')`](https://docs.cypress.io/api/commands/should)
+> a qualquer comando do DOM, o Cypress reverte sua asserção padrão
+> e espera automaticamente até que o elemento deixe de existir.
+
+#### Exemplo 3: Outras asserções padrão
+
+Outros comandos têm outras asserções padrão não relacionadas ao DOM.
+
+[//]: <> (TODO - Adicionar link - its)
+
+Por exemplo, [`.its()`](https://docs.cypress.io/api/commands/its) exige
+que a propriedade sobre a qual você está perguntando exista no objeto.
+
+```JS
+// criar um objeto vazio
+const obj = {}
+
+// definir a propriedade 'foo' depois de 1 segundo
+setTimeout(() => {
+  obj.foo = 'bar'
+}, 1000)
+
+// .its() vai esperar até que a propriedade 'foo' esteja no objeto
+cy.wrap(obj).its('foo')
+```
+
+### Lista de asserções
+
+[//]: <> (TODO - Adicionar links)
+
+O Cypress inclui o [Chai](https://docs.cypress.io/guides/references/bundled-tools#Chai),
+[Chai-jQuery](https://docs.cypress.io/guides/references/bundled-tools#Chai-jQuery)
+e [Sinon-Chai](https://docs.cypress.io/guides/references/bundled-tools#Sinon-Chai)
+para disponibilizar asserções predefinidas. Você pode ver uma lista completa delas
+na [lista de referência de asserções](https://docs.cypress.io/guides/references/assertions). Você também pode
+[escrever suas próprias asserções como plugins Chai](https://docs.cypress.io/examples/examples/recipes#Fundamentals)
+e usá-las no Cypress.
+
+### Escrevendo asserções
+
+Há duas maneiras de escrever asserções no Cypress:
+
+[//]: <> (TODO - Adicionar links - should, and)
+
+1. **Sujeitos implícitos**:
+   usando [`.should()`](https://docs.cypress.io/api/commands/should)
+   ou [`.and()`](https://docs.cypress.io/api/commands/and).
+
+2. **Sujeitos explícitos**: usando `expect`.
+
+### Sujeitos implícitos
+
+[//]: <> (TODO - Adicionar links - should, and)
+
+Usar os comandos
+[`.should()`](https://docs.cypress.io/api/commands/should)
+ou [`.and()`](https://docs.cypress.io/api/commands/and)
+é a forma preferencial de fazer asserções no Cypress.
+Esses são comandos comuns do Cypress, o que significa que eles
+se aplicam ao sujeito gerado atualmente na cadeia de comandos.
+
+```JS
+// o sujeito implícito aqui é o primeiro <tr>;
+// a seguinte asserção afirma que <tr> tem a classe .active
+cy.get('tbody tr:first').should('have.class', 'active')
+```
+
+[//]: <> (TODO - Adicionar links - should, and)
+
+Você pode encadear várias asserções usando
+[`.and()`](https://docs.cypress.io/api/commands/and), que é outro nome para
+[`.should()`](https://docs.cypress.io/api/commands/should),
+porém mais legível:
+
+```JS
+cy.get('#header a')
+  .should('have.class', 'active')
+  .and('have.attr', 'href', '/users')
+```
+
+Como [`.should('have.class')`](https://docs.cypress.io/api/commands/should)
+não altera o sujeito, [.and('have.attr')](https://docs.cypress.io/api/commands/and)
+é executado no mesmo elemento. Isso é útil quando você precisa fazer várias asserções
+sobre um mesmo sujeito rapidamente.
+
+Se fosse escrita explicitamente "do jeito longo", a asserção ficaria assim:
+
+```JS
+cy.get('tbody tr:first').should(($tr) => {
+  expect($tr).to.have.class('active')
+  expect($tr).to.have.attr('href', '/users')
+})
+```
+
+O formato implícito é bem mais sucinto! Então quando convém usar o formato explícito?
+
+Normalmente quando você quer:
+
+- Fazer várias asserções sobre o mesmo sujeito
+
+- Manipular o sujeito de alguma forma antes de fazer a asserção
+
+### Sujeitos explícitos
+
+Usando `expect`, você pode passar um sujeito específico e fazer uma asserção sobre ele.
+Você provavelmente deve estar acostuamdo a ver as asserções escritas em testes unitários assim:
+
+```JS
+// o sujeito explícito aqui é o booleano: true
+expect(true).to.be.true
+```
+
+[//]: <> (TODO - Adicionar links - recipes)
+
+> **Você sabia que pode escrever testes unitários no Cypress?**
+>
+> Confira exemplos de receitas de [testes unitários](https://docs.cypress.io/examples/examples/recipes)
+> e [testes unitários para componentes do React](https://docs.cypress.io/examples/examples/recipes#Unit-Testing).
+
+Asserções explícitas são úteis para:
+
+- Realizar lógica personalizada antes de fazer a asserção.
+
+- Fazer várias asserções sobre o mesmo sujeito.
+
+[//]: <> (TODO - Adicionar links - should e then)
+
+O comando [.should()](https://docs.cypress.io/api/commands/should)
+permite passar uma função callback que tem como primeiro argumento o sujeito gerado.
+Isso funciona da mesma forma que [.then()](https://docs.cypress.io/api/commands/then),
+porém o Cypress **espera e retenta** automaticamente até que tudo dentro da função callback passe.
+
+[//]: <> (TODO - Adicionar links - should)
+
+> **Asserções complexas**
+>
+> O exemplo abaixo é um caso de uso em que fazemos asserções para vários elementos.
+> O uso da função callback [.should()](https://docs.cypress.io/api/commands/should)
+> é uma ótima maneira de consultar vários elementos filhos a partir de um elemento **pai**
+> e fazer uma asserção sobre seu estado.
+
+Fazendo isso, você pode **bloquear** e **proteger** o Cypress, assegurando que
+o estado dos descendentes é exatamente o que você espera sem precisar
+consultá-los individualmente com os comandos do DOM do Cypress.
+
+```JS
+cy.get('p').should(($p) => {
+  // converter o sujeito de um elemento do DOM
+  // para um array de textos de todos os p's
+  let texts = $p.map((i, el) => {
+    return Cypress.$(el).text()
+  })
+
+  // a função map do jQuery retorna o objeto do jQuery
+  // e .get() o converte em um array
+  texts = texts.get()
+
+  // o array deve ter 3 itens
+  expect(texts).to.have.length(3)
+
+  // com o seguinte conteúdo específico
+  expect(texts).to.deep.eq([
+    'Texto do primeiro p',
+    'Texto do segundo p',
+    'E texto do terceiro p',
+  ])
+})
+```
+
+[//]: <> (TODO - Adicionar links - should e retry-ability)
+
+> **Assegure que `.should()` seja seguro**
+>
+> Ao utilizar uma função callback com [.should()](https://docs.cypress.io/api/commands/should),
+> assegure que a função inteira pode ser executada várias vezes sem efeitos colaterais.
+> O Cypress aplica sua lógica de [retentativa](https://docs.cypress.io/guides/core-concepts/retry-ability)
+> a essas funções: se houver uma falha, ele reexecutará várias vezes as asserções até que o timeout seja atingido.
+> Isso significa que seu código deve estar preparado para retentativas. Em termos técnicos,
+> isso significa que seu código deve ser **idempotente**.
