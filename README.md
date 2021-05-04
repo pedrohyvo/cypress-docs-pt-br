@@ -1,6 +1,9 @@
 # cypress-docs-pt-br
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -21,7 +24,7 @@
 ![markdown-lint](https://github.com/pedrohyvo/cypress-docs-pt-br/workflows/markdown-lint/badge.svg?branch=master)
 [![GitHub](https://img.shields.io/github/license/pedrohyvo/cypress-docs-pt-br)](https://github.com/pedrohyvo/cypress-docs-pt-br/edit/master/LICENSE)
 
-----
+---
 
 ## **Tabela de Conteúdo** ⚡
 
@@ -29,6 +32,7 @@
     - [Por que Cypress?](pages/overview/why-cypress.md)
     - [Diferenças-chave](pages/overview/key-differences.md)
 - Primeiros Passos
+    - [Introdução ao Cypress](pages/core-concepts/writing-and-organizing-tests.md)
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
@@ -42,25 +46,25 @@
 - Tooling
     - [TypeScript](pages/tooling/typescript.md)
 
-----
+---
 
 ## Disclaimer (Aviso Legal) ⚠️
 
 **Por que a documentação não está sendo feita no repositório oficial?**
 
 > Existe uma [issue](https://github.com/cypress-io/cypress-documentation/issues/3084) no
-repositório da documentação do Cypress que comenta sobre o não suporte das outras traduções.
+> repositório da documentação do Cypress que comenta sobre o não suporte das outras traduções.
 
 ## Como contribuir 🤝
 
 Se você está interessado em ajudar na tradução da documentação do `Cypress.io`
-para `Português-Brasil`, verifique as 
-[issues abertas](https://github.com/pedrohyvo/cypress-docs-pt-br/issues) e 
+para `Português-Brasil`, verifique as
+[issues abertas](https://github.com/pedrohyvo/cypress-docs-pt-br/issues) e
 solicite uma seção/página para traduzir.
 
 Você também pode enviar qualquer ideia/sugestão como issues no GitHub.
 
-Todas as contribuições são muito bem-vindas :D 
+Todas as contribuições são muito bem-vindas :D
 
 Para maiores informações, recomendo a leitura do nosso [guia de como contribuir](CONTRIBUTING.md).
 

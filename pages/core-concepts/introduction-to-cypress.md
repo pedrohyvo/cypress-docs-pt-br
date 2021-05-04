@@ -935,8 +935,6 @@ Dito isso, desde que você esteja ciente das possíveis armadilhas relacionadas 
 
 Leia tudo sobre como fazer [testes condicionais](https://docs.cypress.io/guides/core-concepts/conditional-testing.html) aqui.
 
-[Voltar para o topo](#introdução-ao-cypress)
-
 ## Asserções
 
 Como mencionamos anteriormente neste guia:
@@ -1227,6 +1225,8 @@ cy.get('#header a')
   .and('have.attr', 'href', '/users')
 ```
 
+[//]: <> (TODO - Adicionar links - should, and)
+
 Como [`.should('have.class')`](https://docs.cypress.io/api/commands/should)
 não altera o sujeito, [.and('have.attr')](https://docs.cypress.io/api/commands/and)
 é executado no mesmo elemento. Isso é útil quando você precisa fazer várias asserções
@@ -1326,3 +1326,5 @@ cy.get('p').should(($p) => {
 > a essas funções: se houver uma falha, ele reexecutará várias vezes as asserções até que o timeout seja atingido.
 > Isso significa que seu código deve estar preparado para retentativas. Em termos técnicos,
 > isso significa que seu código deve ser **idempotente**.
+
+[Voltar para o topo](#introdução-ao-cypress)
