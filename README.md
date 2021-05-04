@@ -32,11 +32,11 @@
     - [Por que Cypress?](pages/overview/why-cypress.md)
     - [Diferenças-chave](pages/overview/key-differences.md)
 - Primeiros Passos
-    - [Introdução ao Cypress](pages/core-concepts/writing-and-organizing-tests.md)
     - [Instalando Cypress](pages/getting-started/installing-cypress.md)
     - [Escrevendo o Primeiro Teste](pages/getting-started/writing-your-first-test.md)
     - [Testando sua Aplicação](pages/getting-started/testing-your-app.md)
 - Conceitos Básicos
+    - [Introdução ao Cypress](pages/core-concepts/writing-and-organizing-tests.md)
     - [Escrevendo e Organizando Testes](pages/core-concepts/writing-and-organizing-tests.md)
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
     - [Variáveis e Apelidos](pages/core-concepts/variables-and-aliases.md)
