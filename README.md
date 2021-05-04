@@ -43,6 +43,7 @@
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
     - [Projetos](pages/dashboard/projects.md)
+    - [Integração com o Gitlab](pages/dashboard/gitlab-integration.md)
 - Tooling
     - [TypeScript](pages/tooling/typescript.md)
 
