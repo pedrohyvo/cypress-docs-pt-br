@@ -5,7 +5,7 @@ O que você vai aprender
 
 - Como o Cypress é executado no mesmo loop de evento com seu código, mantendo a depuração menos exigente e mais compreensível
 - Como o Cypress adota as ferramentas de desenvolvedor padrão
-- Como e quando usar debugger e o [`.debug()`] (https://docs.cypress.io/api/commands/debug)
+- Como e quando usar debugger e o [`.debug()`](https://docs.cypress.io/api/commands/debug)
 ```
 
 ## Usando o `debugger`
@@ -120,21 +120,28 @@ it('reroutes on users page', () => {
 O centro do `<li>`Users`</li>`elemento está oculto em nosso aplicativo em teste, portanto, o teste acima falhará. No Cypress, será mostrado um erro em caso de falha que inclui as seguintes informações:
 
 1 - **Nome do erro** : este é o tipo de erro (por exemplo, AssertionError, CypressError)
+
 2 - **Mensagem de erro** : geralmente informa o que deu errado. O comprimento pode variar. Alguns são curtos como no exemplo, enquanto outros são longos e podem dizer exatamente como corrigir o erro.
+
 3 - **Saiba mais**: algumas mensagens de erro contêm um link Saiba mais que o levará à documentação relevante do Cypress.
+
 4 - **Arquivo de quadro de código** : geralmente é a linha superior do rastreamento de pilha e mostra o arquivo, o número da linha e o número da coluna realçados no quadro de código abaixo. Clicar neste link abrirá o arquivo em seu [`abridor de arquivos preferido`](https://docs.cypress.io/guides/tooling/IDE-integration#File-Opener-Preference) e destacará a linha e a coluna nos editores que o suportam.
+
 5 - **Quadro de código** : mostra um trecho de código onde ocorreu a falha, com a linha e a coluna relevantes destacadas.
+
 6 - **Exibir rastreamento de pilha** : Clicar aqui alterna a visibilidade do rastreamento de pilha. Os rastreamentos de pilha variam em comprimento. Clicar em um caminho de arquivo azul abrirá o arquivo em seu [`abridor de arquivos preferido`](https://docs.cypress.io/guides/tooling/IDE-integration#File-Opener-Preference).
+
 7 - **Botão Imprimir no console** : Clique aqui para imprimir o erro completo no console do DevTools. Isso geralmente permitirá que você clique em linhas no rastreamento de pilha e abra arquivos em suas DevTools.
 
 ## Mapas de origem
 
 O Cypress utiliza mapas de origem para aprimorar a experiência de erro. Os rastreamentos de pilha são traduzidos para que seus arquivos de origem sejam mostrados em vez do arquivo gerado que é carregado pelo navegador. Isso também permite a exibição de frames de código. Sem mapas de origem embutidos, você não verá frames de código.
 
-Por padrão, o Cypress incluirá um mapa de origem embutido em seu arquivo de especificação, para que você obtenha o máximo da experiência de erro. Se você modificar o pré-processador , certifique-se de que os mapas de origem embutidos estejam ativados para obter a mesma experiência. Com webpack e o pré-processador webpack , por exemplo, defina a devtoolopção para inline-source-map.
+Por padrão, o Cypress incluirá um mapa de origem embutido em seu arquivo de especificação, para que você obtenha o máximo da experiência de erro. Se você [`modificar o pré-processador`](https://docs.cypress.io/api/plugins/preprocessors-api), certifique-se de que os mapas de origem embutidos estejam ativados para obter a mesma experiência. Com webpack e o [`pré-processador webpack`](https://github.com/cypress-io/cypress/tree/master/npm/webpack-preprocessor), por exemplo, defina a [`devtool`](https://webpack.js.org/configuration/devtool/)opção para `inline-source-map`.
 
-Floco de depuração
-Embora o Cypress seja resistente a flocos , alguns usuários experimentam flocos, especialmente quando executado em CI versus localmente. Na maioria das vezes, em casos de testes instáveis, vemos que não há asserções suficientes em torno das ações de teste ou solicitações de rede antes de passar para a próxima asserção.
+## Floco de depuração
+
+Embora o Cypress seja [`resistente a flocos`](https://docs.cypress.io/guides/overview/key-differences#Flake-resistant), alguns usuários experimentam flocos, especialmente quando executado em CI versus localmente. Na maioria das vezes, em casos de testes instáveis, vemos que não há asserções suficientes em torno das ações de teste ou solicitações de rede antes de passar para a próxima asserção.
 
 Se houver alguma variação na velocidade das solicitações ou respostas da rede quando executado localmente em comparação com o CI, pode haver falhas em um sobre o outro.
 
@@ -142,34 +149,46 @@ Por causa disso, recomendamos executar o máximo de etapas necessárias antes de
 
 Flake também pode ocorrer quando há diferenças entre os ambientes local e de CI. Você pode usar os seguintes métodos para solucionar problemas de testes que passam localmente, mas falham em CI.
 
-Revise seu processo de construção de CI para garantir que nada esteja mudando em seu aplicativo que possa resultar em testes com falha.
-Remova a variabilidade sensível ao tempo em seus testes. Por exemplo, certifique-se de que uma solicitação de rede foi concluída antes de procurar o elemento DOM que depende dos dados dessa solicitação de rede. Você pode aproveitar o aliasing para isso.
-O Cypress Dashboard também oferece análises que ilustram tendências em seus testes e podem ajudar a identificar os testes que falham com mais frequência. Isso pode ajudar a restringir o que está causando o flake - por exemplo, ver o aumento das falhas após uma mudança no ambiente de teste pode indicar problemas com o novo ambiente.
+- Revise seu processo de construção de CI para garantir que nada esteja mudando em seu aplicativo que possa resultar em testes com falha.
+- Remova a variabilidade sensível ao tempo em seus testes. Por exemplo, certifique-se de que uma solicitação de rede foi concluída antes de procurar o elemento DOM que depende dos dados dessa solicitação de rede. Você pode aproveitar o [`aliasing`](https://docs.cypress.io/guides/overview/key-differences#Flake-resistant)para isso.
 
-Para obter mais conselhos sobre como lidar com os flocos, leia uma série de postagens do nosso blog e Identificando o cheiro do código em Cypress, do Embaixador da Cypress, Josh Justice.
+O Cypress Dashboard também oferece a[`análises`](https://docs.cypress.io/guides/dashboard/analytics) que ilustram tendências em seus testes e podem ajudar a identificar os testes que falham com mais frequência. Isso pode ajudar a restringir o que está causando o flake - por exemplo, ver o aumento das falhas após uma mudança no ambiente de teste pode indicar problemas com o novo ambiente.
 
-Log de eventos Cypress
-Cypress emite vários eventos que você pode ouvir conforme mostrado abaixo. Leia mais sobre o registro de eventos no navegador aqui .
+Para obter mais conselhos sobre como lidar com os flocos, leia uma [`série de postagens do nosso blog`](https://cypress.io/blog/tag/flake/) e [`Identificando o cheiro do código em Cypress`](https://codingitwrong.com/2020/10/09/identifying-code-smells-in-cypress.html), do [`Embaixador da Cypress`](https://www.cypress.io/ambassadors/), Josh Justice.
 
-eventos de log do console para depuração
-Execute o comando Cypress fora do teste
-Se você precisar executar um comando Cypress direto do console das Ferramentas do Desenvolvedor, poderá usar o comando interno cy.now('command name', ...arguments). Por exemplo, para executar o equivalente de cy.task('database', 123)fora da cadeia de comando de execução normal:
+## Log de eventos Cypress
+
+Cypress emite vários eventos que você pode ouvir conforme mostrado abaixo. [`Leia mais sobre o registro de eventos no navegador aqui.`](https://docs.cypress.io/api/events/catalog-of-events#Logging-All-Events)
+
+[Alt](https://docs.cypress.io/_nuxt/img/console-log-events-debug.84f466a.png)
+
+## Execute o comando Cypress fora do teste
+
+Se você precisar executar um comando Cypress direto do console das Ferramentas do Desenvolvedor, poderá usar o comando interno `cy.now('command name', ...arguments)`. Por exemplo, para executar o equivalente de `cy.task('database', 123)`fora da cadeia de comando de execução normal:
+
+```markdown
 
 cy.now('task', 123).then(console.log)
 // runs cy.task(123) and prints the resolved value
-O cy.now()comando é um comando interno e pode mudar no futuro.
 
-Cipreste violino
-Enquanto estiver aprendendo o Cypress, pode ser uma boa ideia tentar pequenos testes em HTML. Nós escrevemos um plugin @ cypress / fiddle para isso. Ele pode montar rapidamente qualquer HTML fornecido e executar alguns comandos de teste do Cypress nele.
+```
 
-Solução de problemas do Cypress
-Há momentos em que você encontrará erros ou comportamento inesperado com o próprio Cypress. Nessa situação, recomendamos verificar nosso Guia de solução de problemas .
+O comando `cy.now()` é um comando interno e pode mudar no futuro.
 
-Mais informações
+## Cypress Fiddle
+
+Enquanto estiver aprendendo o Cypress, pode ser uma boa ideia tentar pequenos testes em HTML. Nós escrevemos um plugin [`@ cypress / fiddle `](https://github.com/cypress-io/cypress-fiddle)para isso. Ele pode montar rapidamente qualquer HTML fornecido e executar alguns comandos de teste do Cypress nele.
+
+## Solução de problemas do Cypress
+
+Há momentos em que você encontrará erros ou comportamento inesperado com o próprio Cypress. Nessa situação, recomendamos verificar nosso [`Guia de solução de problemas.`](https://docs.cypress.io/guides/references/troubleshooting)
+
+## Mais informações
+
 Freqüentemente, depurar um teste Cypress com falha significa entender melhor como seu próprio aplicativo funciona e como o aplicativo pode competir com os comandos de teste. Recomendamos a leitura dessas postagens de blog, onde mostramos cenários de erro comuns e como resolvê-los:
 
-- Quando o teste pode começar?
-- Quando o teste pode parar?
-- Quando o teste pode clicar?
-- Quando o teste pode efetuar logout?
-- Não se desvie demais
+- [`Quando o teste pode começar?`](https://www.cypress.io/blog/2018/02/05/when-can-the-test-start/)
+- [`Quando o teste pode parar?`](https://www.cypress.io/blog/2020/01/16/when-can-the-test-stop/)
+- [`Quando o teste pode clicar?`](https://www.cypress.io/blog/2019/01/22/when-can-the-test-click/)
+- [`Quando o teste pode efetuar logout?`](https://www.cypress.io/blog/2020/06/25/when-can-the-test-log-out/)
+- [`Não se desvie demais`](https://www.cypress.io/blog/2020/07/22/do-not-get-too-detached/)
