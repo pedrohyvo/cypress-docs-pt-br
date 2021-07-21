@@ -6,6 +6,7 @@ O que você vai aprender
 - Como o Cypress é executado no mesmo loop de evento com seu código, mantendo a depuração menos exigente e mais compreensível
 - Como o Cypress adota as ferramentas de desenvolvedor padrão
 - Como e quando usar debugger e o 
+[//]: <> (TODO - Adicionar links - comandos cypress)
 - [`.debug()`](https://docs.cypress.io/api/commands/debug) comando de atalho
 ```
 ## Usando o `debugger`
