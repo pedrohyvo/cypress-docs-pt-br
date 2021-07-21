@@ -71,6 +71,7 @@ it('let me debug like a fiend', () => {
 })
 ```
 O assunto atual gerado pelo [`cy.get()`](https://docs.cypress.io/api/commands/get) é exposto como a variável subjectem suas Ferramentas de Desenvolvedor para que você possa interagir com ele no console.
+
 ![Alt](https://docs.cypress.io/_nuxt/img/debugging-subject.bc0098b.png)
 
 Use [`.debug()`](https://docs.cypress.io/api/commands/debug) para inspecionar rapidamente qualquer (ou muitas!) Parte (s) do seu aplicativo durante o teste. Você pode anexá-lo a qualquer cadeia de comandos do Cypress para dar uma olhada no estado do sistema naquele momento.
@@ -100,6 +101,7 @@ Você pode ver um passo a passo de depuração de algum código de aplicativo do
 Todos os comandos do Cypress, quando clicados no [`Log de Comandos`](https://docs.cypress.io/guides/core-concepts/test-runner#Command-Log) , imprimem informações extras sobre o comando, seu assunto e o resultado gerado. Tente clicar ao redor do Log de Comando com as Ferramentas do Desenvolvedor abertas! Você pode encontrar algumas informações úteis aqui.
 
 Ao clicar no .type() comando, o console das Ferramentas do Desenvolvedor exibe o seguinte:
+
 
 ![Alt](https://docs.cypress.io/_nuxt/img/console-log-of-typing-with-entire-key-events-table-for-each-character.f235db7.png)
 
