@@ -12,7 +12,7 @@ O que você vai aprender
 
 Seu código de teste Cypress é executado no mesmo loop de execução que seu aplicativo. Isto significa que tem acesso ao código em execução na página, bem como as coisas que o navegador faz disponível para você, como `document`, `window`, e `debugger`.
 
-##Depure como você sempre faz
+## Depure como você sempre faz
 
 Com base nessas declarações, você pode ficar tentado a lançar um debuggerem seu teste, assim:
 
@@ -75,7 +75,7 @@ O assunto atual gerado pelo [`cy.get()`](https://docs.cypress.io/api/commands/ge
 
 Use [`.debug()`](https://docs.cypress.io/api/commands/debug) para inspecionar rapidamente qualquer (ou muitas!) Parte (s) do seu aplicativo durante o teste. Você pode anexá-lo a qualquer cadeia de comandos do Cypress para dar uma olhada no estado do sistema naquele momento.
 
-##Percorrer os comandos de teste
+## Percorrer os comandos de teste
 
 Você pode executar o comando de teste por comando usando o [`.pause()`](https://docs.cypress.io/api/commands/pause) comando.
 
@@ -100,6 +100,7 @@ Você pode ver um passo a passo de depuração de algum código de aplicativo do
 Todos os comandos do Cypress, quando clicados no [`Log de Comandos`](https://docs.cypress.io/guides/core-concepts/test-runner#Command-Log) , imprimem informações extras sobre o comando, seu assunto e o resultado gerado. Tente clicar ao redor do Log de Comando com as Ferramentas do Desenvolvedor abertas! Você pode encontrar algumas informações úteis aqui.
 
 Ao clicar no .type() comando, o console das Ferramentas do Desenvolvedor exibe o seguinte:
+
 ![Alt](https://docs.cypress.io/_nuxt/img/console-log-of-typing-with-entire-key-events-table-for-each-character.f235db7.png)
 
 # Erros
@@ -139,9 +140,9 @@ O Cypress utiliza mapas de origem para aprimorar a experiência de erro. Os rast
 
 Por padrão, o Cypress incluirá um mapa de origem embutido em seu arquivo de especificação, para que você obtenha o máximo da experiência de erro. Se você [`modificar o pré-processador`](https://docs.cypress.io/api/plugins/preprocessors-api), certifique-se de que os mapas de origem embutidos estejam ativados para obter a mesma experiência. Com webpack e o [`pré-processador webpack`](https://github.com/cypress-io/cypress/tree/master/npm/webpack-preprocessor), por exemplo, defina a [`devtool`](https://webpack.js.org/configuration/devtool/)opção para `inline-source-map`.
 
-## Floco de depuração
+## Flake de depuração
 
-Embora o Cypress seja [`resistente a flocos`](https://docs.cypress.io/guides/overview/key-differences#Flake-resistant), alguns usuários experimentam flocos, especialmente quando executado em CI versus localmente. Na maioria das vezes, em casos de testes instáveis, vemos que não há asserções suficientes em torno das ações de teste ou solicitações de rede antes de passar para a próxima asserção.
+Embora o Cypress seja [`resistente a flakes`](https://docs.cypress.io/guides/overview/key-differences#Flake-resistant), alguns usuários experimentam flakes, especialmente quando executado em CI versus localmente. Na maioria das vezes, em casos de testes instáveis, vemos que não há asserções suficientes em torno das ações de teste ou solicitações de rede antes de passar para a próxima asserção.
 
 Se houver alguma variação na velocidade das solicitações ou respostas da rede quando executado localmente em comparação com o CI, pode haver falhas em um sobre o outro.
 
@@ -154,7 +155,7 @@ Flake também pode ocorrer quando há diferenças entre os ambientes local e de 
 
 O Cypress Dashboard também oferece a[`análises`](https://docs.cypress.io/guides/dashboard/analytics) que ilustram tendências em seus testes e podem ajudar a identificar os testes que falham com mais frequência. Isso pode ajudar a restringir o que está causando o flake - por exemplo, ver o aumento das falhas após uma mudança no ambiente de teste pode indicar problemas com o novo ambiente.
 
-Para obter mais conselhos sobre como lidar com os flocos, leia uma [`série de postagens do nosso blog`](https://cypress.io/blog/tag/flake/) e [`Identificando o cheiro do código em Cypress`](https://codingitwrong.com/2020/10/09/identifying-code-smells-in-cypress.html), do [`Embaixador da Cypress`](https://www.cypress.io/ambassadors/), Josh Justice.
+Para obter mais conselhos sobre como lidar com os flakes, leia uma [`série de postagens do nosso blog`](https://cypress.io/blog/tag/flake/) e [`Identificando o cheiro do código em Cypress`](https://codingitwrong.com/2020/10/09/identifying-code-smells-in-cypress.html), do [`Embaixador da Cypress`](https://www.cypress.io/ambassadors/), Josh Justice.
 
 ## Log de eventos Cypress
 
