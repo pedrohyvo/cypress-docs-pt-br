@@ -7,7 +7,7 @@ O que você vai aprender
 - Como o Cypress adota as ferramentas de desenvolvedor padrão
 - Como e quando usar debugger e o 
 - [`.debug()`](https://docs.cypress.io/api/commands/debug) comando de atalho
-
+```
 ## Usando o `debugger`
 
 Seu código de teste Cypress é executado no mesmo loop de execução que seu aplicativo. Isto significa que tem acesso ao código em execução na página, bem como as coisas que o navegador faz disponível para você, como `document`, `window`, e `debugger`.
