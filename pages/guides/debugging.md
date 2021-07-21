@@ -10,11 +10,11 @@ O que você vai aprender
 
 ## Usando o `debugger`
 
-Seu código de teste Cypress é executado no mesmo loop de execução que seu aplicativo. Isto significa que tem acesso ao código em execução na página, bem como as coisas que o navegador faz disponível para você, como `document`, `window`, e `debugger`.
+Seu código de teste Cypress é executado no mesmo loop de execução que seu aplicativo. Isto significa que tem acesso ao código em execução na página, bem como as coisas que o navegador disponibiliza para você, como `document`, `window`, e `debugger`.
 
 ## Depure como você sempre faz
 
-Com base nessas declarações, você pode ficar tentado a lançar um debuggerem seu teste, assim:
+Com base nessas declarações, você pode ficar debugar seu teste, assim:
 
 ```markdown
 it('let me debug like a fiend', () => {
@@ -26,11 +26,11 @@ it('let me debug like a fiend', () => {
 })
 ```
 
-Isso pode não funcionar exatamente como você esperava. Como você deve se lembrar da introdução ao Cypress , os cycomandos enfileiram uma ação para ser executada mais tarde. Você pode ver o que o teste acima fará, dada essa perspectiva?
+Isso pode não funcionar exatamente como você esperava. Como você deve se lembrar da introdução ao Cypress, os comandos `cy` enfileiram uma ação para ser executada mais tarde. Você pode ver o que o teste acima fará, dada essa perspectiva?
 
 Ambos [`cy.visit()`](https://docs.cypress.io/api/commands/visit)e [`cy.get()`](https://docs.cypress.io/api/commands/get) retornarão imediatamente, tendo enfileirado seu trabalho para ser feito mais tarde, e debugger serão executados antes que qualquer um dos comandos tenha realmente executado.
 
-Vamos usar [`.then()`](https://docs.cypress.io/api/commands/then) para acessar o comando Cypress durante a execução e adicionar um debuggerno momento apropriado:
+Vamos usar [`.then()`](https://docs.cypress.io/api/commands/then) para acessar o comando Cypress durante a execução e adicionar um debugger no momento apropriado:
 
 ```markdown
 it('let me debug when the after the command executes', () => {
@@ -45,17 +45,17 @@ it('let me debug when the after the command executes', () => {
 
 ```
 
-Agora estamos no negócio! Na primeira vez, [`cy.visit()`](https://docs.cypress.io/api/commands/visit) o [`cy.get()`](https://docs.cypress.io/api/commands/get) cadeia (com seu [`.then()`](https://docs.cypress.io/api/commands/then) anexo) é enfileirada para que o Cypress execute. O `it`bloco sai e o Cypress começa seu trabalho:
+Agora estamos no negócio! Na primeira vez, [`cy.visit()`](https://docs.cypress.io/api/commands/visit) o [`cy.get()`](https://docs.cypress.io/api/commands/get) encadeia (com seu [`.then()`](https://docs.cypress.io/api/commands/then) anexo) e é enfileirada para que o Cypress execute. O bloco `it` sai e o Cypress começa seu trabalho:
 
 1 - A página é visitada e o Cypress espera que ela carregue.
 
 2 - O elemento é consultado e Cypress automaticamente espera e tenta novamente por alguns momentos se não for encontrado imediatamente.
 
-3 - A função passada para [`.then()`](https://docs.cypress.io/api/commands/then) é executada, com o elemento encontrado rendido a ela.
+3 - A função passada para [`.then()`](https://docs.cypress.io/api/commands/then) é executada, com o elemento encontrado atribuido a ela.
 
-4 - Dentro do contexto da [`.then()`](https://docs.cypress.io/api/commands/then) função, o debugger é chamado, parando o navegador e chamando o foco para as Ferramentas do Desenvolvedor.
+4 - Dentro do contexto da função [`.then()`](https://docs.cypress.io/api/commands/then), o debugger é chamado, parando o navegador e chamando o foco para as Ferramentas do Desenvolvedor.
 
-5 - Você está dentro! Inspecione o estado do seu aplicativo como faria normalmente se tivesse debuggerinserido o no código do aplicativo.
+5 - Você está dentro! Inspecione o estado do seu aplicativo como faria normalmente se tivesse debugger inserido no código do aplicativo.
 
 
 ## Usando [`.debug()`](https://docs.cypress.io/api/commands/debug)
@@ -70,7 +70,7 @@ it('let me debug like a fiend', () => {
   cy.get('.selector-in-question').debug()
 })
 ```
-O assunto atual gerado pelo [`cy.get()`](https://docs.cypress.io/api/commands/get) é exposto como a variável subjectem suas Ferramentas de Desenvolvedor para que você possa interagir com ele no console.
+O assunto atual gerado pelo [`cy.get()`](https://docs.cypress.io/api/commands/get) é exposto como a variável que subjeta suas Ferramentas de Desenvolvedor para que você possa interagir com ele no console.
 
 ![Alt](https://docs.cypress.io/_nuxt/img/debugging-subject.bc0098b.png)
 
@@ -98,9 +98,9 @@ Você pode ver um passo a passo de depuração de algum código de aplicativo do
 
 ## Obtenha registros do console para comandos
 
-Todos os comandos do Cypress, quando clicados no [`Log de Comandos`](https://docs.cypress.io/guides/core-concepts/test-runner#Command-Log) , imprimem informações extras sobre o comando, seu assunto e o resultado gerado. Tente clicar ao redor do Log de Comando com as Ferramentas do Desenvolvedor abertas! Você pode encontrar algumas informações úteis aqui.
+Todos os comandos do Cypress, quando clicados no [`Log de Comandos`](https://docs.cypress.io/guides/core-concepts/test-runner#Command-Log), imprimem informações extras sobre o comando, seu assunto e o resultado gerado. Tente clicar ao redor do Log de Comando com as Ferramentas do Desenvolvedor abertas! Você pode encontrar algumas informações úteis aqui.
 
-Ao clicar no .type() comando, o console das Ferramentas do Desenvolvedor exibe o seguinte:
+Ao clicar no comando `.type()`, o console das Ferramentas do Desenvolvedor exibe o seguinte:
 
 
 ![Alt](https://docs.cypress.io/_nuxt/img/console-log-of-typing-with-entire-key-events-table-for-each-character.f235db7.png)
@@ -132,7 +132,7 @@ O centro do `<li>`Users`</li>`elemento está oculto em nosso aplicativo em teste
 
 5 - **Quadro de código** : mostra um trecho de código onde ocorreu a falha, com a linha e a coluna relevantes destacadas.
 
-6 - **Exibir rastreamento de pilha** : Clicar aqui alterna a visibilidade do rastreamento de pilha. Os rastreamentos de pilha variam em comprimento. Clicar em um caminho de arquivo azul abrirá o arquivo em seu [`abridor de arquivos preferido`](https://docs.cypress.io/guides/tooling/IDE-integration#File-Opener-Preference).
+6 - **Exibir rastreamento de pilha** : Clicar aqui alterna a visibilidade do rastreamento de pilha. Os rastreamentos de pilha variam em comprimento. Clicar em um caminho de arquivo azul abrirá o arquivo em seu [`gerenciador de arquivos preferido`](https://docs.cypress.io/guides/tooling/IDE-integration#File-Opener-Preference).
 
 7 - **Botão Imprimir no console** : Clique aqui para imprimir o erro completo no console do DevTools. Isso geralmente permitirá que você clique em linhas no rastreamento de pilha e abra arquivos em suas DevTools.
 
@@ -140,9 +140,9 @@ O centro do `<li>`Users`</li>`elemento está oculto em nosso aplicativo em teste
 
 O Cypress utiliza mapas de origem para aprimorar a experiência de erro. Os rastreamentos de pilha são traduzidos para que seus arquivos de origem sejam mostrados em vez do arquivo gerado que é carregado pelo navegador. Isso também permite a exibição de frames de código. Sem mapas de origem embutidos, você não verá frames de código.
 
-Por padrão, o Cypress incluirá um mapa de origem embutido em seu arquivo de especificação, para que você obtenha o máximo da experiência de erro. Se você [`modificar o pré-processador`](https://docs.cypress.io/api/plugins/preprocessors-api), certifique-se de que os mapas de origem embutidos estejam ativados para obter a mesma experiência. Com webpack e o [`pré-processador webpack`](https://github.com/cypress-io/cypress/tree/master/npm/webpack-preprocessor), por exemplo, defina a [`devtool`](https://webpack.js.org/configuration/devtool/)opção para `inline-source-map`.
+Por padrão, o Cypress incluirá um mapa de origem embutido em seu arquivo de especificação, para que você obtenha o máximo da experiência de erro. Se você [`modificar o pré-processador`](https://docs.cypress.io/api/plugins/preprocessors-api), certifique-se de que os mapas de origem embutidos estejam ativados para obter a mesma experiência. Com webpack e o [`pré-processador webpack`](https://github.com/cypress-io/cypress/tree/master/npm/webpack-preprocessor), por exemplo, defina a opção [`devtool`](https://webpack.js.org/configuration/devtool/) para `inline-source-map`.
 
-## Flake de depuração
+## Depuração de teste Flake
 
 Embora o Cypress seja [`resistente a flakes`](https://docs.cypress.io/guides/overview/key-differences#Flake-resistant), alguns usuários experimentam flakes, especialmente quando executado em CI versus localmente. Na maioria das vezes, em casos de testes instáveis, vemos que não há asserções suficientes em torno das ações de teste ou solicitações de rede antes de passar para a próxima asserção.
 
@@ -155,7 +155,7 @@ Flake também pode ocorrer quando há diferenças entre os ambientes local e de 
 - Revise seu processo de construção de CI para garantir que nada esteja mudando em seu aplicativo que possa resultar em testes com falha.
 - Remova a variabilidade sensível ao tempo em seus testes. Por exemplo, certifique-se de que uma solicitação de rede foi concluída antes de procurar o elemento DOM que depende dos dados dessa solicitação de rede. Você pode aproveitar o [`aliasing`](https://docs.cypress.io/guides/overview/key-differences#Flake-resistant)para isso.
 
-O Cypress Dashboard também oferece a[`análises`](https://docs.cypress.io/guides/dashboard/analytics) que ilustram tendências em seus testes e podem ajudar a identificar os testes que falham com mais frequência. Isso pode ajudar a restringir o que está causando o flake - por exemplo, ver o aumento das falhas após uma mudança no ambiente de teste pode indicar problemas com o novo ambiente.
+O Cypress Dashboard também oferece o [`analiticos`](https://docs.cypress.io/guides/dashboard/analytics) que ilustram tendências em seus testes e podem ajudar a identificar os testes que falham com mais frequência. Isso pode ajudar a restringir o que está causando o flake - por exemplo, ver o aumento das falhas após uma mudança no ambiente de teste pode indicar problemas com o novo ambiente.
 
 Para obter mais conselhos sobre como lidar com os flakes, leia uma [`série de postagens do nosso blog`](https://cypress.io/blog/tag/flake/) e [`Identificando o cheiro do código em Cypress`](https://codingitwrong.com/2020/10/09/identifying-code-smells-in-cypress.html), do [`Embaixador da Cypress`](https://www.cypress.io/ambassadors/), Josh Justice.
 
@@ -167,7 +167,7 @@ Cypress emite vários eventos que você pode ouvir conforme mostrado abaixo. [`L
 
 ## Execute o comando Cypress fora do teste
 
-Se você precisar executar um comando Cypress direto do console das Ferramentas do Desenvolvedor, poderá usar o comando interno `cy.now('command name', ...arguments)`. Por exemplo, para executar o equivalente de `cy.task('database', 123)`fora da cadeia de comando de execução normal:
+Se você precisar executar um comando Cypress direto do console das Ferramentas do Desenvolvedor, poderá usar o comando interno `cy.now('command name', ...arguments)`. Por exemplo, para executar o equivalente de `cy.task('database', 123)` fora da cadeia de comando de execução normal:
 
 ```markdown
 
@@ -180,7 +180,7 @@ O comando `cy.now()` é um comando interno e pode mudar no futuro.
 
 ## Cypress Fiddle
 
-Enquanto estiver aprendendo o Cypress, pode ser uma boa ideia tentar pequenos testes em HTML. Nós escrevemos um plugin [`@ cypress / fiddle `](https://github.com/cypress-io/cypress-fiddle)para isso. Ele pode montar rapidamente qualquer HTML fornecido e executar alguns comandos de teste do Cypress nele.
+Enquanto estiver aprendendo o Cypress, pode ser uma boa ideia tentar pequenos testes em HTML. Nós escrevemos um plugin [`@ cypress/fiddle `](https://github.com/cypress-io/cypress-fiddle)para isso. Ele pode montar rapidamente qualquer HTML fornecido e executar alguns comandos de teste do Cypress nele.
 
 ## Solução de problemas do Cypress
 
