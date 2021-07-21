@@ -45,12 +45,16 @@ it('let me debug when the after the command executes', () => {
 
 ```
 
-Agora estamos no negócio! Na primeira vez, [`cy.visit()`](https://docs.cypress.io/api/commands/visit) o [`cy.get()`](https://docs.cypress.io/api/commands/get) cadeia (com seu [`.then()`] (https://docs.cypress.io/api/commands/then) anexo) é enfileirada para que o Cypress execute. O `it`bloco sai e o Cypress começa seu trabalho:
+Agora estamos no negócio! Na primeira vez, [`cy.visit()`](https://docs.cypress.io/api/commands/visit) o [`cy.get()`](https://docs.cypress.io/api/commands/get) cadeia (com seu [`.then()`](https://docs.cypress.io/api/commands/then) anexo) é enfileirada para que o Cypress execute. O `it`bloco sai e o Cypress começa seu trabalho:
 
 1 - A página é visitada e o Cypress espera que ela carregue.
+
 2 - O elemento é consultado e Cypress automaticamente espera e tenta novamente por alguns momentos se não for encontrado imediatamente.
+
 3 - A função passada para [`.then()`](https://docs.cypress.io/api/commands/then) é executada, com o elemento encontrado rendido a ela.
+
 4 - Dentro do contexto da [`.then()`](https://docs.cypress.io/api/commands/then) função, o debugger é chamado, parando o navegador e chamando o foco para as Ferramentas do Desenvolvedor.
+
 5 - Você está dentro! Inspecione o estado do seu aplicativo como faria normalmente se tivesse debuggerinserido o no código do aplicativo.
 
 
