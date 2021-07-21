@@ -163,7 +163,7 @@ Para obter mais conselhos sobre como lidar com os flakes, leia uma [`série de p
 
 Cypress emite vários eventos que você pode ouvir conforme mostrado abaixo. [`Leia mais sobre o registro de eventos no navegador aqui.`](https://docs.cypress.io/api/events/catalog-of-events#Logging-All-Events)
 
-[Alt](https://docs.cypress.io/_nuxt/img/console-log-events-debug.84f466a.png)
+![Alt](https://docs.cypress.io/_nuxt/img/console-log-events-debug.84f466a.png)
 
 ## Execute o comando Cypress fora do teste
 
