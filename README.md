@@ -44,8 +44,8 @@
     - [Introdução](pages/dashboard/introduction.md)
     - [Projetos](pages/dashboard/projects.md)
     - [Integração com o Gitlab](pages/dashboard/gitlab-integration.md)
-  - Guias
-     - [Introdução](pages/guides/debugging.md)
+ - Guias
+     - [Debugando](pages/guides/debugging.md)
 
 - Tooling
     - [TypeScript](pages/tooling/typescript.md)

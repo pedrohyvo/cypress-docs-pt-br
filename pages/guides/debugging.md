@@ -4,7 +4,7 @@ O que você vai aprender
 
 - Como o Cypress é executado no mesmo loop de evento com seu código, mantendo a depuração menos exigente e mais compreensível
 - Como o Cypress adota as ferramentas de desenvolvedor padrão
-[//]: <> (TODO - Adicionar links Test Runner)
+[//]: <> (TODO - Adicionar link cy.debug  quando traduzido)
 - Como e quando usar debugger e o [`.debug()`](https://docs.cypress.io/api/commands/debug)
 ```
 
@@ -27,6 +27,8 @@ it('let me debug like a fiend', () => {
 ```
 
 Isso pode não funcionar exatamente como você esperava. Como você deve se lembrar da introdução ao Cypress, os comandos `cy` enfileiram uma ação para ser executada mais tarde. Você pode ver o que o teste acima fará, dada essa perspectiva?
+
+[//]: <> (TODO - Adicionar link cy.visit e cy.get quando traduzidos)
 
 Ambos [`cy.visit()`](https://docs.cypress.io/api/commands/visit) e [`cy.get()`](https://docs.cypress.io/api/commands/get) retornarão imediatamente, tendo enfileirado seu trabalho para ser feito mais tarde, e debugger serão executados antes que qualquer um dos comandos tenha realmente executado.
 
