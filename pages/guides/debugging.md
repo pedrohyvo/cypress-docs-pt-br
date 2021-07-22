@@ -1,6 +1,6 @@
 # Debugando
 
-
+```markdown
 O que você vai aprender
 
 - Como o Cypress é executado no mesmo loop de evento com seu código, mantendo a depuração menos exigente e mais compreensível
@@ -28,7 +28,7 @@ it('let me debug like a fiend', () => {
 
 Isso pode não funcionar exatamente como você esperava. Como você deve se lembrar da introdução ao Cypress, os comandos `cy` enfileiram uma ação para ser executada mais tarde. Você pode ver o que o teste acima fará, dada essa perspectiva?
 
-Ambos [`cy.visit()`](https://docs.cypress.io/api/commands/visit)e [`cy.get()`](https://docs.cypress.io/api/commands/get) retornarão imediatamente, tendo enfileirado seu trabalho para ser feito mais tarde, e debugger serão executados antes que qualquer um dos comandos tenha realmente executado.
+Ambos [`cy.visit()`](https://docs.cypress.io/api/commands/visit) e [`cy.get()`](https://docs.cypress.io/api/commands/get) retornarão imediatamente, tendo enfileirado seu trabalho para ser feito mais tarde, e debugger serão executados antes que qualquer um dos comandos tenha realmente executado.
 
 Vamos usar [`.then()`](https://docs.cypress.io/api/commands/then) para acessar o comando Cypress durante a execução e adicionar um debugger no momento apropriado:
 
