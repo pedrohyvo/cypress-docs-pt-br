@@ -196,3 +196,5 @@ Freqüentemente, depurar um teste Cypress com falha significa entender melhor co
 - [`Quando o teste pode clicar?`](https://www.cypress.io/blog/2019/01/22/when-can-the-test-click/)
 - [`Quando o teste pode efetuar logout?`](https://www.cypress.io/blog/2020/06/25/when-can-the-test-log-out/)
 - [`Não se desvie demais`](https://www.cypress.io/blog/2020/07/22/do-not-get-too-detached/)
+
+[Voltar para o topo](#debugando)
