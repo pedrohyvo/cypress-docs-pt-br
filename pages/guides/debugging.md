@@ -135,7 +135,7 @@ O centro do `<li>`Users`</li>`elemento está oculto em nosso aplicativo em teste
 
 7 - **Botão Imprimir no console** : Clique aqui para imprimir o erro completo no console do DevTools. Isso geralmente permitirá que você clique em linhas no rastreamento de pilha e abra arquivos em suas DevTools.
 
-![Alt] (https://docs.cypress.io/_nuxt/img/command-failure-error.35fd85e.png)
+![Alt](https://docs.cypress.io/_nuxt/img/command-failure-error.35fd85e.png)
 
 ## Mapas de origem
 
