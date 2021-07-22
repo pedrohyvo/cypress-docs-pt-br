@@ -1,5 +1,9 @@
 # Debugando
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c155f4822183c6eb3184f99849026bf0ec13a0c5
 ```markdown
 O que você vai aprender
 
@@ -180,7 +184,7 @@ O comando `cy.now()` é um comando interno e pode mudar no futuro.
 
 ## Cypress Fiddle
 
-Enquanto estiver aprendendo o Cypress, pode ser uma boa ideia tentar pequenos testes em HTML. Nós escrevemos um plugin [`@ cypress/fiddle `](https://github.com/cypress-io/cypress-fiddle)para isso. Ele pode montar rapidamente qualquer HTML fornecido e executar alguns comandos de teste do Cypress nele.
+Enquanto estiver aprendendo o Cypress, pode ser uma boa ideia tentar pequenos testes em HTML. Nós escrevemos um plugin [`@cypress/fiddle`](https://github.com/cypress-io/cypress-fiddle) para isso. Ele pode montar rapidamente qualquer HTML fornecido e executar alguns comandos de teste do Cypress nele.
 
 ## Solução de problemas do Cypress
 
