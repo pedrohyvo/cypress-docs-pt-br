@@ -1,9 +1,4 @@
 # Debugando
-
-<<<<<<< HEAD
-=======
-
->>>>>>> c155f4822183c6eb3184f99849026bf0ec13a0c5
 ```markdown
 O que você vai aprender
 
