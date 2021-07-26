@@ -54,7 +54,7 @@ Se você estiver executando seus projetos em *containers*, você vai querer Cypr
 ```yaml
     ui:
         image: cypress/base:latest
-        # if targeting a specific node version, use e.g.
+        # se tiver como alvo uma versão node específica, use e.g.
         # image: cypress/base:14
 ```
 
@@ -67,7 +67,7 @@ Se você estiver executando seus projetos em *containers*, você vai querer Cypr
 Instale o Cypress usando `npm`:
 
 ```shell
-cd /your/project/path
+cd /caminho/do/projeto
 ```
 
 ```shell
@@ -123,7 +123,7 @@ executado sem precisar instalar nenhuma dependência.
 
 [Vídeo de exemplo.](https://docs.cypress.io/img/snippets/installing-global.mp4)
 
-<strong class="alert-header">Direct downloading for old versions</strong>
+<strong class="alert-header">Download direto para versões antigas</strong>
 
 É possível baixar uma versão antiga do nosso CDN adicionando o sufixo ao URL com a versão desejada (ex.
 [https://download.cypress.io/desktop/6.8.0](https://download.cypress.io/desktop/6.8.0)).
