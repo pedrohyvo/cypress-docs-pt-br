@@ -23,7 +23,7 @@ A aplicação desktop suporta os seguintes sistemas operacionais:
 
 Se você está utilizando `npm` para instalar o Cypress, nós suportamos:
 
-- Node.js 10 ou 12 e superior
+- **Node.js** 12 ou 14 e superior
 
 ### Linux
 
@@ -45,19 +45,36 @@ apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 lib
 yum install -y xorg-x11-server-Xvfb gtk2-devel gtk3-devel libnotify-devel GConf2 nss libXScrnSaver alsa-lib
 ```
 
+#### Docker 
+
+Imagens do Docker com todas as dependências necessárias instaladas estão disponíveis em [cypress/base](https://github.com/cypress-io/cypress-docker-images)
+
+Se você estiver executando seus projetos em *containers*, você vai querer Cypress no *container* com o processo Node.js.
+
+```yaml
+    ui:
+        image: cypress/base:latest
+        # if targeting a specific node version, use e.g.
+        # image: cypress/base:14
+```
+
+`cypress/base` é um substituto para imagens [base do docker para node](https://hub.docker.com/_/node/).
+
 ## Instalando
 
 ### `npm install`
 
 Instale o Cypress usando `npm`:
 
-```bash
-cd /caminho/do/projeto
+```shell
+cd /your/project/path
+```
+
+```shell
 npm install cypress --save-dev
 ```
 
-Isto vai instalar o Cypress localmente como uma dependência de desenvolvimento
-em seu projeto.
+Isto vai instalar o Cypress localmente como uma dependência de desenvolvimento em seu projeto.
 
 > Certifique-se que você já rodou `npm init`, ou tenha o diretório
 `node_modules`, ou o arquivo `package.json` no diretório raiz do seu projeto
@@ -105,6 +122,11 @@ Você pode descompactar manualmente e clicar duas vezes. O Cypress será
 executado sem precisar instalar nenhuma dependência.
 
 [Vídeo de exemplo.](https://docs.cypress.io/img/snippets/installing-global.mp4)
+
+<strong class="alert-header">Direct downloading for old versions</strong>
+
+É possível baixar uma versão antiga do nosso CDN adicionando o sufixo ao URL com a versão desejada (ex.
+[https://download.cypress.io/desktop/6.8.0](https://download.cypress.io/desktop/6.8.0)).
 
 ## Integração contínua
 
