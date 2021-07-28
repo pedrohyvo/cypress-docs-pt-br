@@ -1,9 +1,7 @@
 # cypress-docs-pt-br
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -94,6 +92,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.linkedin.com/in/murillowelsi/"><img src="https://avatars.githubusercontent.com/u/25549745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Murillo Welsi de Souza Pereira</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=murillowelsi" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/rafaabc"><img src="https://avatars.githubusercontent.com/u/42503318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rafaabc</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=rafaabc" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/driuzzo"><img src="https://avatars.githubusercontent.com/u/16465816?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adriano Driuzzo</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=driuzzo" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://youtube.com/c/Agilizei"><img src="https://avatars.githubusercontent.com/u/11819736?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Lucas</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=samlucax" title="Code">💻</a></td>
   </tr>
 </table>
 
