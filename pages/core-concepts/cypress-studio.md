@@ -83,3 +83,34 @@ Em seguida, o Test Runner executará o teste isoladamente e fará uma pausa apó
 ![extend-ready]<https://docs.cypress.io/_nuxt/img/extend-ready.ccc2164.png>
 
 Agora, nós podemos começar atualizando o teste e criando uma nova transação entre os usuários.
+
+# Step 3 - Interagindo com a Aplicação
+
+Para registrar ações, começe a interagir com a aplicação. Aqui clicaremos no botão "New" à direita do cabeçalho e como resultado veremos nosso clique registrado no Log de Comandos.
+
+![extend-click-new-transaction](https://docs.cypress.io/_nuxt/img/extend-click-new-transaction.8ea6668.png)
+
+Em seguida, podemos começar a digitar o nome de um usuário que queremos pagar.
+
+![extend-type-user-name](https://docs.cypress.io/_nuxt/img/extend-type-user-name.4ba1bd7.png)
+
+Depois de vermos o nome aparecer nos resultados, queremos adicionar uma asserção para garantir que nossa função de pessquisa funcione corretamente. Clicando com o botão direito do mouse no nome do usuário abrirá um menu a partir do qual podemos adicionar uma asserção para verificar se o elemento contém o texto correto (o nome do usuário).
+
+![extend-assert-user-name](https://docs.cypress.io/_nuxt/img/extend-assert-user-name.c215a18.png)
+
+Podemos então clicar naquele usuário para avançar para a próxima tela. Completaremos o formulário de transação clicando e digitando o valor e a descrição.
+
+![extend-type-transaction-form](https://docs.cypress.io/_nuxt/img/extend-type-transaction-form.51b7c1e.png)
+
+> Observe os comandos gerados no Log de Comandos.
+
+Agora é hora de completar a transação. Vode talvez tenha percebido que o botão "PAY" foi desabilitado antes de digitarmos nos campos. Para ter certeza que nossa validação do formulário funcione corretamente, vamos adicionar uma asserção para garantir que o botão "PAY" esteja habilitado.
+
+![extend-assert-button-enabled](https://docs.cypress.io/_nuxt/img/extend-assert-button-enabled.ec54800.png)
+
+Por fim, clicamos no botão "PAY" e veremos uma página de confirmação de nossa nova transação.
+
+![extend-save-test](https://docs.cypress.io/_nuxt/img/extend-save-test.2007e93.png)
+
+Para descartar as interações, clique no botão "Cancelar" para sair do Cypress Studio. Se estiver satisfeito com as interações com a aplicação, clique em "Save commands" e o código de teste será salvo em seu arquivo de especificações. Alternativamente, você pode escolher o botão "copy" para copiar os comandos gerados para sua área de transferência.
+
