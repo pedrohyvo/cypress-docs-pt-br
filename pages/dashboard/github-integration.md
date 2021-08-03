@@ -20,7 +20,7 @@ Se após isso você ainda estiver enfrentando problemas, por favor, entre em [co
 
 ## Instalando o app Cypress GitHub
 
-Antes que você posssa habilitar a integração com o GitHub em seus projetos Cypress, você primeiro deve instalar
+Antes que você possa habilitar a integração com o GitHub em seus projetos Cypress, você primeiro deve instalar
 o app Cypress GitHub. Você pode iniciar o processo de instalação do aplicativo através da página de configuração
 da sua organização, ou a partir de uma página de configuração de um projeto no [Cypress Dashboard](https://on.cypress.io/dashboard).
 
