@@ -4,7 +4,7 @@ O [Cypress Dashboard](https://on.cypress.io/dashboard) consegue integrar seus te
 com seu Workflow do GitHub através de [verificações de status](#verificacoes-de-status)
 e comentários de [pull requests](#comentarios-de-pull-requests). 
 
-Um projeto primeiramente precisa estar [configurado para gravação](https://docs.cypress.io/guides/dashboard/projects)
+Um projeto inicialmente precisa estar [configurado para gravação](https://docs.cypress.io/guides/dashboard/projects)
 para que o Cypress Dashboard possa utilizar a integração com o GitHub.
 
 ![pull-request-cypress-integration-comments-github-checks](https://docs.cypress.io/_nuxt/img/pull-request-cypress-integration-comments-github-checks.8fd68f7.jpg)
