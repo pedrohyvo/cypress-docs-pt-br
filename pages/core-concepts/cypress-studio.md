@@ -16,11 +16,10 @@ Os comandos [`.click()`](https://docs.cypress.io/api/commands/click.html), [`.ty
 ## Usando Cypress Studio
 
 ```markdown
-Cypress Studio é uma funcionalidade experimental e pode ser habilitada adicionando o atributo
-[`experimentalStudio`](https://docs.cypress.io/guides/references/experiments) no seu arquivo de configuração (`cypress.json` por padrão)
+Cypress Studio é uma funcionalidade experimental e pode ser habilitada adicionando o atributo [`experimentalStudio`](https://docs.cypress.io/guides/references/experiments) no seu arquivo de configuração (`cypress.json` por padrão)
 ```
 
-```HTML
+```js
 {
   "experimentalStudio": true
 }
@@ -114,3 +113,125 @@ Por fim, clicamos no botão "PAY" e veremos uma página de confirmação de noss
 
 Para descartar as interações, clique no botão "Cancelar" para sair do Cypress Studio. Se estiver satisfeito com as interações com a aplicação, clique em "Save commands" e o código de teste será salvo em seu arquivo de especificações. Alternativamente, você pode escolher o botão "copy" para copiar os comandos gerados para sua área de transferência.
 
+# Gerando o Código de Teste
+
+Visualizando nosso código de teste, podemos ver que o teste é atualizado após clicar em "Save Commands" com as ações que gravamos no Cypress Studio.
+
+```js
+// Código do Real World App (RWA)
+describe('Cypress Studio Demo', () => {
+  beforeEach(() => {
+    // Banco de dados seed com dados de teste
+    cy.task('db:seed')
+
+    // Teste de Login com usuário
+    cy.database('find', 'users').then((user) => {
+      cy.login(user.username, 's3cret', true)
+    })
+  })
+
+  it('create new transaction', () => {
+    /* ==== Gerado pelo Cypress Studio ==== */
+    cy.get('[data-test=nav-top-new-transaction]').click()
+    cy.get('[data-test=user-list-search-input]').clear()
+    cy.get('[data-test=user-list-search-input]').type('dev')
+    cy.get(
+      '[data-test=user-list-item-tsHF6_D5oQ] > .MuiListItemText-root > .MuiListItemText-primary'
+    ).should('have.text', 'Devon Becker')
+    cy.get('[data-test=user-list-item-tsHF6_D5oQ]').click()
+    cy.get('#amount').clear()
+    cy.get('#amount').type('$25')
+    cy.get('#transaction-create-description-input').clear()
+    cy.get('#transaction-create-description-input').type('Sushi dinner')
+    cy.get('[data-test=transaction-create-submit-payment]').should('be.enabled')
+    cy.get('[data-test=transaction-create-submit-payment]').click()
+    /* ==== Fim Cypress Studio ==== */
+  })
+})
+```
+
+# Adicionando um Novo Teste
+
+Você pode adicionar um novo teste para qualquer bloco `describe` ou `context` existente,
+clicando em "Add New Test" no nosso bloco `describe` definido.
+
+![add-test-1](https://docs.cypress.io/_nuxt/img/add-test-1.54a496d.png)
+
+Somos lançados dentro do Cypress Studio e podemos começar a interagir com nossa aplicação para gerar os testes.
+
+Para este teste, adicionaremos uma nova conta bancária. Nossas interações serão as seguintes:
+
+	1. Clique em "Banks Accounts" na navegação a esquerda.
+
+![add-test-2](https://docs.cypress.io/_nuxt/img/add-test-2.2d21b03.png)
+
+	2. Clique no botão "Create" na página Bank Accounts
+
+![add-test-create](https://docs.cypress.io/_nuxt/img/add-test-create.7424d89.png)
+
+	3. Preencha as informações bancárias
+
+![add-test-form-complete](https://docs.cypress.io/_nuxt/img/add-test-form-complete.eff5847.png)
+
+	4. Clique no botão "Save"
+
+![add-test-form-saving](https://docs.cypress.io/_nuxt/img/add-test-form-saving.1fdd02a.png)
+
+Para discartar as interações, clique no botão "Cancel" para sair do Cypress Studio.
+
+Se estiver satisfeito com as interações com a aplicação, clique em "Save Commands" digite nome do teste. 
+Clique em "Save Test" e o teste será salvo no arquivo.
+
+![add-test-save-test](https://docs.cypress.io/_nuxt/img/add-test-save-test.f776eb3.png)
+
+Depois de salvo, o arquivo será executado novamente no Cypress.
+
+![add-test-final](https://docs.cypress.io/_nuxt/img/add-test-final.e924aae.png)
+
+Finalmente, visualizando nosso código de teste, podemos ver que o teste é 
+atualizado depois após clickar em "Save Commands" com as ações que gravamos no Cypress Studio.
+
+```js
+// Código do Real World App (RWA)
+import { User } from 'models'
+
+describe('Cypress Studio Demo', () => {
+  beforeEach(() => {
+    cy.task('db:seed')
+
+    cy.database('find', 'users').then((user: User) => {
+      cy.login(user.username, 's3cret', true)
+    })
+  })
+
+  it('create new transaction', () => {
+    // Teste de extensão com Cypress Studio
+  })
+
+  /* === Teste criado com Cypress Studio === */
+  it('create bank account', function () {
+    /* ==== Gerado com Cypress Studio ==== */
+    cy.get('[data-test=sidenav-bankaccounts]').click()
+    cy.get('[data-test=bankaccount-new] > .MuiButton-label').click()
+    cy.get('#bankaccount-bankName-input').click()
+    cy.get('#bankaccount-bankName-input').type('Test Bank Account')
+    cy.get('#bankaccount-routingNumber-input').click()
+    cy.get('#bankaccount-routingNumber-input').type('987654321')
+    cy.get('#bankaccount-accountNumber-input').click()
+    cy.get('#bankaccount-accountNumber-input').type('123456789')
+    cy.get('[data-test=bankaccount-submit] > .MuiButton-label').click()
+    /* ==== Fim Cypress Studio ==== */
+  })
+})
+```
+
+```markdown
+Exemplo do Mundo Real
+Clone a aplicação Real World App (RWA) e consulte o arquivo cypress/tests/demo/cypress-studio.spec.ts.
+```
+
+# Histórico
+
+Mudança de versão
+8.1.0	Adicionado capacidade de gerar afirmações
+6.3.0	Adicionado Cypress Studio como experimental
