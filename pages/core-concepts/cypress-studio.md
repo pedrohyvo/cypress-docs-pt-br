@@ -232,6 +232,7 @@ Clone a aplicação Real World App (RWA) e consulte o arquivo cypress/tests/demo
 
 # Histórico
 
-Mudança de versão
-8.1.0	Adicionado capacidade de gerar afirmações
-6.3.0	Adicionado Cypress Studio como experimental
+| Versão |                   Mudanças                  |
+|:------:|:-------------------------------------------:|
+| 8.1.0  | Adicionado capacidade de gerar afirmações   |
+| 6.3.0  | Adicionado Cypress Studio como experimental |
