@@ -43,7 +43,7 @@
     - [Projetos](pages/dashboard/projects.md)
     - [Integração com o Gitlab](pages/dashboard/gitlab-integration.md)
 - Guias
-    - [Novas tentativas de testes](pages/guides/test-retries.md)
+    - [Novas tentativas de teste](pages/guides/test-retries.md)
 - Tooling
     - [TypeScript](pages/tooling/typescript.md)
 

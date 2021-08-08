@@ -62,12 +62,14 @@ Supondo que configuramos novas tentativas de teste com `2` tentativas (para um t
 
 5. Se o teste falhar pela terceira vez, o Cypress marcará o teste como reprovado e, em seguida, executará os testes restantes.
 
-[//]: <> (TODO - Adicionar command-line e test-runner quando traduzidos)
+[//]: <> (TODO - Adicionar cypress run quando traduzido)
 
 A seguir está uma captura de tela de como as novas tentativas de teste se parecem no mesmo teste com falha quando 
 executado através do [cypress run](https://docs.cypress.io/guides/guides/command-line#cypress-run).
 
 ![Exemplo de nova tentativa rodando via cypress run](https://docs.cypress.io/_nuxt/img/cli-error-message.88a73e6.png)
+
+[//]: <> (TODO - Adicionar cypress open e Log de comandos quando traduzido)
 
 Durante o [cypress open](https://docs.cypress.io/guides/guides/command-line#cypress-open), você poderá ver o número de 
 tentativas feitas no [Log de comandos](https://docs.cypress.io/guides/core-concepts/test-runner#Command-Log) e expandir
@@ -76,6 +78,8 @@ tentativas feitas no [Log de comandos](https://docs.cypress.io/guides/core-conce
 ## Configurar novas tentativas de teste
 
 ### Configuração Global
+
+[//]: <> (TODO - Adicionar arquivo de configuração quando traduzido)
 
 Normalmente, você desejará definir diferentes tentativas de repetição para a execução do Cypress e a abertura do 
 Cypress. Você pode configurar isso em seu 
@@ -102,6 +106,8 @@ Cypress. Você pode configurar isso em seu
 
 #### Configurar novas tentativas para todos os modos
 
+[//]: <> (TODO - Adicionar arquivo de configuração quando traduzido)
+
 Se você deseja configurar as tentativas de repetição para todos os testes executados no `cypress run` e no 
 `cypress open`, você pode configurar isso em seu 
 [arquivo de configuração](https://docs.cypress.io/guides/guides/command-line#cypress-open-config-file-lt-config-file-gt)
@@ -119,7 +125,7 @@ propriedade `retries` e configurando o número de tentativas desejado.
 #### Teste(s) Individual(is) 
 
 Se quiser configurar novas tentativas em um teste específico, você pode definir isso usando a 
-[configuração do teste](../core-concepts/writing-and-organizing-tests.md#Configuração-de-Teste)
+[configuração de teste](../core-concepts/writing-and-organizing-tests.md#Configuração-de-Teste)
 
 
 ````javascript
@@ -171,10 +177,12 @@ describe('User bank accounts', {
 })
 ````
 
-[//]: <> (TODO - Adicionar Configuração de teste e cy.screenshot quando traduzidos)
+[//]: <> (TODO - Adicionar Configuração de teste quando traduzido)
 Você pode encontrar mais informações sobre configurações personalizadas aqui: [Configuração de teste](https://docs.cypress.io/guides/references/configuration#Test-Configuration)
 
 ## Capturas de tela
+
+[//]: <> (TODO - adicionar cy.screenshot quando traduzido)
 
 Quando um teste é repetido, o Cypress continuará a fazer capturas de tela para cada tentativa falhada ou 
 [cy.screenshot()](https://docs.cypress.io/api/commands/screenshot) com sufixo a nova captura de tela com `(attempt n)`, 
@@ -265,6 +273,8 @@ Você também pode ver a 'Flaky Rate' (taxa de instabilidade) para um determinad
 
 ![Flaky rate](https://docs.cypress.io/_nuxt/img/flaky-rate.cf30c01.png)
 
+[//]: <> (TODO - adicionar Flaky Test Management quando traduzido)
+
 Para uma visão abrangente de como o floco está afetando seu conjunto de testes geral, você pode revisar os recursos de 
 [Flake Detection](https://docs.cypress.io/guides/dashboard/flaky-test-management#Flake-Detection) e 
 [Flake Alerting](https://docs.cypress.io/guides/dashboard/flaky-test-management#Flake-Alerting) 
@@ -317,3 +327,5 @@ it('does something differently on retry', { retries: 3 }, () => {
   // use os valores  "attempt" e "retries" de alguma forma
 })
 ````
+
+[Voltar para o topo](#Novas-tentativas-de-teste)
