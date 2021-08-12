@@ -199,21 +199,21 @@ Para este teste, adicionaremos uma nova conta bancária. Nossas interações ser
 
   1. Clique em "Banks Accounts" na navegação a esquerda.
 
-![add-test-2](https://docs.cypress.io/_nuxt/img/add-test-2.2d21b03.png)
+		![add-test-2](https://docs.cypress.io/_nuxt/img/add-test-2.2d21b03.png)
 
-  1. Clique no botão "Create" na página Bank Accounts
+  2. Clique no botão "Create" na página Bank Accounts
 
-![add-test-create](https://docs.cypress.io/_nuxt/img/add-test-create.7424d89.png)
+		![add-test-create](https://docs.cypress.io/_nuxt/img/add-test-create.7424d89.png)
 
-  1. Preencha as informações bancárias
+  3. Preencha as informações bancárias
 
-![add-test-form-complete](https://docs.cypress.io/_nuxt/img/add-test-form-complete.eff5847.png)
+		![add-test-form-complete](https://docs.cypress.io/_nuxt/img/add-test-form-complete.eff5847.png)
 
-  1. Clique no botão "Save"
+  4. Clique no botão "Save"
 
-![add-test-form-saving](https://docs.cypress.io/_nuxt/img/add-test-form-saving.1fdd02a.png)
+		![add-test-form-saving](https://docs.cypress.io/_nuxt/img/add-test-form-saving.1fdd02a.png)
 
-Para discartar as interações, clique no botão "Cancel" para sair do Cypress Studio.
+Para descartar as interações, clique no botão "Cancel" para sair do Cypress Studio.
 
 Se estiver satisfeito com as interações com a aplicação, clique em "Save Commands" digite nome do teste.
 Clique em "Save Test" e o teste será salvo no arquivo.
