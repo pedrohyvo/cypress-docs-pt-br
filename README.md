@@ -39,7 +39,6 @@
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
     - [Variáveis e Apelidos](pages/core-concepts/variables-and-aliases.md)
     - [Cypress Studio](pages/core-concepts/cypress-studio.md)
-
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
     - [Projetos](pages/dashboard/projects.md)
