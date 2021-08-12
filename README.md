@@ -1,7 +1,7 @@
 # cypress-docs-pt-br
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -96,6 +96,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://youtube.com/c/Agilizei"><img src="https://avatars.githubusercontent.com/u/11819736?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Lucas</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=samlucax" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/mhanelia"><img src="https://avatars.githubusercontent.com/u/8427316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mhanelia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=mhanelia" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/fsreibnitz"><img src="https://avatars.githubusercontent.com/u/13247837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fabio Reibnitz</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=fsreibnitz" title="Code">💻</a></td>
   </tr>
 </table>
 
