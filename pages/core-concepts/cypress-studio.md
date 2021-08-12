@@ -7,24 +7,24 @@ O que você vai aprender
 - Como adicionar novos testes interativamente usando o Cypress Studio
 ```
 
-## Overview
+## Visão geral
 
 O Cypress Studio fornece uma maneira visual de gerar testes dentro do Test Runner, gravando interações com o aplicação 
 em teste.
 
-<!-- TODO atualizar links com as traduções quando estiverem disponíveis -->
+[//]: <> (TODO - Adicionar links traduzidos click, type, check. uncheck e select)
 
 Os comandos [`.click()`](https://docs.cypress.io/api/commands/click.html), 
 [`.type()`](https://docs.cypress.io/api/commands/type.html), 
 [`.check()`](https://docs.cypress.io/api/commands/check.html),
-[`.uncheck()`](https://docs.cypress.io/api/commands/uncheck.html),
- and [`.select()`](https://docs.cypress.io/api/commands/select.html)
-  Cypress são suportados e irão gerar código de teste quando interagir com o DOM dentro do Cypress Studio. Você também 
-	pode gerar asserções clicando com o botão direito do mouse em um elemento que você gostaria de afirmar.
+[`.uncheck()`](https://docs.cypress.io/api/commands/uncheck.html), 
+and [`.select()`](https://docs.cypress.io/api/commands/select.html) 
+Cypress são suportados e irão gerar código de teste quando interagir com o DOM dentro do Cypress Studio. Você também 
+pode gerar asserções clicando com o botão direito do mouse em um elemento que você gostaria de afirmar.
 
 ## Usando Cypress Studio
 
-<!-- TODO atualizar links com as traduções quando estiverem disponíveis -->
+[//]: <> (TODO - Adicionar link experimentalStudio)
 
 ```markdown
 O Cypress Studio é uma funcionalidade experimental e pode ser habilitada adicionando o atributo [`experimentalStudio`](https://docs.cypress.io/guides/references/experiments) no seu arquivo de configuração (`cypress.json` por padrão)
@@ -36,7 +36,7 @@ O Cypress Studio é uma funcionalidade experimental e pode ser habilitada adicio
 }
 ```
 
-<!-- TODO atualizar links com as traduções quando estiverem disponíveis -->
+[//]: <> (TODO - Adicionar link cypress-realworld-app)
 
 O Cypress [`Real World App (RWA)`](https://github.com/cypress-io/cypress-realworld-app) é um projeto de código aberto 
 que implementa um aplicativo de pagamento para demonstrar o uso real dos métodos de teste, padrões e fluxos de trabalho 
@@ -44,7 +44,7 @@ do Cypress. Ele será usado para demonstrar a funcionalidade do Cypress Studio a
 
 ## Estendendo um Teste
 
-<!-- TODO atualizar links com as traduções quando estiverem disponíveis -->
+[//]: <> (TODO - Adicionar links integrationFolder)
 
 Voce pode estender qualquer teste preexistente ou começar criando um novo teste no seu 
 [`integrationFolder`](https://docs.cypress.io/guides/references/configuration#Folders-Files) 
@@ -69,7 +69,7 @@ describe("Cypress Studio Demo", () => {
 });
 ```
 
-<!-- TODO atualizar links com as traduções quando estiverem disponíveis -->
+[//]: <> (TODO - Adicionar links cypress-realworld-app e cypress-studio.spec.ts)
 
 ```markdown
 Clone o [`Real World App (RWA)`](https://github.com/cypress-io/cypress-realworld-app) and referencie ao arquivo [`cypress/tests/demo/cypress-studio.spec.ts`](https://github.com/cypress-io/cypress-realworld-app/blob/develop/cypress/tests/demo/cypress-studio.spec.ts).
@@ -89,7 +89,7 @@ Assim que os testes conluírem sua execução, passe o mouse sobre o teste no Lo
 
 Clicando em "Adicionar Comandos ao Teste" iniciará o Cypress Studio
 
-<!-- TODO atualizar links com as traduções quando estiverem disponíveis -->
+[//]: <> (TODO - Adicionar link Log de Comando)
 
 ```markdown
 Cypress Studio é diretamente integrado com o [`Log de Comando`](https://docs.cypress.io/guides/core-concepts/test-runner#Command-Log)
