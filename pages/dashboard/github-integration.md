@@ -1,5 +1,7 @@
 # Integração com o GitHub
 
+[//]: <> (TODO - Adicionar links traduzidos: verificações de status, comentários de pull requests, configurado para gravação)
+
 O [Cypress Dashboard](https://on.cypress.io/dashboard) consegue integrar seus testes Cypress
 com seu Workflow do GitHub através de [verificações de status](#verificacoes-de-status)
 e comentários de [pull requests](#comentarios-de-pull-requests). 
@@ -10,6 +12,8 @@ para que o Cypress Dashboard possa utilizar a integração com o GitHub.
 ![pull-request-cypress-integration-comments-github-checks](https://docs.cypress.io/_nuxt/img/pull-request-cypress-integration-comments-github-checks.8fd68f7.jpg)
 
 >A plataforma local GitHub Enterprise atualmente não é suportada.
+
+[//]: <> (TODO - Adicionar link traduzido sobre as diretrizes)
 
 >A Integração com o GitHub depende que o seu ambiente de integração contínua forneceça dados SHA de commit
 (típicamente via variável de ambiente). Isso não é um problema para a maioria dos usuários,
