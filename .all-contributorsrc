@@ -77,6 +77,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mhanelia",
+      "name": "mhanelia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8427316?v=4",
+      "profile": "https://github.com/mhanelia",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "fsreibnitz",
+      "name": "Fabio Reibnitz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13247837?v=4",
+      "profile": "https://github.com/fsreibnitz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
