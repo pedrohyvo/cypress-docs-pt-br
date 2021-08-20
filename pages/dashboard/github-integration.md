@@ -26,12 +26,12 @@ da sua organização, ou a partir de uma página de configuração de um projeto
 
 ### Instalando via configurações de integração da organização
 
-1. Vá para a [Página de organizações](https://dashboard.cypress.io/organizations)no dashboard, ou abra a lista de organizações.
+1. Vá para a página [Organizations](https://dashboard.cypress.io/organizations)no dashboard, ou abra a lista de organizações.
 2. Selecione a organização que você deseja integrar com uma conta do GitHub ou organização do GitHub.
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/select-cypress-organization.41ec503.png)
-3. Visite a página de **integrações** da organização selecionada, na navegação lateral.
+3. Visite a página de **integrations** da organização selecionada, na navegação lateral.
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/navigate-to-organization-integrations.0c43d75.png)
-4. CLique no botão **Instalar Integração com o GitHub**.
+4. CLique no botão **Install GitHub Integration**.
 
 ### Instalando via configurações do projeto
 
@@ -41,8 +41,8 @@ da sua organização, ou a partir de uma página de configuração de um projeto
 [Docs Cypress](https://docs.cypress.io/_nuxt/img/select-cypress-project.fe3b44b.png)
 3. Vá para a página de configurações do projeto.
 [Docs Cypress](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
-4. Role até a seção **Integração com o GitHub**.
-5. Clique no botão **Instalar Cypress GitHub App**.
+4. Role até a seção **GitHub Integration**.
+5. Clique no botão **Install the Cypress GitHub App**.
 
 ### Processo de instalação do applicativo Cypress GitHub
 
@@ -53,14 +53,14 @@ você será redirecionado(a) ao GitHub.com para completar a instalação:
 
 1. Selecione a conta ou organização GitHub que você deseja integrar com seu Cypress Dashboard da organização.
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/select-gh-org.c083d7b.jpg)
-2. Escolha associar **todos os repositórios** ou apenas selecione repositórios GitHub
+2. Escolha associar **All repositories** ou apenas selecione repositórios GitHub
 com a instalação do seu app Cypress GitHub.
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/select-all-gh-repos.d0b1835.jpg)
 
-> Todos os Atuais e *futuros* repositórios serão inclusos com esta instalação, caso selecionar **Todos os repositórios**.
+> Todos os Atuais e *futuros* repositórios serão inclusos com esta instalação, caso selecionar **All repositories**.
 
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/select-gh-repos.3c71946.jpg)
-3. Clique no botão **instalar** para completar a instalação.
+3. Clique no botão **Install** para completar a instalação.
 
 ## Habilitando a integração com o GitHub para um projeto
 
@@ -69,20 +69,20 @@ a Integração com o Github para *qualquer* projeto Cypress.
 
 1. Vá para a página de configurações do projeto.
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/visit-project-settings.43a21a4.png)
-2. role até a seção integração com o GitHub.
-Você pode rapidamente acessar às configurações de Integração do GitHub de um projeto, clicando no link **configurar**
+2. role até a seção Github Integration.
+Você pode rapidamente acessar às configurações de Integração do GitHub de um projeto, clicando no link **Configure**
 do projeto desejado na página de Integrações de uma organização:
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/org-settings-with-no-enabled-projects.bdbf46e.png)
 3. Selecione um repositório GitHub a ser associado com o projeto.
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/project-settings-repo-selection.449e45a.png)
 
-Assim um repositório GitHub for associado com um projeto Cypress,
+Assim que um repositório GitHub for associado com um projeto Cypress,
 a integração com o GitHub será habilitada imediatamente:
 
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/project-settings-selected-repo.9fc3a58.png)
 
 Você também pode ver todas as Integrações com o Github habilitadas em projetos Cypress
-na sua página de **integrações** das suas organizações:
+na sua página de **Integrations** das suas organizações:
 
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/org-settings-with-projects.57df6b0.png)
 
@@ -145,9 +145,9 @@ forem necessários nas configurações de Integração com o GitHub de um projet
 
 Você pode desinstalar o app Cypress Github ao seguir os seguintes passos:
 
-1. Acesse as ***configurações** da sua organização no GitHub.
-1. Clique nos **apps instalados no GitHub**.
-1. Clique em **configurar** ao lado do aplicativo Cypress.
-1. CLique em **desinstalar** abaixo da seção "desinstalar Cypress".
+1. Acesse as ***Settings** da sua organização no GitHub.
+2. Clique nos **Installed GitHub Apps**.
+3. Clique em **Configure** ao lado do aplicativo Cypress.
+4. CLique em **Uninstall** abaixo da seção "desinstalar Cypress".
 
 [Voltar para o topo](#integração-com-o-github)
