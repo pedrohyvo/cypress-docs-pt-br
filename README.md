@@ -45,6 +45,7 @@
     - [Integração com o Gitlab](pages/dashboard/gitlab-integration.md)
 - Guias
     - [Novas tentativas de teste](pages/guides/test-retries.md)
+    - [Módulo API](pages/guides/module-api.md)
 - Tooling
     - [TypeScript](pages/tooling/typescript.md)
 
