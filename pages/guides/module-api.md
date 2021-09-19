@@ -1,20 +1,20 @@
 # Módulo API
 
 Você pode requerer o Cypress como um módulo do seu aplicativo em teste e executar o Cypress via Node.js.
-Isso pode ser útil quando você deseja acessar os resultados do teste diretamente após a execução. 
-Com este fluxo de trabalho, por exemplo, você pode:
+Isso pode ser útil quando você deseja acessar os resultados do teste diretamente após a execução.
+Com este fluxo de trabalho, você pode, por exemplo:
 
-- Envie uma notificação sobre testes com falha com imagens de captura de tela incluídas
-- Execute novamente um único arquivo de especificação com falha
-- Dê início a outras compilações ou scripts
+- Enviar uma notificação sobre testes com falha com imagens de captura de tela incluídas
+- Executar novamente um único arquivo de especificação com falha
+- Dar início a outras compilações ou scripts
 
 ## cypress.run()
 
-Executa testes do Cypress via Node.js e resolve com todos os resultados de teste. Veja o [Cypress Módulo API recipe](https://github.com/cypress-io/cypress-example-recipes#fundamentals).
+Executa testes do Cypress via Node.js e resolve com todos os resultados de teste. Veja a receita do [Cypress Módulo API](https://github.com/cypress-io/cypress-example-recipes#fundamentals).
 
 ```javascript
 // e2e-run-tests.js
-const cypress = require("cypress")
+const cypress = require("cypress");
 
 cypress.run({
   reporter: "junit",
@@ -27,10 +27,10 @@ cypress.run({
     login_url: "/login",
     products_url: "/products",
   },
-})
+});
 ```
 
-Você pode então executar o Cypress executando o seguinte em seu terminal ou um script npm:
+Você pode então rodar o Cypress executando o seguinte em seu terminal ou em um script npm:
 
 ```bash
 node e2e-run-tests.js
@@ -38,7 +38,7 @@ node e2e-run-tests.js
 
 ## Opções
 
-Assim como as [opções de linha de comando](https://docs.cypress.io/guides/guides/command-line) para o cypress run, 
+Assim como as [opções de linha de comando](https://docs.cypress.io/guides/guides/command-line) para o cypress run,
 você pode passar opções que modificam como o Cypress é executado.
 
 |      Opção      |       Tipo       | Descrição                                                                                                                                                                                                                               |
@@ -49,31 +49,31 @@ você pode passar opções que modificam como o Cypress é executado.
 |   configFile    | string / boolean | Caminho para o arquivo de configuração a ser usado. Se false for passado, nenhum arquivo de configuração será usado.                                                                                                                    |
 |       env       |      object      | Especifica as [variáveis ​​de ambiente](https://docs.cypress.io/guides/guides/environment-variables)                                                                                                                                    |
 |      group      |      string      | Testes registrados do [grupo](https://docs.cypress.io/guides/guides/parallelization#Grouping-test-runs) juntos em uma única execução                                                                                                    |
-|     headed      |     boolean      | Exibe o navegador em vez de funcionar sem controle                                                                                                                                                                                      |
-|    headless     |     boolean      | Oculte o navegador em vez de executar o cabeçalho (padrão durante a execução do cipreste)                                                                                                                                               |
+|     headed      |     boolean      | Executa no navegador em vez do modo _headless_                                                                                                                                                                                          |
+|    headless     |     boolean      | Oculte o navegador em vez de executar em modo _headed_ (padrão durante a execução do Cypress)                                                                                                                                           |
 |       key       |      string      | Especifica sua chave de registro secreto                                                                                                                                                                                                |
 |      exit       |     boolean      | Se deve fechar o Cypress após a execução de todos os testes                                                                                                                                                                             |
 |    parallel     |     boolean      | Execute especificações gravadas em [paralelo](https://docs.cypress.io/guides/guides/parallelization) em várias máquinas                                                                                                                 |
 |      port       |      number      | Substituir porta padrão                                                                                                                                                                                                                 |
 |     project     |      string      | Caminho para um projeto específico                                                                                                                                                                                                      |
-|      quiet      |     boolean      | Se aprovado, a saída do Cypress não será impressa no stdout. Apenas a saída do [repórter Mocha](https://docs.cypress.io/guides/tooling/reporters) configurado será impressa.                                                            |
+|      quiet      |     boolean      | Se aprovado, a saída do Cypress não será impressa no stdout. Apenas a saída do [relatório Mocha](https://docs.cypress.io/guides/tooling/reporters) configurado será impressa.                                                           |
 |     record      |     boolean      | Se deve registrar a execução do teste                                                                                                                                                                                                   |
-|    reporter     |      string      | Especifica um repórter Mocha                                                                                                                                                                                                            |
-| reporterOptions |      object      | Especifica as opções do repórter Mocha                                                                                                                                                                                                  |
-|      spec       |      string      | Especifica as especificações a serem executadas, consulte os exemplos abaixo                                                                                                                                                            |
+|    reporter     |      string      | Especifica um relatório Mocha                                                                                                                                                                                                           |
+| reporterOptions |      object      | Especifica as opções do relatório Mocha                                                                                                                                                                                                 |
+|      spec       |      string      | Especifica os arquivos de teste a serem executados, consulte os exemplos abaixo                                                                                                                                                         |
 |       tag       |      string      | Identifique uma execução com uma etiqueta ou etiquetas                                                                                                                                                                                  |
-|   testingType   |      string      | Especifica o tipo de testes a serem executados ou e2e ou componente. Padrões para e2e                                                                                                                                                  |
+|   testingType   |      string      | Especifica os tipos de testes a serem executados, ou e2e ou componente. Padrões para e2e                                                                                                                                                |
 
 ## Exemplos
 
 ### Execute um único arquivo de especificação
 
-Aqui está um exemplo de execução programada de um arquivo de especificação. Observe que o caminho do arquivo é relativo 
+Aqui está um exemplo de execução programada de um arquivo de especificação. Observe que o caminho do arquivo é relativo
 ao diretório de trabalho atual.
 
 ```javascript
 // e2e-run-tests.js
-const cypress = require("cypress")
+const cypress = require("cypress");
 
 cypress
   .run({
@@ -81,14 +81,14 @@ cypress
     spec: "./cypress/integration/examples/actions.spec.js",
   })
   .then((results) => {
-    console.log(results)
+    console.log(results);
   })
   .catch((err) => {
-    console.error(err)
-  })
+    console.error(err);
+  });
 ```
 
-Você pode então executar o Cypress executando o seguinte em seu terminal ou um script npm:
+Você pode então rodar o Cypress executando o seguinte em seu terminal ou um script npm:
 
 ```bash
 node e2e-run-tests.js
@@ -99,31 +99,29 @@ node e2e-run-tests.js
 Você pode passar um padrão curinga para executar todos os arquivos de especificações correspondentes
 
 ```javascript
-const cypress = require("cypress")
+const cypress = require("cypress");
 
 cypress.run({
   // o caminho curinga é relativo ao diretório de trabalho atual
   spec: "./cypress/integration/**/api*.js",
-})
+});
 ```
 
 ### Uso da sintaxe moderna
 
-Se a sua versão do Node permitir, você pode usar a sintaxe moderna async / await para aguardar a promessa retornada 
+Se a sua versão do Node permitir, você pode usar a sintaxe moderna async / await para aguardar a promessa retornada
 pelo método cypress.run.
 
 ```javascript
-const cypress = require("cypress")
-
-(async () => {
-  const results = await cypress.run()
+const cypress = require("cypress")(async () => {
+  const results = await cypress.run();
   // use o objeto results
-})()
+})();
 ```
 
 ## Resultados
 
-cypress.run() retorna uma promessa que resolve com um objeto que contém os resultados dos testes. 
+cypress.run() retorna uma promessa que resolve com um objeto que contém os resultados dos testes.
 Uma execução típica pode retornar algo assim:
 
 ```json
@@ -198,16 +196,16 @@ Uma execução típica pode retornar algo assim:
 }
 ```
 
-Você pode encontrar a definição do TypeScript para o objeto de resultados no [cypress/cli/pastas de tipos](https://github.com/cypress-io/cypress/tree/develop/cli/types).
+Você pode encontrar a definição do TypeScript para o objeto de resultados na pasta [cypress/cli/types](https://github.com/cypress-io/cypress/tree/develop/cli/types).
 
 ## Manipulação de erros
 
-Mesmo quando os testes falham, a promessa resolve com os resultados do teste. 
-A promessa só é rejeitada se o Cypress não puder ser executado por algum motivo (por exemplo, 
-se um binário não foi instalado ou ele não consegue encontrar uma dependência de módulo). 
+Mesmo quando os testes falham, a promessa resolve com os resultados do teste.
+A promessa só é rejeitada se o Cypress não puder ser executado por algum motivo (por exemplo,
+se um binário não foi instalado ou ele não consegue encontrar uma dependência de módulo).
 Nesse caso, a promessa será rejeitada com um erro detalhado.
 
-Há uma terceira opção - o Cypress pode ser executado, mas os testes não podem ser iniciados por algum motivo. 
+Há uma terceira opção - o Cypress pode ser executado, mas os testes não podem ser iniciados por algum motivo.
 Nesse caso, o valor resolvido é um objeto com dois campos
 
 ```json
@@ -248,7 +246,7 @@ Abra os testes do Cypress via Node.js.
 
 ```javascript
 // e2e-open-tests.js
-const cypress = require("cypress")
+const cypress = require("cypress");
 
 cypress.open({
   config: {
@@ -258,7 +256,7 @@ cypress.open({
     login_url: "/login",
     products_url: "/products",
   },
-})
+});
 ```
 
 Em seguida, você pode abrir o Cypress executando o seguinte em seu terminal ou um script npm:
@@ -269,7 +267,7 @@ node e2e-open-tests.js
 
 ### Opções
 
-Assim como o [Opções de linha de comando](https://docs.cypress.io/guides/guides/command-line), você pode passar opções 
+Assim como as [opções de linha de comando](https://docs.cypress.io/guides/guides/command-line), você pode passar opções
 que modificam como o Cypress é executado.
 
 |    Opção    |       Tipo       | Descrição                                                                                                            |
@@ -279,18 +277,18 @@ que modificam como o Cypress é executado.
 | configFile  | string / boolean | Caminho para o arquivo de configuração a ser usado. Se false for passado, nenhum arquivo de configuração será usado. |
 |  detached   |     boolean      | Abra o Cypress em modo separado                                                                                      |
 |     env     |      object      | Especifique as [variáveis ​​de ambiente](https://docs.cypress.io/guides/guides/environment-variables)                |
-|   global    |     boolean      | Executar em modo global mode                                                                                         |
+|   global    |     boolean      | Executar em modo global                                                                                              |
 |    port     |      number      | Substituir porta padrão                                                                                              |
 |   project   |      string      | Caminho para um projeto específico                                                                                   |
-| testingType |      string      | Especifique o tipo de testes a serem executados ou e2e ou componente. Padrões para e2e                              |
+| testingType |      string      | Especifique os tipos de testes a serem executados, ou e2e ou componente. Padrões para e2e                            |
 
 ## Exemplo
 
 ```javascript
 // e2e-open-tests.js
-const cypress = require("cypress")
+const cypress = require("cypress");
 
-cypress.open({})
+cypress.open({});
 ```
 
 Em seguida, você pode abrir o Cypress executando o seguinte em seu terminal ou um script npm:
@@ -303,30 +301,30 @@ node e2e-open-tests.js
 
 ## parseRunArguments()
 
-Se você estiver escrevendo uma ferramenta que envolve o comando cypress.run(), você pode querer analisar 
-argumentos de linha de comando fornecidos pelo usuário usando a mesma lógica que o cypress run usa.
+Se você estiver escrevendo uma ferramenta que envolve o comando cypress.run(), você pode querer analisar
+argumentos de linha de comando fornecidos pelo usuário usando a mesma lógica que o cypress run utiliza.
 Nesse caso, você pode usar a função parseRunArguments incluída.
 
 ```javascript
 // wrapper.js
-const cypress = require("cypress")
+const cypress = require("cypress");
 
-const runOptions = await cypress.cli.parseRunArguments(process.argv.slice(2))
-const results = await cypress.run(runOptions)
+const runOptions = await cypress.cli.parseRunArguments(process.argv.slice(2));
+const results = await cypress.run(runOptions);
 // processar os resultados  "cypress.run()"
 ```
 
 Um exemplo de uso executado em seu terminal poderia ser:
 
-``` bash
+```bash
 node ./wrapper cypress run --browser chrome --config ...
 ```
 
 Observação: os argumentos passados ​​para parseRunArguments devem começar com cypress run.
 
-Usamos a análise CLI e a chamada de cypress.run para repetir testes para encontrar testes instáveis ​​e para 
-[repita os testes para encontrar testes instáveis](https://github.com/bahmutov/cypress-repeat) e para 
-[validar os números de teste após uma execução de teste](https://github.com/bahmutov/cypress-expect). 
+Usamos a análise CLI e a chamada de cypress.run para repetir testes para encontrar testes instáveis ​​e para
+[repetir os testes para encontrar testes instáveis](https://github.com/bahmutov/cypress-repeat) e para
+[validar os números de teste após uma execução de teste](https://github.com/bahmutov/cypress-expect).
 leia [Wrap Cypress usando npm Module API](https://glebbahmutov.com/blog/wrap-cypress-using-npm/) para mais exemplos.
 
 ## História
