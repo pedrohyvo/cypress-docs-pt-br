@@ -10,6 +10,8 @@ Com este fluxo de trabalho, você pode, por exemplo:
 
 ## cypress.run()
 
+[//]: <> (TODO - Adicionar links traduzidos Cypress Módulo API)
+
 Executa testes do Cypress via Node.js e resolve com todos os resultados de teste. Veja a receita do [Cypress Módulo API](https://github.com/cypress-io/cypress-example-recipes#fundamentals).
 
 ```javascript
@@ -37,6 +39,8 @@ node e2e-run-tests.js
 ```
 
 ## Opções
+
+[//]: <> (TODO - Adicionar links traduzidos das opções de linha de comando)
 
 Assim como as [opções de linha de comando](https://docs.cypress.io/guides/guides/command-line) para o cypress run,
 você pode passar opções que modificam como o Cypress é executado.
@@ -266,6 +270,8 @@ node e2e-open-tests.js
 ```
 
 ### Opções
+
+[//]: <> (TODO - Adicionar links traduzidos das opções de linha de comando)
 
 Assim como as [opções de linha de comando](https://docs.cypress.io/guides/guides/command-line), você pode passar opções
 que modificam como o Cypress é executado.
