@@ -95,6 +95,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Wil-g2",
+      "name": "Willian Rezende",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26700193?v=4",
+      "profile": "https://www.linkedin.com/in/willian-gaudencio-de-rezende-38864312b/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
