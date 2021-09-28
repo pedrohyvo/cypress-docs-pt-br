@@ -42,6 +42,7 @@
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
     - [Projetos](pages/dashboard/projects.md)
+    - [Integração com o Github](pages/dashboard/github-integration.md)
     - [Integração com o Gitlab](pages/dashboard/gitlab-integration.md)
 - Guias
     - [Novas tentativas de teste](pages/guides/test-retries.md)
