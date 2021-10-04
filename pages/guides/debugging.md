@@ -59,6 +59,7 @@ it('let me debug when the after the command executes', () => {
 })
 
 ```
+
 [//]: <> (TODO - Adicionar link cy.debug e .then  quando traduzido)
 
 Agora estamos no negócio! Na primeira vez, 
