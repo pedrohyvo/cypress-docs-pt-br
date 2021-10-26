@@ -566,8 +566,11 @@ Agora, o Cypress nos fornece uma interface de usuário (similar ao depurador) pa
 
 ## Próximos passos
 
+[//]: <> (TODO - Adicionar link - autocomplete)
+
 - Inicie [testando sua aplicação](../getting-started/testing-your-app.md).
-- Configure o [autocompletar de código inteligente] para comandos e asserções do Cypress.
+- Configure o [autocompletar de código inteligente](https://docs.cypress.io/guides/tooling/IDE-integration#Intelligent-Code-Completion)
+para comandos e asserções do Cypress.
 - Confira a [Cypress Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app) 
 para demonstrações práticas de testes escritos com Cypress, configuração e estratégias em um projeto do mundo real.
 - Pesquise a documentação do Cypress para encontrar rapidamente o que você precisa.
