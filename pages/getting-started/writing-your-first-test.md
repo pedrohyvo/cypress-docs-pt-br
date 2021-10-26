@@ -418,7 +418,8 @@ Agora, se você se lembrar, no final do teste, acabamos em uma URL diferente:
 
 > <https://example.cypress.io/commands/actions>
 
-Mas conforme passamos o mouse sobre o CONTAINS, o Cypress volta para a URL que estava presente quando aquela captura foi feita.
+Mas conforme passamos o mouse sobre o CONTAINS, 
+o Cypress volta para a URL que estava presente quando aquela captura foi feita.
 
 ![Primeiro teste de reverter url](https://docs.cypress.io/_nuxt/img/first-test-url-revert.ef02fdb.png)
 
