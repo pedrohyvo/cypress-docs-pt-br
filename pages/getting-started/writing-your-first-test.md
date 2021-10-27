@@ -389,4 +389,193 @@ Esses vários tempos limite são definidos no arquivo de
 
 ## Debugando
 
+O Cypress vem com uma série de ferramentas de depuração para ajudá-lo a entender um teste.
+
+Damos a você a capacidade de:
+
+- Viaje de volta no tempo até o instante de cada comando.
+- Veja especiais eventos de página que aconteceram.
+- Receba saída adicional sobre cada comando.
+- Avance / retroceda entre vários instantâneos de comando.
+- Pause os comandos e percorra-os iterativamente.
+- Visualize quando elementos ocultos ou múltiplos forem encontrados.
+
+Vamos ver um pouco disso em ação usando nosso código de teste existente. 
+
+## Time travel
+
+Passe o mouse sobre o comando CONTAINS no Log de Comandos.
+
+Você vê o que aconteceu?
+
+![Primeiro teste do hover contains](https://docs.cypress.io/_nuxt/img/first-test-hover-contains.66304a8.png)
+
+O Cypress automaticamente viajou de volta no tempo para um instante de quando o comando foi resolvido. 
+Além disso, como o [cy.contains()](https://docs.cypress.io/api/commands/contains) encontra elementos do DOM na página, 
+o Cypress também destaca o elemento e o rola para a visualização (no topo da página).
+
+Agora, se você se lembrar, no final do teste, acabamos em uma URL diferente:
+
+> <https://example.cypress.io/commands/actions>
+
+Mas conforme passamos o mouse sobre o CONTAINS, 
+o Cypress volta para a URL que estava presente quando aquela captura foi feita.
+
+![Primeiro teste de reverter url](https://docs.cypress.io/_nuxt/img/first-test-url-revert.ef02fdb.png)
+
+## Snapshots
+
+Os comandos também são interativos. Vá em frente e clique no comando CLIQUE.
+
+![Primeiro teste de reverter url](https://docs.cypress.io/_nuxt/img/first-test-click-revert.af1b574.png)
+
+Observe que ele é destacado em roxo. Isso fez três coisas dignas de nota ...
+
+1. Snapshots fixadas
+
+    Agora fixamos este instante. Passar o mouse sobre outros comandos não reverterá para eles. 
+    Isso nos dá a chance de inspecionar manualmente o DOM de nosso aplicativo em teste no momento em que a snapshot foi obtida.
+
+2. Evento hitbox
+
+    Como `.click()` é um comando de ação, isso significa que também vemos
+    uma hitbox vermelha nas coordenadas em que o evento ocorreu.
+
+3. Painel do menu da snapshot
+
+    Também existe um novo painel de menu. 
+    Alguns comandos (como comandos de ação) irão tirar vários instantes: antes e depois. 
+    Agora podemos alternar entre eles.
+
+O snapshot anterior é obtido antes do disparo do evento de clique. 
+O snapshot posterior é obtido imediatamente após o evento de clique.
+Embora esse evento de clique tenha feito nosso navegador carregar uma nova página, não é uma transição instantânea. 
+Dependendo da velocidade de carregamento de sua página, você ainda pode ver a mesma página ou 
+uma tela em branco enquanto a página está sendo descarregada e em transição.
+
+Quando um comando causa uma mudança visual imediata em nosso aplicativo,
+alternar entre antes e depois atualizará nosso snapshot. 
+Podemos ver isso em ação clicando no comando TYPE no Log de Comandos.
+Agora, clicar antes nos mostrará a entrada em um estado padrão, mostrando o texto do espaço reservado. 
+Clique depois para nos mostrar a aparência da entrada quando o comando TYPE for concluído.
+
+
+## Erros
+
+[//]: <> (TODO - Adicionar links quando forem traduzidos)
+
+O Cypress imprime várias informações quando ocorre um erro durante um teste.
+
+1. **Nome do erro**: este é o tipo de erro (por exemplo, AssertionError, CypressError)
+
+2. **Mensagem de erro**: geralmente informa o que deu errado. 
+O comprimento pode variar. Alguns são curtos como no exemplo, 
+enquanto outros são longos e podem dizer exatamente como corrigir o erro.
+
+3. **Saiba mais**: algumas mensagens de erro contêm um link Saiba mais que o levará à documentação relevante do Cypress.
+
+4. **Arquivo de quadro de código**: geralmente é a linha superior do rastreamento de pilha e mostra o arquivo, 
+o número da linha e o número da coluna realçado no quadro de código abaixo. 
+Clicar neste link abrirá o arquivo em seu 
+[visualizador de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference) preferido e 
+destacará a linha e a coluna nos editores que o suportam.
+    
+5. **Pedaço de código**: mostra um trecho de código onde ocorreu a falha, com a linha e a coluna relevantes destacadas.
+    
+6. **Exibir rastreamento de pilha**: Clicar aqui alterna a visibilidade do rastreamento de pilha. 
+Os rastreamentos de pilha variam em comprimento. 
+Clicar em um caminho de arquivo azul abrirá o arquivo em seu 
+[visualizador de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference).
+    
+7. **Botão Imprimir no console**: Clique aqui para imprimir o erro completo no console do DevTools. 
+Isso geralmente permitirá que você clique em linhas no rastreamento de pilha e abra arquivos em suas DevTools.
+
+
+![Erro de falha de comando](https://docs.cypress.io/_nuxt/img/command-failure-error.35fd85e.png)
+
+## Página de eventos
+
+Observe que também há um log de aparência engraçada chamado: (PAGE LOAD) seguido por outra entrada para (NEW URL). 
+Nenhum desses foi um comando que emitimos - em vez disso, o próprio Cypress irá desconectar eventos importantes de 
+seu aplicativo quando eles ocorrerem. Observe que eles têm uma aparência diferente (eles são cinza e sem um número).
+
+![Primeiro teste de carregamento de página](https://docs.cypress.io/_nuxt/img/first-test-page-load.d5d8863.png)
+
+O Cypress guarda logs de eventos de página para:
+
+- Solicitações de rede XHR
+- Mudanças de hash de URL
+- Carregamentos de página
+- Envios de formulários
+
+## Saída do console
+
+Além dos Comandos serem interativos, eles também geram informações adicionais de depuração em seu console.
+
+Abra suas Ferramentas de Desenvolvimento e clique em GET para o seletor de classe `.action-email`.
+
+![Primeiro teste de carregamento de página](https://docs.cypress.io/_nuxt/img/first-test-console-output.7b821c6.png)
+
+Podemos ver informações adicionais de saída do Cypress no console:
+
+- Command (que foi emitido)
+- Yielded (o que foi retornado por esse comando)
+- Elements (o número de elementos encontrados)
+- Selector (o argumento que usamos)
+
+Podemos até expandir o que foi retornado e inspecionar cada elemento individual ou até clicar com o botão direito e 
+inspecioná-los no painel Elementos!
+
+## Comandos especiais
+
+Além de ter uma interface de usuário útil, também existem comandos especiais dedicados à tarefa de depuração.
+
+Por exemplo, existe:
+
+- [cy.pause()](https://docs.cypress.io/api/commands/pause)
+- [cy.debug()](https://docs.cypress.io/api/commands/debug)
+
+Vamos adicionar o [cy.pause()](https://docs.cypress.io/api/commands/pause) para o nosso código teste e ver o que acontence.
+
+```javascript
+describe('My First Test', () => {
+  it('clicking "type" shows the right headings', () => {
+    cy.visit('https://example.cypress.io')
+
+    cy.pause()
+
+    cy.contains('type').click()
+
+    // Deve estar em uma nova URL que inclui '/commands/actions'
+    cy.url().should('include', '/commands/actions')
+
+    // Obtenha um campo de entrada, digite e verifique se o valor foi atualizado
+    cy.get('.action-email')
+      .type('fake@email.com')
+      .should('have.value', 'fake@email.com')
+  })
+})
+```
+
+Agora, o Cypress nos fornece uma interface de usuário (similar ao depurador) para avançar em cada comando.
+
+![Primeiro teste pausado](https://docs.cypress.io/_nuxt/img/first-test-paused.88947d0.png)
+
+### Em ação
+
+[Vídeo do primeiro debug](https://docs.cypress.io/_nuxt/videos/first-test-debugging-30fps.77609bf.mp4)
+
+## Próximos passos
+
+[//]: <> (TODO - Adicionar link - autocomplete)
+
+- Inicie [testando sua aplicação](../getting-started/testing-your-app.md).
+- Configure o [autocompletar de código inteligente](https://docs.cypress.io/guides/tooling/IDE-integration#Intelligent-Code-Completion)
+para comandos e asserções do Cypress.
+- Confira a [Cypress Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app) 
+para demonstrações práticas de testes escritos com Cypress, configuração e estratégias em um projeto do mundo real.
+- Pesquise a documentação do Cypress para encontrar rapidamente o que você precisa.
+
+![Campo de busca](https://docs.cypress.io/_nuxt/img/search-box.974f905.png)
+
 [Voltar para o topo](#escrevendo-o-primeiro-teste)
