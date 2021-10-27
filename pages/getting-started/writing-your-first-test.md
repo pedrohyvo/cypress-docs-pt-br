@@ -477,7 +477,7 @@ enquanto outros são longos e podem dizer exatamente como corrigir o erro.
 4. **Arquivo de quadro de código**: geralmente é a linha superior do rastreamento de pilha e mostra o arquivo, 
 o número da linha e o número da coluna realçado no quadro de código abaixo. 
 Clicar neste link abrirá o arquivo em seu 
-[abridor de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference) preferido e destacará a linha e 
+[visualizador de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference) preferido e destacará a linha e 
 a coluna nos editores que o suportam.
     
 5. **Pedaço de código**: mostra um trecho de código onde ocorreu a falha, com a linha e a coluna relevantes destacadas.
@@ -485,7 +485,7 @@ a coluna nos editores que o suportam.
 6. **Exibir rastreamento de pilha**: Clicar aqui alterna a visibilidade do rastreamento de pilha. 
 Os rastreamentos de pilha variam em comprimento. 
 Clicar em um caminho de arquivo azul abrirá o arquivo em seu 
-[abridor de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference).
+[visualizador de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference).
     
 7. **Botão Imprimir no console**: Clique aqui para imprimir o erro completo no console do DevTools. 
 Isso geralmente permitirá que você clique em linhas no rastreamento de pilha e abra arquivos em suas DevTools.
