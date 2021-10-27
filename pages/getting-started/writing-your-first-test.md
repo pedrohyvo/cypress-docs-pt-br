@@ -477,8 +477,8 @@ enquanto outros são longos e podem dizer exatamente como corrigir o erro.
 4. **Arquivo de quadro de código**: geralmente é a linha superior do rastreamento de pilha e mostra o arquivo, 
 o número da linha e o número da coluna realçado no quadro de código abaixo. 
 Clicar neste link abrirá o arquivo em seu 
-[visualizador de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference) preferido e destacará a linha e 
-a coluna nos editores que o suportam.
+[visualizador de arquivos](https://on.cypress.io/IDE-integration#File-Opener-Preference) preferido e 
+destacará a linha e a coluna nos editores que o suportam.
     
 5. **Pedaço de código**: mostra um trecho de código onde ocorreu a falha, com a linha e a coluna relevantes destacadas.
     
