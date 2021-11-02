@@ -1,7 +1,5 @@
 # Integração com o Slack
 
-[//]: <> (TODO - Adicionar links traduzidos Dashboard, status de commit, comentários de merge request e config para gravação)
-
 A integração com o Slack permite que você veja os resultados do teste diretamente no canal de slack do seu time.
 
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/cypress-slack-integration-channel-feed.e077328.png)
@@ -14,6 +12,8 @@ A integração com o Slack permite que você veja os resultados do teste diretam
 > e da sua área de trabalho do Slack.
 
 ### Para instalar a integração com o Slack
+
+[//]: <> (TODO - Adicionar link organizações)
 
 1. Vá para o Dashboard [Organizations page](https://dashboard.cypress.io/organizations) ou abra a troca de organização.
 
