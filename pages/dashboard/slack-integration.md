@@ -1,10 +1,12 @@
 # Integração com o Slack
 
+[//]: <> (TODO - Adicionar links traduzidos Dashboard, status de commit, comentários de merge request e config para gravação)
+
 A integração com o Slack permite que você veja os resultados do teste diretamente no canal de slack do seu time.
 
 ![Docs Cypress](https://docs.cypress.io/_nuxt/img/cypress-slack-integration-channel-feed.e077328.png)
 
-## Instalar o aplicativo Cypress Slack
+## Instalar o app Cypress Slack
 
 > **Requisitos de Propriedade**
 
@@ -163,3 +165,5 @@ mas você poderá instalar a integração com o Slack de novo futuramente.
 2. Dentro da integração com o Slack, clique em **Configure**.
 
 3. Clique **Uninstall Slack Integration** para desinstalar a integração com o Slack.
+
+[Voltar para o topo](#integração-com-o-slack)
