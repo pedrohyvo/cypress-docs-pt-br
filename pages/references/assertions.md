@@ -349,7 +349,7 @@ Asserções negativas podem passar por motivos inesperados. Digamos que queremos
 testar que um aplicativo de lista de tarefas adiciona um novo item à lista após
 digitar a tarefa e pressionar enter.
 
-**Asserções positivas**
+#### Asserções positivas
 
 Ao adicionar um elemento à lista de tarefas e usando uma **asserção positiva**,
 o teste verifica o número específico de itens na lista em nosso aplicativo.
@@ -366,7 +366,7 @@ cy.get('input#new-todo').type('Write tests{enter}');
 cy.get('li.todo').should('have.length', 3);
 ```
 
-**Asserções negativas**
+#### Asserções negativas
 
 Porém, ao usar uma **asserção negativa** no teste abaixo, o teste pode passar
 erroneamente quando o aplicativo se comporta de diversas maneiras inesperadas:
