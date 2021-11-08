@@ -1,5 +1,3 @@
-{::options parse_block_html="true" /}
-
 # O Executor de Testes
 
 ```markdown
