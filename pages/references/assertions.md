@@ -356,7 +356,7 @@ cy.get('#loading').should('not.be.visible');
 ### ⚠️ Falsa aprovação em testes
 
 Asserções negativas podem passar por motivos inesperados. Digamos que queremos
-testar que um aplicativo de lista de tarefas adiciona um novo item à lista após
+testar que uma aplicação de lista de tarefas adiciona um novo item à lista após
 digitar a tarefa e pressionar enter.
 
 #### Asserções positivas
