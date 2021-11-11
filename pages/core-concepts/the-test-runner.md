@@ -27,18 +27,18 @@ executados dentro do bloco de teste, bem como qualquer comando e asserção exec
 ### Abra arquivos na sua IDE
 
 Há alguns locais no Log de Comando que apresentam um link para o arquivo relevante onde o código está localizado.
-Clicar neste link abrirá o seu [abridor de arquivo preferido](../tooling/ide-integration.md#Preferência-do-Abridor-Arquivo).
+Clicar neste link abrirá o seu [visualizador de arquivo preferido](../tooling/ide-integration.md#Preferência-do-Visualizador-de-Arquivo).
 
 ![file-opener](https://docs.cypress.io/_nuxt/img/open-file-in-IDE.f53270c.gif)
 
-### Pairando sobre os Comandos
+### Passando o mouse sobre os Comandos
 
-Cada comando e asserção, quando pairado sobre, restaura a Aplicação em Teste (lado direito do Executor de Testes) para o
-estado que ela estava quando o comando foi executado.
+Cada comando e asserção, quando passado o mouse sobre, restaura a Aplicação em Teste (lado direito do Executor de Testes)
+para o estado que ela estava quando o comando foi executado.
 Isto permite que você possa "viajar no tempo" de volta para estados anteriores da sua aplicação quando está sendo testada.
 
 > Por padrão, o Cypress mantém snapshots e dados de comando de 50 testes para viagem no tempo. Se você está percebendo
-> um consumo extremamente alto de memória no seu navegador, você pode diminiuir o `numTestsKeptInMemory` na sua [configuração](../references/configuration.md#Global)
+> um consumo extremamente alto de memória no seu navegador, você pode diminuir o `numTestsKeptInMemory` na sua [configuração](../references/configuration.md#Global)
 
 ### Clicando nos comandos
 
@@ -61,14 +61,14 @@ a documentação relevante do Cypress;
 
 4. **Arquivo de corpo de código:** normalmente é a linha no topo da pilha de rastreamento e apresenta o arquivo, número
 da linha e o número da coluna que é destacado no quadro abaixo. Clicando neste link abrirá o arquivo no seu 
-[abridor de arquivo preferido](../tooling/ide-integration.md#Preferência-do-Abridor-Arquivo) e destaca a linha e coluna
-nos editores que o suportam;
+[visualizador de arquivo preferido](../tooling/ide-integration.md#Preferência-do-Visualizador-de-Arquivo) e destaca
+a linha e coluna nos editores que o suportam;
 
 5. **Corpo de código:** apresenta um fragmento do código onde a falha ocorreu, destacando a linha e coluna relevantes;
 
 6. **Visualizar pilha de rastreamento:** clicando nisto, alterna a visibilidade da pilha de rastreamento.
 As pilhas de rastreamento variam em extensão. Clicando no caminho do arquivo em azul abrirá o arquivo no
-seu [abridor de arquivo preferido](../tooling/ide-integration.md#Preferência-do-Abridor-Arquivo);
+seu [visualizador de arquivo preferido](../tooling/ide-integration.md#Preferência-do-Visualizador-de-Arquivo);
 
 7. **Botão imprimir no console:** clique nele para imprimir o erro completo na sua *DevTools*.
 Isto, normalmente, permitirá que você clique nas linhas da pilha de rastreamento e abra arquivos na sua *DevTools*.
@@ -185,13 +185,13 @@ a direcionar elementos e previnir que os testes quebrem nas mudanças de CSS ou 
 
 ### Encontrando Seletores
 
-Para abrir a Área de Seletores, clique no botão <img src="./icons/crosshairs.svg" alt="crosshairs icon" width="15rem"> próximo à URL no topo do executor.
+Para abrir a Área de Seletores, clique no botão ![crosshairs-icon](./icons/crosshairs.svg) próximo à URL no topo do executor.
 Paire sobre os elementos na sua aplicação para visualizar um seletor único para o elemento na dica de contexto.
 
 ![selector-playground](https://docs.cypress.io/_nuxt/img/open-selector-playground.0d6d17f.gif)
 
-Clique no elemento e seu seletor aparecerá no topo. A partir daí, você pode copiar para sua área de transferência <img src="./icons/copy.svg" alt="copy icon" width="15rem">
-ou imprimir no console <img src="./icons/terminal.svg" alt="terminal icon" width="15rem">.
+Clique no elemento e seu seletor aparecerá no topo.
+A partir daí, você pode copiar para sua área de transferência ![copy-icon](./icons/copy.svg) ou imprimir no console ![terminal-icon](./icons/terminal.svg).
 
 ![copy-in-selector](https://docs.cypress.io/_nuxt/img/copy-selector-in-selector-playground.fe0eeb0.gif)
 
@@ -242,3 +242,4 @@ Existe atalhos do teclado para executar com ações comuns com mais rapidez de d
 | [3.5.0](https://docs.cypress.io/guides/references/changelog#3-5-0) | Adicionado atalhos de teclado para o Executor de Testes |
 | [1.3.0](https://docs.cypress.io/guides/references/changelog#1-3-0) | Adicionada a Área de Seletores |
 
+[Voltar ao topo](#o-executor-de-testes)

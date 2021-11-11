@@ -38,6 +38,7 @@
     - [Escrevendo e Organizando Testes](pages/core-concepts/writing-and-organizing-tests.md)
     - [Interagindo com Elementos](pages/core-concepts/interacting-with-elements.md)
     - [Variáveis e Apelidos](pages/core-concepts/variables-and-aliases.md)
+    - [O Executor de Testes](pages/core-concepts/the-test-runner.md)
     - [Cypress Studio](pages/core-concepts/cypress-studio.md)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
