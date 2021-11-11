@@ -132,6 +132,8 @@ a lista completa de asserções Chai disponíveis
 
 Esses encadeadores estão disponíveis ao assertar sobre um objeto do DOM.
 
+[//]: <> (TODO - Adicionar links - cy.get, cy.contains)
+
 Normalmente, você usará esses encadeadores depois de usar os comandos do DOM
 como: [`cy.get()`](https://docs.cypress.io/api/commands/get),
 [`cy.contains()`](https://docs.cypress.io/api/commands/contains), etc.
@@ -163,6 +165,8 @@ como: [`cy.get()`](https://docs.cypress.io/api/commands/get),
 ## Sinon-Chai
 
 [https://github.com/domenic/sinon-chai](https://github.com/domenic/sinon-chai)
+
+[//]: <> (TODO - Adicionar links - stub, spy)
 
 Esses encadeadores são usados em asserções com
 [`cy.stub()`](https://docs.cypress.io/api/commands/stub) e
@@ -203,9 +207,13 @@ Você pode:
 - Instalar qualquer biblioteca `chai` existente com `npm` e importar em seu
   arquivo de teste ou de suporte.
 
-> [Confira nossa receita de exemplo estendendo chai com novas asserções.](https://docs.cypress.io/examples/examples/recipes#Fundamentals)
+[//]: <> (TODO - Adicionar link - exemplos)
+
+> [Confira nosso exemplo estendendo chai com novas asserções.](https://docs.cypress.io/examples/examples/recipes#Fundamentals)
 
 ## Asserções Comuns
+
+[//]: <> (TODO - Adicionar links - should, retry)
 
 Aqui está uma lista de asserções de elementos comuns. Observe como usamos essas
 asserções (listadas acima) com
@@ -252,6 +260,8 @@ cy.get('#greeting')
 // correspondendo com a expressão regular fornecida
 cy.contains('#a-greeting', /^Hello/);
 ```
+
+[//]: <> (TODO - Adicionar link - faq)
 
 **Dica:** leia sobre asserções em um texto com entidades de espaçamentos
 ininterruptos em
@@ -408,6 +418,8 @@ Para obter mais exemplos, leia a postagem do blog
 
 ## Should callback
 
+[//]: <> (TODO - Adicionar links - retry, should)
+
 Se as asserções construídas não forem suficientes, você pode escrever sua
 própria função de asserção e passá-la como um callback para o comando
 `.should()`. O Cypress irá automaticamente fazer uma
@@ -468,6 +480,10 @@ cy.get('#loading').should('not.be.visible');
 
 ## Veja também
 
+[//]: <> (TODO - Adicionar link - introduction-to-cypress)
+
 - [Guia: Introdução ao Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress#Assertions)
 - [Asserções cypress-example-kitchensink](https://example.cypress.io/commands/assertions)
 - Postagem do blog [Cypress should callback](https://glebbahmutov.com/blog/cypress-should-callback/)
+
+[Voltar para o topo](#Asserções)
