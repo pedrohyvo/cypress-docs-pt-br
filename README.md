@@ -107,7 +107,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/wellmalta"><img src="https://avatars.githubusercontent.com/u/23343613?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Welliton Malta</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wellmalta" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Deivisom1979"><img src="https://avatars.githubusercontent.com/u/91226920?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Deivisom Oliveira</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Deivisom1979" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Lubambo"><img src="https://avatars.githubusercontent.com/u/29545656?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Felipe Lubambo</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Lubambo" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/cintiafumi"><img src="https://avatars.githubusercontent.com/u/34029172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cíntia Fumi</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=cintiafumi" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/cintiafumi"><img src="https://avatars.githubusercontent.com/u/34029172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cíntia Fumi</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=cintiafumi" title="Code">💻</a></td>  
   </tr>
 </table>
 
