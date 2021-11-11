@@ -51,6 +51,8 @@
     - [Módulo API](pages/guides/module-api.md)
 - Tooling
     - [TypeScript](pages/tooling/typescript.md)
+- References
+    - [Assertions](pages/references/assertions.md)
 
 ---
 
