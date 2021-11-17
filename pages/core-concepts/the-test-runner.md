@@ -185,13 +185,13 @@ a direcionar elementos e previnir que os testes quebrem nas mudanças de CSS ou 
 
 ### Encontrando Seletores
 
-Para abrir a Área de Seletores, clique no botão ![crosshairs-icon](./icons/crosshairs.svg) próximo à URL no topo do executor.
+Para abrir a Área de Seletores, clique no botão ![crosshairs-icon](../../icons/crosshairs.svg) próximo à URL no topo do executor.
 Paire sobre os elementos na sua aplicação para visualizar um seletor único para o elemento na dica de contexto.
 
 ![selector-playground](https://docs.cypress.io/_nuxt/img/open-selector-playground.0d6d17f.gif)
 
 Clique no elemento e seu seletor aparecerá no topo.
-A partir daí, você pode copiar para sua área de transferência ![copy-icon](./icons/copy.svg) ou imprimir no console ![terminal-icon](./icons/terminal.svg).
+A partir daí, você pode copiar para sua área de transferência ![copy-icon](../../icons/copy.svg) ou imprimir no console ![terminal-icon](../../icons/terminal.svg).
 
 ![copy-in-selector](https://docs.cypress.io/_nuxt/img/copy-selector-in-selector-playground.fe0eeb0.gif)
 
