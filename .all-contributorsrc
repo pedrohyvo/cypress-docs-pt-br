@@ -122,6 +122,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Lubambo",
+      "name": "Felipe Lubambo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29545656?v=4",
+      "profile": "https://github.com/Lubambo",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "cintiafumi",
+      "name": "Cíntia Fumi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34029172?v=4",
+      "profile": "https://github.com/cintiafumi",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
