@@ -578,7 +578,9 @@ Imprime informações sobre o Cypress e o ambiente atual, como:
 
 - Uma lista de navegadores Cypress detectados na máquina.
 - Quaisquer variáveis de ambiente que controlam a [configuração do proxy](https://docs.cypress.io/guides/references/proxy-configuration).
-- Quaisquer variáveis de ambiente que começam com o prefixo `CYPRESS` (com variáveis confidenciais, como [chave de registro](https://github.com/pedrohyvo/cypress-docs-pt-br/blob/master/pages/dashboard/projects.md#criar-uma-nova-chave-de-registro) mascarada para segurança).
+- Quaisquer variáveis de ambiente que começam com o prefixo `CYPRESS` (com variáveis confidenciais, como [chave de
+ registro](https://github.com/pedrohyvo/cypress-docs-pt-br/blob/master/pages/dashboard/projects.md#criar-uma-nova-chave-de-registro)
+ mascarada para segurança).
 - O local onde os dados de tempo de execução são armazenados.
 - O local onde o binário do Cypress está armazenado em cache.
 - Informações do sistema operacional.
