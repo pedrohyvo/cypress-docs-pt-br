@@ -674,7 +674,7 @@ em sua máquina, globais ou não.
 ### `cypress cache path`
 
 Imprime o `path` para a pasta de cache do Cypress. Você pode alterar o caminho onde o cache do Cypress está localizado 
-seguindo [estas instruções](https://docs.cypress.io/guides/getting-started/installing-cypress#Binary-cache).
+seguindo [estas instruções](https://github.com/pedrohyvo/cypress-docs-pt-br/blob/master/pages/getting-started/installing-cypress.md#cache-bin%C3%A1rio).
 
 ```bash
 cypress cache path
