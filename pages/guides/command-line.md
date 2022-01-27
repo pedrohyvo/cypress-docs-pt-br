@@ -562,7 +562,7 @@ cypress open --global
 cypress open --port 8080
 ```
 
-## cypress open --project \ <project-path>
+## cypress open --project \<project-path>
 
 Para ver isso em ação, configuramos um [repositório de exemplo para demonstração](https://github.com/cypress-io/cypress-test-nested-projects).
 
@@ -578,12 +578,11 @@ Imprime informações sobre o Cypress e o ambiente atual, como:
 
 - Uma lista de navegadores Cypress detectados na máquina.
 - Quaisquer variáveis de ambiente que controlam a [configuração do proxy](https://docs.cypress.io/guides/references/proxy-configuration).
-- Quaisquer variáveis de ambiente que começam com o prefixo `CYPRESS` (com variáveis confidenciais, como [chave de 
-registro](https://docs.cypress.io/guides/dashboard/projects#Record-keys) mascarada para segurança).
+- Quaisquer variáveis de ambiente que começam com o prefixo `CYPRESS` (com variáveis confidenciais, como [chave de registro](https://github.com/pedrohyvo/cypress-docs-pt-br/blob/master/pages/dashboard/projects.md#criar-uma-nova-chave-de-registro) mascarada para segurança).
 - O local onde os dados de tempo de execução são armazenados.
 - O local onde o binário do Cypress está armazenado em cache.
 - Informações do sistema operacional.
-Memória do sistema incluindo espaço livre.
+- Memória do sistema incluindo espaço livre.
 
 ```shell
 cypress info
