@@ -129,6 +129,8 @@ Você também pode escolher um navegador, fornecendo um caminho:
 cypress run --browser /usr/bin/chromium
 ```
 
+[//]: <> (TODO - Adicionar link - solução de problemas inicinado navegadores)
+
 [Problemas com a detecção do navegador? Confira nosso guia de solução de problemas](https://docs.cypress.io/guides/references/troubleshooting#Launching-browsers)
 
 ### cypress run --ci-build-id \<id>
@@ -142,6 +144,8 @@ um único "build" ou "run".
 ```bash
 cypress run --ci-build-id BUILD_NUMBER
 ```
+
+[//]: <> (TODO - Adicionar link - paralelização)
 
 Válido apenas ao fornecer um sinalizador `--group` ou `--parallel`. Leia nossa documentação de 
 [paralelização](https://docs.cypress.io/guides/guides/parallelization) para saber mais.
@@ -159,6 +163,8 @@ cypress run --config pageLoadTimeout=100000,watchForFileChanges=false
 
 > **Exemplo do mundo real**
 
+[//]: <> (TODO - Adicionar link - configuração de tamanho das janelas)
+
 > O Cypress [Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app) usa o sinalizador `--config` 
 para especificar facilmente o [tamanho das janelas](https://docs.cypress.io/guides/references/configuration#Viewport) 
 de visualização para testes responsivos localmente 
@@ -171,6 +177,8 @@ para executar o Cypress na janela de visualização móvel.
 para executar suítes de teste na janela de visualização móvel.
 
 ### cypress run --config-file \<config-file>`
+
+[//]: <> (TODO - Adicionar link - configuração)
 
 Você pode especificar um caminho para um arquivo JSON onde os valores de 
 [configuração](https://docs.cypress.io/guides/references/configuration) são definidos. O padrão é `cypress.json`.
@@ -187,13 +195,15 @@ cypress run --config-file false
 
 ### cypress run --env \<env>
 
-Defina as [variáveis ​​de ambiente](https://docs.cypress.io/guides/guides/environment-variables) do Cypress.
+[//]: <> (TODO - Adicionar link - variáveis de ambiente)
+
+Defina as [variáveis de ambiente](https://docs.cypress.io/guides/guides/environment-variables) do Cypress.
 
 ```bash
 cypress run --env host=api.dev.local
 ```
 
-Passe diversas variáveis ​​usando vírgulas e sem espaços. Os números são convertidos automaticamente para strings.
+Passe diversas variáveis usando vírgulas e sem espaços. Os números são convertidos automaticamente para strings.
 
 ```bash
 cypress open --env host=api.dev.local,port=4222
@@ -226,6 +236,8 @@ cypress run --group user-tests --spec 'cypress/integration/user/**/*'
 
 Especificar `--ci-build-id` também pode ser necessário.
 
+[//]: <> (TODO - Adicionar link - paralelização de agrupar execuções de teste)
+
 [Leia mais sobre agrupamento.](https://docs.cypress.io/guides/guides/parallelization#Grouping-test-runs)
 
 ### cypress run --headed
@@ -252,11 +264,15 @@ cypress run --headed --no-exit
 
 ### cypress run --parallel
 
+[//]: <> (TODO - Adicionar link - paralelização)
+
 Execute especificações gravadas em [paralelo](https://docs.cypress.io/guides/guides/parallelization) em várias máquinas.
 
 ```bash
 cypress run --record --parallel
 ```
+
+[//]: <> (TODO - Adicionar link - paralelização de agrupar execuções de teste)
 
 Além disso, você pode passar um sinalizador `--group` para que ele apareça como um 
 [grupo](https://docs.cypress.io/guides/guides/parallelization#Grouping-test-runs) nomeado.
@@ -264,6 +280,8 @@ Além disso, você pode passar um sinalizador `--group` para que ele apareça co
 ```bash
 cypress run --record --parallel --group e2e-staging-specs
 ```
+
+[//]: <> (TODO - Adicionar link - paralelização)
 
 Leia nossa documentação de [paralelização](https://docs.cypress.io/guides/guides/parallelization) para saber mais.
 
@@ -292,6 +310,8 @@ cypress run --record --key <record_key>
 
 Se você definir a **chave de registro** como a variável de ambiente `CYPRESS_RECORD_KEY`, poderá omitir o sinalizador `--key`.
 
+[//]: <> (TODO - Adicionar link - integração contínua)
+
 Você normalmente definiria essa variável de ambiente ao executar em [integração contínua](https://docs.cypress.io/guides/continuous-integration/introduction).
 
 ```bash
@@ -304,7 +324,7 @@ Agora você pode omitir o sinalizador `--key`.
 cypress run --record
 ```
 
-Você pode ler mais sobre a [gravação de execuções aqui](https://docs.cypress.io/guides/dashboard/projects#Setup).
+Você pode ler mais sobre a [gravação de execuções aqui](https://github.com/pedrohyvo/cypress-docs-pt-br/blob/master/pages/dashboard/projects.md#configura%C3%A7%C3%A3o).
 
 ### cypress run --reporter \<reporter>
 
@@ -471,9 +491,13 @@ Se encontrado, o navegador especificado será adicionado à lista de navegadores
 Atualmente, apenas navegadores da família Chrome (incluindo o novo Microsoft Edge e Brave baseado em Chromium) 
 e Firefox são suportados.
 
+[//]: <> (TODO - Adicionar link - solução de problemas inicinado navegadores)
+
 [Está tendo problemas para iniciar um navegador? Confira nosso guia de solução de problemas](https://docs.cypress.io/guides/references/troubleshooting#Launching-browsers)
 
 ### cypress open --config \<config>
+
+[//]: <> (TODO - Adicionar link - configuração)
 
 Defina os valores de [configuração](https://docs.cypress.io/guides/references/configuration). 
 Separe vários valores com uma vírgula. Os valores definidos aqui 
@@ -484,6 +508,8 @@ cypress open --config pageLoadTimeout=100000,watchForFileChanges=false
 ```
 
 ### cypress open --config-file \<config-file>
+
+[//]: <> (TODO - Adicionar link - configuração)
 
 Você pode especificar um caminho para um arquivo JSON onde os valores de 
 [configuração](https://docs.cypress.io/guides/references/configuration) são definidos. O padrão é `cypress.json`.
@@ -500,13 +526,15 @@ cypress open --config-file false
 
 ### cypress open --env \<env>
 
-Defina as [variáveis ​​de ambiente](https://docs.cypress.io/guides/guides/environment-variables) do Cypress.
+[//]: <> (TODO - Adicionar link - variáveis de ambiente)
+
+Defina as [variáveis de ambiente](https://docs.cypress.io/guides/guides/environment-variables) do Cypress.
 
 ```bash
 cypress open --env host=api.dev.local
 ```
 
-Passe várias variáveis ​​usando vírgulas e sem espaços. Os números são convertidos automaticamente para strings.
+Passe várias variáveis usando vírgulas e sem espaços. Os números são convertidos automaticamente para strings.
 
 ```bash
 cypress open --env host=api.dev.local,port=4222
@@ -545,10 +573,12 @@ cypress open --project ./some/nested/folder
 ### `cypress info`
 
 Imprime informações sobre o Cypress e o ambiente atual, como:
+  
+  [//]: <> (TODO - Adicionar link - configuração do proxy)
 
 - Uma lista de navegadores Cypress detectados na máquina.
-- Quaisquer variáveis ​​de ambiente que controlam a [configuração do proxy](https://docs.cypress.io/guides/references/proxy-configuration).
-- Quaisquer variáveis ​​de ambiente que começam com o prefixo `CYPRESS` (com variáveis ​​confidenciais, como [chave de 
+- Quaisquer variáveis de ambiente que controlam a [configuração do proxy](https://docs.cypress.io/guides/references/proxy-configuration).
+- Quaisquer variáveis de ambiente que começam com o prefixo `CYPRESS` (com variáveis confidenciais, como [chave de 
 registro](https://docs.cypress.io/guides/dashboard/projects#Record-keys) mascarada para segurança).
 - O local onde os dados de tempo de execução são armazenados.
 - O local onde o binário do Cypress está armazenado em cache.
@@ -593,6 +623,8 @@ Cypress Version: 4.1.0
 System Platform: darwin (19.2.0)
 System Memory: 17.2 GB free 670 MB
 ```
+  
+[//]: <> (TODO - Adicionar link - variável de ambiente DEBUG)
 
 **Dica:** defina [a variável de ambiente DEBUG](https://docs.cypress.io/guides/references/troubleshooting#Print-DEBUG-logs)
 como `cypress:launcher`ao executar `cypress info` para solucionar problemas de detecção do navegador.
