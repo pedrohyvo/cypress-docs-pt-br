@@ -46,6 +46,7 @@
     - [Integração com o Github](pages/dashboard/github-integration.md)
     - [Integração com o Gitlab](pages/dashboard/gitlab-integration.md)
 - Guias
+    - [Linha de comando](pages/guides/command-line.md)
     - [Debugando](pages/guides/debugging.md)
     - [Novas tentativas de teste](pages/guides/test-retries.md)
     - [Módulo API](pages/guides/module-api.md)
