@@ -4,7 +4,7 @@
 O que você aprenderá
 - Benefícios de usar o Cypress em aplicativos Angular
 - Como o Cypress pode criar testes e2e confiáveis para aplicativos Angular
-- Como migrar testes de transferidor para Cypress
+- Como migrar testes com Protractor para Cypress
 ```
 
 ## Introdução
