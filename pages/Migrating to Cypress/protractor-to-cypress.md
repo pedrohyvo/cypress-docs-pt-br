@@ -1,8 +1,8 @@
-# Migrating from Protractor to Cypress
+# Migrando do Protractor para o Cypress
 
 ```markdown
 O que você aprenderá
-- Benefícios de usar Cypress em aplicativos Angular
+- Benefícios de usar o Cypress em aplicativos Angular
 - Como o Cypress pode criar testes e2e confiáveis para aplicativos Angular
 - Como migrar testes de transferidor para Cypress
 ```
@@ -11,12 +11,12 @@ O que você aprenderá
 
 O Protractor tem sido uma ferramenta de teste ponta a ponta popular para aplicativos Angular e AngularJS. 
 No entanto, o Protractor não está mais incluído em novos projetos Angular a partir do Angular 12.
- Nós abordamos você aqui com este guia de migração para ajudar você e sua equipe na transição do Protractor para o Cypress.
+Nós abordamos você aqui com este guia de migração para ajudar você e sua equipe na transição do Protractor para o Cypress.
 
- Se você notar alguma imprecisão neste guia ou sentir que algo foi deturpado, inicie uma discussão aqui[https://github.com/cypress-io/cypress/discussions/new]
+Se você notar alguma imprecisão neste guia ou sentir que algo foi deturpado, inicie uma discussão aqui[https://github.com/cypress-io/cypress/discussions/new]
 
 Para começar, vamos dar uma olhada em um exemplo de código rápido para ver como o Cypress acessível está vindo do Protractor.
- Neste cenário, temos um teste para validar se um usuário pode se inscrever para uma nova conta.
+Neste cenário, temos um teste para validar se um usuário pode se inscrever para uma nova conta.
 
 Antes: **Protractor**
 
@@ -46,7 +46,6 @@ describe('Testes de autorização', () => {
 
 ## Benefícios do uso de Cypress
 
-
 Como muitos desenvolvedores podem atestar, o teste de ponta a ponta é uma daquelas coisas que eles sabem que devem fazer,
 mas geralmente não fazem. Ou, se eles executam testes, eles costumam ser instáveis e muito caros, devido ao tempo que  podem
 levar para serem executados. E embora muitas vezes existam ideais de cobertura de código completa, as realidades dos negócios
@@ -55,9 +54,7 @@ porque não são confiáveis.
  O Cypress não apenas garante que seus testes serão confiáveis, mas também fornece aos desenvolvedores ferramentas que tornam o 
  teste do e2e um recurso para o desenvolvimento, em vez de um obstáculo.
 
-
 ## Interaja com seus testes em um navegador
-
 
 Quando o Protractor executa testes, a automação do navegador inicia uma instância do navegador e geralmente executa os testes
 muito rápido para o olho humano. Sem configuração adicional, isso geralmente leva a uma dependência de mensagens de terminal
@@ -79,7 +76,6 @@ escrever testes que verificam a lógica do seu aplicativo.
 
 ## Loops de feedback mais rápidos
 
-
 Quando se trata de seus testes de ponta a ponta, ser capaz de ver seus testes enquanto eles são executados é fundamental
 para permitir que você itere com segurança mais rápido. Com o Cypress, seus testes são executados automaticamente após
 o salvamento do arquivo à medida que você faz a iteração neles.
@@ -89,7 +85,6 @@ mais rápido com confiança.
 
 ## Viagem no tempo por meio de testes
 
-
 O Cypress Test Runner oferece recursos de viagem no tempo para ver exatamente como seu aplicativo estava se comportando
 em qualquer ponto durante a execução do teste. O Cypress tira instantâneos DOM de seu aplicativo em teste enquanto o Test
 Runner executa os comandos e asserções em seus testes. Isso permite que você visualize a IU real de seu aplicativo a qualquer
@@ -98,16 +93,9 @@ o Cypress agiu e como seu aplicativo respondeu ao comportamento do usuário real
 
 ## Ganhe visibilidade no modo sem cabeça com capturas de tela e vídeos
 
-Running browser tests in headless mode (locally or in continuous integration pipeline) can be a bit of a black-box without
-much visibility. When tests fail, error messages by themselves can often fall short in painting the picture of why something
-failed, especially if assertions were not explicit enough or too indirect. To understand the reason behind test failures
-it also helps to see the state of the app UI at the point of failure or see the events that led up to the failure.
-Cypress assists with debugging in headless mode, by automatically taking a screenshot of the app UI and command log at
-the exact point of test failure. To help see everything that happened prior to test failure, Cypress provides a video
-recording (as an MP4 file) of a full test spec run by default.
+Executar testes de navegador no modo headless (localmente ou em pipeline de integração contínua) pode ser uma caixa preta sem muita visibilidade. Quando os testes falham, as mensagens de erro por si só podem muitas vezes pode ficar aquém em pintar na imagem de por que algo falhou, especialmente se as afirmações não foram suficientemente explícitas ou muito indiretas. Para entender o motivo por trás das falhas de teste também ajuda a ver o estado da interface do usuário do aplicativo no ponto de falha ou ver os eventos que levaram à falha. O Cypress auxilia na depuração no modo headless, tirando automaticamente uma captura de tela da interface do usuário do aplicativo e do log de comandos em o ponto exato da falha do teste. Para ajudar a ver tudo o que aconteceu antes da falha do teste, o Cypress fornece um vídeo gravação (como um arquivo MP4) de uma especificação de teste completa executada por padrão.
 
 ## Novas tentativas de teste
-
 
 Os testes de ponta a ponta podem ser complicados porque os aplicativos da web modernos também são complexos. Você pode
 descobrir que alguns recursos de seu aplicativo da web são difíceis de testar ou os testes falham esporadicamente.
@@ -193,22 +181,22 @@ uma página. Em vez de dividir a busca de elemento em vários métodos que você
 com cy.get ao usar seletores CSS ou o atributo de dados preferido
 
 Antes: **Protractor**
-// Get an element
+// Obter um elemento
 element(by.tagName('h1'))
 
-/// Get an element using a CSS selector.
+// Obter um elemento usando o seletor CSS
 element(by.css('.my-class'))
 
-// Get an element with the given id.
+// Obter um elemento com o id fornecido.
 element(by.id('my-id'))
 
-// Get an element using an input name selector.
+// Obtenha um elemento usando um seletor de nome de entrada
 element(by.name('field-name'))
 
-//Get an element by the text it contains within a certain CSS selector
+// Obter um elemento pelo texto que ele contém em um determinado seletor CSS
 element(by.cssContainingText('.my-class', 'text'))
 
-//Get the first element containing a specific text (only for link elements)
+// Obtenha o primeiro elemento contendo um texto específico (somente para elementos de link)
 element(by.linkText('text')
 
 Depois: **Cypress**
