@@ -1,7 +1,7 @@
 # cypress-docs-pt-br
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <div align="center">
@@ -92,28 +92,31 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/pedrohyvo/"><img src="https://avatars.githubusercontent.com/u/15241188?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pedro Hyvo</b></sub></a><br /><a href="#infra-pedrohyvo" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=pedrohyvo" title="Code">💻</a></td>
-    <td align="center"><a href="https://walmyr.dev"><img src="https://avatars.githubusercontent.com/u/2768415?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Walmyr</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wlsf82" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/lucastfa-toptal"><img src="https://avatars.githubusercontent.com/u/69941309?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Avila</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=lucastfa-toptal" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/edmundobiglia"><img src="https://avatars.githubusercontent.com/u/53831919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edmundo Biglia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=edmundobiglia" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/murillowelsi/"><img src="https://avatars.githubusercontent.com/u/25549745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Murillo Welsi de Souza Pereira</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=murillowelsi" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/rafaabc"><img src="https://avatars.githubusercontent.com/u/42503318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rafaabc</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=rafaabc" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/driuzzo"><img src="https://avatars.githubusercontent.com/u/16465816?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adriano Driuzzo</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=driuzzo" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="http://youtube.com/c/Agilizei"><img src="https://avatars.githubusercontent.com/u/11819736?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samuel Lucas</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=samlucax" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/mhanelia"><img src="https://avatars.githubusercontent.com/u/8427316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mhanelia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=mhanelia" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/fsreibnitz"><img src="https://avatars.githubusercontent.com/u/13247837?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fabio Reibnitz</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=fsreibnitz" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/willian-gaudencio-de-rezende-38864312b/"><img src="https://avatars.githubusercontent.com/u/26700193?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Willian Rezende</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Wil-g2" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/wellmalta"><img src="https://avatars.githubusercontent.com/u/23343613?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Welliton Malta</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wellmalta" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Deivisom1979"><img src="https://avatars.githubusercontent.com/u/91226920?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Deivisom Oliveira</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Deivisom1979" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Lubambo"><img src="https://avatars.githubusercontent.com/u/29545656?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Felipe Lubambo</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Lubambo" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/cintiafumi"><img src="https://avatars.githubusercontent.com/u/34029172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cíntia Fumi</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=cintiafumi" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/KarineJappe"><img src="https://avatars.githubusercontent.com/u/37879075?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karine Jappe</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=KarineJappe" title="Code">💻</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/pedrohyvo/"><img src="https://avatars.githubusercontent.com/u/15241188?v=4?s=100" width="100px;" alt="Pedro Hyvo"/><br /><sub><b>Pedro Hyvo</b></sub></a><br /><a href="#infra-pedrohyvo" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=pedrohyvo" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://walmyr.dev"><img src="https://avatars.githubusercontent.com/u/2768415?v=4?s=100" width="100px;" alt="Walmyr"/><br /><sub><b>Walmyr</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wlsf82" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lucastfa-toptal"><img src="https://avatars.githubusercontent.com/u/69941309?v=4?s=100" width="100px;" alt="Lucas Avila"/><br /><sub><b>Lucas Avila</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=lucastfa-toptal" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/edmundobiglia"><img src="https://avatars.githubusercontent.com/u/53831919?v=4?s=100" width="100px;" alt="Edmundo Biglia"/><br /><sub><b>Edmundo Biglia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=edmundobiglia" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/murillowelsi/"><img src="https://avatars.githubusercontent.com/u/25549745?v=4?s=100" width="100px;" alt="Murillo Welsi de Souza Pereira"/><br /><sub><b>Murillo Welsi de Souza Pereira</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=murillowelsi" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rafaabc"><img src="https://avatars.githubusercontent.com/u/42503318?v=4?s=100" width="100px;" alt="rafaabc"/><br /><sub><b>rafaabc</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=rafaabc" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/driuzzo"><img src="https://avatars.githubusercontent.com/u/16465816?v=4?s=100" width="100px;" alt="Adriano Driuzzo"/><br /><sub><b>Adriano Driuzzo</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=driuzzo" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://youtube.com/c/Agilizei"><img src="https://avatars.githubusercontent.com/u/11819736?v=4?s=100" width="100px;" alt="Samuel Lucas"/><br /><sub><b>Samuel Lucas</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=samlucax" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mhanelia"><img src="https://avatars.githubusercontent.com/u/8427316?v=4?s=100" width="100px;" alt="mhanelia"/><br /><sub><b>mhanelia</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=mhanelia" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fsreibnitz"><img src="https://avatars.githubusercontent.com/u/13247837?v=4?s=100" width="100px;" alt="Fabio Reibnitz"/><br /><sub><b>Fabio Reibnitz</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=fsreibnitz" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/willian-gaudencio-de-rezende-38864312b/"><img src="https://avatars.githubusercontent.com/u/26700193?v=4?s=100" width="100px;" alt="Willian Rezende"/><br /><sub><b>Willian Rezende</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Wil-g2" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/wellmalta"><img src="https://avatars.githubusercontent.com/u/23343613?v=4?s=100" width="100px;" alt="Welliton Malta"/><br /><sub><b>Welliton Malta</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=wellmalta" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Deivisom1979"><img src="https://avatars.githubusercontent.com/u/91226920?v=4?s=100" width="100px;" alt="Deivisom Oliveira"/><br /><sub><b>Deivisom Oliveira</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Deivisom1979" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lubambo"><img src="https://avatars.githubusercontent.com/u/29545656?v=4?s=100" width="100px;" alt="Felipe Lubambo"/><br /><sub><b>Felipe Lubambo</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=Lubambo" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cintiafumi"><img src="https://avatars.githubusercontent.com/u/34029172?v=4?s=100" width="100px;" alt="Cíntia Fumi"/><br /><sub><b>Cíntia Fumi</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=cintiafumi" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/KarineJappe"><img src="https://avatars.githubusercontent.com/u/37879075?v=4?s=100" width="100px;" alt="Karine Jappe"/><br /><sub><b>Karine Jappe</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=KarineJappe" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/alineborak"><img src="https://avatars.githubusercontent.com/u/36476341?v=4?s=100" width="100px;" alt="Aline"/><br /><sub><b>Aline</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=alineborak" title="Code">💻</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
