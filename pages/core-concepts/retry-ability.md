@@ -126,7 +126,7 @@ asserção encontrada `should('have.length', 2)` passar, mas a segunda asserçã
 
 ## Asserções integradas
 
-Freqüentemente, um comando Cypress possui asserções integradas que farão com que as consultas anteriores sejam repetidas.
+Frequentemente, um comando Cypress possui asserções integradas que farão com que as consultas anteriores sejam repetidas.
 Por exemplo, a consulta `.eq()` será repetida mesmo sem nenhuma asserção anexada até encontrar um elemento com o índice fornecido.
 
 ```JS
