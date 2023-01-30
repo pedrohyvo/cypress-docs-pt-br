@@ -112,6 +112,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/cintiafumi"><img src="https://avatars.githubusercontent.com/u/34029172?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cíntia Fumi</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=cintiafumi" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/KarineJappe"><img src="https://avatars.githubusercontent.com/u/37879075?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karine Jappe</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=KarineJappe" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/alineborak"><img src="https://avatars.githubusercontent.com/u/36476341?v=4" width="100px;" alt=""/><br /><sub><b>Aline Bora</b></sub></a><br /><a href="https://github.com/pedrohyvo/cypress-docs-pt-br/commits?author=alineborak" title="Code">💻</a></td>
   </tr>
 </table>
 
