@@ -40,6 +40,7 @@
     - [Variáveis e Apelidos](pages/core-concepts/variables-and-aliases.md)
     - [O Executor de Testes](pages/core-concepts/the-test-runner.md)
     - [Cypress Studio](pages/core-concepts/cypress-studio.md)
+    - [Retry Ability](https://docs.cypress.io/guides/core-concepts/retry-ability)
 - Dashboard
     - [Introdução](pages/dashboard/introduction.md)
     - [Projetos](pages/dashboard/projects.md)
