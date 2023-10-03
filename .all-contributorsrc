@@ -149,6 +149,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "alineborak",
+      "name": "Aline",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36476341?v=4",
+      "profile": "https://github.com/alineborak",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -156,5 +165,6 @@
   "projectOwner": "pedrohyvo",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
