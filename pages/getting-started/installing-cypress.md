@@ -82,7 +82,7 @@ para garantir que o cypress seja instalado no diretório correto.
 
 [Vídeo de exemplo.](https://docs.cypress.io/img/snippets/installing-cli.mp4)
 
-> Note que o pacote npm do cypress é um _wrapper_ que envolve o binário
+> Note que o pacote npm do cypress é um *wrapper* que envolve o binário
 do Cypress. A versão do pacote npm determina qual versão do binário
 será baixado. A partir da versão 3.0, o binário é baixado como um diretório
 de cache global para ser utilizado entre os projetos.
@@ -216,7 +216,7 @@ npm run cypress:open
 
 … e o Cypress irá abrir direto para você. 
 
-## Ferramentas CLI (_Command Line Interface_)
+## Ferramentas CLI (*Command Line Interface*)
 
 Instalando Cypress pela `npm` você também pode acessar vários comandos CLI.
 
