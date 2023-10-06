@@ -189,4 +189,4 @@ module.exports = (on, config) => {
 
 - [Integração do IDE](https://docs.cypress.io/guides/tooling/IDE-integration.html)
 
-[Voltar para o topo](#TypeScript)
+[Voltar para o topo](#typescript)

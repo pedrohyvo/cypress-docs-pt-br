@@ -1,7 +1,7 @@
 # Asserções
 
-O Cypress empacota a biblioteca popular de asserções [Chai](#Chai), assim como
-extensões úteis para [Sinon](#Sinon-Chai) e [jQuery](#Chai-jQuery), trazendo
+O Cypress empacota a biblioteca popular de asserções [Chai](#chai), assim como
+extensões úteis para [Sinon](#sinon-chai) e [jQuery](#chai-jquery), trazendo
 dezenas de asserções poderosas gratuitamente.
 
 > **Novo no Cypress?**

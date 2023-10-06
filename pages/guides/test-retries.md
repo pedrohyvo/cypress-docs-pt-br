@@ -328,4 +328,4 @@ it('does something differently on retry', { retries: 3 }, () => {
 })
 ````
 
-[Voltar para o topo](#Novas-tentativas-de-teste)
+[Voltar para o topo](#novas-tentativas-de-teste)

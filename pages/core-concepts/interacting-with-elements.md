@@ -74,7 +74,7 @@ as traduções e transformações CSS.
 __* Esconde transbordamento__  significa que ele tem `overflow: hidden`, `overflow-x: hidden`, `overflow-y: hidden`, 
 `overflow: scroll`, or `overflow: auto`
 
-> **Opacidade**
+> __Opacidade__
 >
 > Os elementos onde a propriedade CSS (ou ancestrais) tem `opacity: 0` são considerados ocultos ao declarar a visibilidade
 > do elemento diretamente.
@@ -151,7 +151,7 @@ comportamento toda vez que o comando for executado.
 
 [//]: <> (TODO - Adicionar links dos comandos de Acionabilidade, cy.get e .find)
 > Essa lógica de rolagem se aplica apenas aos [`comandos acionáveis ​​acima`](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Actionability).
-> **Não rolamos os elementos** para a visualização ao usar comandos DOM, como [`cy.get()`](https://docs.cypress.io/api/commands/get.html)
+> __Não rolamos os elementos__ para a visualização ao usar comandos DOM, como [`cy.get()`](https://docs.cypress.io/api/commands/get.html)
 ou [`.find()`](https://docs.cypress.io/api/commands/find.html).
 
 Por padrão, o algoritmo de rolagem funciona rolando o ponto superior mais à esquerda do elemento no qual emitimos o 
@@ -256,7 +256,7 @@ Você pode passar `{ force: true }` para a maioria dos comandos de ação.
 cy.get('button').click({ force: true })
 ```
 
-> **Qual é a diferença?**
+> __Qual é a diferença?__
 > Quando você força um evento a acontecer, nós iremos:
 >
 > - Continuar a realizar todas as ações padrão

@@ -225,7 +225,7 @@ beforeEach(() => {
 
 ![Ganchos globais para testes](https://docs.cypress.io/img/guides/global-hooks.993be24d.png)
 
->Nota: Este exemplo pressupõe que você já esteja familiarizado com os [ganchos](#Ganchos)
+>Nota: Este exemplo pressupõe que você já esteja familiarizado com os [ganchos](#ganchos)
 >Mocha.
 
 #### Execução
